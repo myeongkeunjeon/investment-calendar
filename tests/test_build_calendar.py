@@ -141,6 +141,46 @@ class TestSp500AndResults(unittest.TestCase):
         self.assertEqual(item.description.split("\n")[1], "✅ 발표 결과: 실제 EPS $5.20 → 예상 상회 +3.8%")
 
 
+class TestFomcOutlook(unittest.TestCase):
+    def setUp(self):
+        lower = dict(bc.parse_fred_csv((FIX / "fred_lower.csv").read_text()))
+        upper = dict(bc.parse_fred_csv((FIX / "fred_upper.csv").read_text()))
+        self.rates = [(d, lower[d], upper[d]) for d in sorted(set(lower) & set(upper))]
+
+    def test_fred_and_meeting_result(self):
+        self.assertEqual(self.rates[-1], ("2026-10-06", 3.75, 4.0))  # '.'(빈 값)은 건너뜀
+        self.assertEqual(bc.meeting_result(self.rates, "2026-09-16"),
+                         "0.25%p 인하 (4.00~4.25% → 3.75~4.00%)")
+        self.assertEqual(bc.meeting_result(self.rates, "2026-09-18"), "동결 (3.75~4.00%)")
+        self.assertEqual(bc.meeting_result(self.rates, "2026-12-09"), "")  # 아직 기록 없음
+
+    def test_sep_link_and_dotplot(self):
+        html = '<a href="/monetarypolicy/fomcprojtabl20260617.htm">x</a> <a href="/monetarypolicy/fomcprojtabl20260916.htm">y</a>'
+        self.assertEqual(bc.find_sep_links(html)[0],
+                         ("20260916", "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm"))
+        dots = bc.parse_dotplot((FIX / "fomc_projtabl.html").read_text())
+        self.assertEqual(dots["years"], ["2026", "2027", "2028", "Longer run"])
+        s = bc.dot_summary(dots, "2026", 3.875)  # 현재 3.75~4.00% → 중간 3.875
+        self.assertEqual(s, {"year": "2026", "n": 19, "median": 3.875, "lower": 4, "same": 8, "higher": 7})
+        self.assertEqual(bc.dot_summary(dots, "2027", 3.875)["median"], 3.625)
+
+    def test_fomc_item_texts(self):
+        outlook = {"rate_date": "2026-10-06", "lower": 3.75, "upper": 4.0, "midpoint": 3.875,
+                   "sep_date": "2026-09-16", "sep_url": "https://example/sep",
+                   "years": [{"year": "2026", "n": 19, "median": 3.875, "lower": 4, "same": 8, "higher": 7}]}
+        future = bc.fomc_item(date(2026, 10, 28), False, outlook, self.rates, date(2026, 10, 7))
+        self.assertIn("현재 기준금리(목표 범위): 3.75~4.00% (2026-10-06 기준)", future.description)
+        self.assertIn("📍 연준 위원들의 금리 전망 (2026년 9월 점도표, 19명)", future.description)
+        self.assertIn("지금보다 낮게 4명 · 지금 수준 8명 · 높게 7명", future.description)
+        self.assertIn("cme-fedwatch-tool", future.description)
+        self.assertEqual(future.note, "현재 3.75~4.00% · 위원 2026년 말 전망: 인하 4 · 동결 8 · 인상 7명")
+        past = bc.fomc_item(date(2026, 9, 16), True, outlook, self.rates, date(2026, 10, 7))
+        self.assertIn("✅ 결정: 0.25%p 인하", past.description)
+        self.assertNotIn("점도표, 19명", past.description)  # 지난 회의엔 현재 전망을 붙이지 않음
+        self.assertTrue(past.title.endswith("· 0.25%p 인하"))
+        self.assertEqual(past.note, "결정: 0.25%p 인하 (4.00~4.25% → 3.75~4.00%)")
+
+
 class TestEstimates(unittest.TestCase):
     def test_estimates_follow_latest_known_date(self):
         members = [{"symbol": "AAPL", "name": "Apple Inc.", "sector": "Information Technology"},

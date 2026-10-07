@@ -521,7 +521,7 @@
   }
   function eventRow(ev) {
     const sub = [];
-    if (ev.kind === "fomc") sub.push("미국 기준금리 결정");
+    if (ev.kind === "fomc") sub.push(ev.note || "미국 기준금리 결정");
     else {
       const name = companyName(ev.symbol);
       if (name) sub.push(name);
