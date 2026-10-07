@@ -11,6 +11,7 @@ on:
       - "build_calendar.py"
       - "data/themes.json"
       - "docs/index.html"
+      - "docs/manifest.webmanifest"
       - ".github/workflows/update-calendar.yml"
 
 permissions:

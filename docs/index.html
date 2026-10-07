@@ -2,74 +2,559 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>투자 일정 캘린더</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>투자 캘린더</title>
+<meta name="description" content="S&P 100 실적 발표와 FOMC 일정을 한국시간으로 보는 투자 전용 캘린더">
+<meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121418" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="투자캘린더">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
 <style>
-  :root { --bg:#fbfaf7; --fg:#1f2328; --muted:#5b616b; --line:#e3e0d8; --accent:#1f5fbf; --card:#ffffff; }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg:#16181c; --fg:#e8e6e1; --muted:#a3a7ae; --line:#2c3036; --accent:#7fb0ff; --card:#1d2025; }
+  :root {
+    --bg: #f6f5f1; --surface: #ffffff; --surface-2: #efede7; --line: #e2dfd7;
+    --fg: #1c1f24; --muted: #646a73; --faint: #9aa0a8;
+    --accent: #2457c5; --accent-soft: #e5ecfb;
+    --earn: #2457c5; --earn-soft: #e5ecfb;
+    --est: #6b7280; --est-soft: #eceef1;
+    --fomc: #b45309; --fomc-soft: #fbefdc;
+    --on: #2457c5; --off: #c9ccd2;
+    --radius: 14px;
   }
-  * { box-sizing: border-box; }
-  body { margin:0; background:var(--bg); color:var(--fg);
-         font:16px/1.7 -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; }
-  main { max-width:680px; margin:0 auto; padding:40px 16px 64px; }
-  h1 { font-size:1.6rem; margin:0 0 4px; }
-  .lead { color:var(--muted); margin:0 0 28px; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px; margin-bottom:16px; }
-  h2 { font-size:1.05rem; margin:0 0 8px; }
-  code { display:block; overflow-wrap:anywhere; background:var(--bg); border:1px solid var(--line);
-         border-radius:8px; padding:10px 12px; font-size:.9rem; }
-  .btns { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
-  a.btn { display:inline-block; padding:8px 14px; border-radius:8px; background:var(--accent); color:#fff;
-          text-decoration:none; font-weight:600; }
-  @media (prefers-color-scheme: dark) { a.btn { color:#0d1117; } }
-  button { padding:8px 14px; border-radius:8px; border:1px solid var(--line); background:transparent;
-           color:var(--fg); font:inherit; cursor:pointer; }
-  ol { margin:0; padding-left:20px; }
-  small { color:var(--muted); }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121418; --surface: #1b1e24; --surface-2: #242830; --line: #2d323b;
+      --fg: #e9e7e2; --muted: #a2a8b1; --faint: #6f7680;
+      --accent: #84a9ff; --accent-soft: #1f2a44;
+      --earn: #84a9ff; --earn-soft: #1f2a44;
+      --est: #a3a9b3; --est-soft: #2a2e36;
+      --fomc: #f0b35a; --fomc-soft: #3a2c17;
+      --on: #84a9ff; --off: #4a505a;
+    }
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; background: var(--bg); color: var(--fg); }
+  body {
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+  }
+  button { font: inherit; color: inherit; }
+  a { color: var(--accent); }
+
+  header {
+    position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    padding: calc(12px + env(safe-area-inset-top)) 16px 10px; border-bottom: 1px solid var(--line);
+  }
+  .head-row { max-width: 720px; margin: 0 auto; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+  h1 { font-size: 1.25rem; margin: 0; letter-spacing: -0.01em; }
+  .today { color: var(--muted); font-size: .85rem; }
+  main { max-width: 720px; margin: 0 auto; padding: 12px 16px 24px; }
+  .view[hidden] { display: none; }
+
+  /* 일정 목록 */
+  .toolbar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 4px 0 12px; }
+  .chip {
+    border: 1px solid var(--line); background: var(--surface); border-radius: 999px;
+    padding: 5px 12px; font-size: .85rem; cursor: pointer; color: var(--muted);
+  }
+  .chip[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); border-color: transparent; font-weight: 600; }
+  .summary { color: var(--muted); font-size: .85rem; margin-left: auto; }
+  .day { margin-bottom: 18px; }
+  .day h2 {
+    font-size: .9rem; margin: 0 0 6px; color: var(--muted); font-weight: 600;
+    display: flex; gap: 8px; align-items: center;
+  }
+  .day h2 .tag { font-size: .72rem; padding: 1px 7px; border-radius: 6px; background: var(--accent); color: var(--surface); }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .ev { border-top: 1px solid var(--line); }
+  .ev:first-child { border-top: 0; }
+  .ev > button {
+    width: 100%; text-align: left; background: none; border: 0; padding: 12px 14px; cursor: pointer;
+    display: grid; grid-template-columns: 64px 1fr auto; gap: 10px; align-items: center;
+  }
+  .time { font-size: .82rem; color: var(--muted); font-variant-numeric: tabular-nums; line-height: 1.3; }
+  .title { font-weight: 600; line-height: 1.35; }
+  .sub { font-size: .82rem; color: var(--muted); margin-top: 2px; }
+  .badge { font-size: .72rem; font-weight: 700; padding: 3px 8px; border-radius: 6px; white-space: nowrap; }
+  .k-earnings .badge { background: var(--earn-soft); color: var(--earn); }
+  .k-estimate .badge { background: var(--est-soft); color: var(--est); }
+  .k-fomc .badge { background: var(--fomc-soft); color: var(--fomc); }
+  .k-estimate .title { color: var(--muted); }
+  .detail {
+    padding: 0 14px 14px 88px; font-size: .88rem; color: var(--muted); white-space: pre-wrap; overflow-wrap: anywhere;
+  }
+  .detail[hidden] { display: none; }
+  .empty { text-align: center; color: var(--muted); padding: 40px 16px; }
+  .more { display: block; margin: 8px auto 0; }
+
+  /* 달력 */
+  .month-nav { display: flex; align-items: center; justify-content: space-between; margin: 4px 0 10px; }
+  .month-nav h2 { font-size: 1.1rem; margin: 0; }
+  .icon-btn { width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; font-size: 1.1rem; }
+  .grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+  .dow { text-align: center; font-size: .75rem; color: var(--muted); padding: 2px 0; }
+  .dow:first-child, .cell.sun .num { color: #d14b4b; }
+  .cell {
+    min-height: 64px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+    padding: 4px; cursor: pointer; text-align: left; display: flex; flex-direction: column; gap: 2px; overflow: hidden;
+  }
+  .cell.out { opacity: .4; }
+  .cell.today { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+  .cell.sel { background: var(--accent-soft); }
+  .num { font-size: .78rem; font-weight: 600; }
+  .mini { font-size: .66rem; line-height: 1.25; border-radius: 4px; padding: 0 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .mini.k-earnings { background: var(--earn-soft); color: var(--earn); }
+  .mini.k-estimate { background: var(--est-soft); color: var(--est); }
+  .mini.k-fomc { background: var(--fomc-soft); color: var(--fomc); font-weight: 700; }
+  .plus { font-size: .64rem; color: var(--muted); }
+  #cal-day { margin-top: 16px; }
+
+  /* 설정 */
+  .section { margin-bottom: 22px; }
+  .section > h2 { font-size: 1rem; margin: 0 0 8px; }
+  .hint { color: var(--muted); font-size: .84rem; margin: 6px 2px 0; }
+  .row { display: flex; align-items: center; gap: 12px; padding: 11px 14px; border-top: 1px solid var(--line); }
+  .row:first-child { border-top: 0; }
+  .row .grow { flex: 1; min-width: 0; }
+  .row .name { font-weight: 600; }
+  .row .desc { font-size: .8rem; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .switch { position: relative; width: 48px; height: 28px; flex: none; }
+  .switch input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; z-index: 1; }
+  .switch span { position: absolute; inset: 0; background: var(--off); border-radius: 999px; transition: background .15s; }
+  .switch span::after {
+    content: ""; position: absolute; top: 3px; left: 3px; width: 22px; height: 22px; border-radius: 50%;
+    background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.25); transition: transform .15s;
+  }
+  .switch input:checked + span { background: var(--on); }
+  .switch input:checked + span::after { transform: translateX(20px); }
+  .switch input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .search {
+    width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line);
+    background: var(--surface); color: var(--fg); font: inherit; margin-bottom: 8px;
+  }
+  .btn-row { display: flex; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+  .btn {
+    padding: 8px 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface);
+    cursor: pointer; font-size: .9rem;
+  }
+  details.sector { margin-bottom: 8px; }
+  details.sector > summary {
+    list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px; padding: 12px 14px;
+  }
+  details.sector > summary::-webkit-details-marker { display: none; }
+  details.sector > summary .chev { transition: transform .15s; color: var(--muted); }
+  details.sector[open] > summary .chev { transform: rotate(90deg); }
+  details.sector > summary .count { color: var(--muted); font-size: .85rem; }
+  details.sector > summary .grow { flex: 1; min-width: 0; }
+  details.sector > summary .name { font-weight: 600; }
+  details.sector .list { border-top: 1px solid var(--line); }
+  code.url { display: block; overflow-wrap: anywhere; background: var(--surface-2); border-radius: 8px; padding: 8px 10px; font-size: .82rem; margin: 8px 0; }
+
+  /* 아래 탭 */
+  nav.tabs {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; background: var(--surface);
+    border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom);
+  }
+  nav.tabs .inner { max-width: 720px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); }
+  nav.tabs button {
+    background: none; border: 0; padding: 8px 0 10px; cursor: pointer; color: var(--muted);
+    display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: .74rem;
+  }
+  nav.tabs button svg { width: 24px; height: 24px; }
+  nav.tabs button[aria-selected="true"] { color: var(--accent); font-weight: 600; }
+
+  .notice { background: var(--surface-2); border-radius: 10px; padding: 10px 12px; font-size: .85rem; color: var(--muted); margin-bottom: 12px; }
 </style>
 </head>
 <body>
+<header>
+  <div class="head-row">
+    <h1>투자 캘린더</h1>
+    <span class="today" id="today"></span>
+  </div>
+</header>
+
 <main>
-  <h1>투자 일정 캘린더</h1>
-  <p class="lead">S&amp;P 100 기업의 실적 발표일과 FOMC 금리 결정일을 한국시간으로 정리했어요. 매일 아침 자동으로 갱신돼요. 📊는 확정된 실적 발표, 🗓️는 약 6개월 앞까지 계산한 예상일이에요.</p>
+  <div id="load-msg" class="empty">일정을 불러오는 중…</div>
 
-  <div class="card">
-    <h2>구독 주소</h2>
-    <code id="url">calendar.ics</code>
-    <div class="btns">
-      <a class="btn" id="webcal" href="calendar.ics">캘린더 앱에서 구독</a>
-      <button id="copy" type="button">주소 복사</button>
+  <!-- 일정 목록 -->
+  <section class="view" id="view-list" hidden>
+    <div class="toolbar">
+      <button class="chip" id="past-btn" aria-pressed="false">지난 일정</button>
+      <span class="summary" id="list-summary"></span>
     </div>
-  </div>
+    <div id="list"></div>
+  </section>
 
-  <div class="card">
-    <h2>구글 캘린더 (PC)</h2>
-    <ol>
-      <li>calendar.google.com 왼쪽의 <b>다른 캘린더 +</b> → <b>URL로 추가</b></li>
-      <li>위 구독 주소를 붙여넣고 <b>캘린더 추가</b></li>
-    </ol>
-    <small>구글은 보통 하루에 한 번쯤 새로 읽어 와요. 휴대폰 구글 캘린더에도 자동으로 보여요.</small>
-  </div>
+  <!-- 달력 -->
+  <section class="view" id="view-cal" hidden>
+    <div class="month-nav">
+      <button class="icon-btn" id="prev-m" aria-label="이전 달">‹</button>
+      <h2 id="month-title"></h2>
+      <button class="icon-btn" id="next-m" aria-label="다음 달">›</button>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div id="cal-day"></div>
+  </section>
 
-  <div class="card">
-    <h2>아이폰 / 맥</h2>
-    <ol>
-      <li>이 페이지에서 <b>캘린더 앱에서 구독</b>을 눌러요</li>
-      <li>또는 설정 → 캘린더 → 계정 → 계정 추가 → 기타 → <b>구독 캘린더 추가</b>에 주소를 붙여넣어요</li>
-    </ol>
-  </div>
+  <!-- 설정 -->
+  <section class="view" id="view-set" hidden>
+    <div class="section">
+      <h2>일정 종류</h2>
+      <div class="card" id="kind-toggles"></div>
+    </div>
 
-  <p><small>공개 정보(위키백과, 나스닥, 미국 연준)를 자동으로 모은 일정이에요. 실적 발표 시각은 '장 전/장 후' 구분을 바탕으로 한 추정이고, 투자 권유가 아니에요.</small></p>
+    <div class="section">
+      <h2>종목 선택</h2>
+      <input class="search" id="search" type="search" placeholder="티커나 회사명 검색 (예: NVDA, 애플)" autocomplete="off">
+      <div class="btn-row">
+        <button class="btn" id="all-on">모두 켜기</button>
+        <button class="btn" id="all-off">모두 끄기</button>
+      </div>
+      <div id="sectors"></div>
+      <p class="hint">처음엔 S&amp;P 100 전체가 켜져 있어요. 관심 없는 종목은 꺼 두세요. 새로 편입된 종목은 자동으로 켜진 채 추가돼요.</p>
+    </div>
+
+    <div class="section">
+      <h2>개인정보</h2>
+      <div class="notice">켜고 끈 설정은 <b>이 기기의 브라우저에만</b> 저장돼요. 서버나 다른 사람에게 전송되지 않아요. 다른 기기에서는 따로 설정해야 해요.</div>
+    </div>
+
+    <div class="section">
+      <h2>홈 화면에 앱으로 추가</h2>
+      <div class="card"><div class="row"><div class="grow">
+        <div class="desc" style="white-space:normal">아이폰 사파리: 아래 <b>공유</b> 버튼 → <b>홈 화면에 추가</b>. 앱처럼 아이콘으로 열려요.</div>
+      </div></div></div>
+    </div>
+
+    <div class="section">
+      <h2>다른 캘린더 앱에서 구독 (선택)</h2>
+      <code class="url" id="ics-url">calendar.ics</code>
+      <p class="hint">구독 주소에는 위 종목 선택이 적용되지 않고 전체 일정이 들어가요.</p>
+    </div>
+
+    <p class="hint">공개 정보(위키백과, 나스닥, 미국 연준)를 매일 아침 자동으로 모아요. 실적 발표 시각은 '장 전/장 후' 기준 추정이고, 🗓️ 예상일은 직전 발표일에 13주를 더한 날짜예요. 투자 권유가 아니에요.
+      <br><span id="updated"></span></p>
+  </section>
 </main>
+
+<nav class="tabs" role="tablist">
+  <div class="inner">
+    <button role="tab" data-view="list" aria-selected="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+      일정
+    </button>
+    <button role="tab" data-view="cal" aria-selected="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
+      달력
+    </button>
+    <button role="tab" data-view="set" aria-selected="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+      설정
+    </button>
+  </div>
+</nav>
+
 <script>
-  const ics = new URL("calendar.ics", location.href).href;
-  document.getElementById("url").textContent = ics;
-  document.getElementById("webcal").href = ics.replace(/^https?:/, "webcal:");
-  document.getElementById("copy").addEventListener("click", async (e) => {
-    try { await navigator.clipboard.writeText(ics); e.target.textContent = "복사했어요"; }
-    catch { e.target.textContent = "주소를 길게 눌러 복사하세요"; }
+(() => {
+  "use strict";
+  const KST = "Asia/Seoul";
+  const DOW = ["일", "월", "화", "수", "목", "금", "토"];
+  const KIND = {
+    earnings: { label: "실적", badge: "확정" },
+    estimate: { label: "실적 예상", badge: "예상" },
+    fomc: { label: "FOMC", badge: "FOMC" },
+  };
+  const STORE_KEY = "investment-calendar.settings.v1";
+  const $ = (s) => document.querySelector(s);
+
+  // ---------- 설정 (이 기기에만 저장)
+  const defaults = { hidden: [], kinds: { earnings: true, estimate: true, fomc: true } };
+  let settings = loadSettings();
+  function loadSettings() {
+    try {
+      const raw = JSON.parse(localStorage.getItem(STORE_KEY) || "null");
+      if (raw && Array.isArray(raw.hidden)) return { hidden: raw.hidden, kinds: { ...defaults.kinds, ...(raw.kinds || {}) } };
+    } catch (e) { /* 저장소를 못 쓰면 기본값 */ }
+    return structuredClone(defaults);
+  }
+  function saveSettings() {
+    try { localStorage.setItem(STORE_KEY, JSON.stringify(settings)); } catch (e) { /* 무시 */ }
+  }
+  const hiddenSet = () => new Set(settings.hidden);
+
+  // ---------- 날짜 도구 (모두 한국시간 기준)
+  const ymdFmt = new Intl.DateTimeFormat("en-CA", { timeZone: KST, year: "numeric", month: "2-digit", day: "2-digit" });
+  const timeFmt = new Intl.DateTimeFormat("ko-KR", { timeZone: KST, hour: "numeric", minute: "2-digit" });
+  const kstYmd = (d) => ymdFmt.format(d);
+  const todayYmd = kstYmd(new Date());
+  function parseYmd(s) { const [y, m, d] = s.split("-").map(Number); return new Date(Date.UTC(y, m - 1, d)); }
+  function addDays(s, n) { const d = parseYmd(s); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); }
+  function dayLabel(s) {
+    const d = parseYmd(s);
+    return `${d.getUTCMonth() + 1}월 ${d.getUTCDate()}일 (${DOW[d.getUTCDay()]})`;
+  }
+
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const linkify = (s) => esc(s).replace(/https?:\/\/[^\s<]+/g, (u) => `<a href="${u}" target="_blank" rel="noopener">${u}</a>`);
+
+  // ---------- 데이터
+  let events = [];
+  let companies = [];
+
+  function normalize(raw) {
+    let symbol = raw.symbol || "";
+    if (!symbol && raw.kind !== "fomc") {
+      const m = /📊|🗓️/.test(raw.title) && raw.title.match(/^\S+\s+(\S+)/);
+      symbol = m ? m[1] : "";
+    }
+    let sector = raw.sector || "";
+    if (!sector && raw.kind !== "fomc") sector = (raw.title.split("·").pop() || "").trim();
+    const start = raw.start_utc ? new Date(raw.start_utc) : null;
+    const day = start ? kstYmd(start) : raw.us_date;
+    let time;
+    if (start) time = timeFmt.format(start);
+    else time = raw.kind === "estimate" ? "날짜 예상" : "시각 미정";
+    let name = symbol;
+    if (raw.kind === "fomc") name = raw.title.replace(/^🏦\s*/, "");
+    const firstLine = (raw.description || "").split("\n")[0].replace(/^■\s*/, "");
+    const eps = ((raw.description || "").match(/시장 예상 EPS[^:]*:\s*([^\n(]+)/) || [])[1];
+    const timingLabel = raw.timing === "pre" ? "장 전" : raw.timing === "after" ? "장 후" : "";
+    return { ...raw, symbol, sector, day, time, start, name, firstLine, eps: eps && eps.trim(), timingLabel };
+  }
+
+  function visible(ev) {
+    if (!settings.kinds[ev.kind]) return false;
+    if (ev.kind !== "fomc" && ev.symbol && hiddenSet().has(ev.symbol)) return false;
+    return true;
+  }
+
+  // ---------- 그리기: 일정 하나
+  function eventRow(ev) {
+    const sub = [];
+    if (ev.kind === "fomc") sub.push("미국 기준금리 결정");
+    else {
+      const company = companies.find((c) => c.symbol === ev.symbol);
+      if (company) sub.push(company.name);
+      if (ev.sector) sub.push(ev.sector);
+      if (ev.kind === "earnings" && ev.timingLabel) sub.push(`미국 ${ev.timingLabel}`);
+      if (ev.eps) sub.push(`예상 EPS ${ev.eps}`);
+    }
+    const title = ev.kind === "fomc" ? ev.name : `${ev.symbol} ${KIND[ev.kind].label}`;
+    const id = "d-" + ev.uid.replace(/[^a-zA-Z0-9]/g, "");
+    return `<div class="ev k-${ev.kind}">
+      <button aria-expanded="false" aria-controls="${id}">
+        <span class="time">${esc(ev.time)}</span>
+        <span><div class="title">${esc(title)}</div><div class="sub">${esc(sub.join(" · "))}</div></span>
+        <span class="badge">${KIND[ev.kind].badge}</span>
+      </button>
+      <div class="detail" id="${id}" hidden>${linkify(ev.description)}</div>
+    </div>`;
+  }
+  function bindToggles(root) {
+    root.querySelectorAll(".ev > button").forEach((b) => b.addEventListener("click", () => {
+      const d = document.getElementById(b.getAttribute("aria-controls"));
+      const open = d.hidden;
+      d.hidden = !open;
+      b.setAttribute("aria-expanded", String(open));
+    }));
+  }
+  function groupByDay(list) {
+    const map = new Map();
+    for (const ev of list) { if (!map.has(ev.day)) map.set(ev.day, []); map.get(ev.day).push(ev); }
+    for (const arr of map.values()) arr.sort((a, b) => (a.start ? a.start.getTime() : -1) - (b.start ? b.start.getTime() : -1) || order(a) - order(b));
+    return [...map.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+  }
+  const order = (ev) => ({ fomc: 0, earnings: 1, estimate: 2 }[ev.kind]);
+
+  // ---------- 일정 목록 화면
+  let showPast = false;
+  let listLimit = 45;
+  function renderList() {
+    const list = events.filter(visible).filter((e) => showPast ? e.day < todayYmd : e.day >= todayYmd);
+    let days = groupByDay(list);
+    if (showPast) days.reverse();
+    const total = list.length;
+    $("#list-summary").textContent = total ? `${days.length}일 · ${total}건` : "";
+    if (!total) {
+      $("#list").innerHTML = `<div class="empty">${showPast ? "지난 일정이 없어요." : "보여 줄 일정이 없어요.<br>설정에서 종목이나 일정 종류를 켜 보세요."}</div>`;
+      return;
+    }
+    const shown = days.slice(0, listLimit);
+    const tomorrow = addDays(todayYmd, 1);
+    $("#list").innerHTML = shown.map(([day, evs]) => {
+      const tag = day === todayYmd ? `<span class="tag">오늘</span>` : day === tomorrow ? `<span class="tag">내일</span>` : "";
+      return `<div class="day"><h2>${dayLabel(day)} ${tag}</h2><div class="card">${evs.map(eventRow).join("")}</div></div>`;
+    }).join("") + (days.length > listLimit ? `<button class="btn more" id="more">더 보기 (${days.length - listLimit}일 남음)</button>` : "");
+    bindToggles($("#list"));
+    const more = $("#more");
+    if (more) more.addEventListener("click", () => { listLimit += 45; renderList(); });
+  }
+  $("#past-btn").addEventListener("click", (e) => {
+    showPast = !showPast; listLimit = 45;
+    e.currentTarget.setAttribute("aria-pressed", String(showPast));
+    renderList();
   });
+
+  // ---------- 달력 화면
+  let calMonth = todayYmd.slice(0, 7);
+  let selDay = todayYmd;
+  function renderCal() {
+    const [y, m] = calMonth.split("-").map(Number);
+    $("#month-title").textContent = `${y}년 ${m}월`;
+    const first = new Date(Date.UTC(y, m - 1, 1));
+    const start = addDays(calMonth + "-01", -first.getUTCDay());
+    const byDay = new Map(groupByDay(events.filter(visible)));
+    let html = DOW.map((d) => `<div class="dow">${d}</div>`).join("");
+    for (let i = 0; i < 42; i++) {
+      const day = addDays(start, i);
+      if (i === 35 && day.slice(0, 7) !== calMonth) break;
+      const evs = byDay.get(day) || [];
+      const cls = ["cell", day.slice(0, 7) !== calMonth && "out", day === todayYmd && "today", day === selDay && "sel", i % 7 === 0 && "sun"].filter(Boolean).join(" ");
+      const minis = evs.slice(0, 3).map((ev) => `<span class="mini k-${ev.kind}">${esc(ev.kind === "fomc" ? "FOMC" : ev.symbol)}</span>`).join("");
+      const plus = evs.length > 3 ? `<span class="plus">+${evs.length - 3}</span>` : "";
+      html += `<button class="${cls}" data-day="${day}" aria-label="${dayLabel(day)} 일정 ${evs.length}건"><span class="num">${parseYmd(day).getUTCDate()}</span>${minis}${plus}</button>`;
+    }
+    $("#grid").innerHTML = html;
+    $("#grid").querySelectorAll(".cell").forEach((c) => c.addEventListener("click", () => {
+      selDay = c.dataset.day;
+      if (selDay.slice(0, 7) !== calMonth) calMonth = selDay.slice(0, 7);
+      renderCal();
+    }));
+    const evs = byDay.get(selDay) || [];
+    $("#cal-day").innerHTML = `<div class="day"><h2>${dayLabel(selDay)}</h2>${evs.length ? `<div class="card">${evs.map(eventRow).join("")}</div>` : `<div class="empty" style="padding:16px">일정이 없어요.</div>`}</div>`;
+    bindToggles($("#cal-day"));
+  }
+  function shiftMonth(n) {
+    const [y, m] = calMonth.split("-").map(Number);
+    const d = new Date(Date.UTC(y, m - 1 + n, 1));
+    calMonth = d.toISOString().slice(0, 7);
+    renderCal();
+  }
+  $("#prev-m").addEventListener("click", () => shiftMonth(-1));
+  $("#next-m").addEventListener("click", () => shiftMonth(1));
+
+  // ---------- 설정 화면
+  function switchHtml(attrs, checked, label) {
+    return `<label class="switch"><input type="checkbox" ${attrs} ${checked ? "checked" : ""} aria-label="${esc(label)}"><span></span></label>`;
+  }
+  function renderKinds() {
+    const rows = [
+      ["fomc", "FOMC 금리 결정", "미국 기준금리 발표 · 점도표"],
+      ["earnings", "확정 실적 발표 📊", "회사가 날짜를 확정한 일정"],
+      ["estimate", "실적 예상일 🗓️", "약 6개월 앞까지, 13주 간격으로 계산한 날짜"],
+    ];
+    $("#kind-toggles").innerHTML = rows.map(([k, name, desc]) => `<div class="row">
+      <div class="grow"><div class="name">${name}</div><div class="desc">${desc}</div></div>
+      ${switchHtml(`data-kind="${k}"`, settings.kinds[k], name)}</div>`).join("");
+    $("#kind-toggles").querySelectorAll("input").forEach((i) => i.addEventListener("change", () => {
+      settings.kinds[i.dataset.kind] = i.checked; saveSettings(); refresh();
+    }));
+  }
+
+  let openSectors = new Set();
+  function renderSectors() {
+    const q = $("#search").value.trim().toLowerCase();
+    const hidden = hiddenSet();
+    const match = (c) => !q || [c.symbol, c.name, c.sector, c.theme].some((v) => (v || "").toLowerCase().includes(q));
+    const bySector = new Map();
+    for (const c of companies) { if (!bySector.has(c.sector)) bySector.set(c.sector, []); bySector.get(c.sector).push(c); }
+    let html = "";
+    for (const [sector, list] of [...bySector.entries()].sort((a, b) => a[0].localeCompare(b[0], "ko"))) {
+      const shown = list.filter(match);
+      if (!shown.length) continue;
+      const on = list.filter((c) => !hidden.has(c.symbol)).length;
+      const open = q || openSectors.has(sector);
+      html += `<details class="sector card" data-sector="${esc(sector)}" ${open ? "open" : ""}>
+        <summary>
+          <span class="chev">›</span>
+          <span class="grow"><span class="name">${esc(sector)}</span> <span class="count">${on}/${list.length}</span></span>
+          ${switchHtml(`data-sector-toggle="${esc(sector)}"`, on > 0, `${sector} 전체`)}
+        </summary>
+        <div class="list">${shown.map((c) => `<div class="row">
+          <div class="grow"><div class="name">${esc(c.symbol)} <span style="font-weight:400;color:var(--muted)">${esc(c.name)}</span></div>
+          ${c.theme ? `<div class="desc">${esc(c.theme)}</div>` : ""}</div>
+          ${switchHtml(`data-symbol="${esc(c.symbol)}"`, !hidden.has(c.symbol), c.symbol)}</div>`).join("")}</div>
+      </details>`;
+    }
+    $("#sectors").innerHTML = html || `<div class="empty" style="padding:16px">검색 결과가 없어요.</div>`;
+
+    $("#sectors").querySelectorAll("details").forEach((d) => d.addEventListener("toggle", () => {
+      if (q) return;
+      d.open ? openSectors.add(d.dataset.sector) : openSectors.delete(d.dataset.sector);
+    }));
+    $("#sectors").querySelectorAll("input[data-symbol]").forEach((i) => i.addEventListener("change", () => {
+      setHidden([i.dataset.symbol], !i.checked);
+    }));
+    $("#sectors").querySelectorAll("input[data-sector-toggle]").forEach((i) => {
+      i.addEventListener("click", (e) => e.stopPropagation());
+      i.addEventListener("change", () => {
+        const syms = companies.filter((c) => c.sector === i.dataset.sectorToggle).map((c) => c.symbol);
+        setHidden(syms, !i.checked);
+      });
+    });
+  }
+  function setHidden(symbols, hide) {
+    const h = hiddenSet();
+    symbols.forEach((s) => hide ? h.add(s) : h.delete(s));
+    settings.hidden = [...h].sort();
+    saveSettings();
+    renderSectors(); refresh(false);
+  }
+  $("#search").addEventListener("input", renderSectors);
+  $("#all-on").addEventListener("click", () => setHidden(companies.map((c) => c.symbol), false));
+  $("#all-off").addEventListener("click", () => setHidden(companies.map((c) => c.symbol), true));
+
+  // ---------- 탭
+  let current = "list";
+  function show(view) {
+    current = view;
+    document.querySelectorAll(".view").forEach((v) => v.hidden = v.id !== "view-" + view);
+    document.querySelectorAll("nav.tabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.view === view)));
+    try { sessionStorage.setItem("ic.view", view); } catch (e) { /* 무시 */ }
+    refresh();
+    window.scrollTo(0, 0);
+  }
+  document.querySelectorAll("nav.tabs button").forEach((b) => b.addEventListener("click", () => show(b.dataset.view)));
+
+  function refresh(withSectors = true) {
+    if (current === "list") renderList();
+    if (current === "cal") renderCal();
+    if (current === "set") { renderKinds(); if (withSectors) renderSectors(); }
+  }
+
+  // ---------- 시작
+  $("#today").textContent = `오늘 ${dayLabel(todayYmd)} · 한국시간`;
+  const icsUrl = new URL("calendar.ics", location.href).href;
+  $("#ics-url").textContent = icsUrl;
+
+  Promise.all([
+    fetch("events.json", { cache: "no-cache" }).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }),
+    fetch("companies.json", { cache: "no-cache" }).then((r) => r.ok ? r.json() : []).catch(() => []),
+    fetch("calendar.ics", { method: "HEAD", cache: "no-cache" }).then((r) => r.headers.get("last-modified")).catch(() => null),
+  ]).then(([evs, comps, modified]) => {
+    events = evs.map(normalize);
+    companies = comps.length ? comps : deriveCompanies(events);
+    if (modified) $("#updated").textContent = `마지막 갱신: ${new Date(modified).toLocaleString("ko-KR", { timeZone: KST })}`;
+    $("#load-msg").remove();
+    let start = "list";
+    try { start = sessionStorage.getItem("ic.view") || "list"; } catch (e) { /* 무시 */ }
+    show(["list", "cal", "set"].includes(start) ? start : "list");
+  }).catch(() => {
+    $("#load-msg").innerHTML = "일정을 불러오지 못했어요.<br>잠시 후 다시 열어 주세요.";
+  });
+
+  function deriveCompanies(evs) {
+    const map = new Map();
+    for (const e of evs) if (e.symbol && !map.has(e.symbol)) map.set(e.symbol, { symbol: e.symbol, name: e.firstLine.replace(/\s*\(.*$/, ""), sector: e.sector, theme: "" });
+    return [...map.values()];
+  }
+})();
 </script>
 </body>
 </html>

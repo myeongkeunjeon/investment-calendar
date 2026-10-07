@@ -94,6 +94,16 @@ class TestEstimates(unittest.TestCase):
         self.assertEqual(bc.merge([old], [], set(), None, date(2026, 10, 7)), [])
 
 
+class TestCompanies(unittest.TestCase):
+    def test_company_list_for_web_app(self):
+        members = [{"symbol": "JPM", "name": "JPMorgan Chase", "sector": "Financials"},
+                   {"symbol": "AAPL", "name": "Apple Inc.", "sector": "Information Technology"}]
+        out = bc.companies(members, THEMES)
+        self.assertEqual(out[0], {"symbol": "JPM", "name": "JPMorgan Chase", "sector": "금융",
+                                  "theme": "미국 최대 은행, 투자은행"})
+        self.assertEqual(out[1]["theme"], "")
+
+
 class TestMergeAndIcs(unittest.TestCase):
     def test_merge_replaces_refetched_days_and_keeps_others(self):
         today = date(2026, 10, 7)

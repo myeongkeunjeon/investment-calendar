@@ -2,8 +2,12 @@
 
 S&P 100 기업의 **실적 발표일**과 미국 연준의 **FOMC 금리 결정일**을 모아, 매일 자동으로 갱신되는 구독용 캘린더(.ics)로 공개합니다.
 
-- 구독 주소: `https://myeongkeunjeon.github.io/investment-calendar/calendar.ics`
-- 안내 페이지: `https://myeongkeunjeon.github.io/investment-calendar/`
+- **투자 캘린더 웹앱**: `https://myeongkeunjeon.github.io/investment-calendar/`
+  - 아이폰 사파리에서 열고 **공유 → 홈 화면에 추가**하면 앱처럼 쓸 수 있어요.
+  - 개인 캘린더와 섞이지 않고 투자 일정만 보여요. (일정 목록 / 달력 / 설정)
+  - **설정**에서 종목을 하나씩, 또는 섹터 단위로 켜고 끌 수 있어요. 처음엔 S&P 100 전체가 켜져 있어요.
+  - 켜고 끈 설정은 그 기기의 브라우저에만 저장되고, 어디에도 전송되지 않아요.
+- 구독 주소(다른 캘린더 앱용, 선택): `https://myeongkeunjeon.github.io/investment-calendar/calendar.ics`
 
 각 일정에는 이런 내용이 들어갑니다.
 - 한국어 설명: 섹터, 테마, **한국시간 기준 발표 시점**, 대상 분기, 시장 예상 EPS
@@ -36,7 +40,9 @@ S&P 100 기업의 **실적 발표일**과 미국 연준의 **FOMC 금리 결정�
 | `data/sp100.json` | 마지막으로 가져온 S&P 100 목록 (자동 저장) |
 | `docs/calendar.ics` | 구독용 캘린더 파일 (자동 생성) |
 | `docs/events.json` | 일정 기록 (자동 생성) |
-| `docs/index.html` | 구독 방법 안내 페이지 |
+| `docs/index.html` | 투자 캘린더 웹앱 (일정·달력·종목 켜고 끄기) |
+| `docs/companies.json` | 웹앱 종목 목록 (자동 생성) |
+| `docs/manifest.webmanifest`, `docs/icon*` | 홈 화면 앱 이름·아이콘 |
 | `.github/workflows/update-calendar.yml` | 매일 자동 실행 설정 |
 | `tests/` | 프로그램이 제대로 동작하는지 확인하는 검사 |
 

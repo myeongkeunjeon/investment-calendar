@@ -106,6 +106,7 @@ class Item:
     minutes: int = 30
     symbol: str = ""   # 실적 일정의 티커 (예상일 계산에 사용)
     timing: str = ""   # "pre"(장 전), "after"(장 후), ""(미정)
+    sector: str = ""   # 한국어 섹터 (웹앱 필터에 사용)
 
 
 # ---------------------------------------------------------------- 공통 도구
@@ -260,6 +261,7 @@ def earnings_item(row: dict, member: dict, us_day: date, themes: dict) -> Item:
         minutes=30,
         symbol=symbol,
         timing=timing_code,
+        sector=sector,
     )
 
 
@@ -364,6 +366,7 @@ def estimate_items(earnings: list[Item], members_list: list[dict], themes: dict,
                     url=url,
                     symbol=symbol,
                     timing=anchor.timing,
+                    sector=sector,
                 ))
             day += timedelta(days=QUARTER_DAYS)
     print(f"실적 예상일 {len(out)}건 (확정 전, {ESTIMATE_DAYS}일 앞까지)")
@@ -502,6 +505,16 @@ def build_ics(items: list[Item], now: datetime) -> bytes:
     return cal.to_ical()
 
 
+def companies(members: list[dict], themes: dict) -> list[dict]:
+    """웹앱의 종목 켜고 끄기 목록. 일정이 없는 종목도 미리 고를 수 있게 전부 넣는다."""
+    out = []
+    for m in members:
+        sector = SECTOR_KO.get(m.get("sector", ""), m.get("sector", ""))
+        out.append({"symbol": m["symbol"], "name": m["name"], "sector": sector,
+                    "theme": themes.get(m["symbol"], "")})
+    return sorted(out, key=lambda c: (c["sector"], c["symbol"]))
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="투자 일정 .ics 생성")
     parser.add_argument("--today", help="기준 날짜(YYYY-MM-DD). 테스트용")
@@ -533,6 +546,8 @@ def main() -> int:
     DOCS_DIR.mkdir(exist_ok=True)
     (DOCS_DIR / "calendar.ics").write_bytes(build_ics(items, now))
     save_json(events_path, [asdict(i) for i in items])
+    if members:
+        save_json(DOCS_DIR / "companies.json", companies(members, themes))
     n_e = sum(i.kind == "earnings" for i in items)
     n_f = sum(i.kind == "fomc" for i in items)
     n_x = sum(i.kind == "estimate" for i in items)
