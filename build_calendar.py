@@ -988,6 +988,16 @@ def parse_schedule_text(html: str, agency: str) -> list[dict]:
         if ind["agency"] != agency:
             continue
         for m in re.finditer(ind["match"].lstrip("^"), text):
+            # 목록형 일정표: '발표 이름 날짜'(예: ... Food Services January 15, 2027) → 그 날짜가 발표일
+            right = re.match(r"\s*[-–:|]?\s*" + MONTH_RE + r"\.?\s+(\d{1,2}),\s*(\d{4})", text[m.end():m.end() + 40], re.I)
+            if right:
+                d = date(int(right.group(3)), MONTH_NAMES.index(right.group(1).lower()) + 1, int(right.group(2)))
+                entry = release_entry(key, m.group(0), et_to_utc(d, ECON_TIME_ET))
+                ident = (key, entry["period"], entry["utc"][:10])
+                if ident not in seen:
+                    seen.add(ident)
+                    out.append(entry)
+                continue
             # 발표 이름 뒤 조금(기간 표기)까지를 제목으로 본다
             title = text[m.start():m.end() + 90]
             period = period_of(title)
@@ -1364,6 +1374,51 @@ def parse_closes(payload: dict) -> dict[str, float]:
     return out
 
 
+YAHOO_CHART = ("https://query1.finance.yahoo.com/v8/finance/chart/{symbol}"
+               "?period1={p1}&period2={p2}&interval=1d")
+
+
+def parse_yahoo_closes(payload: dict) -> dict[str, float]:
+    """야후 파이낸스 일봉 자료 → {미국 날짜: 종가}"""
+    try:
+        res = payload["chart"]["result"][0]
+        stamps, closes = res["timestamp"], res["indicators"]["quote"][0]["close"]
+    except (KeyError, IndexError, TypeError):
+        return {}
+    out = {}
+    for t, c in zip(stamps, closes):
+        if c is not None:
+            out[datetime.fromtimestamp(t, timezone.utc).astimezone(ET).date().isoformat()] = round(float(c), 4)
+    return out
+
+
+def fetch_closes(symbol: str, d: date) -> tuple[dict[str, float], str]:
+    """발표일 앞뒤 약 1주의 종가. 나스닥 → 야후 순서로 시도. (종가, 실패 이유)"""
+    start, end = d - timedelta(days=7), d + timedelta(days=7)
+    why = ""
+    try:
+        resp = http_get(NASDAQ_HISTORY.format(symbol=symbol.replace(".", "-"), start=start.isoformat(),
+                                              end=end.isoformat()), headers=BROWSER_HEADERS, tries=1, timeout=10)
+        closes = parse_closes(resp.json())
+        if closes:
+            return closes, ""
+        why = "나스닥 빈 응답: " + resp.text[:150].replace("\n", " ")
+    except Exception as err:  # noqa: BLE001
+        why = f"나스닥 실패: {err}"
+    try:
+        p1 = int(datetime.combine(start, datetime.min.time(), timezone.utc).timestamp())
+        p2 = int(datetime.combine(end, datetime.min.time(), timezone.utc).timestamp())
+        resp = http_get(YAHOO_CHART.format(symbol=symbol.replace(".", "-"), p1=p1, p2=p2),
+                        headers={"User-Agent": BROWSER_HEADERS["User-Agent"]}, tries=1, timeout=10)
+        closes = parse_yahoo_closes(resp.json())
+        if closes:
+            return closes, ""
+        why += " / 야후 빈 응답"
+    except Exception as err:  # noqa: BLE001
+        why += f" / 야후 실패: {err}"
+    return {}, why
+
+
 def reaction_from(closes: dict[str, float], us_day: str, timing: str) -> dict | None:
     """장 전 발표: 전날 종가 → 당일 종가, 장 후 발표: 당일 종가 → 다음 거래일 종가,
     모르면: 전날 종가 → 다음 거래일 종가."""
@@ -1403,18 +1458,13 @@ def apply_reactions(earnings: list[Item], today: date) -> None:
         if fails >= 5:
             print("  주가 조회가 계속 실패해 이번에는 중단합니다.")
             break
-        d = date.fromisoformat(item.us_date)
-        try:
-            closes = parse_closes(http_get(NASDAQ_HISTORY.format(
-                symbol=item.symbol.replace(".", "-"), start=(d - timedelta(days=7)).isoformat(),
-                end=(d + timedelta(days=7)).isoformat()), headers=BROWSER_HEADERS, tries=1, timeout=10).json())
-            fails = 0
-        except Exception as err:  # noqa: BLE001
+        closes, why = fetch_closes(item.symbol, date.fromisoformat(item.us_date))
+        time.sleep(0.4)
+        if not closes:
             fails += 1
-            print(f"  {item.symbol} 주가 조회 실패: {err}")
+            print(f"  {item.symbol} 주가 조회 실패: {why}")
             continue
-        finally:
-            time.sleep(0.4)
+        fails = 0
         r = reaction_from(closes, item.us_date, item.timing or timings.get(item.uid, ""))
         if r:
             cache[item.uid] = r

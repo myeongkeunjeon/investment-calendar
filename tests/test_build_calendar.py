@@ -292,6 +292,19 @@ class TestBokDividendsReaction(unittest.TestCase):
         # 장 전/장 후를 모르면 전날 종가 → 다음 거래일 종가
         self.assertEqual(bc.reaction_from(closes, "2026-10-14", ""), {"pct": -3.1, "from": "2026-10-13", "to": "2026-10-15"})
 
+    def test_yahoo_closes(self):
+        payload = {"chart": {"result": [{"timestamp": [1791984600, 1792071000],  # 10/14, 10/15 09:30 ET
+                                         "indicators": {"quote": [{"close": [100.0, None]}]}}]}}
+        self.assertEqual(bc.parse_yahoo_closes(payload), {"2026-10-14": 100.0})
+        self.assertEqual(bc.parse_yahoo_closes({"chart": {"result": None}}), {})
+
+    def test_census_list_view_date_after_name(self):
+        html = ("<li>Advance Economic Indicators Report December 23, 2026</li>"
+                "<li>Advance Monthly Sales for Retail and Food Services January 15, 2027</li>"
+                "<li>Monthly Wholesale Trade November 2026</li>")
+        got = bc.parse_schedule_text(html, "census")
+        self.assertEqual([(e["key"], e["period"], e["utc"][:10]) for e in got], [("retail", "2026-12", "2027-01-15")])
+
     def test_bls_falls_back_to_fred_api(self):
         calls = []
 
