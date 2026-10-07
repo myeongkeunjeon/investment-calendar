@@ -532,7 +532,7 @@
     const res = ev.actual_eps ? verdict(ev.surprise) : null;
     const star = ev.kind !== "fomc" && mineSet().has(ev.symbol) ? `<span class="star" aria-label="내 종목">★</span>` : "";
     const title = ev.kind === "fomc" ? esc(ev.name) : `${star}${esc(ev.symbol)} ${ev.actual_eps ? "실적 결과" : KIND[ev.kind].label}`;
-    const id = "d-" + ev.uid.replace(/[^a-zA-Z0-9]/g, "");
+    const id = detailId(ev.uid);
     return `<div class="ev k-${ev.kind}">
       <button aria-expanded="false" aria-controls="${id}">
         <span class="time">${esc(ev.time)}</span>
@@ -542,6 +542,11 @@
       <div class="detail" id="${id}" hidden>${linkify(ev.description).replace(/^(✅[^\n]*)$/m, '<span class="result-line">$1</span>')}</div>
     </div>`;
   }
+  function scrollBelowHeader(el) {
+    const head = document.querySelector("header").getBoundingClientRect().height;
+    window.scrollTo({ top: Math.max(0, el.getBoundingClientRect().top + window.scrollY - head - 8), behavior: "smooth" });
+  }
+  function detailId(uid) { return "d-" + String(uid).replace(/[^a-zA-Z0-9]/g, ""); }
   function bindToggles(root) {
     root.querySelectorAll(".ev > button").forEach((b) => b.addEventListener("click", () => {
       const d = document.getElementById(b.getAttribute("aria-controls"));
@@ -698,18 +703,23 @@
       // 내 종목과 FOMC를 먼저 보여 준다
       const evs = [...(byDay.get(day) || [])].sort((a, b) => rank(a, mine) - rank(b, mine));
       const cls = ["cell", day.slice(0, 7) !== calMonth && "out", day === todayYmd && "today", day === selDay && "sel", i % 7 === 0 && "sun"].filter(Boolean).join(" ");
-      const minis = evs.slice(0, 3).map((ev) => `<span class="mini k-${ev.kind}">${ev.kind !== "fomc" && mine.has(ev.symbol) ? "★" : ""}${esc(ev.kind === "fomc" ? "FOMC" : ev.symbol)}</span>`).join("");
+      const minis = evs.slice(0, 3).map((ev) => `<span class="mini k-${ev.kind}" data-uid="${esc(ev.uid)}">${ev.kind !== "fomc" && mine.has(ev.symbol) ? "★" : ""}${esc(ev.kind === "fomc" ? "FOMC" : ev.symbol)}</span>`).join("");
       const plus = evs.length > 3 ? `<span class="plus">+${evs.length - 3}</span>` : "";
       html += `<button class="${cls}" data-day="${day}" aria-label="${dayLabel(day)} 일정 ${evs.length}건"><span class="num">${parseYmd(day).getUTCDate()}</span>${minis}${plus}</button>`;
     }
     $("#grid").innerHTML = html;
-    $("#grid").querySelectorAll(".cell").forEach((c) => c.addEventListener("click", () => {
+    $("#grid").querySelectorAll(".cell").forEach((c) => c.addEventListener("click", (e) => {
       if (suppressClick) return;
+      const chip = e.target.closest(".mini");
       selDay = c.dataset.day;
       if (selDay.slice(0, 7) !== calMonth) calMonth = selDay.slice(0, 7);
       renderCal();
+      // 달력 아래 그날 일정으로 내려가고, 종목 이름을 눌렀다면 그 종목 설명을 바로 펼친다
+      const target = chip && document.querySelector(`#cal-day [aria-controls="${detailId(chip.dataset.uid)}"]`);
+      if (target) target.click();
+      scrollBelowHeader(target ? target.closest(".ev") : $("#cal-day"));
     }));
-    const evs = byDay.get(selDay) || [];
+    const evs = [...(byDay.get(selDay) || [])].sort((a, b) => rank(a, mine) - rank(b, mine));
     $("#cal-day").innerHTML = `<div class="day"><h2>${dayLabel(selDay)}</h2>${evs.length ? `<div class="card">${evs.map(eventRow).join("")}</div>` : `<div class="empty" style="padding:16px">일정이 없어요.</div>`}</div>`;
     bindToggles($("#cal-day"));
   }
