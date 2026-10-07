@@ -45,6 +45,9 @@ RESULT_LOOKUP_LIMIT = 60    # 한 번 실행에 결과를 따로 찾아보는 �
 NASDAQ_API = "https://api.nasdaq.com/api/calendar/earnings?date={day}"
 NASDAQ_EARNINGS_PAGE = "https://www.nasdaq.com/market-activity/stocks/{symbol}/earnings"
 FOMC_URL = "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+FRED_CSV = "https://fred.stlouisfed.org/graph/fredgraph.csv?id={series}"  # 미국 기준금리(목표 범위) 공식 통계
+FED_BASE = "https://www.federalreserve.gov"
+FEDWATCH_URL = "https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html"
 FX_URLS = [  # 유럽중앙은행(ECB) 기준환율을 제공하는 무료 공개 API (키 필요 없음)
     "https://api.frankfurter.dev/v1/{start}..{end}?base=USD&symbols=KRW",
     "https://api.frankfurter.app/{start}..{end}?from=USD&to=KRW",
@@ -123,6 +126,7 @@ class Item:
     timing: str = ""   # "pre"(장 전), "after"(장 후), ""(미정)
     sector: str = ""   # 한국어 섹터 (웹앱 필터에 사용)
     kst_date: str = "" # 한국시간 기준 날짜(종일 일정을 놓을 날). 비면 us_date
+    note: str = ""        # 목록에 보여 줄 짧은 요약 (FOMC: 현재 금리·위원 전망·결과)
     actual_eps: str = ""  # 발표된 실제 EPS (예: "$5.20")
     surprise: str = ""    # 예상 대비 차이 % (예: "3.8", "-1.2")
 
@@ -634,11 +638,181 @@ def parse_fomc(html: str) -> list[tuple[date, bool]]:
     return sorted(set(meetings))
 
 
-def fomc_item(last_day: date, with_sep: bool) -> Item:
+# ---------------------------------------------------------------- 3-1. 기준금리 · 연준 위원 전망(점도표)
+
+def parse_fred_csv(text: str) -> list[tuple[str, float]]:
+    """FRED CSV(날짜,값)를 [(날짜, 값)]으로. 빈 값('.')은 건너뛴다."""
+    out = []
+    for line in text.strip().splitlines()[1:]:
+        parts = line.split(",")
+        if len(parts) < 2:
+            continue
+        try:
+            out.append((parts[0].strip(), float(parts[1])))
+        except ValueError:
+            continue
+    return out
+
+
+def get_policy_rates() -> list[tuple[str, float, float]]:
+    """[(날짜, 목표 하단, 목표 상단)]. 실패하면 []."""
+    try:
+        lower = dict(parse_fred_csv(http_get(FRED_CSV.format(series="DFEDTARL"), tries=2).text))
+        upper = dict(parse_fred_csv(http_get(FRED_CSV.format(series="DFEDTARU"), tries=2).text))
+        rates = [(d, lower[d], upper[d]) for d in sorted(set(lower) & set(upper))]
+        if rates:
+            print(f"기준금리 목표 범위: {rates[-1][1]:.2f}~{rates[-1][2]:.2f}% ({rates[-1][0]} 기준)")
+        return rates
+    except Exception as err:  # noqa: BLE001
+        warn(f"기준금리(FRED) 조회 실패 → 금리 정보 없이 진행 ({err})")
+        return []
+
+
+def fmt_range(lo: float, hi: float) -> str:
+    return f"{lo:.2f}~{hi:.2f}%"
+
+
+def rate_on(rates: list, day: str, before: bool):
+    """day 직전(before) 또는 직후의 목표 범위."""
+    if before:
+        cands = [r for r in rates if r[0] < day]
+        return cands[-1] if cands else None
+    cands = [r for r in rates if r[0] > day]
+    return cands[0] if cands else None
+
+
+def meeting_result(rates: list, day: str) -> str:
+    """지난 회의의 결정(동결/인하/인상)을 금리 기록으로 판단."""
+    a, b = rate_on(rates, day, True), rate_on(rates, day, False)
+    if not a or not b:
+        return ""
+    diff = round(b[2] - a[2], 2)
+    if abs(diff) < 0.01:
+        return f"동결 ({fmt_range(b[1], b[2])})"
+    return f"{abs(diff):.2f}%p {'인하' if diff < 0 else '인상'} ({fmt_range(a[1], a[2])} → {fmt_range(b[1], b[2])})"
+
+
+def find_sep_links(html: str) -> list[tuple[str, str]]:
+    """연준 일정 페이지에서 경제전망(점도표) 표 주소들. [(YYYYMMDD, 전체 주소)] 최신순."""
+    found = {m.group(1): FED_BASE + m.group(0) for m in
+             re.finditer(r"/monetarypolicy/fomcprojtabl(\d{8})\.htm", html)}
+    return sorted(found.items(), reverse=True)
+
+
+def parse_dotplot(html: str) -> dict:
+    """점도표 표(Figure 2)를 읽는다. 반환: {"years": ["2026", ...], "rows": [(금리, [연도별 인원])]}"""
+    soup = BeautifulSoup(html, "html.parser")
+    for table in soup.find_all("table"):
+        text = table.get_text(" ", strip=True).lower()
+        if "midpoint" not in text:
+            continue
+        trs = table.find_all("tr")
+        header = next((tr for tr in trs if re.search(r"20\d\d", tr.get_text(" ", strip=True))), None)
+        if header is None:
+            continue
+        years = [c.get_text(" ", strip=True) for c in header.find_all(["th", "td"])]
+        years = [y for y in years if re.fullmatch(r"20\d\d|Longer run", y)]
+        rows = []
+        for tr in trs:
+            cells = [c.get_text(" ", strip=True) for c in tr.find_all(["th", "td"])]
+            if not cells:
+                continue
+            try:
+                rate = float(cells[0])
+            except ValueError:
+                continue
+            counts = []
+            for c in cells[1:1 + len(years)]:
+                counts.append(int(c) if c.isdigit() else 0)
+            counts += [0] * (len(years) - len(counts))
+            rows.append((rate, counts))
+        if years and rows:
+            return {"years": years, "rows": rows}
+    raise ValueError("점도표 표를 찾지 못했습니다.")
+
+
+def dot_summary(dots: dict, year: str, midpoint: float | None) -> dict | None:
+    """한 해 말 금리 전망: 인원, 중간값, 지금보다 낮게/같게/높게."""
+    if year not in dots["years"]:
+        return None
+    i = dots["years"].index(year)
+    points = sorted(v for rate, counts in dots["rows"] for v in [rate] * counts[i])
+    if not points:
+        return None
+    n = len(points)
+    median = points[n // 2] if n % 2 else (points[n // 2 - 1] + points[n // 2]) / 2
+    out = {"year": year, "n": n, "median": median}
+    if midpoint is not None:
+        out["lower"] = sum(p < midpoint - 0.01 for p in points)
+        out["same"] = sum(abs(p - midpoint) <= 0.01 for p in points)
+        out["higher"] = sum(p > midpoint + 0.01 for p in points)
+    return out
+
+
+def get_outlook(fomc_html: str, rates: list, today: date) -> dict:
+    """현재 금리 + 최신 점도표 요약. 일부가 실패해도 가능한 것만 담는다."""
+    outlook: dict = {}
+    if rates:
+        d, lo, hi = rates[-1]
+        outlook.update(rate_date=d, lower=lo, upper=hi, midpoint=(lo + hi) / 2)
+    for sep_day, url in find_sep_links(fomc_html)[:1]:
+        try:
+            dots = parse_dotplot(http_get(url).text)
+            mid = outlook.get("midpoint")
+            years = [y for y in dots["years"] if y.isdigit() and int(y) >= today.year]
+            outlook["sep_date"] = f"{sep_day[:4]}-{sep_day[4:6]}-{sep_day[6:]}"
+            outlook["sep_url"] = url
+            outlook["years"] = [s for s in (dot_summary(dots, y, mid) for y in years[:2]) if s]
+            if outlook["years"]:
+                print(f"점도표({outlook['sep_date']}) 읽음: " +
+                      ", ".join(f"{s['year']}년 말 중간값 {s['median']:.3f}%" for s in outlook["years"]))
+        except Exception as err:  # noqa: BLE001
+            warn(f"점도표 읽기 실패 → 링크만 표시 ({err})")
+    return outlook
+
+
+def outlook_lines(outlook: dict) -> list[str]:
+    lines = []
+    if "lower" in outlook:
+        lines.append(f"현재 기준금리(목표 범위): {fmt_range(outlook['lower'], outlook['upper'])} "
+                     f"({outlook['rate_date']} 기준)")
+    years = outlook.get("years") or []
+    if years:
+        y, m, d = outlook["sep_date"].split("-")
+        lines.append(f"📍 연준 위원들의 금리 전망 ({int(y)}년 {int(m)}월 점도표, {years[0]['n']}명)")
+        for s in years:
+            label = "올해" if s is years[0] else "내년"
+            line = f" · {s['year']}년 말({label}) 적정 금리 중간값 {s['median']:.3f}%"
+            if "lower" in s:
+                line += f" — 지금보다 낮게 {s['lower']}명 · 지금 수준 {s['same']}명 · 높게 {s['higher']}명"
+            lines.append(line)
+        lines.append("※ 점도표는 위원 각자가 생각하는 '연말 적정 금리'예요. 이번 회의 한 번의 결정을 예측한 것은 아니에요.")
+    lines.append(f"시장이 보는 이번 회의 확률(CME FedWatch, 영어): {FEDWATCH_URL}")
+    return lines
+
+
+def outlook_note(outlook: dict) -> str:
+    parts = []
+    if "lower" in outlook:
+        parts.append(f"현재 {fmt_range(outlook['lower'], outlook['upper'])}")
+    years = outlook.get("years") or []
+    if years and "lower" in years[0]:
+        s = years[0]
+        parts.append(f"위원 {s['year']}년 말 전망: 인하 {s['lower']} · 동결 {s['same']} · 인상 {s['higher']}명")
+    return " · ".join(parts)
+
+
+def fomc_item(last_day: date, with_sep: bool, outlook: dict | None = None,
+              rates: list | None = None, today: date | None = None) -> Item:
     start = et_to_utc(last_day, FOMC_STATEMENT_ET)
     presser = start + timedelta(minutes=30)
-    lines = [
-        "■ FOMC(미국 연방공개시장위원회) 기준금리 결정",
+    outlook, rates = outlook or {}, rates or []
+    past = today is not None and last_day < today
+    result = meeting_result(rates, last_day.isoformat()) if past else ""
+    lines = ["■ FOMC(미국 연방공개시장위원회) 기준금리 결정"]
+    if result:
+        lines.append(f"✅ 결정: {result}")
+    lines += [
         "섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 금리",
         f"한국시간: {kst_phrase(start)} 성명서 발표 (미 동부 14:00)",
         f"기자회견: {kst_phrase(presser)}부터 (미 동부 14:30)",
@@ -646,6 +820,8 @@ def fomc_item(last_day: date, with_sep: bool) -> Item:
     ]
     if with_sep:
         lines.append("이번 회의에서는 경제전망(SEP)과 점도표도 함께 공개됩니다.")
+    if not past and outlook:
+        lines += ["", *outlook_lines(outlook)]
     lines += [
         "",
         "※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.",
@@ -653,25 +829,32 @@ def fomc_item(last_day: date, with_sep: bool) -> Item:
         "English source (Federal Reserve):",
         FOMC_URL,
     ]
+    if not past and outlook.get("sep_url"):
+        lines += ["점도표 원문(Federal Reserve):", outlook["sep_url"]]
+    note = f"결정: {result}" if result else ("" if past else outlook_note(outlook))
     return Item(
         uid=f"fomc-{last_day.isoformat()}@investment-calendar",
         kind="fomc",
         us_date=last_day.isoformat(),
-        title="🏦 FOMC 금리 결정" + (" (+점도표)" if with_sep else ""),
+        title="🏦 FOMC 금리 결정" + (" (+점도표)" if with_sep else "") + (f" · {result.split(' (')[0]}" if result else ""),
         description="\n".join(lines),
         url=FOMC_URL,
+        note=note,
         start_utc=start.isoformat(),
         minutes=60,
         kst_date=start.astimezone(KST).date().isoformat(),
     )
 
 
-def get_fomc() -> list[Item] | None:
+def get_fomc(today: date) -> list[Item] | None:
     """실패하면 None (→ 이전 데이터 유지)."""
     try:
-        meetings = parse_fomc(http_get(FOMC_URL).text)
+        html = http_get(FOMC_URL).text
+        meetings = parse_fomc(html)
         print(f"FOMC 회의 {len(meetings)}건을 연준 홈페이지에서 가져왔습니다.")
-        return [fomc_item(d, sep) for d, sep in meetings]
+        rates = get_policy_rates()
+        outlook = get_outlook(html, rates, today)
+        return [fomc_item(d, sep, outlook, rates, today) for d, sep in meetings]
     except Exception as err:  # noqa: BLE001
         warn(f"연준 FOMC 페이지 실패 → 이전 데이터 유지 ({err})")
         return None
@@ -792,7 +975,7 @@ def main() -> int:
     else:
         warn("S&P 500 목록이 없어 실적 일정을 건너뜁니다.")
         earnings, fetched, market = [], set(), {}
-    fomc = get_fomc()
+    fomc = get_fomc(today)
     market_all = merge_market(load_json(DOCS_DIR / "market.json", {}), market, today)
     fx = get_fx(today, load_json(DOCS_DIR / "fx.json", {}))
 

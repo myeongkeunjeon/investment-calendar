@@ -3,7 +3,8 @@ name: 투자 캘린더 갱신
 
 on:
   schedule:
-    - cron: "17 22 * * *"   # 매일 한국시간 오전 7:17 (UTC 22:17)
+    - cron: "17 22 * * *"   # 매일 한국시간 오전 7:17 (UTC 22:17) — 새벽(장 후) 발표 결과 반영
+    - cron: "47 14 * * *"   # 매일 한국시간 밤 11:47 (UTC 14:47) — 저녁(장 전) 발표 결과 반영
   workflow_dispatch:         # Actions 화면의 "Run workflow" 버튼으로 바로 실행
   push:
     branches: [main]
