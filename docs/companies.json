@@ -3,606 +3,707 @@
     "symbol": "AMZN",
     "name": "Amazon",
     "sector": "경기소비재",
-    "theme": "전자상거래, 클라우드(AWS)"
+    "theme": "전자상거래, 클라우드(AWS)",
+    "ko": "아마존"
   },
   {
     "symbol": "BKNG",
     "name": "Booking Holdings",
     "sector": "경기소비재",
-    "theme": "온라인 여행 예약"
+    "theme": "온라인 여행 예약",
+    "ko": "부킹 홀딩스"
   },
   {
     "symbol": "GM",
     "name": "General Motors",
     "sector": "경기소비재",
-    "theme": "자동차"
+    "theme": "자동차",
+    "ko": "제너럴 모터스 GM"
   },
   {
     "symbol": "HD",
     "name": "Home Depot",
     "sector": "경기소비재",
-    "theme": "주택 개량 용품 유통"
+    "theme": "주택 개량 용품 유통",
+    "ko": "홈디포"
   },
   {
     "symbol": "LOW",
     "name": "Lowe's",
     "sector": "경기소비재",
-    "theme": "주택 개량 용품 유통"
+    "theme": "주택 개량 용품 유통",
+    "ko": "로우스"
   },
   {
     "symbol": "MCD",
     "name": "McDonald's",
     "sector": "경기소비재",
-    "theme": "외식(패스트푸드)"
+    "theme": "외식(패스트푸드)",
+    "ko": "맥도날드"
   },
   {
     "symbol": "SBUX",
     "name": "Starbucks",
     "sector": "경기소비재",
-    "theme": "커피 전문점"
+    "theme": "커피 전문점",
+    "ko": "스타벅스"
   },
   {
     "symbol": "TSLA",
     "name": "Tesla, Inc.",
     "sector": "경기소비재",
-    "theme": "전기차, 에너지 저장, 자율주행"
+    "theme": "전기차, 에너지 저장, 자율주행",
+    "ko": "테슬라"
   },
   {
     "symbol": "AXP",
     "name": "American Express",
     "sector": "금융",
-    "theme": "신용카드·결제"
+    "theme": "신용카드·결제",
+    "ko": "아메리칸 익스프레스"
   },
   {
     "symbol": "BAC",
     "name": "Bank of America",
     "sector": "금융",
-    "theme": "대형 은행"
+    "theme": "대형 은행",
+    "ko": "뱅크오브아메리카"
   },
   {
     "symbol": "BLK",
     "name": "BlackRock",
     "sector": "금융",
-    "theme": "자산운용(ETF 아이셰어즈)"
+    "theme": "자산운용(ETF 아이셰어즈)",
+    "ko": "블랙록"
   },
   {
     "symbol": "BNY",
     "name": "BNY Mellon",
     "sector": "금융",
-    "theme": ""
+    "theme": "",
+    "ko": "BNY 멜론"
   },
   {
     "symbol": "BRK.B",
     "name": "Berkshire Hathaway (Class B)",
     "sector": "금융",
-    "theme": "버크셔 해서웨이 지주회사(보험·철도·투자)"
+    "theme": "버크셔 해서웨이 지주회사(보험·철도·투자)",
+    "ko": "버크셔 해서웨이"
   },
   {
     "symbol": "C",
     "name": "Citigroup",
     "sector": "금융",
-    "theme": "대형 은행, 글로벌 금융"
+    "theme": "대형 은행, 글로벌 금융",
+    "ko": "씨티그룹"
   },
   {
     "symbol": "COF",
     "name": "Capital One",
     "sector": "금융",
-    "theme": ""
+    "theme": "",
+    "ko": "캐피털 원"
   },
   {
     "symbol": "GS",
     "name": "Goldman Sachs",
     "sector": "금융",
-    "theme": "투자은행·자산운용"
+    "theme": "투자은행·자산운용",
+    "ko": "골드만삭스"
   },
   {
     "symbol": "JPM",
     "name": "JPMorgan Chase",
     "sector": "금융",
-    "theme": "미국 최대 은행, 투자은행"
+    "theme": "미국 최대 은행, 투자은행",
+    "ko": "JP모건 체이스"
   },
   {
     "symbol": "MA",
     "name": "Mastercard",
     "sector": "금융",
-    "theme": "카드 결제 네트워크"
+    "theme": "카드 결제 네트워크",
+    "ko": "마스터카드"
   },
   {
     "symbol": "MS",
     "name": "Morgan Stanley",
     "sector": "금융",
-    "theme": "투자은행·자산관리"
+    "theme": "투자은행·자산관리",
+    "ko": "모건 스탠리"
   },
   {
     "symbol": "SCHW",
     "name": "Charles Schwab Corporation",
     "sector": "금융",
-    "theme": "증권 중개·자산관리"
+    "theme": "증권 중개·자산관리",
+    "ko": "찰스 슈왑"
   },
   {
     "symbol": "USB",
     "name": "U.S. Bancorp",
     "sector": "금융",
-    "theme": ""
+    "theme": "",
+    "ko": "US 뱅코프"
   },
   {
     "symbol": "V",
     "name": "Visa Inc.",
     "sector": "금융",
-    "theme": "카드 결제 네트워크"
+    "theme": "카드 결제 네트워크",
+    "ko": "비자"
   },
   {
     "symbol": "WFC",
     "name": "Wells Fargo",
     "sector": "금융",
-    "theme": "대형 은행"
+    "theme": "대형 은행",
+    "ko": "웰스파고"
   },
   {
     "symbol": "AMT",
     "name": "American Tower",
     "sector": "부동산",
-    "theme": "통신 기지국 리츠(부동산)"
+    "theme": "통신 기지국 리츠(부동산)",
+    "ko": "아메리칸 타워"
   },
   {
     "symbol": "BA",
     "name": "Boeing",
     "sector": "산업재",
-    "theme": "항공기 제조"
+    "theme": "항공기 제조",
+    "ko": "보잉"
   },
   {
     "symbol": "CAT",
     "name": "Caterpillar Inc.",
     "sector": "산업재",
-    "theme": "건설·광산 장비"
+    "theme": "건설·광산 장비",
+    "ko": "캐터필러"
   },
   {
     "symbol": "DE",
     "name": "Deere & Company",
     "sector": "산업재",
-    "theme": "농기계"
+    "theme": "농기계",
+    "ko": "디어 앤 컴퍼니 존디어"
   },
   {
     "symbol": "EMR",
     "name": "Emerson Electric",
     "sector": "산업재",
-    "theme": ""
+    "theme": "",
+    "ko": "에머슨 일렉트릭"
   },
   {
     "symbol": "FDX",
     "name": "FedEx",
     "sector": "산업재",
-    "theme": "택배·물류"
+    "theme": "택배·물류",
+    "ko": "페덱스"
   },
   {
     "symbol": "GD",
     "name": "General Dynamics",
     "sector": "산업재",
-    "theme": "방산(잠수함·장갑차), 비즈니스 제트기"
+    "theme": "방산(잠수함·장갑차), 비즈니스 제트기",
+    "ko": "제너럴 다이내믹스"
   },
   {
     "symbol": "GE",
     "name": "GE Aerospace",
     "sector": "산업재",
-    "theme": "항공기 엔진"
+    "theme": "항공기 엔진",
+    "ko": "GE 에어로스페이스"
   },
   {
     "symbol": "GEV",
     "name": "GE Vernova",
     "sector": "산업재",
-    "theme": ""
+    "theme": "",
+    "ko": "GE 버노바"
   },
   {
     "symbol": "LMT",
     "name": "Lockheed Martin",
     "sector": "산업재",
-    "theme": "방산(전투기·미사일)"
+    "theme": "방산(전투기·미사일)",
+    "ko": "록히드 마틴"
   },
   {
     "symbol": "MMM",
     "name": "3M",
     "sector": "산업재",
-    "theme": ""
+    "theme": "",
+    "ko": "3M 쓰리엠"
   },
   {
     "symbol": "RTX",
     "name": "RTX Corporation",
     "sector": "산업재",
-    "theme": "방산·항공 엔진"
+    "theme": "방산·항공 엔진",
+    "ko": "RTX 레이시온"
   },
   {
     "symbol": "UBER",
     "name": "Uber",
     "sector": "산업재",
-    "theme": "차량 호출, 음식 배달"
+    "theme": "차량 호출, 음식 배달",
+    "ko": "우버"
   },
   {
     "symbol": "UNP",
     "name": "Union Pacific Corporation",
     "sector": "산업재",
-    "theme": "철도 운송"
+    "theme": "철도 운송",
+    "ko": "유니언 퍼시픽"
   },
   {
     "symbol": "UPS",
     "name": "United Parcel Service",
     "sector": "산업재",
-    "theme": "택배·물류"
+    "theme": "택배·물류",
+    "ko": "UPS 유피에스"
   },
   {
     "symbol": "LIN",
     "name": "Linde plc",
     "sector": "소재",
-    "theme": "산업용 가스"
+    "theme": "산업용 가스",
+    "ko": "린데"
   },
   {
     "symbol": "COP",
     "name": "ConocoPhillips",
     "sector": "에너지",
-    "theme": "석유·가스 생산"
+    "theme": "석유·가스 생산",
+    "ko": "코노코필립스"
   },
   {
     "symbol": "CVX",
     "name": "Chevron Corporation",
     "sector": "에너지",
-    "theme": "석유·가스"
+    "theme": "석유·가스",
+    "ko": "셰브론"
   },
   {
     "symbol": "XOM",
     "name": "ExxonMobil",
     "sector": "에너지",
-    "theme": "석유·가스"
+    "theme": "석유·가스",
+    "ko": "엑슨모빌"
   },
   {
     "symbol": "DUK",
     "name": "Duke Energy",
     "sector": "유틸리티",
-    "theme": "전력"
+    "theme": "전력",
+    "ko": "듀크 에너지"
   },
   {
     "symbol": "NEE",
     "name": "NextEra Energy",
     "sector": "유틸리티",
-    "theme": "전력·신재생 에너지"
+    "theme": "전력·신재생 에너지",
+    "ko": "넥스트에라 에너지"
   },
   {
     "symbol": "SO",
     "name": "Southern Company",
     "sector": "유틸리티",
-    "theme": "전력"
+    "theme": "전력",
+    "ko": "서던 컴퍼니"
   },
   {
     "symbol": "AAPL",
     "name": "Apple Inc.",
     "sector": "정보기술",
-    "theme": "아이폰·맥·앱스토어 등 서비스"
+    "theme": "아이폰·맥·앱스토어 등 서비스",
+    "ko": "애플"
   },
   {
     "symbol": "ACN",
     "name": "Accenture",
     "sector": "정보기술",
-    "theme": "IT 컨설팅·아웃소싱"
+    "theme": "IT 컨설팅·아웃소싱",
+    "ko": "액센츄어"
   },
   {
     "symbol": "ADBE",
     "name": "Adobe Inc.",
     "sector": "정보기술",
-    "theme": "포토샵 등 창작 소프트웨어, 생성형 AI"
+    "theme": "포토샵 등 창작 소프트웨어, 생성형 AI",
+    "ko": "어도비"
   },
   {
     "symbol": "AMAT",
     "name": "Applied Materials",
     "sector": "정보기술",
-    "theme": ""
+    "theme": "",
+    "ko": "어플라이드 머티리얼즈"
   },
   {
     "symbol": "AMD",
     "name": "Advanced Micro Devices",
     "sector": "정보기술",
-    "theme": "반도체(CPU·GPU), AI 가속기"
+    "theme": "반도체(CPU·GPU), AI 가속기",
+    "ko": "AMD 에이엠디"
   },
   {
     "symbol": "ANET",
     "name": "Arista Networks",
     "sector": "정보기술",
-    "theme": ""
+    "theme": "",
+    "ko": "아리스타 네트웍스"
   },
   {
     "symbol": "AVGO",
     "name": "Broadcom",
     "sector": "정보기술",
-    "theme": "AI 맞춤형 반도체·네트워크 칩, 소프트웨어"
+    "theme": "AI 맞춤형 반도체·네트워크 칩, 소프트웨어",
+    "ko": "브로드컴"
   },
   {
     "symbol": "CRM",
     "name": "Salesforce",
     "sector": "정보기술",
-    "theme": "기업용 클라우드 소프트웨어(CRM)"
+    "theme": "기업용 클라우드 소프트웨어(CRM)",
+    "ko": "세일즈포스"
   },
   {
     "symbol": "CSCO",
     "name": "Cisco",
     "sector": "정보기술",
-    "theme": "네트워크 장비, 보안"
+    "theme": "네트워크 장비, 보안",
+    "ko": "시스코"
   },
   {
     "symbol": "DELL",
     "name": "Dell Technologies",
     "sector": "정보기술",
-    "theme": ""
+    "theme": "",
+    "ko": "델 테크놀로지스"
   },
   {
     "symbol": "IBM",
     "name": "IBM",
     "sector": "정보기술",
-    "theme": "기업 IT 서비스, 하이브리드 클라우드·AI"
+    "theme": "기업 IT 서비스, 하이브리드 클라우드·AI",
+    "ko": "IBM 아이비엠"
   },
   {
     "symbol": "INTC",
     "name": "Intel",
     "sector": "정보기술",
-    "theme": "반도체(CPU), 파운드리(위탁생산)"
+    "theme": "반도체(CPU), 파운드리(위탁생산)",
+    "ko": "인텔"
   },
   {
     "symbol": "INTU",
     "name": "Intuit",
     "sector": "정보기술",
-    "theme": ""
+    "theme": "",
+    "ko": "인튜이트"
   },
   {
     "symbol": "LRCX",
     "name": "Lam Research",
     "sector": "정보기술",
-    "theme": ""
+    "theme": "",
+    "ko": "램리서치"
   },
   {
     "symbol": "MSFT",
     "name": "Microsoft",
     "sector": "정보기술",
-    "theme": "윈도우·오피스, 클라우드(Azure)·AI"
+    "theme": "윈도우·오피스, 클라우드(Azure)·AI",
+    "ko": "마이크로소프트"
   },
   {
     "symbol": "MU",
     "name": "Micron Technology",
     "sector": "정보기술",
-    "theme": "메모리 반도체(D램·HBM·낸드)"
+    "theme": "메모리 반도체(D램·HBM·낸드)",
+    "ko": "마이크론"
   },
   {
     "symbol": "NOW",
     "name": "ServiceNow",
     "sector": "정보기술",
-    "theme": ""
+    "theme": "",
+    "ko": "서비스나우"
   },
   {
     "symbol": "NVDA",
     "name": "Nvidia",
     "sector": "정보기술",
-    "theme": "AI 반도체(GPU)·데이터센터"
+    "theme": "AI 반도체(GPU)·데이터센터",
+    "ko": "엔비디아"
   },
   {
     "symbol": "ORCL",
     "name": "Oracle Corporation",
     "sector": "정보기술",
-    "theme": "데이터베이스, 클라우드 인프라"
+    "theme": "데이터베이스, 클라우드 인프라",
+    "ko": "오라클"
   },
   {
     "symbol": "PANW",
     "name": "Palo Alto Networks",
     "sector": "정보기술",
-    "theme": ""
+    "theme": "",
+    "ko": "팔로알토 네트웍스"
   },
   {
     "symbol": "PLTR",
     "name": "Palantir Technologies",
     "sector": "정보기술",
-    "theme": "데이터 분석·AI 소프트웨어(정부·기업)"
+    "theme": "데이터 분석·AI 소프트웨어(정부·기업)",
+    "ko": "팔란티어"
   },
   {
     "symbol": "QCOM",
     "name": "Qualcomm",
     "sector": "정보기술",
-    "theme": "스마트폰용 반도체(스냅드래곤)"
+    "theme": "스마트폰용 반도체(스냅드래곤)",
+    "ko": "퀄컴"
   },
   {
     "symbol": "SNDK",
     "name": "Sandisk",
     "sector": "정보기술",
-    "theme": ""
+    "theme": "",
+    "ko": "샌디스크"
   },
   {
     "symbol": "TXN",
     "name": "Texas Instruments",
     "sector": "정보기술",
-    "theme": "아날로그·임베디드 반도체"
+    "theme": "아날로그·임베디드 반도체",
+    "ko": "텍사스 인스트루먼트"
   },
   {
     "symbol": "CMCSA",
     "name": "Comcast",
     "sector": "커뮤니케이션 서비스",
-    "theme": "케이블·인터넷, 미디어(NBC유니버설)"
+    "theme": "케이블·인터넷, 미디어(NBC유니버설)",
+    "ko": "컴캐스트"
   },
   {
     "symbol": "DIS",
     "name": "Walt Disney Company (The)",
     "sector": "커뮤니케이션 서비스",
-    "theme": "미디어·스트리밍(디즈니+), 테마파크"
+    "theme": "미디어·스트리밍(디즈니+), 테마파크",
+    "ko": "디즈니"
   },
   {
     "symbol": "GOOG",
     "name": "Alphabet Inc. (Class C)",
     "sector": "커뮤니케이션 서비스",
-    "theme": "검색·유튜브 광고, 클라우드, AI"
+    "theme": "검색·유튜브 광고, 클라우드, AI",
+    "ko": "알파벳 구글"
   },
   {
     "symbol": "GOOGL",
     "name": "Alphabet Inc. (Class A)",
     "sector": "커뮤니케이션 서비스",
-    "theme": "검색·유튜브 광고, 클라우드, AI"
+    "theme": "검색·유튜브 광고, 클라우드, AI",
+    "ko": "알파벳 구글"
   },
   {
     "symbol": "META",
     "name": "Meta Platforms",
     "sector": "커뮤니케이션 서비스",
-    "theme": "페이스북·인스타그램 광고, AI"
+    "theme": "페이스북·인스타그램 광고, AI",
+    "ko": "메타 페이스북"
   },
   {
     "symbol": "NFLX",
     "name": "Netflix, Inc.",
     "sector": "커뮤니케이션 서비스",
-    "theme": "동영상 스트리밍"
+    "theme": "동영상 스트리밍",
+    "ko": "넷플릭스"
   },
   {
     "symbol": "T",
     "name": "AT&T",
     "sector": "커뮤니케이션 서비스",
-    "theme": "미국 통신(무선·유선)"
+    "theme": "미국 통신(무선·유선)",
+    "ko": "AT&T"
   },
   {
     "symbol": "TMUS",
     "name": "T-Mobile US",
     "sector": "커뮤니케이션 서비스",
-    "theme": "미국 통신(무선)"
+    "theme": "미국 통신(무선)",
+    "ko": "T-모바일"
   },
   {
     "symbol": "VZ",
     "name": "Verizon",
     "sector": "커뮤니케이션 서비스",
-    "theme": "미국 통신(무선·유선)"
+    "theme": "미국 통신(무선·유선)",
+    "ko": "버라이즌"
   },
   {
     "symbol": "COST",
     "name": "Costco",
     "sector": "필수소비재",
-    "theme": "회원제 창고형 유통"
+    "theme": "회원제 창고형 유통",
+    "ko": "코스트코"
   },
   {
     "symbol": "KO",
     "name": "Coca-Cola Company (The)",
     "sector": "필수소비재",
-    "theme": "음료"
+    "theme": "음료",
+    "ko": "코카콜라"
   },
   {
     "symbol": "MDLZ",
     "name": "Mondelēz International",
     "sector": "필수소비재",
-    "theme": ""
+    "theme": "",
+    "ko": "몬델리즈"
   },
   {
     "symbol": "MO",
     "name": "Altria",
     "sector": "필수소비재",
-    "theme": ""
+    "theme": "",
+    "ko": "알트리아"
   },
   {
     "symbol": "PEP",
     "name": "PepsiCo",
     "sector": "필수소비재",
-    "theme": "음료·스낵"
+    "theme": "음료·스낵",
+    "ko": "펩시코"
   },
   {
     "symbol": "PG",
     "name": "Procter & Gamble",
     "sector": "필수소비재",
-    "theme": "생활용품"
+    "theme": "생활용품",
+    "ko": "프록터앤드갬블 P&G"
   },
   {
     "symbol": "PM",
     "name": "Philip Morris International",
     "sector": "필수소비재",
-    "theme": ""
+    "theme": "",
+    "ko": "필립모리스"
   },
   {
     "symbol": "WMT",
     "name": "Walmart",
     "sector": "필수소비재",
-    "theme": "대형 할인 유통"
+    "theme": "대형 할인 유통",
+    "ko": "월마트"
   },
   {
     "symbol": "ABBV",
     "name": "AbbVie",
     "sector": "헬스케어",
-    "theme": "제약(면역질환 치료제)"
+    "theme": "제약(면역질환 치료제)",
+    "ko": "애브비"
   },
   {
     "symbol": "ABT",
     "name": "Abbott Laboratories",
     "sector": "헬스케어",
-    "theme": "의료기기·진단"
+    "theme": "의료기기·진단",
+    "ko": "애보트 래버러토리스"
   },
   {
     "symbol": "AMGN",
     "name": "Amgen",
     "sector": "헬스케어",
-    "theme": "바이오 의약품"
+    "theme": "바이오 의약품",
+    "ko": "암젠"
   },
   {
     "symbol": "BMY",
     "name": "Bristol Myers Squibb",
     "sector": "헬스케어",
-    "theme": ""
+    "theme": "",
+    "ko": "브리스톨 마이어스 스퀴브"
   },
   {
     "symbol": "CVS",
     "name": "CVS Health",
     "sector": "헬스케어",
-    "theme": "약국 체인, 건강보험"
+    "theme": "약국 체인, 건강보험",
+    "ko": "CVS 헬스"
   },
   {
     "symbol": "DHR",
     "name": "Danaher Corporation",
     "sector": "헬스케어",
-    "theme": ""
+    "theme": "",
+    "ko": "다나허"
   },
   {
     "symbol": "GILD",
     "name": "Gilead Sciences",
     "sector": "헬스케어",
-    "theme": "바이오 의약품(항바이러스)"
+    "theme": "바이오 의약품(항바이러스)",
+    "ko": "길리어드 사이언스"
   },
   {
     "symbol": "ISRG",
     "name": "Intuitive Surgical",
     "sector": "헬스케어",
-    "theme": "수술 로봇"
+    "theme": "수술 로봇",
+    "ko": "인튜이티브 서지컬"
   },
   {
     "symbol": "JNJ",
     "name": "Johnson & Johnson",
     "sector": "헬스케어",
-    "theme": "제약, 의료기기"
+    "theme": "제약, 의료기기",
+    "ko": "존슨앤드존슨"
   },
   {
     "symbol": "LLY",
     "name": "Eli Lilly and Company",
     "sector": "헬스케어",
-    "theme": "비만·당뇨 치료제, 제약"
+    "theme": "비만·당뇨 치료제, 제약",
+    "ko": "일라이 릴리"
   },
   {
     "symbol": "MDT",
     "name": "Medtronic",
     "sector": "헬스케어",
-    "theme": "의료기기"
+    "theme": "의료기기",
+    "ko": "메드트로닉"
   },
   {
     "symbol": "MRK",
     "name": "Merck & Co.",
     "sector": "헬스케어",
-    "theme": "제약(면역항암제)"
+    "theme": "제약(면역항암제)",
+    "ko": "머크"
   },
   {
     "symbol": "PFE",
     "name": "Pfizer",
     "sector": "헬스케어",
-    "theme": "제약, 백신"
+    "theme": "제약, 백신",
+    "ko": "화이자"
   },
   {
     "symbol": "TMO",
     "name": "Thermo Fisher Scientific",
     "sector": "헬스케어",
-    "theme": "연구장비·진단"
+    "theme": "연구장비·진단",
+    "ko": "써모피셔 사이언티픽"
   },
   {
     "symbol": "UNH",
     "name": "UnitedHealth Group",
     "sector": "헬스케어",
-    "theme": "건강보험, 의료 서비스"
+    "theme": "건강보험, 의료 서비스",
+    "ko": "유나이티드헬스"
   }
 ]
