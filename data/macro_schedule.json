@@ -1,0 +1,130 @@
+{
+  "releases": {
+    "macro-pce-2026-09-x-2026-10-29": {
+      "key": "pce",
+      "period": "2026-09",
+      "stage": "",
+      "utc": "2026-10-29T12:30:00+00:00",
+      "title_en": "Personal Income and Outlays, September 2026"
+    },
+    "macro-gdp-2026-Q3-속보치-2026-10-29": {
+      "key": "gdp",
+      "period": "2026-Q3",
+      "stage": "속보치",
+      "utc": "2026-10-29T12:30:00+00:00",
+      "title_en": "GDP (Advance Estimate), 3rd Quarter 2026"
+    },
+    "macro-pce-2026-10-x-2026-11-25": {
+      "key": "pce",
+      "period": "2026-10",
+      "stage": "",
+      "utc": "2026-11-25T13:30:00+00:00",
+      "title_en": "Personal Income and Outlays, October 2026"
+    },
+    "macro-gdp-2026-Q3-잠정치-2026-11-25": {
+      "key": "gdp",
+      "period": "2026-Q3",
+      "stage": "잠정치",
+      "utc": "2026-11-25T13:30:00+00:00",
+      "title_en": "GDP (Second Estimate) and Corporate Profits, 3rd Quarter 2026"
+    },
+    "macro-retail-2026-11-x-2026-12-20": {
+      "key": "retail",
+      "period": "2026-11",
+      "stage": "",
+      "utc": "2026-12-20T13:30:00+00:00",
+      "title_en": "Advance Monthly Sales for Retail and Food Services January 15, 2027"
+    },
+    "macro-pce-2026-11-x-2026-12-23": {
+      "key": "pce",
+      "period": "2026-11",
+      "stage": "",
+      "utc": "2026-12-23T13:30:00+00:00",
+      "title_en": "Personal Income and Outlays, November 2026"
+    },
+    "macro-gdp-2026-Q3-x-2026-12-23": {
+      "key": "gdp",
+      "period": "2026-Q3",
+      "stage": "",
+      "utc": "2026-12-23T13:30:00+00:00",
+      "title_en": "GDP, and State Personal Income, 3rd Quarter 2026"
+    },
+    "macro-retail-2026-12-x-2027-01-20": {
+      "key": "retail",
+      "period": "2026-12",
+      "stage": "",
+      "utc": "2027-01-20T13:30:00+00:00",
+      "title_en": "Advance Monthly Sales for Retail and Food Services February 17, 2027"
+    },
+    "macro-retail-2027-01-x-2027-02-20": {
+      "key": "retail",
+      "period": "2027-01",
+      "stage": "",
+      "utc": "2027-02-20T13:30:00+00:00",
+      "title_en": "Advance Monthly Sales for Retail and Food Services March 16, 2027"
+    },
+    "macro-retail-2027-02-x-2027-03-20": {
+      "key": "retail",
+      "period": "2027-02",
+      "stage": "",
+      "utc": "2027-03-20T12:30:00+00:00",
+      "title_en": "Advance Monthly Sales for Retail and Food Services April 16, 2027"
+    },
+    "macro-retail-2027-03-x-2027-04-20": {
+      "key": "retail",
+      "period": "2027-03",
+      "stage": "",
+      "utc": "2027-04-20T12:30:00+00:00",
+      "title_en": "Advance Monthly Sales for Retail and Food Services May 14, 2027"
+    },
+    "macro-retail-2027-04-x-2027-05-20": {
+      "key": "retail",
+      "period": "2027-04",
+      "stage": "",
+      "utc": "2027-05-20T12:30:00+00:00",
+      "title_en": "Advance Monthly Sales for Retail and Food Services June 16, 2027"
+    },
+    "macro-retail-2027-05-x-2027-06-20": {
+      "key": "retail",
+      "period": "2027-05",
+      "stage": "",
+      "utc": "2027-06-20T12:30:00+00:00",
+      "title_en": "Advance Monthly Sales for Retail and Food Services July 16, 2027"
+    },
+    "macro-retail-2027-06-x-2027-07-20": {
+      "key": "retail",
+      "period": "2027-06",
+      "stage": "",
+      "utc": "2027-07-20T12:30:00+00:00",
+      "title_en": "Advance Monthly Sales for Retail and Food Services August 16, 2027"
+    },
+    "macro-retail-2027-07-x-2027-08-20": {
+      "key": "retail",
+      "period": "2027-07",
+      "stage": "",
+      "utc": "2027-08-20T12:30:00+00:00",
+      "title_en": "Advance Monthly Sales for Retail and Food Services September 16, 2027"
+    },
+    "macro-retail-2027-08-x-2027-09-20": {
+      "key": "retail",
+      "period": "2027-08",
+      "stage": "",
+      "utc": "2027-09-20T12:30:00+00:00",
+      "title_en": "Advance Monthly Sales for Retail and Food Services October 15, 2027"
+    },
+    "macro-retail-2027-09-x-2027-10-20": {
+      "key": "retail",
+      "period": "2027-09",
+      "stage": "",
+      "utc": "2027-10-20T12:30:00+00:00",
+      "title_en": "Advance Monthly Sales for Retail and Food Services November 16, 2027"
+    },
+    "macro-retail-2027-10-x-2027-11-20": {
+      "key": "retail",
+      "period": "2027-10",
+      "stage": "",
+      "utc": "2027-11-20T13:30:00+00:00",
+      "title_en": "Advance Monthly Sales for Retail and Food Services December 15, 2027"
+    }
+  }
+}
