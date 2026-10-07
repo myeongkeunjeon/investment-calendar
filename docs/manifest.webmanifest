@@ -1,0 +1,16 @@
+{
+  "name": "투자 캘린더",
+  "short_name": "투자캘린더",
+  "description": "S&P 100 실적 발표와 FOMC 일정을 한국시간으로 보는 투자 전용 캘린더",
+  "lang": "ko",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f5f1",
+  "theme_color": "#1d3f8f",
+  "icons": [
+    { "src": "icon-180.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

@@ -60,6 +60,50 @@ class TestSources(unittest.TestCase):
         self.assertIn("점도표", dec.title)
 
 
+class TestEstimates(unittest.TestCase):
+    def test_estimates_follow_latest_known_date(self):
+        members = [{"symbol": "AAPL", "name": "Apple Inc.", "sector": "Information Technology"},
+                   {"symbol": "JPM", "name": "JPMorgan Chase", "sector": "Financials"}]
+        today = date(2026, 10, 7)
+        known = [
+            # AAPL: 지난 7월 발표만 알려짐(10월 날짜 미확정) → 10월 말부터 예상
+            bc.Item("earnings-AAPL-2026-07-30@x", "earnings", "2026-07-30", "t", "d", "u",
+                    symbol="AAPL", timing="after"),
+            # JPM: 지난 발표 + 확정된 다음 발표 → 확정일 이후부터 예상
+            bc.Item("earnings-JPM-2026-07-14@x", "earnings", "2026-07-14", "t", "d", "u",
+                    symbol="JPM", timing="pre"),
+            bc.Item("earnings-JPM-2026-10-13@x", "earnings", "2026-10-13", "t", "d", "u",
+                    symbol="JPM", timing="pre"),
+            bc.Item("fomc-2026-10-28@x", "fomc", "2026-10-28", "t", "d", "u"),
+        ]
+        out = bc.estimate_items(known, members, THEMES, today)
+        dates = {(i.symbol, i.us_date) for i in out}
+        self.assertEqual(dates, {
+            ("AAPL", "2026-10-29"), ("AAPL", "2027-01-28"),
+            ("JPM", "2027-01-12"),
+        })  # 4월 날짜는 6개월(2027-04-08) 밖이라 빠진다
+        # 13주 간격이라 요일이 유지된다 (AAPL 7/30 목요일 → 목요일)
+        self.assertTrue(all(date.fromisoformat(i.us_date).weekday() == 3 for i in out if i.symbol == "AAPL"))
+        jan = next(i for i in out if i.us_date == "2027-01-12")
+        self.assertIn("아직 확정 아님", jan.description)
+        self.assertIn("장 시작 전", jan.description)
+        self.assertIn("예상일", jan.title)
+
+    def test_old_estimates_are_dropped_on_merge(self):
+        old = bc.Item("estimate-AAPL-2026-10-29@x", "estimate", "2026-10-29", "t", "d", "u")
+        self.assertEqual(bc.merge([old], [], set(), None, date(2026, 10, 7)), [])
+
+
+class TestCompanies(unittest.TestCase):
+    def test_company_list_for_web_app(self):
+        members = [{"symbol": "JPM", "name": "JPMorgan Chase", "sector": "Financials"},
+                   {"symbol": "AAPL", "name": "Apple Inc.", "sector": "Information Technology"}]
+        out = bc.companies(members, THEMES)
+        self.assertEqual(out[0], {"symbol": "JPM", "name": "JPMorgan Chase", "sector": "금융",
+                                  "theme": "미국 최대 은행, 투자은행"})
+        self.assertEqual(out[1]["theme"], "")
+
+
 class TestMergeAndIcs(unittest.TestCase):
     def test_merge_replaces_refetched_days_and_keeps_others(self):
         today = date(2026, 10, 7)

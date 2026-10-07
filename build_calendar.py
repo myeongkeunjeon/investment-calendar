@@ -2,8 +2,9 @@
 
 하는 일:
   1. 위키백과에서 S&P 100 구성종목 목록(티커·회사명·섹터)을 가져온다.
-  2. 나스닥 실적 캘린더 API에서 앞으로 N일간의 실적 발표 일정을 가져와
-     S&P 100 종목만 고른다.
+  2. 나스닥 실적 캘린더 API에서 지난 100일~앞으로 90일의 실적 발표 일정을 가져와
+     S&P 100 종목만 고른다. 아직 확정되지 않은 다음 분기는 13주 간격으로
+     '예상일'을 계산해 약 6개월 앞까지 채운다.
   3. 연준(Fed) 홈페이지에서 FOMC 회의 일정을 가져온다.
   4. 한국어 설명(테마/섹터, 한국시간 발표 시점)과 영어 원문 링크를 붙여
      docs/calendar.ics 로 저장한다.
@@ -40,7 +41,10 @@ FOMC_URL = "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
 ET = ZoneInfo("America/New_York")
 KST = ZoneInfo("Asia/Seoul")
 
-DAYS_AHEAD = 60        # 오늘부터 며칠 뒤까지 실적 일정을 조회할지
+DAYS_AHEAD = 90        # 오늘부터 며칠 뒤까지 나스닥에서 확정 실적 일정을 조회할지
+DAYS_BACK = 100        # 직전 분기 발표일을 알기 위해 며칠 전까지 거꾸로 조회할지
+ESTIMATE_DAYS = 183    # 확정 전 '예상일'을 오늘부터 며칠 뒤(약 6개월)까지 보여 줄지
+QUARTER_DAYS = 91      # 분기 간격 13주. 7의 배수라 요일이 그대로 유지된다
 KEEP_PAST_DAYS = 120   # 지난 일정을 며칠까지 캘린더에 남겨 둘지
 
 # 실적 발표 시각은 나스닥이 "장 전/장 후"로만 알려 준다. 아래는 흔한 시각을 쓴 추정값이다.
@@ -93,13 +97,16 @@ class Item:
     """캘린더에 들어갈 일정 하나."""
 
     uid: str
-    kind: str          # "earnings" 또는 "fomc"
+    kind: str          # "earnings"(확정 실적), "estimate"(실적 예상일), "fomc"
     us_date: str       # 미국 현지 날짜(YYYY-MM-DD)
     title: str
     description: str
     url: str
     start_utc: str | None = None  # 시각이 정해진 일정이면 UTC 시각(ISO), 아니면 종일 일정
     minutes: int = 30
+    symbol: str = ""   # 실적 일정의 티커 (예상일 계산에 사용)
+    timing: str = ""   # "pre"(장 전), "after"(장 후), ""(미정)
+    sector: str = ""   # 한국어 섹터 (웹앱 필터에 사용)
 
 
 # ---------------------------------------------------------------- 공통 도구
@@ -206,15 +213,18 @@ def earnings_item(row: dict, member: dict, us_day: date, themes: dict) -> Item:
         when_label = "장 시작 전"
         when = f"{kst_phrase(start)}경 (미 동부 07:00경 추정, 미국 {when_label})"
         title_tag = "장전"
+        timing_code = "pre"
     elif "after" in timing:
         start = et_to_utc(us_day, AFTER_HOURS_ET)
         when_label = "장 마감 후"
         when = f"{kst_phrase(start)}경 (미 동부 16:05경 추정, 미국 {when_label})"
         title_tag = "장후"
+        timing_code = "after"
     else:
         start = None
         when = "발표 시각 미정 (회사가 아직 시각을 알리지 않음)"
         title_tag = "시각 미정"
+        timing_code = ""
 
     lines = [
         f"■ {name} ({symbol}) 실적 발표",
@@ -249,6 +259,9 @@ def earnings_item(row: dict, member: dict, us_day: date, themes: dict) -> Item:
         url=url,
         start_utc=start.isoformat() if start else None,
         minutes=30,
+        symbol=symbol,
+        timing=timing_code,
+        sector=sector,
     )
 
 
@@ -276,7 +289,7 @@ def get_earnings(members_list: list[dict], themes: dict, today: date) -> tuple[l
     items: list[Item] = []
     fetched: set[str] = set()
     failures = 0
-    for offset in range(DAYS_AHEAD + 1):
+    for offset in range(-DAYS_BACK, DAYS_AHEAD + 1):
         day = today + timedelta(days=offset)
         if day.weekday() >= 5:  # 주말은 건너뜀
             continue
@@ -292,6 +305,72 @@ def get_earnings(members_list: list[dict], themes: dict, today: date) -> tuple[l
         warn(f"나스닥 실적 조회 실패 {failures}일 → 그 날짜는 이전 데이터 유지")
     print(f"실적 발표 일정 {len(items)}건 (조회 성공 {len(fetched)}일)")
     return items, fetched
+
+
+# ---------------------------------------------------------------- 2-1. 실적 예상일
+
+def estimate_items(earnings: list[Item], members_list: list[dict], themes: dict, today: date) -> list[Item]:
+    """아직 날짜를 확정하지 않은 다음 분기 실적을 '예상일'로 만든다.
+
+    회사들은 대개 13주 간격, 같은 요일에 실적을 발표한다. 그래서 가장 최근에 알려진
+    발표일(지난 발표 또는 확정된 다음 발표)에 13주씩 더해 약 6개월 앞까지 채운다.
+    회사가 날짜를 확정하면 그 날짜가 기준이 되어 예상일은 자연스럽게 사라진다.
+    """
+    members = {norm_symbol(m["symbol"]): m for m in members_list}
+    latest: dict[str, Item] = {}
+    for item in earnings:
+        if item.kind != "earnings" or not item.symbol:
+            continue
+        key = norm_symbol(item.symbol)
+        if key in members and (key not in latest or item.us_date > latest[key].us_date):
+            latest[key] = item
+
+    horizon = today + timedelta(days=ESTIMATE_DAYS)
+    out: list[Item] = []
+    for key, anchor in latest.items():
+        member = members[key]
+        symbol = member["symbol"]
+        sector = SECTOR_KO.get(member.get("sector", ""), member.get("sector", ""))
+        theme = themes.get(symbol) or themes.get(symbol.replace(".", "-"))
+        anchor_day = date.fromisoformat(anchor.us_date)
+        timing_note = {
+            "pre": "지난번엔 미국 장 시작 전 발표 (한국시간 같은 날 밤)",
+            "after": "지난번엔 미국 장 마감 후 발표 (한국시간 다음 날 새벽)",
+        }.get(anchor.timing, "지난번 발표 시각은 알려지지 않음")
+        day = anchor_day + timedelta(days=QUARTER_DAYS)
+        while day <= horizon:
+            if day > today:
+                k = day.weekday()
+                url = NASDAQ_EARNINGS_PAGE.format(symbol=symbol.lower())
+                lines = [
+                    f"■ {member['name']} ({symbol}) 실적 발표 예상일 — 아직 확정 아님",
+                    f"섹터: {sector}" + (f" / 테마: {theme}" if theme else ""),
+                    f"예상 날짜(미국): {day.isoformat()}({WEEKDAY_KO[k]}) 전후",
+                    timing_note,
+                    "",
+                    f"계산 근거: 직전 발표일 {anchor_day.isoformat()}에서 13주씩 더한 날짜예요.",
+                    "실제 날짜는 1~2주 앞뒤로 달라질 수 있어요. 특히 연말 결산 분기(1~2월 발표)는 늦어지기 쉬워요.",
+                    "회사가 날짜를 확정하면 이 예상일은 자동으로 확정 일정으로 바뀝니다.",
+                    "",
+                    "※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.",
+                    "",
+                    "English source (Nasdaq):",
+                    url,
+                ]
+                out.append(Item(
+                    uid=f"estimate-{key}-{day.isoformat()}@investment-calendar",
+                    kind="estimate",
+                    us_date=day.isoformat(),
+                    title=f"🗓️ {symbol} 실적 예상일 · {sector}",
+                    description="\n".join(lines),
+                    url=url,
+                    symbol=symbol,
+                    timing=anchor.timing,
+                    sector=sector,
+                ))
+            day += timedelta(days=QUARTER_DAYS)
+    print(f"실적 예상일 {len(out)}건 (확정 전, {ESTIMATE_DAYS}일 앞까지)")
+    return out
 
 
 # ---------------------------------------------------------------- 3. FOMC
@@ -380,6 +459,8 @@ def merge(previous: list[Item], earnings: list[Item], fetched_days: set[str],
     keep_from = (today - timedelta(days=KEEP_PAST_DAYS)).isoformat()
     merged: dict[str, Item] = {}
     for item in previous:
+        if item.kind == "estimate":
+            continue  # 예상일은 매번 새로 계산
         if item.us_date < keep_from:
             continue  # 너무 오래된 일정은 정리
         if item.kind == "earnings" and item.us_date in fetched_days:
@@ -424,6 +505,16 @@ def build_ics(items: list[Item], now: datetime) -> bytes:
     return cal.to_ical()
 
 
+def companies(members: list[dict], themes: dict) -> list[dict]:
+    """웹앱의 종목 켜고 끄기 목록. 일정이 없는 종목도 미리 고를 수 있게 전부 넣는다."""
+    out = []
+    for m in members:
+        sector = SECTOR_KO.get(m.get("sector", ""), m.get("sector", ""))
+        out.append({"symbol": m["symbol"], "name": m["name"], "sector": sector,
+                    "theme": themes.get(m["symbol"], "")})
+    return sorted(out, key=lambda c: (c["sector"], c["symbol"]))
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="투자 일정 .ics 생성")
     parser.add_argument("--today", help="기준 날짜(YYYY-MM-DD). 테스트용")
@@ -445,6 +536,9 @@ def main() -> int:
     fomc = get_fomc()
 
     items = merge(previous, earnings, fetched, fomc, today)
+    if members:
+        items = sorted(items + estimate_items(items, members, themes, today),
+                       key=lambda i: (i.us_date, i.start_utc or "", i.uid))
     if not items:
         print("::error::일정이 하나도 없습니다. 데이터 출처 접속을 확인하세요.")
         return 1
@@ -452,9 +546,12 @@ def main() -> int:
     DOCS_DIR.mkdir(exist_ok=True)
     (DOCS_DIR / "calendar.ics").write_bytes(build_ics(items, now))
     save_json(events_path, [asdict(i) for i in items])
+    if members:
+        save_json(DOCS_DIR / "companies.json", companies(members, themes))
     n_e = sum(i.kind == "earnings" for i in items)
     n_f = sum(i.kind == "fomc" for i in items)
-    print(f"완료: 실적 {n_e}건, FOMC {n_f}건 → docs/calendar.ics")
+    n_x = sum(i.kind == "estimate" for i in items)
+    print(f"완료: 확정 실적 {n_e}건, 실적 예상일 {n_x}건, FOMC {n_f}건 → docs/calendar.ics")
     return 0
 
 
