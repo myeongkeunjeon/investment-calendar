@@ -181,6 +181,116 @@ class TestFomcOutlook(unittest.TestCase):
         self.assertEqual(past.note, "결정: 0.25%p 인하 (4.00~4.25% → 3.75~4.00%)")
 
 
+def _series(start_year, start_month, values):
+    out, y, m = [], start_year, start_month
+    for v in values:
+        out.append((f"{y}-{m:02d}-01", v))
+        m += 1
+        if m > 12:
+            y, m = y + 1, 1
+    return out
+
+
+class TestEcon(unittest.TestCase):
+    NOW = datetime(2026, 10, 7, tzinfo=timezone.utc)
+
+    def test_periods(self):
+        self.assertEqual(bc.period_of("Consumer Price Index for September 2026"), "2026-09")
+        self.assertEqual(bc.period_of("GDP (Advance Estimate), 3rd Quarter 2026"), "2026-Q3")
+        self.assertEqual(bc.guess_period("cpi", date(2026, 1, 14)), "2025-12")
+        self.assertEqual(bc.guess_period("gdp", date(2026, 1, 29)), "2025-Q4")
+        self.assertEqual(bc.prev_period("2026-01"), "2025-12")
+        self.assertEqual(bc.prev_period("2026-Q1"), "2025-Q4")
+
+    def test_bls_ics(self):
+        got = bc.parse_bls_ics((FIX / "bls.ics").read_bytes())
+        self.assertEqual([(e["key"], e["period"]) for e in got], [("cpi", "2026-09"), ("jobs", "2026-09")])
+        self.assertEqual(got[0]["utc"], "2026-10-15T12:30:00+00:00")  # 08:30 EDT
+
+    def test_bea_and_census_text(self):
+        bea = bc.parse_schedule_text((FIX / "bea_schedule.html").read_text(), "bea")
+        self.assertIn(("gdp", "2026-Q3", "속보치", "2026-10-29T12:30"), [(e["key"], e["period"], e["stage"], e["utc"][:16]) for e in bea])
+        self.assertIn(("gdp", "2026-Q3", "확정치", "2026-12-23T15:00"), [(e["key"], e["period"], e["stage"], e["utc"][:16]) for e in bea])
+        self.assertIn(("pce", "2026-09", "2026-10-30"), [(e["key"], e["period"], e["utc"][:10]) for e in bea])
+        census = bc.parse_schedule_text((FIX / "census_calendar.html").read_text(), "census")
+        self.assertEqual([(e["key"], e["period"], e["utc"][:10]) for e in census], [("retail", "2026-09", "2026-10-16")])
+
+    def test_merge_releases_reschedule(self):
+        old = {"releases": {
+            "macro-cpi-2026-09-x-2026-10-14": {"key": "cpi", "period": "2026-09", "stage": "", "utc": "2026-10-14T12:30:00+00:00", "title_en": "old"},
+            "macro-cpi-2026-08-x-2026-09-11": {"key": "cpi", "period": "2026-08", "stage": "", "utc": "2026-09-11T12:30:00+00:00", "title_en": "past"},
+            "macro-pce-2026-09-x-2026-10-30": {"key": "pce", "period": "2026-09", "stage": "", "utc": "2026-10-30T12:30:00+00:00", "title_en": "bea"}}}
+        new = [{"key": "cpi", "period": "2026-09", "stage": "", "utc": "2026-10-15T12:30:00+00:00", "title_en": "moved"}]
+        merged = bc.merge_releases(old, new, {"bls"}, self.NOW)["releases"]
+        self.assertNotIn("macro-cpi-2026-09-x-2026-10-14", merged)  # 연기된 옛 날짜는 사라짐
+        self.assertIn("macro-cpi-2026-09-x-2026-10-15", merged)
+        self.assertIn("macro-cpi-2026-08-x-2026-09-11", merged)  # 지난 발표는 유지
+        self.assertIn("macro-pce-2026-09-x-2026-10-30", merged)  # BEA는 이번에 못 받았으니 유지
+
+    def test_results_and_items(self):
+        fred = {
+            "CPIAUCSL": _series(2025, 7, [100 + i * 0.25 for i in range(15)]),  # 2025-07 ~ 2026-09
+            "CPILFESL": _series(2025, 7, [200 + i * 0.5 for i in range(15)]),
+            "PAYEMS": _series(2026, 7, [159000, 159120, 159270]),
+            "UNRATE": _series(2026, 7, [4.1, 4.2, 4.3]),
+            "A191RL1Q225SBEA": [("2026-04-01", 2.1)],
+        }
+        self.assertEqual(bc.econ_result("cpi", "2026-09", fred),
+                         "9월 CPI 전년 대비 +3.0% (전월 +3.0%) · 근원 +3.0% · 전월 대비 +0.2%")
+        self.assertEqual(bc.econ_result("jobs", "2026-09", fred), "9월 비농업 일자리 +15.0만 명 · 실업률 4.3% (전월 4.2%)")
+        self.assertEqual(bc.econ_result("gdp", "2026-Q2", fred), "2분기 실질 GDP 연율 +2.1%")
+        self.assertEqual(bc.econ_result("retail", "2026-09", fred), "")  # 자료 없음
+        sched = {"releases": {
+            "macro-jobs-2026-09-x-2026-10-02": {"key": "jobs", "period": "2026-09", "stage": "", "utc": "2026-10-02T12:30:00+00:00", "title_en": "The Employment Situation for September 2026"},
+            "macro-jobs-2026-10-x-2026-11-06": {"key": "jobs", "period": "2026-10", "stage": "", "utc": "2026-11-06T13:30:00+00:00", "title_en": "The Employment Situation for October 2026"}}}
+        past, future = bc.econ_items(sched, fred, self.NOW)
+        self.assertIn("✅ 결과: 9월 비농업 일자리 +15.0만 명", past.description)
+        self.assertEqual(past.kst_date, "2026-10-02")
+        self.assertIn("밤 9:30", bc.kst_clock(datetime.fromisoformat(past.start_utc)))
+        self.assertEqual(future.note, "지난번: 9월 비농업 일자리 +15.0만 명 · 실업률 4.3% (전월 4.2%)")
+        self.assertIn("밤 10:30", bc.kst_clock(datetime.fromisoformat(future.start_utc)))  # 서머타임 끝난 뒤
+        self.assertEqual(future.short, "고용")
+
+
+class TestBokDividendsReaction(unittest.TestCase):
+    def test_bok(self):
+        rates = bc.parse_bok_rates((FIX / "bok_rates.html").read_text())
+        self.assertEqual(rates, [("2025-02-25", 2.75), ("2025-05-29", 2.5), ("2026-07-16", 2.75)])
+
+        class R:
+            text = (FIX / "bok_rates.html").read_text()
+        import tempfile
+        orig = (bc.http_get, bc.DATA_DIR)
+        with tempfile.TemporaryDirectory() as tmp:
+            bc.DATA_DIR = Path(tmp)
+            (Path(tmp) / "bok_meetings.json").write_text(json.dumps({"meetings": ["2026-05-28", "2026-07-16", "2026-10-22"]}))
+            bc.http_get = lambda *a, **k: R()
+            try:
+                items = {i.us_date: i for i in bc.get_bok(date(2026, 10, 7))}
+            finally:
+                bc.http_get, bc.DATA_DIR = orig
+        self.assertEqual(items["2026-07-16"].note, "결정: 0.25%p 인상 (2.50% → 2.75%)")
+        self.assertEqual(items["2026-05-28"].note, "결정: 동결 (2.50%)")
+        self.assertEqual(items["2026-10-22"].note, "현재 2.75%")
+        self.assertEqual(items["2026-10-22"].short, "한은")
+
+    def test_dividends(self):
+        payload = {"data": {"calendar": {"rows": [
+            {"companyName": "Coca-Cola Company (The)", "symbol": "KO", "dividend_Ex_Date": "10/14/2026",
+             "payment_Date": "12/15/2026", "record_Date": "10/14/2026", "dividend_Rate": 0.51,
+             "indicated_Annual_Dividend": 2.04}]}}}
+        self.assertEqual(bc.parse_dividends(payload), [["KO", "Coca-Cola Company (The)", "$0.51", "2026-12-15", "$2.04"]])
+
+    def test_reaction(self):
+        payload = {"data": {"tradesTable": {"rows": [
+            {"date": "10/15/2026", "close": "$95.00"}, {"date": "10/14/2026", "close": "$100.00"},
+            {"date": "10/13/2026", "close": "$98.00"}]}}}
+        closes = bc.parse_closes(payload)
+        self.assertEqual(bc.reaction_from(closes, "2026-10-14", "pre"), {"pct": 2.0, "from": "2026-10-13", "to": "2026-10-14"})
+        self.assertEqual(bc.reaction_from(closes, "2026-10-14", "after"), {"pct": -5.0, "from": "2026-10-14", "to": "2026-10-15"})
+        self.assertIsNone(bc.reaction_from(closes, "2026-10-15", "after"))  # 다음 거래일 자료 없음
+
+
 class TestEstimates(unittest.TestCase):
     def test_estimates_follow_latest_known_date(self):
         members = [{"symbol": "AAPL", "name": "Apple Inc.", "sector": "Information Technology"},

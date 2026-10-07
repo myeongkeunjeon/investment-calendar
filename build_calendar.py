@@ -127,6 +127,8 @@ class Item:
     sector: str = ""   # 한국어 섹터 (웹앱 필터에 사용)
     kst_date: str = "" # 한국시간 기준 날짜(종일 일정을 놓을 날). 비면 us_date
     note: str = ""        # 목록에 보여 줄 짧은 요약 (FOMC: 현재 금리·위원 전망·결과)
+    short: str = ""       # 달력 칸에 보여 줄 짧은 이름 (예: "CPI", "한은")
+    reaction: str = ""    # 실적 발표 후 주가 반응 % (예: "-3.2")
     actual_eps: str = ""  # 발표된 실제 EPS (예: "$5.20")
     surprise: str = ""    # 예상 대비 차이 % (예: "3.8", "-1.2")
 
@@ -860,6 +862,536 @@ def get_fomc(today: date) -> list[Item] | None:
         return None
 
 
+# ---------------------------------------------------------------- 3-2. 미국 경제지표 (발표 일정 + 결과)
+
+ECON_TIME_ET = (8, 30)  # 미국 주요 경제지표는 보통 미 동부 08:30 발표
+BLS_ICS = "https://www.bls.gov/schedule/news_release/bls.ics"
+BEA_SCHEDULE = "https://www.bea.gov/news/schedule"
+CENSUS_CALENDAR = "https://www.census.gov/economic-indicators/calendar-listview.html"
+MONTH_NAMES = ["january", "february", "march", "april", "may", "june", "july",
+               "august", "september", "october", "november", "december"]
+MONTH_RE = r"(January|February|March|April|May|June|July|August|September|October|November|December)"
+
+INDICATORS = {
+    "cpi": {"name": "소비자물가지수(CPI)", "short": "CPI", "emoji": "📈", "agency": "bls",
+            "match": r"^Consumer Price Index(?! .*(Average|Supplement))",
+            "page": "https://www.bls.gov/cpi/",
+            "why": "미국 물가 흐름이에요. 연준 금리 결정에 가장 큰 영향을 주는 지표 중 하나예요.",
+            "series": ["CPIAUCSL", "CPILFESL"]},
+    "jobs": {"name": "고용보고서(일자리·실업률)", "short": "고용", "emoji": "👷", "agency": "bls",
+             "match": r"^(The )?Employment Situation",
+             "page": "https://www.bls.gov/news.release/empsit.toc.htm",
+             "why": "미국 경기와 일자리 흐름이에요. 일자리가 크게 늘면 금리 인하 기대가 줄어들기 쉬워요.",
+             "series": ["PAYEMS", "UNRATE"]},
+    "pce": {"name": "PCE 물가(개인소비지출)", "short": "PCE", "emoji": "🛒", "agency": "bea",
+            "match": r"Personal Income and Outlays",
+            "page": "https://www.bea.gov/data/income-saving/personal-income",
+            "why": "연준이 물가 목표(2%)를 판단할 때 기준으로 삼는 지표예요.",
+            "series": ["PCEPI", "PCEPILFE"]},
+    "gdp": {"name": "GDP(국내총생산)", "short": "GDP", "emoji": "🏭", "agency": "bea",
+            "match": r"^GDP\b",
+            "page": "https://www.bea.gov/data/gdp/gross-domestic-product",
+            "why": "미국 경제 전체가 얼마나 빨리 성장하는지 보여 줘요.",
+            "series": ["A191RL1Q225SBEA"]},
+    "retail": {"name": "소매판매", "short": "소매", "emoji": "🛍️", "agency": "census",
+               "match": r"Advance Monthly Sales for Retail and Food Services",
+               "page": "https://www.census.gov/retail/sales.html",
+               "why": "미국 경제의 약 70%를 차지하는 소비가 얼마나 늘었는지 보여 줘요.",
+               "series": ["RSAFS"]},
+}
+GDP_STAGE = {"advance": "속보치", "second": "잠정치", "third": "확정치"}
+
+
+def period_of(title: str) -> str:
+    """발표 제목에서 기준 기간을 읽는다. 월: '2026-09', 분기: '2026-Q3'. 못 찾으면 ''."""
+    q = re.search(r"(\d)(?:st|nd|rd|th) Quarter,? (\d{4})", title, re.I)
+    if q:
+        return f"{q.group(2)}-Q{q.group(1)}"
+    m = re.search(MONTH_RE + r",? (\d{4})", title, re.I)
+    if m:
+        return f"{m.group(2)}-{MONTH_NAMES.index(m.group(1).lower()) + 1:02d}"
+    return ""
+
+
+def period_ko(period: str) -> str:
+    if "-Q" in period:
+        y, q = period.split("-Q")
+        return f"{y}년 {q}분기"
+    y, m = period.split("-")
+    return f"{y}년 {int(m)}월"
+
+
+def guess_period(key: str, release: date) -> str:
+    """제목에 기간이 없을 때: 보통 지난달(GDP는 지난 분기) 자료를 발표한다."""
+    if key == "gdp":
+        q = (release.month - 1) // 3  # 0~3, 지난 분기
+        return f"{release.year - 1}-Q4" if q == 0 else f"{release.year}-Q{q}"
+    prev = release.replace(day=1) - timedelta(days=1)
+    return f"{prev.year}-{prev.month:02d}"
+
+
+def release_entry(key: str, title: str, when_utc: datetime) -> dict:
+    period = period_of(title) or guess_period(key, when_utc.astimezone(ET).date())
+    stage = next((v for k, v in GDP_STAGE.items() if k in title.lower()), "") if key == "gdp" else ""
+    return {"key": key, "period": period, "stage": stage, "utc": when_utc.isoformat(), "title_en": title.strip()}
+
+
+def parse_bls_ics(raw: bytes) -> list[dict]:
+    out = []
+    for ev in Calendar.from_ical(raw).walk("VEVENT"):
+        title = str(ev.get("summary", "")).strip()
+        key = next((k for k, v in INDICATORS.items() if v["agency"] == "bls" and re.search(v["match"], title)), None)
+        if not key or not ev.get("dtstart"):
+            continue
+        start = ev.decoded("dtstart")
+        if isinstance(start, datetime):
+            when = (start if start.tzinfo else start.replace(tzinfo=ET)).astimezone(timezone.utc)
+        else:
+            when = et_to_utc(start, ECON_TIME_ET)
+        out.append(release_entry(key, title, when))
+    return out
+
+
+def _date_near(text: str, end: int, period: str) -> tuple[date, tuple[int, int]] | None:
+    """text[:end] 끝부분에서 가장 가까운 '월 일' 날짜와 시각을 찾는다. 연도는 기준 기간 뒤로 맞춘다."""
+    window = text[max(0, end - 160):end]
+    dates = list(re.finditer(MONTH_RE + r"\.?\s+(\d{1,2})(?:,\s*(\d{4}))?", window, re.I))
+    if not dates:
+        return None
+    m = dates[-1]
+    month = MONTH_NAMES.index(m.group(1).lower()) + 1
+    day = int(m.group(2))
+    tm = re.search(r"(\d{1,2}):(\d{2})\s*([AaPp])\.?[Mm]", window[m.end():] + text[end:end + 40])
+    hm = ECON_TIME_ET
+    if tm:
+        h = int(tm.group(1)) % 12 + (12 if tm.group(3).lower() == "p" else 0)
+        hm = (h, int(tm.group(2)))
+    if m.group(3):
+        return date(int(m.group(3)), month, day), hm
+    py = int(period[:4])
+    for y in (py, py + 1):
+        try:
+            d = date(y, month, day)
+        except ValueError:
+            continue
+        if d.isoformat() > period[:4] + ("-01-01" if "-Q" in period else period[4:] + "-01"):
+            return d, hm
+    return None
+
+
+def parse_schedule_text(html: str, agency: str) -> list[dict]:
+    """BEA·Census 일정표 페이지 글자에서 발표 이름 바로 앞의 날짜를 찾는다."""
+    text = BeautifulSoup(html, "html.parser").get_text(" ", strip=True)
+    out, seen = [], set()
+    for key, ind in INDICATORS.items():
+        if ind["agency"] != agency:
+            continue
+        for m in re.finditer(ind["match"].lstrip("^"), text):
+            # 발표 이름 뒤 조금(기간 표기)까지를 제목으로 본다
+            title = text[m.start():m.end() + 90]
+            period = period_of(title)
+            if not period:
+                continue
+            title = title[:title.find(re.search(r"(\d{4})", title[m.end() - m.start():]).group(1)) + 4] \
+                if re.search(r"\d{4}", title[m.end() - m.start():]) else title
+            found = _date_near(text, m.start(), period)
+            if not found:  # 표에 따라 날짜가 이름 뒤에 오는 경우
+                tail = text[m.end():m.end() + 160]
+                after = re.search(MONTH_RE + r"\.?\s+\d{1,2},\s*\d{4}", tail, re.I)
+                if after:
+                    found = _date_near(text, m.end() + after.end(), period)
+            if not found:
+                continue
+            d, hm = found
+            entry = release_entry(key, title, et_to_utc(d, hm))
+            ident = (key, entry["period"], entry["utc"][:10])
+            if ident not in seen:
+                seen.add(ident)
+                out.append(entry)
+    return out
+
+
+def fetch_releases() -> tuple[list[dict], set[str]]:
+    """반환: (발표 일정들, 일정을 제대로 받은 기관들)"""
+    entries, ok = [], set()
+    sources = [
+        ("bls", lambda: parse_bls_ics(http_get(BLS_ICS, headers=BROWSER_HEADERS | {"Accept": "text/calendar,*/*"}).content)),
+        ("bea", lambda: parse_schedule_text(http_get(BEA_SCHEDULE, headers=BROWSER_HEADERS | {"Accept": "text/html"}).text, "bea")),
+        ("census", lambda: parse_schedule_text(http_get(CENSUS_CALENDAR, headers=BROWSER_HEADERS | {"Accept": "text/html"}).text, "census")),
+    ]
+    for agency, fn in sources:
+        try:
+            got = fn()
+            if not got:
+                raise ValueError("일정을 하나도 찾지 못함")
+            entries += got
+            ok.add(agency)
+            print(f"경제지표 일정({agency.upper()}) {len(got)}건")
+        except Exception as err:  # noqa: BLE001
+            warn(f"경제지표 일정({agency.upper()}) 조회 실패 → 이전 일정 유지 ({err})")
+    return entries, ok
+
+
+def merge_releases(previous: dict, entries: list[dict], ok: set[str], now: datetime) -> dict:
+    """저장해 둔 발표 일정에 새로 받은 일정을 합친다. 받은 기관의 '앞으로 일정'은 새 것으로 교체(연기 반영)."""
+    keep_from = (now - timedelta(days=400)).isoformat()
+    def uid(e):
+        return f"macro-{e['key']}-{e['period']}-{e['stage'] or 'x'}-{e['utc'][:10]}"
+    out = {}
+    for u, e in (previous.get("releases") or {}).items():
+        if e["utc"] < keep_from:
+            continue
+        if INDICATORS.get(e["key"], {}).get("agency") in ok and e["utc"] > now.isoformat():
+            continue
+        out[u] = e
+    for e in entries:
+        if e["utc"] >= keep_from:
+            out[uid(e)] = e
+    return {"releases": dict(sorted(out.items(), key=lambda kv: kv[1]["utc"]))}
+
+
+def month_key(period: str, back: int = 0) -> str:
+    """'2026-09' 기준 back개월 전의 FRED 날짜('2026-08-01')."""
+    y, m = int(period[:4]), int(period[5:7])
+    m -= back
+    while m <= 0:
+        m += 12
+        y -= 1
+    return f"{y}-{m:02d}-01"
+
+
+def quarter_key(period: str) -> str:
+    y, q = period.split("-Q")
+    return f"{y}-{(int(q) - 1) * 3 + 1:02d}-01"
+
+
+def pct(a, b) -> float | None:
+    return None if a is None or b in (None, 0) else (a / b - 1) * 100
+
+
+def econ_result(key: str, period: str, fred: dict) -> str:
+    """기준 기간의 결과 한 줄. 자료가 아직 없으면 ''."""
+    s = {sid: dict(rows) for sid, rows in fred.items()}
+    def g(sid, k):
+        return s.get(sid, {}).get(k)
+    mo = period_ko(period).split(" ")[1]
+    if key == "cpi":
+        yoy = pct(g("CPIAUCSL", month_key(period)), g("CPIAUCSL", month_key(period, 12)))
+        if yoy is None:
+            return ""
+        prev = pct(g("CPIAUCSL", month_key(period, 1)), g("CPIAUCSL", month_key(period, 13)))
+        core = pct(g("CPILFESL", month_key(period)), g("CPILFESL", month_key(period, 12)))
+        mom = pct(g("CPIAUCSL", month_key(period)), g("CPIAUCSL", month_key(period, 1)))
+        out = f"{mo} CPI 전년 대비 {yoy:+.1f}%"
+        if prev is not None:
+            out += f" (전월 {prev:+.1f}%)"
+        if core is not None:
+            out += f" · 근원 {core:+.1f}%"
+        if mom is not None:
+            out += f" · 전월 대비 {mom:+.1f}%"
+        return out
+    if key == "jobs":
+        a, b = g("PAYEMS", month_key(period)), g("PAYEMS", month_key(period, 1))
+        u, up = g("UNRATE", month_key(period)), g("UNRATE", month_key(period, 1))
+        if a is None or b is None:
+            return ""
+        out = f"{mo} 비농업 일자리 {(a - b) / 10:+.1f}만 명"
+        if u is not None:
+            out += f" · 실업률 {u:.1f}%" + (f" (전월 {up:.1f}%)" if up is not None else "")
+        return out
+    if key == "pce":
+        yoy = pct(g("PCEPI", month_key(period)), g("PCEPI", month_key(period, 12)))
+        if yoy is None:
+            return ""
+        core = pct(g("PCEPILFE", month_key(period)), g("PCEPILFE", month_key(period, 12)))
+        return f"{mo} PCE 물가 전년 대비 {yoy:+.1f}%" + (f" · 근원 {core:+.1f}%" if core is not None else "")
+    if key == "gdp":
+        v = g("A191RL1Q225SBEA", quarter_key(period))
+        return "" if v is None else f"{period_ko(period).split(' ')[1]} 실질 GDP 연율 {v:+.1f}%"
+    if key == "retail":
+        mom = pct(g("RSAFS", month_key(period)), g("RSAFS", month_key(period, 1)))
+        return "" if mom is None else f"{mo} 소매판매 전월 대비 {mom:+.1f}%"
+    return ""
+
+
+def prev_period(period: str) -> str:
+    if "-Q" in period:
+        y, q = int(period[:4]), int(period[-1])
+        return f"{y - 1}-Q4" if q == 1 else f"{y}-Q{q - 1}"
+    k = month_key(period, 1)
+    return k[:7]
+
+
+def fetch_fred_series() -> dict:
+    fred = {}
+    for sid in sorted({sid for ind in INDICATORS.values() for sid in ind["series"]}):
+        try:
+            rows = parse_fred_csv(http_get(FRED_CSV.format(series=sid) + "&cosd=2023-01-01", tries=2).text)
+            if rows:
+                fred[sid] = rows
+        except Exception as err:  # noqa: BLE001
+            warn(f"FRED {sid} 조회 실패 ({err})")
+    return fred
+
+
+def econ_items(schedule: dict, fred: dict, now: datetime) -> list[Item]:
+    out = []
+    for uid, e in (schedule.get("releases") or {}).items():
+        ind = INDICATORS.get(e["key"])
+        if not ind:
+            continue
+        when = datetime.fromisoformat(e["utc"])
+        past = when < now
+        result = econ_result(e["key"], e["period"], fred) if past else ""
+        last = "" if past else econ_result(e["key"], prev_period(e["period"]), fred)
+        label = f"{period_ko(e['period'])}분" + (f" {e['stage']}" if e["stage"] else "")
+        lines = [f"■ {ind['name']} 발표 · {label}"]
+        if result:
+            lines.append(f"✅ 결과: {result}")
+        lines += [
+            f"한국시간: {kst_phrase(when)} 발표 (미 동부 {when.astimezone(ET):%H:%M})",
+            f"왜 중요할까: {ind['why']}",
+        ]
+        if last:
+            lines.append(f"지난번 결과: {last}")
+        if result or last:
+            lines.append("※ 숫자는 FRED(세인트루이스 연준 통계)의 현재 집계 기준이에요. 발표 뒤 수정되면 조금 달라질 수 있어요.")
+        lines += ["", "※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.", "",
+                  f"English source: {e['title_en']}", ind["page"]]
+        out.append(Item(
+            uid=f"{uid}@investment-calendar", kind="macro",
+            us_date=when.astimezone(ET).date().isoformat(),
+            title=f"{ind['emoji']} {ind['name']} · {label}",
+            description="\n".join(lines), url=ind["page"],
+            start_utc=when.isoformat(), minutes=30,
+            kst_date=when.astimezone(KST).date().isoformat(),
+            note=(f"결과: {result}" if result else (f"지난번: {last}" if last else "")),
+            short=ind["short"],
+        ))
+    return out
+
+
+def get_econ(now: datetime) -> list[Item]:
+    path = DATA_DIR / "macro_schedule.json"
+    entries, ok = fetch_releases()
+    schedule = merge_releases(load_json(path, {}), entries, ok, now)
+    save_json(path, schedule)
+    fred = fetch_fred_series()
+    items = econ_items(schedule, fred, now)
+    print(f"경제지표 일정 {len(items)}건 (결과 {sum('✅ 결과' in i.description for i in items)}건)")
+    return items
+
+
+# ---------------------------------------------------------------- 3-3. 한국은행 기준금리
+
+BOK_RATE_PAGE = "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+BOK_MAIN = "https://www.bok.or.kr/portal/main/main.do"
+
+
+def parse_bok_rates(html: str) -> list[tuple[str, float]]:
+    """한국은행 기준금리 변경 내역 표 → [(변경일 YYYY-MM-DD, 금리)] (오래된 순)."""
+    text = BeautifulSoup(html, "html.parser").get_text(" ", strip=True)
+    rows = []
+    for m in re.finditer(r"(20\d\d)\s*년?\s+(\d{1,2})\s*월\s*(\d{1,2})\s*일\s+(\d{1,2}\.\d{2})", text):
+        rows.append((f"{m.group(1)}-{int(m.group(2)):02d}-{int(m.group(3)):02d}", float(m.group(4))))
+    return sorted(set(rows))
+
+
+def get_bok(today: date) -> list[Item]:
+    cfg = load_json(DATA_DIR / "bok_meetings.json", {})
+    meetings = sorted(cfg.get("meetings") or [])
+    history_path = DATA_DIR / "bok_rate_history.json"
+    history = load_json(history_path, [])
+    try:
+        fetched = parse_bok_rates(http_get(BOK_RATE_PAGE, headers=BROWSER_HEADERS | {"Accept": "text/html"}).text)
+        if not fetched:
+            raise ValueError("기준금리 표를 찾지 못함")
+        history = sorted({tuple(r) for r in history} | set(fetched))
+        print(f"한국은행 기준금리 변경 내역 {len(fetched)}건 (현재 {history[-1][1]:.2f}%)")
+    except Exception as err:  # noqa: BLE001
+        warn(f"한국은행 기준금리 조회 실패 → 저장된 기록 사용 ({err})")
+    history = [list(r) for r in sorted({tuple(r) for r in history})]
+    save_json(history_path, history)
+    current = history[-1][1] if history else None
+    if not meetings:
+        return []
+    out = []
+    for d in meetings:
+        day = date.fromisoformat(d)
+        past = day < today
+        result = ""
+        if past and history:
+            before = [r for r in history if r[0] < d]
+            changed = [r for r in history if r[0] == d or (d < r[0] <= (day + timedelta(days=3)).isoformat())]
+            if changed and before:
+                diff = round(changed[0][1] - before[-1][1], 2)
+                result = (f"{abs(diff):.2f}%p {'인상' if diff > 0 else '인하'} "
+                          f"({before[-1][1]:.2f}% → {changed[0][1]:.2f}%)") if diff else f"동결 ({changed[0][1]:.2f}%)"
+            elif before:  # 회의 날짜 근처에 변경 기록이 없으면 동결
+                result = f"동결 ({before[-1][1]:.2f}%)"
+        lines = ["■ 한국은행 금융통화위원회 기준금리 결정"]
+        if result:
+            lines.append(f"✅ 결정: {result}")
+        lines += [
+            "섹터/테마: 거시경제 · 한국 기준금리 · 원/달러 환율",
+            f"한국시간: {day.month}월 {day.day}일({WEEKDAY_KO[day.weekday()]}) 오전 결정 발표 (보통 10시 전후), 이어서 총재 기자간담회",
+        ]
+        if not past and current is not None:
+            lines.append(f"현재 한국은행 기준금리: {current:.2f}%")
+        lines += ["왜 중요할까: 한국 금리가 미국 금리와 얼마나 차이 나는지에 따라 원/달러 환율이 움직이기 쉬워요.",
+                  "", "※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.", "",
+                  "한국은행 기준금리 추이:", BOK_RATE_PAGE]
+        if past and not result:
+            lines.insert(1, "결정 결과는 아래 한국은행 기준금리 추이에서 확인할 수 있어요.")
+        out.append(Item(
+            uid=f"bok-{d}@investment-calendar", kind="bok", us_date=d,
+            title="🇰🇷 한국은행 기준금리 결정" + (f" · {result.split(' (')[0]}" if result else ""),
+            description="\n".join(lines), url=BOK_RATE_PAGE, kst_date=d,
+            note=(f"결정: {result}" if result else (f"현재 {current:.2f}%" if (not past and current is not None) else "")),
+            short="한은",
+        ))
+    print(f"한국은행 회의 {len(out)}건")
+    return out
+
+
+# ---------------------------------------------------------------- 3-4. 배당 (미국 상장사 전체, 웹앱에서 내 종목만 표시)
+
+NASDAQ_DIVIDENDS = "https://api.nasdaq.com/api/calendar/dividends?date={day}"
+DIV_BACK, DIV_AHEAD = 30, 90
+
+
+def parse_dividends(payload: dict) -> list[list]:
+    """[티커, 회사명, 1주당 배당금, 지급일, 연간 배당금]"""
+    rows = ((((payload or {}).get("data") or {}).get("calendar") or {}).get("rows")) or []
+    out = []
+    for r in rows:
+        sym = (r.get("symbol") or "").strip()
+        if not sym:
+            continue
+        pay = (r.get("payment_Date") or "").strip()
+        try:
+            pay = datetime.strptime(pay, "%m/%d/%Y").date().isoformat()
+        except ValueError:
+            pay = ""
+        out.append([sym, (r.get("companyName") or "").strip(), money(r.get("dividend_Rate")), pay,
+                    money(r.get("indicated_Annual_Dividend"))])
+    return out
+
+
+def get_dividends(today: date) -> dict:
+    path = DOCS_DIR / "dividends.json"
+    previous = load_json(path, {})
+    keep_from = (today - timedelta(days=KEEP_PAST_DAYS)).isoformat()
+    names = dict(previous.get("names") or {})
+    days = {d: v for d, v in (previous.get("days") or {}).items() if d >= keep_from}
+    ok = fail = 0
+    for offset in range(-DIV_BACK, DIV_AHEAD + 1):
+        day = today + timedelta(days=offset)
+        if day.weekday() >= 5:
+            continue
+        if fail >= 8 and ok == 0:
+            warn("배당 일정 조회가 계속 실패해 중단 → 이전 데이터 유지")
+            break
+        try:
+            rows = parse_dividends(http_get(NASDAQ_DIVIDENDS.format(day=day.isoformat()),
+                                            headers=BROWSER_HEADERS, tries=2, timeout=20).json())
+            days[day.isoformat()] = [[sym, rate, pay, annual] for sym, name, rate, pay, annual in rows]
+            for sym, name, *_ in rows:
+                if name:
+                    names[sym] = name
+            ok += 1
+        except Exception as err:  # noqa: BLE001
+            fail += 1
+            print(f"  {day} 배당 조회 실패: {err}")
+        time.sleep(0.5)
+    used = {r[0] for v in days.values() for r in v}
+    data = {"names": {k: names[k] for k in sorted(used) if k in names}, "days": dict(sorted(days.items()))}
+    print(f"배당락일 {sum(len(v) for v in data['days'].values())}건 (조회 성공 {ok}일)")
+    return data
+
+
+# ---------------------------------------------------------------- 3-5. 실적 발표 후 주가 반응
+
+NASDAQ_HISTORY = ("https://api.nasdaq.com/api/quote/{symbol}/historical?assetclass=stocks"
+                  "&fromdate={start}&todate={end}&limit=30")
+REACTION_LIMIT = 150  # 한 번 실행에 새로 계산할 최대 건수 (나머지는 다음 실행에서)
+
+
+def parse_closes(payload: dict) -> dict[str, float]:
+    rows = ((((payload or {}).get("data") or {}).get("tradesTable") or {}).get("rows")) or []
+    out = {}
+    for r in rows:
+        try:
+            d = datetime.strptime(r["date"], "%m/%d/%Y").date().isoformat()
+            out[d] = float(str(r["close"]).replace("$", "").replace(",", ""))
+        except (KeyError, ValueError):
+            continue
+    return out
+
+
+def reaction_from(closes: dict[str, float], us_day: str, timing: str) -> dict | None:
+    """장 전 발표: 전날 종가 → 당일 종가, 장 후 발표: 당일 종가 → 다음 거래일 종가."""
+    days = sorted(closes)
+    before = [d for d in days if d < us_day]
+    on_after = [d for d in days if d >= us_day]
+    if timing == "pre":
+        if not before or not on_after or on_after[0] != us_day:
+            return None
+        a, b = before[-1], us_day
+    elif timing == "after":
+        nxt = [d for d in days if d > us_day]
+        if us_day not in closes or not nxt:
+            return None
+        a, b = us_day, nxt[0]
+    else:
+        return None
+    return {"pct": round((closes[b] / closes[a] - 1) * 100, 1), "from": a, "to": b}
+
+
+def apply_reactions(earnings: list[Item], today: date) -> None:
+    path = DATA_DIR / "reactions.json"
+    cache = load_json(path, {})
+    todo = [i for i in earnings if i.kind == "earnings" and i.actual_eps and i.timing in ("pre", "after")
+            and i.uid not in cache and i.us_date < (today - timedelta(days=1)).isoformat()]
+    done = fails = 0
+    for item in todo[:REACTION_LIMIT]:
+        if fails >= 5:
+            print("  주가 조회가 계속 실패해 이번에는 중단합니다.")
+            break
+        d = date.fromisoformat(item.us_date)
+        try:
+            closes = parse_closes(http_get(NASDAQ_HISTORY.format(
+                symbol=item.symbol.replace(".", "-"), start=(d - timedelta(days=7)).isoformat(),
+                end=(d + timedelta(days=7)).isoformat()), headers=BROWSER_HEADERS, tries=1, timeout=10).json())
+            fails = 0
+        except Exception as err:  # noqa: BLE001
+            fails += 1
+            print(f"  {item.symbol} 주가 조회 실패: {err}")
+            continue
+        finally:
+            time.sleep(0.4)
+        r = reaction_from(closes, item.us_date, item.timing)
+        if r:
+            cache[item.uid] = r
+            done += 1
+    keep = {i.uid for i in earnings}
+    cache = {k: v for k, v in cache.items() if k in keep}
+    save_json(path, cache)
+    for item in earnings:
+        r = cache.get(item.uid)
+        if not r:
+            continue
+        item.reaction = f"{r['pct']:.1f}"
+        icon = "📈" if r["pct"] > 0 else "📉" if r["pct"] < 0 else "➖"
+        line = (f"{icon} 주가 반응: {r['pct']:+.1f}% "
+                f"({r['from'][5:].replace('-', '/')} 종가 → {r['to'][5:].replace('-', '/')} 종가)")
+        lines = item.description.split("\n")
+        lines.insert(2 if len(lines) > 1 and lines[1].startswith("✅") else 1, line)
+        item.description = "\n".join(lines)
+    if todo:
+        print(f"주가 반응 새로 계산 {done}건 (대기 {max(0, len(todo) - REACTION_LIMIT)}건)")
+
+
 # ---------------------------------------------------------------- 4. 합치기 & .ics 만들기
 
 def merge(previous: list[Item], earnings: list[Item], fetched_days: set[str],
@@ -867,8 +1399,8 @@ def merge(previous: list[Item], earnings: list[Item], fetched_days: set[str],
     keep_from = (today - timedelta(days=KEEP_PAST_DAYS)).isoformat()
     merged: dict[str, Item] = {}
     for item in previous:
-        if item.kind == "estimate":
-            continue  # 예상일은 매번 새로 계산
+        if item.kind in ("estimate", "macro", "bok"):
+            continue  # 예상일·경제지표·한국은행 일정은 매번 새로 만든다
         if item.us_date < keep_from:
             continue  # 너무 오래된 일정은 정리
         if item.kind == "earnings" and item.us_date in fetched_days:
@@ -972,14 +1504,17 @@ def main() -> int:
     if members:
         earnings, fetched, market = get_earnings(members, themes, today)
         earnings = fill_results(earnings, today)
+        apply_reactions(earnings, today)
     else:
         warn("S&P 500 목록이 없어 실적 일정을 건너뜁니다.")
         earnings, fetched, market = [], set(), {}
     fomc = get_fomc(today)
     market_all = merge_market(load_json(DOCS_DIR / "market.json", {}), market, today)
     fx = get_fx(today, load_json(DOCS_DIR / "fx.json", {}))
+    extras = get_econ(now) + get_bok(today)
+    dividends = get_dividends(today)
 
-    items = merge(previous, earnings, fetched, fomc, today)
+    items = merge(previous, earnings, fetched, fomc, today) + extras
     if members:
         items = sorted(items + estimate_items(items, members, themes, today), key=sort_key)
     if not items:
@@ -988,7 +1523,7 @@ def main() -> int:
 
     DOCS_DIR.mkdir(exist_ok=True)
     top100 = {norm_symbol(m["symbol"]) for m in members if m.get("top100")}
-    ics_items = [i for i in items if i.kind == "fomc" or not top100 or norm_symbol(i.symbol) in top100]
+    ics_items = [i for i in items if i.kind in ("fomc", "macro", "bok") or not top100 or norm_symbol(i.symbol) in top100]
     (DOCS_DIR / "calendar.ics").write_bytes(build_ics(ics_items, now))
     save_json(events_path, [asdict(i) for i in items])
     if members:
@@ -999,6 +1534,8 @@ def main() -> int:
         json.dumps(market_all, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     if fx:
         save_json(DOCS_DIR / "fx.json", fx)
+    (DOCS_DIR / "dividends.json").write_text(
+        json.dumps(dividends, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     n_e = sum(i.kind == "earnings" for i in items)
     n_f = sum(i.kind == "fomc" for i in items)
     n_x = sum(i.kind == "estimate" for i in items)

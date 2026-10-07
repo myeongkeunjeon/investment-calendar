@@ -12,6 +12,7 @@ on:
       - "build_calendar.py"
       - "data/themes.json"
       - "data/names_ko.json"
+      - "data/bok_meetings.json"
       - "docs/index.html"
       - "docs/manifest.webmanifest"
       - ".github/workflows/update-calendar.yml"
@@ -54,7 +55,7 @@ jobs:
           # 최신 main 위에 다시 올려서 저장한다 (충돌 방지).
           OUT="$RUNNER_TEMP/generated"
           mkdir -p "$OUT"
-          FILES="docs/calendar.ics docs/events.json docs/companies.json docs/market.json docs/fx.json data/sp100.json data/sp500.json"
+          FILES="docs/calendar.ics docs/events.json docs/companies.json docs/market.json docs/fx.json docs/dividends.json data/sp100.json data/sp500.json data/macro_schedule.json data/bok_rate_history.json data/reactions.json"
           for f in $FILES; do [ -f "$f" ] && cp "$f" "$OUT/$(basename "$f")"; done
           git fetch origin main
           git checkout -f -B main origin/main

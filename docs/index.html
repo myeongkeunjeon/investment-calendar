@@ -22,6 +22,9 @@
     --earn: #2457c5; --earn-soft: #e5ecfb;
     --est: #6b7280; --est-soft: #eceef1;
     --fomc: #b45309; --fomc-soft: #fbefdc;
+    --macro: #6d28d9; --macro-soft: #efe7fd;
+    --bok: #0f766e; --bok-soft: #dcf3ef;
+    --div: #15803d; --div-soft: #e3f4e8;
     --on: #2457c5; --off: #c9ccd2;
     --radius: 14px;
   }
@@ -33,6 +36,9 @@
       --earn: #84a9ff; --earn-soft: #1f2a44;
       --est: #a3a9b3; --est-soft: #2a2e36;
       --fomc: #f0b35a; --fomc-soft: #3a2c17;
+      --macro: #c4a7ff; --macro-soft: #2d2140;
+      --bok: #5eead4; --bok-soft: #173430;
+      --div: #86efac; --div-soft: #1a3322;
       --on: #84a9ff; --off: #4a505a;
     }
   }
@@ -84,6 +90,21 @@
   .k-earnings .badge { background: var(--earn-soft); color: var(--earn); }
   .k-estimate .badge { background: var(--est-soft); color: var(--est); }
   .k-fomc .badge { background: var(--fomc-soft); color: var(--fomc); }
+  .k-macro .badge { background: var(--macro-soft); color: var(--macro); }
+  .k-bok .badge { background: var(--bok-soft); color: var(--bok); }
+  .k-dividend .badge { background: var(--div-soft); color: var(--div); }
+  .memo { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--line); white-space: normal; }
+  .memo label { display: block; font-weight: 600; color: var(--fg); margin-bottom: 4px; }
+  .memo label small { font-weight: 400; color: var(--muted); }
+  .memo textarea {
+    width: 100%; min-height: 72px; resize: vertical; border: 1px solid var(--line); border-radius: 10px;
+    padding: 8px 10px; font: inherit; font-size: .9rem; background: var(--surface); color: var(--fg);
+  }
+  .memo .memo-state { font-size: .75rem; color: var(--muted); min-height: 1em; margin-top: 2px; }
+  .pen { color: var(--accent); margin-left: 4px; font-weight: 400; }
+  .memo-card { padding: 12px 14px; border-top: 1px solid var(--line); }
+  .memo-card:first-child { border-top: 0; }
+  .memo-card .meta { font-size: .8rem; color: var(--muted); margin-bottom: 2px; }
   .ev .badge.res-up { background: #fde8e8; color: #c23b3b; }
   .ev .badge.res-down { background: #e3edfc; color: #2f6fd6; }
   .ev .badge.res-flat { background: var(--est-soft); color: var(--est); }
@@ -122,6 +143,9 @@
   .mini.k-earnings { background: var(--earn-soft); color: var(--earn); }
   .mini.k-estimate { background: var(--est-soft); color: var(--est); }
   .mini.k-fomc { background: var(--fomc-soft); color: var(--fomc); font-weight: 700; }
+  .mini.k-macro { background: var(--macro-soft); color: var(--macro); font-weight: 700; }
+  .mini.k-bok { background: var(--bok-soft); color: var(--bok); font-weight: 700; }
+  .mini.k-dividend { background: var(--div-soft); color: var(--div); }
   .plus { font-size: .64rem; color: var(--muted); }
   #cal-day { margin-top: 16px; }
 
@@ -220,6 +244,7 @@
     <div class="toolbar">
       <button class="chip mine-chip" aria-pressed="false">★ 내 종목만</button>
       <button class="chip" id="past-btn" aria-pressed="false">지난 일정</button>
+      <button class="chip" id="memo-btn" aria-pressed="false">✎ 메모</button>
       <span class="summary" id="list-summary"></span>
     </div>
     <div id="list"></div>
@@ -262,6 +287,19 @@
       </div>
       <div id="sectors"></div>
       <p class="hint">처음엔 S&amp;P 500 중 대형주 100개(S&amp;P 100)만 켜져 있어요. 필요한 종목은 켜고, 관심 없는 종목은 꺼 두세요. ★ 내 종목은 여기 설정과 상관없이 항상 보여요.</p>
+    </div>
+
+    <div class="section">
+      <h2>✎ 내 메모 백업</h2>
+      <div class="card"><div class="row"><div class="grow">
+        <div class="name" id="memo-count">메모 0개</div>
+        <div class="desc" style="white-space:normal">메모는 이 기기에만 저장돼요. 사파리 데이터를 지우거나 기기를 바꾸면 사라지니, 가끔 내보내기로 보관해 두세요.</div>
+      </div></div></div>
+      <div class="btn-row" style="margin-top:8px">
+        <button class="btn" id="memo-export">메모 내보내기</button>
+        <button class="btn" id="memo-import-btn">메모 가져오기</button>
+        <input type="file" id="memo-import" accept="application/json,.json" hidden>
+      </div>
     </div>
 
     <div class="section">
@@ -313,7 +351,11 @@
     earnings: { label: "실적", badge: "확정" },
     estimate: { label: "실적 예상", badge: "예상" },
     fomc: { label: "FOMC", badge: "FOMC" },
+    macro: { label: "경제지표", badge: "지표" },
+    bok: { label: "한국은행", badge: "한은" },
+    dividend: { label: "배당락일", badge: "배당" },
   };
+  const MACRO_KINDS = new Set(["fomc", "macro", "bok"]);
   const QUARTER_DAYS = 91, ESTIMATE_DAYS = 183;
   const STORE_KEY = "investment-calendar.settings.v1";
   const $ = (s) => document.querySelector(s);
@@ -321,7 +363,8 @@
 
   // ---------- 설정 (이 기기에만 저장)
   // overrides: 종목별로 직접 켜고 끈 기록 {티커: true/false}. 기록이 없으면 S&P 100만 켜진 상태.
-  const defaults = { overrides: {}, mine: [], onlyMine: false, kinds: { earnings: true, estimate: true, fomc: true } };
+  const defaults = { overrides: {}, mine: [], onlyMine: false,
+    kinds: { earnings: true, estimate: true, fomc: true, macro: true, bok: true, dividend: true } };
   let settings = loadSettings();
   function loadSettings() {
     try {
@@ -400,28 +443,33 @@
   let marketIndex = new Map();
 
   function timeLabel(kind, timing, start) {
-    if (kind === "fomc" && start) return timeFmt.format(start);
+    if ((kind === "fomc" || kind === "macro") && start) return timeFmt.format(start);
+    if (kind === "bok") return "오전\n발표";
+    if (kind === "dividend") return "배당\n락일";
     if (kind === "estimate") return "날짜\n예상";
     return timing === "pre" ? "저녁\n장 전" : timing === "after" ? "새벽\n장 후" : "시각\n미정";
   }
   function sortMinutes(ev) {
     if (ev.start) { const [h, m] = kstHourFmt.format(ev.start).split(":").map(Number); return h * 60 + m; }
+    if (ev.kind === "bok") return 600;
+    if (ev.kind === "dividend") return 1;
     const base = ev.timing === "after" ? 300 : ev.timing === "pre" ? 1170 : 1300;
     return base + (ev.kind === "estimate" ? 100 : 0);
   }
 
   function normalize(raw) {
     let symbol = raw.symbol || "";
-    if (!symbol && raw.kind !== "fomc") {
+    const company = raw.kind === "earnings" || raw.kind === "estimate";
+    if (!symbol && company) {
       const m = /📊|🗓️/.test(raw.title) && raw.title.match(/^\S+\s+(\S+)/);
       symbol = m ? m[1] : "";
     }
     let sector = raw.sector || "";
-    if (!sector && raw.kind !== "fomc") sector = (raw.title.split("·").pop() || "").trim();
-    const start = raw.kind === "fomc" && raw.start_utc ? new Date(raw.start_utc) : null;
+    if (!sector && company) sector = (raw.title.split("·").pop() || "").trim();
+    const start = (raw.kind === "fomc" || raw.kind === "macro") && raw.start_utc ? new Date(raw.start_utc) : null;
     const day = raw.kst_date || (start ? kstYmd(start) : raw.us_date);
     let name = symbol;
-    if (raw.kind === "fomc") name = raw.title.replace(/^🏦\s*/, "");
+    if (MACRO_KINDS.has(raw.kind)) name = raw.title.replace(/^\S+\s*/, "");
     const eps = ((raw.description || "").match(/시장 예상 EPS[^:]*:\s*([^\n(]+)/) || [])[1];
     const ev = { ...raw, symbol, sector, day, start, name, eps: eps && eps.trim() };
     ev.time = timeLabel(ev.kind, ev.timing, start);
@@ -487,10 +535,48 @@
     }
     return out.map(normalize);
   }
+  // ---------- 배당: 미국 상장사 전체 배당락일 표에서 내 종목 것만 기기 안에서 만든다
+  let dividends = null;
+  function dividendEvents() {
+    if (!dividends) return [];
+    const mine = mineSet();
+    const names = dividends.names || {};
+    const out = [];
+    for (const [day, rows] of Object.entries(dividends.days || {})) {
+      for (const [sym, rate, pay, annual] of rows) {
+        if (!mine.has(sym)) continue;
+        const name = names[sym] || companyName(sym) || sym;
+        const payTxt = pay ? `${parseYmd(pay).getUTCMonth() + 1}월 ${parseYmd(pay).getUTCDate()}일` : "";
+        const lines = [`■ ${name} (${sym}) 배당락일`,
+          `1주당 배당금: ${rate || "미정"}${annual ? ` · 1년 기준 ${annual}` : ""}`];
+        if (payTxt) lines.push(`지급일: ${payTxt}`);
+        lines.push(`미국 현지 날짜: ${day}`, "",
+          "이번 배당을 받으려면 배당락일 전 거래일(미국 기준)까지 주식을 사 두어야 해요. 배당락일 당일에 사면 이번 배당은 받지 못해요.",
+          "배당락일에는 보통 배당금만큼 주가가 낮아진 채로 거래가 시작돼요.",
+          "※ 미국 주식 배당금은 보통 현지에서 세금(한국 거주자 15%)을 뗀 뒤 들어와요.",
+          "", "※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.", "",
+          "English source (Nasdaq):", `https://www.nasdaq.com/market-activity/stocks/${sym.toLowerCase()}/dividend-history`);
+        out.push(normalize({ uid: `div-${sym}-${day}`, kind: "dividend", us_date: day, kst_date: day, symbol: sym,
+          short: sym, title: `💵 ${sym} 배당락일`, description: lines.join("\n"),
+          note: `1주당 ${rate || "미정"}${payTxt ? ` · 지급 ${payTxt}` : ""}` }));
+      }
+    }
+    return out;
+  }
+  let dividendsLoading = null;
+  function loadDividends() {
+    if (dividends) return Promise.resolve();
+    if (!dividendsLoading) {
+      dividendsLoading = fetch("dividends.json", { cache: "no-cache" })
+        .then((r) => r.ok ? r.json() : { days: {} }).catch(() => ({ days: {} }))
+        .then((d) => { dividends = d; rebuildEvents(); });
+    }
+    return dividendsLoading;
+  }
   function rebuildEvents() {
     const sp = new Set(companies.map((c) => c.symbol));
     const extra = settings.mine.filter((s) => !sp.has(s)).flatMap(marketEventsFor);
-    events = baseEvents.concat(extra);
+    events = baseEvents.concat(extra, dividendEvents());
   }
   let marketLoading = null;
   function loadMarket() {
@@ -505,8 +591,9 @@
   }
 
   function visible(ev) {
-    if (!settings.kinds[ev.kind]) return false;
-    if (ev.kind === "fomc") return true;
+    if (settings.kinds[ev.kind] === false) return false;
+    if (MACRO_KINDS.has(ev.kind)) return true;
+    if (ev.kind === "dividend") return mineSet().has(ev.symbol);
     const mine = mineSet();
     if (settings.onlyMine) return mine.has(ev.symbol);
     if (mine.has(ev.symbol)) return true;
@@ -522,16 +609,21 @@
   function eventRow(ev, prefix = "l") {
     const sub = [];
     if (ev.kind === "fomc") sub.push(ev.note || "미국 기준금리 결정");
+    else if (ev.kind === "macro") sub.push(ev.note || "미국 경제지표 발표");
+    else if (ev.kind === "bok") sub.push(ev.note || "한국 기준금리 결정");
+    else if (ev.kind === "dividend") { const n = companyName(ev.symbol); if (n) sub.push(n); sub.push(ev.note); }
     else {
       const name = companyName(ev.symbol);
       if (name) sub.push(name);
       if (ev.sector) sub.push(ev.sector);
       if (ev.actual_eps) sub.push(`실제 EPS ${ev.actual_eps}${ev.eps ? " (예상 " + ev.eps + ")" : ""}`);
       else if (ev.eps) sub.push(`예상 EPS ${ev.eps}`);
+      if (ev.reaction) sub.push(`주가 ${parseFloat(ev.reaction) > 0 ? "+" : ""}${ev.reaction}%`);
     }
     const res = ev.actual_eps ? verdict(ev.surprise) : null;
-    const star = ev.kind !== "fomc" && mineSet().has(ev.symbol) ? `<span class="star" aria-label="내 종목">★</span>` : "";
-    const title = ev.kind === "fomc" ? esc(ev.name) : `${star}${esc(ev.symbol)} ${ev.actual_eps ? "실적 결과" : KIND[ev.kind].label}`;
+    const star = !MACRO_KINDS.has(ev.kind) && mineSet().has(ev.symbol) ? `<span class="star" aria-label="내 종목">★</span>` : "";
+    const pen = notes[ev.uid] && notes[ev.uid].t ? `<span class="pen" aria-label="메모 있음">✎</span>` : "";
+    const title = (MACRO_KINDS.has(ev.kind) ? esc(ev.name) : `${star}${esc(ev.symbol)} ${ev.actual_eps ? "실적 결과" : KIND[ev.kind].label}`) + pen;
     const id = detailId(ev.uid, prefix);
     return `<div class="ev k-${ev.kind}">
       <button aria-expanded="false" aria-controls="${id}">
@@ -539,7 +631,7 @@
         <span><div class="title">${title}</div><div class="sub">${esc(sub.join(" · "))}</div></span>
         <span class="badge ${res ? res.cls : ""}">${res ? esc(res.text.replace("예상 ", "")) : KIND[ev.kind].badge}</span>
       </button>
-      <div class="detail" id="${id}" hidden>${linkify(ev.description).replace(/^(✅[^\n]*)$/m, '<span class="result-line">$1</span>')}</div>
+      <div class="detail" id="${id}" hidden>${linkify(ev.description).replace(/^(✅[^\n]*)$/m, '<span class="result-line">$1</span>')}${memoBox(ev)}</div>
     </div>`;
   }
   function scrollBelowHeader(el) {
@@ -555,7 +647,93 @@
       d.hidden = !open;
       b.setAttribute("aria-expanded", String(open));
     }));
+    bindMemos(root);
   }
+
+  // ---------- 나만의 메모 (이 기기에만 저장)
+  const NOTES_KEY = "investment-calendar.notes.v1";
+  let notes = loadNotes();
+  function loadNotes() {
+    try { return JSON.parse(localStorage.getItem(NOTES_KEY) || "{}") || {}; } catch (e) { return {}; }
+  }
+  function saveNotes() {
+    try { localStorage.setItem(NOTES_KEY, JSON.stringify(notes)); return true; } catch (e) { return false; }
+  }
+  const MEMO_HINT = {
+    earnings: "결과를 보고 어떻게 생각했나요? 무엇을 했나요(또는 하지 않기로 했나요)? 그 이유는?",
+    estimate: "이 실적 발표 전에 확인하고 싶은 것, 미리 정해 둘 나의 원칙은?",
+    fomc: "금리 결정을 보고 어떻게 생각했나요? 내 투자에 어떤 영향이 있을까요?",
+    macro: "이 지표를 보고 든 생각은? 다음에 확인할 것은?",
+    bok: "한국 금리 결정을 보고 든 생각은? 환율에는 어떤 영향이 있을까요?",
+    dividend: "이 배당을 어떻게 쓸 계획인가요? (재투자, 나눔, 생활비 등)",
+  };
+  function memoBox(ev) {
+    const t = (notes[ev.uid] && notes[ev.uid].t) || "";
+    return `<div class="memo"><label>✎ 내 메모 <small>· 이 기기에만 저장</small></label>
+      <textarea data-memo="${esc(ev.uid)}" data-title="${esc(MACRO_KINDS.has(ev.kind) ? ev.name : `${ev.symbol} ${KIND[ev.kind].label}`)}" data-day="${esc(ev.day)}" placeholder="${esc(MEMO_HINT[ev.kind] || "")}">${esc(t)}</textarea>
+      <div class="memo-state"></div></div>`;
+  }
+  function bindMemos(root) {
+    root.querySelectorAll("textarea[data-memo]").forEach((ta) => {
+      let timer = null;
+      ta.addEventListener("input", () => {
+        const state = ta.parentElement.querySelector(".memo-state");
+        state.textContent = "저장 중…";
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          const uid = ta.dataset.memo, t = ta.value.trim();
+          if (t) notes[uid] = { t: ta.value, at: new Date().toISOString(), title: ta.dataset.title, day: ta.dataset.day };
+          else delete notes[uid];
+          state.textContent = saveNotes() ? "저장됨" : "저장하지 못했어요 (사파리 설정 확인)";
+          // 같은 일정의 다른 화면 메모 칸도 맞춘다
+          document.querySelectorAll(`textarea[data-memo="${CSS.escape(uid)}"]`).forEach((o) => { if (o !== ta) o.value = ta.value; });
+          updateMemoCount();
+        }, 500);
+      });
+    });
+  }
+  function updateMemoCount() {
+    const el = $("#memo-count");
+    if (el) el.textContent = `메모 ${Object.keys(notes).length}개`;
+  }
+  let memoMode = false;
+  function renderMemos() {
+    const list = Object.entries(notes).sort((a, b) => (b[1].day || "").localeCompare(a[1].day || "") || (b[1].at || "").localeCompare(a[1].at || ""));
+    $("#list-summary").textContent = list.length ? `메모 ${list.length}개` : "";
+    if (!list.length) {
+      $("#list").innerHTML = `<div class="empty">아직 메모가 없어요.<br>일정을 눌러 펼친 뒤 아래 "내 메모" 칸에 생각을 남겨 보세요.</div>`;
+      return;
+    }
+    $("#list").innerHTML = `<div class="card">${list.map(([uid, n]) => `<div class="memo-card">
+      <div class="meta">${n.day ? esc(dayLabel(n.day)) : ""} · ${esc(n.title || "")}</div>
+      <div class="memo" style="margin:0;padding:0;border:0"><textarea data-memo="${esc(uid)}" data-title="${esc(n.title || "")}" data-day="${esc(n.day || "")}">${esc(n.t)}</textarea>
+      <div class="memo-state"></div></div></div>`).join("")}</div>`;
+    bindMemos($("#list"));
+  }
+  $("#memo-export").addEventListener("click", () => {
+    const blob = new Blob([JSON.stringify({ app: "investment-calendar", exported: new Date().toISOString(), notes }, null, 2)], { type: "application/json" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `투자캘린더-메모-${todayYmd}.json`;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  });
+  $("#memo-import-btn").addEventListener("click", () => $("#memo-import").click());
+  $("#memo-import").addEventListener("change", (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    file.text().then((txt) => {
+      const data = JSON.parse(txt);
+      const incoming = data.notes || data;
+      let added = 0;
+      for (const [uid, n] of Object.entries(incoming)) {
+        if (n && typeof n.t === "string" && (!notes[uid] || (n.at || "") > (notes[uid].at || ""))) { notes[uid] = n; added++; }
+      }
+      saveNotes(); updateMemoCount(); refresh();
+      alert(`메모 ${added}개를 가져왔어요.`);
+    }).catch(() => alert("메모 파일을 읽지 못했어요."));
+    e.target.value = "";
+  });
   function groupByDay(list) {
     const map = new Map();
     for (const ev of list) { if (!map.has(ev.day)) map.set(ev.day, []); map.get(ev.day).push(ev); }
@@ -655,6 +833,7 @@
   let listLimit = 45;
   function renderList() {
     renderFx();
+    if (memoMode) { renderMemos(); return; }
     const list = events.filter(visible).filter((e) => showPast ? e.day < todayYmd : e.day >= todayYmd);
     let days = groupByDay(list);
     if (showPast) days.reverse();
@@ -677,8 +856,14 @@
     if (more) more.addEventListener("click", () => { listLimit += 45; renderList(); });
   }
   $("#past-btn").addEventListener("click", (e) => {
-    showPast = !showPast; listLimit = 45;
+    showPast = !showPast; listLimit = 45; memoMode = false;
     e.currentTarget.setAttribute("aria-pressed", String(showPast));
+    $("#memo-btn").setAttribute("aria-pressed", "false");
+    renderList();
+  });
+  $("#memo-btn").addEventListener("click", (e) => {
+    memoMode = !memoMode;
+    e.currentTarget.setAttribute("aria-pressed", String(memoMode));
     renderList();
   });
   function syncMineChips() { $$(".mine-chip").forEach((b) => b.setAttribute("aria-pressed", String(settings.onlyMine))); }
@@ -704,7 +889,7 @@
       // 내 종목과 FOMC를 먼저 보여 준다
       const evs = [...(byDay.get(day) || [])].sort((a, b) => rank(a, mine) - rank(b, mine));
       const cls = ["cell", day.slice(0, 7) !== calMonth && "out", day === todayYmd && "today", day === selDay && "sel", i % 7 === 0 && "sun"].filter(Boolean).join(" ");
-      const minis = evs.slice(0, 3).map((ev) => `<span class="mini k-${ev.kind}" data-uid="${esc(ev.uid)}">${ev.kind !== "fomc" && mine.has(ev.symbol) ? "★" : ""}${esc(ev.kind === "fomc" ? "FOMC" : ev.symbol)}</span>`).join("");
+      const minis = evs.slice(0, 3).map((ev) => `<span class="mini k-${ev.kind}" data-uid="${esc(ev.uid)}">${!MACRO_KINDS.has(ev.kind) && ev.kind !== "dividend" && mine.has(ev.symbol) ? "★" : ""}${esc(ev.kind === "fomc" ? "FOMC" : ev.kind === "dividend" ? "💵" + ev.symbol : (ev.short || ev.symbol))}</span>`).join("");
       const plus = evs.length > 3 ? `<span class="plus">+${evs.length - 3}</span>` : "";
       html += `<button class="${cls}" data-day="${day}" aria-label="${dayLabel(day)} 일정 ${evs.length}건"><span class="num">${parseYmd(day).getUTCDate()}</span>${minis}${plus}</button>`;
     }
@@ -724,7 +909,7 @@
     $("#cal-day").innerHTML = `<div class="day"><h2>${dayLabel(selDay)}</h2>${evs.length ? `<div class="card">${evs.map((ev) => eventRow(ev, "c")).join("")}</div>` : `<div class="empty" style="padding:16px">일정이 없어요.</div>`}</div>`;
     bindToggles($("#cal-day"));
   }
-  const rank = (ev, mine) => ev.kind === "fomc" ? 0 : mine.has(ev.symbol) ? 1 : 2;
+  const rank = (ev, mine) => MACRO_KINDS.has(ev.kind) ? 0 : mine.has(ev.symbol) ? 1 : 2;
   function shiftMonth(n) {
     const [y, m] = calMonth.split("-").map(Number);
     const d = new Date(Date.UTC(y, m - 1 + n, 1));
@@ -806,6 +991,7 @@
     $("#mine-results").querySelectorAll("[data-add]").forEach((b) => b.addEventListener("click", () => {
       const sym = b.dataset.add;
       if (!settings.mine.includes(sym)) settings.mine.push(sym);
+      loadDividends().then(() => { rebuildEvents(); renderMine(); });
       saveSettings(); rebuildEvents(); renderMine(); renderMineResults();
     }));
   }
@@ -821,6 +1007,9 @@
       ["fomc", "FOMC 금리 결정", "미국 기준금리 발표 · 점도표"],
       ["earnings", "확정 실적 발표 📊", "회사가 날짜를 확정한 일정"],
       ["estimate", "실적 예상일 🗓️", "약 6개월 앞까지, 13주 간격으로 계산한 날짜"],
+      ["macro", "미국 경제지표 📈", "CPI · 고용 · PCE · GDP · 소매판매 발표와 결과"],
+      ["bok", "한국은행 기준금리 🇰🇷", "금융통화위원회 결정일과 결과"],
+      ["dividend", "내 종목 배당락일 💵", "★ 내 종목의 배당락일 · 배당금 · 지급일"],
     ];
     $("#kind-toggles").innerHTML = rows.map(([k, name, desc]) => `<div class="row">
       <div class="grow"><div class="name">${name}</div><div class="desc">${desc}</div></div>
@@ -900,7 +1089,7 @@
   function refresh(withSectors = true) {
     if (current === "list") renderList();
     if (current === "cal") renderCal();
-    if (current === "set") { renderMine(); renderKinds(); if (withSectors) renderSectors(); }
+    if (current === "set") { renderMine(); renderKinds(); updateMemoCount(); if (withSectors) renderSectors(); }
   }
 
   // ---------- 시작
@@ -928,6 +1117,7 @@
     // S&P 500 밖 내 종목이 있으면 전체 상장사 표를 불러와 일정을 더한다
     const sp = new Set(companies.map((c) => c.symbol));
     if (settings.mine.some((s) => !sp.has(s))) loadMarket().then(() => refresh());
+    if (settings.mine.length) loadDividends().then(() => refresh());
   }).catch(() => {
     $("#load-msg").innerHTML = "일정을 불러오지 못했어요.<br>잠시 후 다시 열어 주세요.";
   });
