@@ -34,18 +34,43 @@ class TestSources(unittest.TestCase):
         self.assertEqual(syms, ["BRKB", "GOOGL", "JPM"])
 
         jpm = next(i for i in items if "JPM" in i.uid)
-        # 미 동부 2026-10-14 07:00 EDT = 한국 같은 날 20:00
-        self.assertEqual(jpm.start_utc, "2026-10-14T11:00:00+00:00")
-        self.assertIn("10월 14일(수) 오후 8:00", jpm.description)
+        # 정확한 시각을 지어내지 않고 시간대로 안내: 미 동부 06:00~08:30 EDT = 한국 저녁 7:00~9:30
+        self.assertIsNone(jpm.start_utc)
+        self.assertEqual(jpm.kst_date, "2026-10-14")
+        self.assertIn("10월 14일(수) 저녁 7:00~9:30 사이", jpm.description)
+        self.assertIn("미국 정규장 개장: 한국시간 밤 10:30", jpm.description)
+        self.assertIn("장 전·저녁", jpm.title)
         self.assertIn("섹터: 금융 / 테마: 미국 최대 은행", jpm.description)
         self.assertIn("https://www.nasdaq.com/market-activity/stocks/jpm/earnings", jpm.description)
 
         goog = next(i for i in items if "GOOGL" in i.uid)
-        # 미 동부 16:05 EDT = 한국 다음 날 05:05
-        self.assertIn("10월 15일(목) 오전 5:05", goog.description)
+        # 장 마감 후(16:00~17:00 EDT)는 한국 다음 날 새벽 5:00~6:00
+        self.assertEqual(goog.kst_date, "2026-10-15")
+        self.assertIn("10월 15일(목) 새벽 5:00~6:00 사이", goog.description)
 
         brk = next(i for i in items if "BRKB" in i.uid)
-        self.assertIsNone(brk.start_utc)  # 시각 미정 → 종일 일정
+        self.assertEqual(brk.kst_date, "2026-10-14")  # 시각 미정 → 미국 날짜 그대로
+        self.assertIn("시각 미정", brk.title)
+
+    def test_winter_time_shifts_one_hour(self):
+        # 미국 서머타임이 끝나면(11월 첫 일요일 이후) 한국시간이 1시간 늦어진다
+        self.assertEqual(bc.timing_info(date(2026, 11, 3), "pre")[2][0],
+                         "한국시간: 11월 3일(화) 저녁 8:00~10:30 사이 (미국 장 시작 전 발표)")
+        self.assertEqual(bc.timing_info(date(2026, 11, 3), "after")[0], "2026-11-04")
+
+    def test_market_rows_keep_every_listed_company(self):
+        payload = json.loads((FIX / "nasdaq_2026-10-14.json").read_text())
+        rows = bc.market_rows(payload)
+        self.assertEqual(len(rows), 5)  # S&P 100 밖 종목(SMLL)도 남는다
+        self.assertEqual(rows[-1], ["SMLL", "Small Cap Inc.", "pre", "$0.10", "Sep/2026"])
+        previous = {"names": {"KEEP": "Keep Co.", "OLD": "Old Co."},
+                    "days": {"2026-01-01": [["OLD", "", "", ""]], "2026-10-13": [["KEEP", "pre", "", ""]]}}
+        merged = bc.merge_market(previous, {"2026-10-14": rows}, date(2026, 10, 7))
+        self.assertEqual(list(merged["days"]), ["2026-10-13", "2026-10-14"])  # 오래된 날짜는 정리
+        self.assertEqual(merged["days"]["2026-10-14"][-1], ["SMLL", "pre", "$0.10", "Sep/2026"])
+        self.assertEqual(merged["names"]["SMLL"], "Small Cap Inc.")
+        self.assertEqual(merged["names"]["KEEP"], "Keep Co.")
+        self.assertNotIn("OLD", merged["names"])  # 쓰이지 않는 이름도 정리
 
     def test_fomc(self):
         meetings = bc.parse_fomc((FIX / "fomc.html").read_text())
@@ -94,13 +119,20 @@ class TestEstimates(unittest.TestCase):
         self.assertEqual(bc.merge([old], [], set(), None, date(2026, 10, 7)), [])
 
 
+class TestFx(unittest.TestCase):
+    def test_parse_fx(self):
+        payload = {"base": "USD", "rates": {"2026-10-06": {"KRW": 1381.237}, "2026-10-05": {"KRW": 1379.5}}}
+        self.assertEqual(bc.parse_fx(payload), [["2026-10-05", 1379.5], ["2026-10-06", 1381.24]])
+        self.assertEqual(bc.parse_fx({"rates": {"2026-10-06": {"JPY": 1}}}), [])
+
+
 class TestCompanies(unittest.TestCase):
     def test_company_list_for_web_app(self):
         members = [{"symbol": "JPM", "name": "JPMorgan Chase", "sector": "Financials"},
                    {"symbol": "AAPL", "name": "Apple Inc.", "sector": "Information Technology"}]
-        out = bc.companies(members, THEMES)
+        out = bc.companies(members, THEMES, {"JPM": "JP모건 체이스"})
         self.assertEqual(out[0], {"symbol": "JPM", "name": "JPMorgan Chase", "sector": "금융",
-                                  "theme": "미국 최대 은행, 투자은행"})
+                                  "theme": "미국 최대 은행, 투자은행", "ko": "JP모건 체이스"})
         self.assertEqual(out[1]["theme"], "")
 
 
