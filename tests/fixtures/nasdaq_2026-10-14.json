@@ -1,0 +1,7 @@
+{"data":{"asOf":"Wed, Oct 14, 2026","headers":{},"rows":[
+{"lastYearRptDt":"10/15/2025","lastYearEPS":"$4.37","time":"time-pre-market","symbol":"JPM","name":"JPMorgan Chase & Co.","marketCap":"$800,000,000,000","fiscalQuarterEnding":"Sep/2026","epsForecast":"$5.01","noOfEsts":"12"},
+{"lastYearRptDt":"","lastYearEPS":"","time":"time-after-hours","symbol":"GOOGL","name":"Alphabet Inc.","marketCap":"","fiscalQuarterEnding":"Sep/2026","epsForecast":"$2.50","noOfEsts":"10"},
+{"lastYearRptDt":"","lastYearEPS":"","time":"time-after-hours","symbol":"GOOG","name":"Alphabet Inc.","marketCap":"","fiscalQuarterEnding":"Sep/2026","epsForecast":"$2.50","noOfEsts":"10"},
+{"lastYearRptDt":"","lastYearEPS":"","time":"time-not-supplied","symbol":"BRK/B","name":"Berkshire Hathaway Inc.","marketCap":"","fiscalQuarterEnding":"Sep/2026","epsForecast":"","noOfEsts":""},
+{"lastYearRptDt":"","lastYearEPS":"","time":"time-pre-market","symbol":"SMLL","name":"Small Cap Inc.","marketCap":"","fiscalQuarterEnding":"Sep/2026","epsForecast":"$0.10","noOfEsts":"2"}
+]},"message":null,"status":{"rCode":200}}

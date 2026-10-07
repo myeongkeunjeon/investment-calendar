@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>투자 일정 캘린더</title>
+<style>
+  :root { --bg:#fbfaf7; --fg:#1f2328; --muted:#5b616b; --line:#e3e0d8; --accent:#1f5fbf; --card:#ffffff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#16181c; --fg:#e8e6e1; --muted:#a3a7ae; --line:#2c3036; --accent:#7fb0ff; --card:#1d2025; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font:16px/1.7 -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; }
+  main { max-width:680px; margin:0 auto; padding:40px 16px 64px; }
+  h1 { font-size:1.6rem; margin:0 0 4px; }
+  .lead { color:var(--muted); margin:0 0 28px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px; margin-bottom:16px; }
+  h2 { font-size:1.05rem; margin:0 0 8px; }
+  code { display:block; overflow-wrap:anywhere; background:var(--bg); border:1px solid var(--line);
+         border-radius:8px; padding:10px 12px; font-size:.9rem; }
+  .btns { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+  a.btn { display:inline-block; padding:8px 14px; border-radius:8px; background:var(--accent); color:#fff;
+          text-decoration:none; font-weight:600; }
+  @media (prefers-color-scheme: dark) { a.btn { color:#0d1117; } }
+  button { padding:8px 14px; border-radius:8px; border:1px solid var(--line); background:transparent;
+           color:var(--fg); font:inherit; cursor:pointer; }
+  ol { margin:0; padding-left:20px; }
+  small { color:var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>투자 일정 캘린더</h1>
+  <p class="lead">S&amp;P 100 기업의 실적 발표일과 FOMC 금리 결정일을 한국시간으로 정리했어요. 매일 아침 자동으로 갱신돼요.</p>
+
+  <div class="card">
+    <h2>구독 주소</h2>
+    <code id="url">calendar.ics</code>
+    <div class="btns">
+      <a class="btn" id="webcal" href="calendar.ics">캘린더 앱에서 구독</a>
+      <button id="copy" type="button">주소 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>구글 캘린더 (PC)</h2>
+    <ol>
+      <li>calendar.google.com 왼쪽의 <b>다른 캘린더 +</b> → <b>URL로 추가</b></li>
+      <li>위 구독 주소를 붙여넣고 <b>캘린더 추가</b></li>
+    </ol>
+    <small>구글은 보통 하루에 한 번쯤 새로 읽어 와요. 휴대폰 구글 캘린더에도 자동으로 보여요.</small>
+  </div>
+
+  <div class="card">
+    <h2>아이폰 / 맥</h2>
+    <ol>
+      <li>이 페이지에서 <b>캘린더 앱에서 구독</b>을 눌러요</li>
+      <li>또는 설정 → 캘린더 → 계정 → 계정 추가 → 기타 → <b>구독 캘린더 추가</b>에 주소를 붙여넣어요</li>
+    </ol>
+  </div>
+
+  <p><small>공개 정보(위키백과, 나스닥, 미국 연준)를 자동으로 모은 일정이에요. 실적 발표 시각은 '장 전/장 후' 구분을 바탕으로 한 추정이고, 투자 권유가 아니에요.</small></p>
+</main>
+<script>
+  const ics = new URL("calendar.ics", location.href).href;
+  document.getElementById("url").textContent = ics;
+  document.getElementById("webcal").href = ics.replace(/^https?:/, "webcal:");
+  document.getElementById("copy").addEventListener("click", async (e) => {
+    try { await navigator.clipboard.writeText(ics); e.target.textContent = "복사했어요"; }
+    catch { e.target.textContent = "주소를 길게 눌러 복사하세요"; }
+  });
+</script>
+</body>
+</html>
