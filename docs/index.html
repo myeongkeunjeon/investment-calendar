@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>투자 캘린더</title>
-<meta name="description" content="S&P 100 실적 발표와 FOMC 일정을 한국시간으로 보는 투자 전용 캘린더">
+<meta name="description" content="S&P 500 실적 발표·결과와 FOMC 일정을 한국시간으로 보는 투자 전용 캘린더">
 <meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#121418" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -84,6 +84,17 @@
   .k-earnings .badge { background: var(--earn-soft); color: var(--earn); }
   .k-estimate .badge { background: var(--est-soft); color: var(--est); }
   .k-fomc .badge { background: var(--fomc-soft); color: var(--fomc); }
+  .ev .badge.res-up { background: #fde8e8; color: #c23b3b; }
+  .ev .badge.res-down { background: #e3edfc; color: #2f6fd6; }
+  .ev .badge.res-flat { background: var(--est-soft); color: var(--est); }
+  @media (prefers-color-scheme: dark) {
+    .ev .badge.res-up { background: #3b1f22; color: #ff8a8a; }
+    .ev .badge.res-down { background: #1d2a44; color: #8db4ff; }
+  }
+  .result-line { font-weight: 600; color: var(--fg); }
+  #grid { touch-action: pan-y; transition: transform .18s ease, opacity .18s ease; }
+  #grid.swipe-left { transform: translateX(-24px); opacity: .3; }
+  #grid.swipe-right { transform: translateX(24px); opacity: .3; }
   .k-estimate .title { color: var(--muted); }
   .detail {
     padding: 0 14px 14px 88px; font-size: .88rem; color: var(--muted); white-space: pre-wrap; overflow-wrap: anywhere;
@@ -233,7 +244,7 @@
       <div class="card" id="mine-list"></div>
       <input class="search" id="mine-search" type="search" style="margin-top:10px" placeholder="종목 검색해서 추가 (예: NVDA, 엔비디아, Ford)" autocomplete="off">
       <div class="card" id="mine-results"></div>
-      <p class="hint">S&amp;P 100 밖의 미국 상장 종목도 추가할 수 있어요. S&amp;P 100 밖 종목은 영문 티커나 영문 회사명으로 검색해 주세요. 내 종목은 <b>이 기기에만</b> 저장돼요.</p>
+      <p class="hint">S&amp;P 500 밖의 미국 상장 종목도 추가할 수 있어요. S&amp;P 500 밖 종목은 영문 티커나 영문 회사명으로 검색해 주세요. 내 종목은 <b>이 기기에만</b> 저장돼요.</p>
     </div>
 
     <div class="section">
@@ -242,14 +253,15 @@
     </div>
 
     <div class="section">
-      <h2>S&amp;P 100 종목 켜고 끄기</h2>
+      <h2>S&amp;P 500 종목 켜고 끄기</h2>
       <input class="search" id="search" type="search" placeholder="티커나 회사명 검색 (예: NVDA, 엔비디아)" autocomplete="off">
       <div class="btn-row">
+        <button class="btn" id="top100-only">S&amp;P 100만 (기본)</button>
         <button class="btn" id="all-on">모두 켜기</button>
         <button class="btn" id="all-off">모두 끄기</button>
       </div>
       <div id="sectors"></div>
-      <p class="hint">처음엔 S&amp;P 100 전체가 켜져 있어요. 관심 없는 종목은 꺼 두세요. 새로 편입된 종목은 자동으로 켜진 채 추가돼요.</p>
+      <p class="hint">처음엔 S&amp;P 500 중 대형주 100개(S&amp;P 100)만 켜져 있어요. 필요한 종목은 켜고, 관심 없는 종목은 꺼 두세요. ★ 내 종목은 여기 설정과 상관없이 항상 보여요.</p>
     </div>
 
     <div class="section">
@@ -267,7 +279,7 @@
     <div class="section">
       <h2>다른 캘린더 앱에서 구독 (선택)</h2>
       <code class="url" id="ics-url">calendar.ics</code>
-      <p class="hint">구독 주소에는 S&amp;P 100 전체와 FOMC가 들어가요. 내 종목과 켜고 끈 설정은 적용되지 않아요.</p>
+      <p class="hint">구독 주소에는 S&amp;P 100과 FOMC만 들어가요(파일 크기 때문). 내 종목과 켜고 끈 설정은 적용되지 않아요.</p>
     </div>
 
     <p class="hint">공개 정보(위키백과, 나스닥, 미국 연준, 유럽중앙은행 환율)를 매일 아침 자동으로 모아요. 나스닥은 실적 발표를 '장 전/장 후'로만 알려 줘서, 저녁(장 전)·새벽(장 후) 같은 시간대로 보여 드려요. 🗓️ 예상일은 직전 발표일에 13주를 더한 날짜예요. 투자 권유가 아니에요.
@@ -308,14 +320,17 @@
   const $$ = (s) => document.querySelectorAll(s);
 
   // ---------- 설정 (이 기기에만 저장)
-  const defaults = { hidden: [], mine: [], onlyMine: false, kinds: { earnings: true, estimate: true, fomc: true } };
+  // overrides: 종목별로 직접 켜고 끈 기록 {티커: true/false}. 기록이 없으면 S&P 100만 켜진 상태.
+  const defaults = { overrides: {}, mine: [], onlyMine: false, kinds: { earnings: true, estimate: true, fomc: true } };
   let settings = loadSettings();
   function loadSettings() {
     try {
       const raw = JSON.parse(localStorage.getItem(STORE_KEY) || "null");
-      if (raw && Array.isArray(raw.hidden)) {
+      if (raw && (raw.overrides || Array.isArray(raw.hidden))) {
+        const overrides = { ...(raw.overrides || {}) };
+        for (const sym of raw.hidden || []) overrides[sym] = false; // 예전 설정(끈 종목 목록) 옮기기
         return {
-          hidden: raw.hidden,
+          overrides,
           mine: Array.isArray(raw.mine) ? raw.mine : [],
           onlyMine: !!raw.onlyMine,
           kinds: { ...defaults.kinds, ...(raw.kinds || {}) },
@@ -327,7 +342,12 @@
   function saveSettings() {
     try { localStorage.setItem(STORE_KEY, JSON.stringify(settings)); } catch (e) { /* 무시 */ }
   }
-  const hiddenSet = () => new Set(settings.hidden);
+  let companyMap = new Map();
+  function isOn(sym) {
+    if (Object.prototype.hasOwnProperty.call(settings.overrides, sym)) return settings.overrides[sym];
+    const c = companyMap.get(sym);
+    return c ? c.top100 !== false : true;
+  }
   const mineSet = () => new Set(settings.mine);
 
   // ---------- 날짜 도구 (모두 한국시간 기준)
@@ -373,9 +393,9 @@
   const linkify = (s) => esc(s).replace(/https?:\/\/[^\s<]+/g, (u) => `<a href="${u}" target="_blank" rel="noopener">${u}</a>`);
 
   // ---------- 데이터
-  let baseEvents = [];   // S&P 100 + FOMC (서버가 만든 일정)
-  let events = [];       // baseEvents + 내 종목(S&P 100 밖) 일정
-  let companies = [];    // S&P 100 목록
+  let baseEvents = [];   // S&P 500 + FOMC (서버가 만든 일정)
+  let events = [];       // baseEvents + 내 종목(S&P 500 밖) 일정
+  let companies = [];    // S&P 500 목록 (top100: S&P 100 여부)
   let market = null;     // 미국 상장사 전체 실적 표 (필요할 때만 불러옴)
   let marketIndex = new Map();
 
@@ -409,15 +429,23 @@
     return ev;
   }
 
-  // ---------- 내 종목: S&P 100 밖 종목의 일정은 전체 상장사 표에서 기기 안에서 만든다
+  // ---------- 결과(실제 EPS) 표시 도구
+  function verdict(surprise) {
+    const v = parseFloat(surprise);
+    if (Number.isNaN(v)) return { text: "결과 발표", cls: "res-flat" };
+    if (Math.abs(v) < 0.05) return { text: "예상 부합", cls: "res-flat" };
+    return { text: `예상 ${v > 0 ? "상회" : "하회"} ${v > 0 ? "+" : ""}${v.toFixed(1)}%`, cls: v > 0 ? "res-up" : "res-down" };
+  }
+
+  // ---------- 내 종목: S&P 500 밖 종목의 일정은 전체 상장사 표에서 기기 안에서 만든다
   function buildMarketIndex() {
     marketIndex = new Map();
     if (!market) return;
     const names = market.names || {};
     for (const [day, rows] of Object.entries(market.days || {})) {
-      for (const [sym, timing, eps, fq] of rows) {
+      for (const [sym, timing, eps, fq, actual, surprise] of rows) {
         if (!marketIndex.has(sym)) marketIndex.set(sym, { symbol: sym, name: names[sym] || "", rows: [] });
-        marketIndex.get(sym).rows.push({ day, timing, eps, fq });
+        marketIndex.get(sym).rows.push({ day, timing, eps, fq, actual: actual || "", surprise: surprise || "" });
       }
     }
   }
@@ -425,18 +453,22 @@
     const entry = marketIndex.get(sym);
     if (!entry) return [];
     const url = `https://www.nasdaq.com/market-activity/stocks/${sym.toLowerCase()}/earnings`;
+    const sec = `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${sym.replace(".", "-")}&type=8-K&dateb=&owner=include&count=10`;
     const tail = ["", "※ 나스닥은 '장 전/장 후'만 알려 줘요. 위 시간은 대부분의 회사가 발표하는 시간대이고, 정확한 시각은 회사 IR 공지를 확인하세요.",
-      "※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.", "", "English source (Nasdaq):", url];
+      "※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.", "", "공식 공시(8-K, 실적 보도자료 포함 · 영어):", sec, "English source (Nasdaq):", url];
     const out = [];
     const rows = [...entry.rows].sort((a, b) => a.day.localeCompare(b.day));
     for (const r of rows) {
       const t = timingLines(r.day, r.timing);
       const tag = r.timing === "pre" ? "장 전·저녁" : r.timing === "after" ? "장 후·새벽" : "시각 미정";
-      const lines = [`■ ${entry.name} (${sym}) 실적 발표`, "S&P 100 밖 종목 (내 종목)", ...t.lines, `미국 현지 날짜: ${r.day}`];
+      const lines = [`■ ${entry.name} (${sym}) 실적 발표`];
+      if (r.actual) lines.push(`✅ 발표 결과: 실제 EPS ${r.actual}${r.eps ? " · 시장 예상 " + r.eps : ""} → ${verdict(r.surprise).text}`);
+      lines.push("S&P 500 밖 종목 (내 종목)", ...t.lines, `미국 현지 날짜: ${r.day}`);
       if (r.fq) lines.push(`대상 분기: ${r.fq} 마감 분기`);
       if (r.eps) lines.push(`시장 예상 EPS(주당순이익): ${r.eps}`);
       out.push({ uid: `mine-earnings-${sym}-${r.day}`, kind: "earnings", us_date: r.day, kst_date: t.day, symbol: sym,
-        timing: r.timing, sector: "S&P 100 밖", title: `📊 ${sym} 실적 (${tag})`, description: [...lines, ...tail].join("\n"), url });
+        timing: r.timing, sector: "S&P 500 밖", title: `📊 ${sym} 실적 (${tag})`, description: [...lines, ...tail].join("\n"), url,
+        actual_eps: r.actual, surprise: r.surprise });
     }
     const last = rows[rows.length - 1];
     if (last) {
@@ -445,12 +477,12 @@
         if (d <= todayYmd) continue;
         const note = last.timing === "pre" ? "지난번엔 미국 장 시작 전 발표 (한국시간 같은 날 저녁)"
           : last.timing === "after" ? "지난번엔 미국 장 마감 후 발표 (한국시간 다음 날 새벽)" : "지난번 발표 시각은 알려지지 않음";
-        const lines = [`■ ${entry.name} (${sym}) 실적 발표 예상일 — 아직 확정 아님`, "S&P 100 밖 종목 (내 종목)",
+        const lines = [`■ ${entry.name} (${sym}) 실적 발표 예상일 — 아직 확정 아님`, "S&P 500 밖 종목 (내 종목)",
           `예상 날짜(미국): ${d}(${DOW[parseYmd(d).getUTCDay()]}) 전후`, note, "",
           `계산 근거: 직전 발표일 ${last.day}에서 13주씩 더한 날짜예요.`,
           "실제 날짜는 1~2주 앞뒤로 달라질 수 있어요. 회사가 날짜를 확정하면 자동으로 확정 일정으로 바뀝니다."];
         out.push({ uid: `mine-estimate-${sym}-${d}`, kind: "estimate", us_date: d, kst_date: timingLines(d, last.timing).day,
-          symbol: sym, timing: last.timing, sector: "S&P 100 밖", title: `🗓️ ${sym} 실적 예상일`, description: [...lines, ...tail.slice(1)].join("\n"), url });
+          symbol: sym, timing: last.timing, sector: "S&P 500 밖", title: `🗓️ ${sym} 실적 예상일`, description: [...lines, ...tail.slice(1)].join("\n"), url });
       }
     }
     return out.map(normalize);
@@ -478,7 +510,7 @@
     const mine = mineSet();
     if (settings.onlyMine) return mine.has(ev.symbol);
     if (mine.has(ev.symbol)) return true;
-    return !(ev.symbol && hiddenSet().has(ev.symbol));
+    return !ev.symbol || isOn(ev.symbol);
   }
 
   // ---------- 그리기: 일정 하나
@@ -494,18 +526,20 @@
       const name = companyName(ev.symbol);
       if (name) sub.push(name);
       if (ev.sector) sub.push(ev.sector);
-      if (ev.eps) sub.push(`예상 EPS ${ev.eps}`);
+      if (ev.actual_eps) sub.push(`실제 EPS ${ev.actual_eps}${ev.eps ? " (예상 " + ev.eps + ")" : ""}`);
+      else if (ev.eps) sub.push(`예상 EPS ${ev.eps}`);
     }
+    const res = ev.actual_eps ? verdict(ev.surprise) : null;
     const star = ev.kind !== "fomc" && mineSet().has(ev.symbol) ? `<span class="star" aria-label="내 종목">★</span>` : "";
-    const title = ev.kind === "fomc" ? esc(ev.name) : `${star}${esc(ev.symbol)} ${KIND[ev.kind].label}`;
+    const title = ev.kind === "fomc" ? esc(ev.name) : `${star}${esc(ev.symbol)} ${ev.actual_eps ? "실적 결과" : KIND[ev.kind].label}`;
     const id = "d-" + ev.uid.replace(/[^a-zA-Z0-9]/g, "");
     return `<div class="ev k-${ev.kind}">
       <button aria-expanded="false" aria-controls="${id}">
         <span class="time">${esc(ev.time)}</span>
         <span><div class="title">${title}</div><div class="sub">${esc(sub.join(" · "))}</div></span>
-        <span class="badge">${KIND[ev.kind].badge}</span>
+        <span class="badge ${res ? res.cls : ""}">${res ? esc(res.text.replace("예상 ", "")) : KIND[ev.kind].badge}</span>
       </button>
-      <div class="detail" id="${id}" hidden>${linkify(ev.description)}</div>
+      <div class="detail" id="${id}" hidden>${linkify(ev.description).replace(/^(✅[^\n]*)$/m, '<span class="result-line">$1</span>')}</div>
     </div>`;
   }
   function bindToggles(root) {
@@ -525,27 +559,88 @@
 
   // ---------- 환율
   let fx = null;
+  // 앱을 열 때마다 최신 환율을 받아 온다. 실패하면 서버가 매일 저장한 유럽중앙은행 기준환율(fx.json)을 쓴다.
+  let fxLive = null;
+  const FX_LIVE_SOURCES = [
+    { // 하나은행 고시 환율 (두나무 제공, 영업시간 중 약 1분 단위)
+      url: "https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWUSD",
+      parse: (j) => {
+        const r = Array.isArray(j) ? j[0] : null;
+        if (!r || typeof r.basePrice !== "number") return null;
+        return { rate: r.basePrice, diff: r.signedChangePrice, pct: typeof r.signedChangeRate === "number" ? r.signedChangeRate * 100 : null,
+          label: `실시간 · ${r.provider || "하나은행"} 고시 ${r.date ? r.date.slice(5).replace("-", "/") + " " : ""}${(r.time || "").slice(0, 5)}`,
+          link: "https://www.kebhana.com/cms/rate/index.do?contentUrl=/cms/rate/wpfxd651_01i.do" };
+      },
+    },
+    { // ExchangeRate-API 무료 공개 주소 (하루 몇 번 갱신)
+      url: "https://open.er-api.com/v6/latest/USD",
+      parse: (j) => {
+        const krw = j && j.rates && j.rates.KRW;
+        if (typeof krw !== "number") return null;
+        const t = j.time_last_update_unix ? new Date(j.time_last_update_unix * 1000) : null;
+        return { rate: krw, diff: null, pct: null, label: `${t ? dayLabel(kstYmd(t)).replace(/ \(.\)/, "") + " " + kstHourFmt.format(t) + " 기준 · " : ""}ExchangeRate-API`,
+          link: "https://www.exchangerate-api.com" };
+      },
+    },
+  ];
+  async function fetchLiveFx() {
+    for (const src of FX_LIVE_SOURCES) {
+      try {
+        const ctrl = new AbortController();
+        const timer = setTimeout(() => ctrl.abort(), 5000);
+        const r = await fetch(src.url, { cache: "no-store", signal: ctrl.signal });
+        clearTimeout(timer);
+        if (!r.ok) continue;
+        const v = src.parse(await r.json());
+        if (v && v.rate > 100 && v.rate < 10000) { fxLive = { ...v, at: Date.now() }; return true; }
+      } catch (e) { /* 다음 출처 시도 */ }
+    }
+    return false;
+  }
+  function refreshFx() { fetchLiveFx().then((ok) => { if (ok && current === "list") renderFx(); }); }
+  document.addEventListener("visibilitychange", () => {
+    // 앱으로 돌아왔을 때 1분 넘게 지났으면 다시 받아 온다
+    if (document.visibilityState === "visible" && (!fxLive || Date.now() - fxLive.at > 60000)) refreshFx();
+  });
+
   function renderFx() {
-    const rates = fx && fx.rates;
-    if (!rates || rates.length < 2) { $("#fx").innerHTML = ""; return; }
-    const [lastDay, last] = rates[rates.length - 1];
-    const prev = rates[rates.length - 2][1];
-    const diff = last - prev, pct = (diff / prev) * 100;
+    const rates = (fx && fx.rates) || [];
+    if (!fxLive && rates.length < 2) { $("#fx").innerHTML = ""; return; }
+    const fmt = (v) => v.toLocaleString("ko-KR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    let rate, diff, pct, label, link;
+    if (fxLive) {
+      ({ rate, label, link } = fxLive);
+      // 변동 정보가 없는 출처는 마지막 기준환율과 비교
+      const base = rates.length ? rates[rates.length - 1][1] : null;
+      diff = typeof fxLive.diff === "number" ? fxLive.diff : base ? rate - base : null;
+      pct = typeof fxLive.pct === "number" ? fxLive.pct : base && diff !== null ? (diff / base) * 100 : null;
+    } else {
+      const [lastDay, last] = rates[rates.length - 1];
+      const prev = rates[rates.length - 2][1];
+      rate = last; diff = last - prev; pct = (diff / prev) * 100;
+      const d = parseYmd(lastDay);
+      label = `${d.getUTCMonth() + 1}/${d.getUTCDate()} 기준 · ${fx.source || ""} (실시간 연결 안 됨)`;
+      link = fx.url;
+    }
     const cls = diff > 0 ? "up" : diff < 0 ? "down" : "";
     const arrow = diff > 0 ? "▲" : diff < 0 ? "▼" : "−";
-    const pts = rates.slice(-40).map((r) => r[1]);
-    const min = Math.min(...pts), max = Math.max(...pts), span = max - min || 1;
-    const path = pts.map((v, i) => `${(i / (pts.length - 1)) * 100},${36 - ((v - min) / span) * 32}`).join(" ");
-    const d = parseYmd(lastDay);
+    const chg = diff === null ? "" : `<span class="chg ${cls}">${arrow}${Math.abs(diff).toFixed(2)}${pct === null ? "" : ` (${pct >= 0 ? "+" : ""}${pct.toFixed(2)}%)`}</span>`;
+    let spark = "";
+    if (rates.length >= 2) {
+      const pts = rates.slice(-40).map((r) => r[1]);
+      const min = Math.min(...pts), max = Math.max(...pts), span = max - min || 1;
+      const path = pts.map((v, i) => `${(i / (pts.length - 1)) * 100},${36 - ((v - min) / span) * 32}`).join(" ");
+      spark = `<svg viewBox="0 0 100 40" preserveAspectRatio="none" role="img" aria-label="최근 약 2개월 기준환율 추이 (최저 ${min.toFixed(0)}원, 최고 ${max.toFixed(0)}원)">
+        <polyline points="${path}" fill="none" stroke="var(--accent)" stroke-width="1.6" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+      </svg>`;
+    }
     $("#fx").innerHTML = `<div class="card fx">
       <div>
         <div class="label">달러/원 환율</div>
-        <div><span class="rate">${last.toLocaleString("ko-KR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}원</span><span class="chg ${cls}">${arrow}${Math.abs(diff).toFixed(2)} (${pct >= 0 ? "+" : ""}${pct.toFixed(2)}%)</span></div>
-        <a href="${esc(fx.url || "#")}" target="_blank" rel="noopener">${d.getUTCMonth() + 1}/${d.getUTCDate()} 기준 · ${esc(fx.source || "")}</a>
+        <div><span class="rate">${fmt(rate)}원</span>${chg}</div>
+        <a href="${esc(link || "#")}" target="_blank" rel="noopener">${esc(label)}</a>
       </div>
-      <svg viewBox="0 0 100 40" preserveAspectRatio="none" role="img" aria-label="최근 환율 추이 (최저 ${min.toFixed(0)}원, 최고 ${max.toFixed(0)}원)">
-        <polyline points="${path}" fill="none" stroke="var(--accent)" stroke-width="1.6" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
-      </svg>
+      ${spark}
     </div>`;
   }
 
@@ -587,6 +682,7 @@
 
   // ---------- 달력 화면
   let calMonth = todayYmd.slice(0, 7);
+  let suppressClick = false;
   let selDay = todayYmd;
   function renderCal() {
     const [y, m] = calMonth.split("-").map(Number);
@@ -608,6 +704,7 @@
     }
     $("#grid").innerHTML = html;
     $("#grid").querySelectorAll(".cell").forEach((c) => c.addEventListener("click", () => {
+      if (suppressClick) return;
       selDay = c.dataset.day;
       if (selDay.slice(0, 7) !== calMonth) calMonth = selDay.slice(0, 7);
       renderCal();
@@ -625,6 +722,25 @@
   }
   $("#prev-m").addEventListener("click", () => shiftMonth(-1));
   $("#next-m").addEventListener("click", () => shiftMonth(1));
+  // 달력을 좌우로 밀어서 달 넘기기
+  (() => {
+    const grid = $("#grid");
+    let x0 = null, y0 = null, t0 = 0;
+    grid.addEventListener("touchstart", (e) => {
+      if (e.touches.length !== 1) { x0 = null; return; }
+      x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; t0 = Date.now();
+    }, { passive: true });
+    grid.addEventListener("touchend", (e) => {
+      if (x0 === null) return;
+      const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+      x0 = null;
+      if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy) * 1.5 || Date.now() - t0 > 800) return;
+      suppressClick = true; setTimeout(() => { suppressClick = false; }, 350);
+      const dir = dx < 0 ? 1 : -1; // 왼쪽으로 밀면 다음 달
+      grid.classList.add(dir > 0 ? "swipe-left" : "swipe-right");
+      setTimeout(() => { grid.classList.remove("swipe-left", "swipe-right"); shiftMonth(dir); }, 140);
+    }, { passive: true });
+  })();
 
   // ---------- 설정: 내 종목
   function nextEarnings(sym) {
@@ -638,7 +754,7 @@
     $("#mine-list").innerHTML = settings.mine.length ? settings.mine.map((sym) => {
       const c = sp.get(sym);
       const name = c ? `${c.name}${c.ko ? " · " + c.ko : ""}` : (marketIndex.get(sym)?.name || "");
-      const info = [c ? c.sector : "S&P 100 밖", nextEarnings(sym)].filter(Boolean).join(" · ");
+      const info = [c ? c.sector : "S&P 500 밖", nextEarnings(sym)].filter(Boolean).join(" · ");
       return `<div class="row"><div class="grow"><div class="name"><span class="star">★</span>${esc(sym)} <span style="font-weight:400;color:var(--muted)">${esc(name)}</span></div>
         <div class="desc">${esc(info)}</div></div><button class="del-btn" data-del="${esc(sym)}">삭제</button></div>`;
     }).join("") : `<div class="row"><div class="grow desc" style="white-space:normal">아직 없어요. 아래에서 검색해 추가하면 ★ 표시가 붙고, "★ 내 종목만"으로 모아 볼 수 있어요.</div></div>`;
@@ -661,16 +777,16 @@
     };
     for (const c of companies) {
       const sc = scoreOf(c.symbol, [c.name, c.ko, c.theme]);
-      if (sc >= 0) push(c.symbol, `${c.name}${c.ko ? " · " + c.ko : ""}`, `S&P 100 · ${c.sector}`, sc);
+      if (sc >= 0) push(c.symbol, `${c.name}${c.ko ? " · " + c.ko : ""}`, `${c.top100 === false ? "S&P 500" : "S&P 100"} · ${c.sector}`, sc);
     }
     for (const [sym, e] of marketIndex) {
       const sc = scoreOf(sym, [e.name]);
-      if (sc >= 0) push(sym, e.name, "S&P 100 밖", sc + 0.5);
+      if (sc >= 0) push(sym, e.name, "S&P 500 밖", sc + 0.5);
     }
     results.sort((a, b) => a.score - b.score || a.sym.localeCompare(b.sym));
     const top = results.slice(0, 15);
     if (!top.length) {
-      $("#mine-results").innerHTML = `<div class="result"><div class="grow desc" style="white-space:normal">${market ? "찾는 종목이 없어요. S&P 100 밖 종목은 영문 티커나 영문 회사명으로 검색해 주세요. 최근 약 3개월 안에 실적을 발표했거나 발표 예정인 미국 상장사만 나와요." : "종목 목록을 불러오는 중…"}</div></div>`;
+      $("#mine-results").innerHTML = `<div class="result"><div class="grow desc" style="white-space:normal">${market ? "찾는 종목이 없어요. S&P 500 밖 종목은 영문 티커나 영문 회사명으로 검색해 주세요. 최근 약 3개월 안에 실적을 발표했거나 발표 예정인 미국 상장사만 나와요." : "종목 목록을 불러오는 중…"}</div></div>`;
       return;
     }
     $("#mine-results").innerHTML = top.map((r) => `<div class="result">
@@ -679,14 +795,13 @@
     $("#mine-results").querySelectorAll("[data-add]").forEach((b) => b.addEventListener("click", () => {
       const sym = b.dataset.add;
       if (!settings.mine.includes(sym)) settings.mine.push(sym);
-      settings.hidden = settings.hidden.filter((s) => s !== sym); // S&P 100 종목이 꺼져 있었다면 켠다
       saveSettings(); rebuildEvents(); renderMine(); renderMineResults();
     }));
   }
   $("#mine-search").addEventListener("focus", () => loadMarket().then(renderMineResults));
   $("#mine-search").addEventListener("input", () => { renderMineResults(); loadMarket().then(renderMineResults); });
 
-  // ---------- 설정: 일정 종류, S&P 100 켜고 끄기
+  // ---------- 설정: 일정 종류, S&P 500 켜고 끄기
   function switchHtml(attrs, checked, label) {
     return `<label class="switch"><input type="checkbox" ${attrs} ${checked ? "checked" : ""} aria-label="${esc(label)}"><span></span></label>`;
   }
@@ -707,7 +822,6 @@
   let openSectors = new Set();
   function renderSectors() {
     const q = $("#search").value.trim().toLowerCase();
-    const hidden = hiddenSet();
     const match = (c) => !q || [c.symbol, c.name, c.sector, c.theme, c.ko].some((v) => (v || "").toLowerCase().includes(q));
     const bySector = new Map();
     for (const c of companies) { if (!bySector.has(c.sector)) bySector.set(c.sector, []); bySector.get(c.sector).push(c); }
@@ -715,7 +829,7 @@
     for (const [sector, list] of [...bySector.entries()].sort((a, b) => a[0].localeCompare(b[0], "ko"))) {
       const shown = list.filter(match);
       if (!shown.length) continue;
-      const on = list.filter((c) => !hidden.has(c.symbol)).length;
+      const on = list.filter((c) => isOn(c.symbol)).length;
       const open = q || openSectors.has(sector);
       html += `<details class="sector card" data-sector="${esc(sector)}" ${open ? "open" : ""}>
         <summary>
@@ -724,9 +838,9 @@
           ${switchHtml(`data-sector-toggle="${esc(sector)}"`, on > 0, `${sector} 전체`)}
         </summary>
         <div class="list">${shown.map((c) => `<div class="row">
-          <div class="grow"><div class="name">${esc(c.symbol)} <span style="font-weight:400;color:var(--muted)">${esc(c.name)}${c.ko ? " · " + esc(c.ko) : ""}</span></div>
+          <div class="grow"><div class="name">${esc(c.symbol)} <span style="font-weight:400;color:var(--muted)">${esc(c.name)}${c.ko ? " · " + esc(c.ko) : ""}${c.top100 === false ? "" : " · S&amp;P 100"}</span></div>
           ${c.theme ? `<div class="desc">${esc(c.theme)}</div>` : ""}</div>
-          ${switchHtml(`data-symbol="${esc(c.symbol)}"`, !hidden.has(c.symbol), c.symbol)}</div>`).join("")}</div>
+          ${switchHtml(`data-symbol="${esc(c.symbol)}"`, isOn(c.symbol), c.symbol)}</div>`).join("")}</div>
       </details>`;
     }
     $("#sectors").innerHTML = html || `<div class="empty" style="padding:16px">검색 결과가 없어요.</div>`;
@@ -736,26 +850,29 @@
       d.open ? openSectors.add(d.dataset.sector) : openSectors.delete(d.dataset.sector);
     }));
     $("#sectors").querySelectorAll("input[data-symbol]").forEach((i) => i.addEventListener("change", () => {
-      setHidden([i.dataset.symbol], !i.checked);
+      setOn([i.dataset.symbol], i.checked);
     }));
     $("#sectors").querySelectorAll("input[data-sector-toggle]").forEach((i) => {
       i.addEventListener("click", (e) => e.stopPropagation());
       i.addEventListener("change", () => {
         const syms = companies.filter((c) => c.sector === i.dataset.sectorToggle).map((c) => c.symbol);
-        setHidden(syms, !i.checked);
+        setOn(syms, i.checked);
       });
     });
   }
-  function setHidden(symbols, hide) {
-    const h = hiddenSet();
-    symbols.forEach((s) => hide ? h.add(s) : h.delete(s));
-    settings.hidden = [...h].sort();
+  function setOn(symbols, on) {
+    for (const sym of symbols) {
+      const c = companyMap.get(sym);
+      const def = c ? c.top100 !== false : true;
+      if (on === def) delete settings.overrides[sym]; else settings.overrides[sym] = on;
+    }
     saveSettings();
     renderSectors(); refresh(false);
   }
   $("#search").addEventListener("input", renderSectors);
-  $("#all-on").addEventListener("click", () => setHidden(companies.map((c) => c.symbol), false));
-  $("#all-off").addEventListener("click", () => setHidden(companies.map((c) => c.symbol), true));
+  $("#top100-only").addEventListener("click", () => { settings.overrides = {}; saveSettings(); renderSectors(); refresh(false); });
+  $("#all-on").addEventListener("click", () => setOn(companies.map((c) => c.symbol), true));
+  $("#all-off").addEventListener("click", () => setOn(companies.map((c) => c.symbol), false));
 
   // ---------- 탭
   let current = "list";
@@ -779,6 +896,7 @@
   $("#today").textContent = `오늘 ${dayLabel(todayYmd)} · 한국시간`;
   $("#ics-url").textContent = new URL("calendar.ics", location.href).href;
   syncMineChips();
+  refreshFx();
 
   Promise.all([
     fetch("events.json", { cache: "no-cache" }).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }),
@@ -788,6 +906,7 @@
   ]).then(([evs, comps, fxData, modified]) => {
     baseEvents = evs.map(normalize);
     companies = comps.length ? comps : deriveCompanies(baseEvents);
+    companyMap = new Map(companies.map((c) => [c.symbol, c]));
     fx = fxData;
     events = baseEvents;
     if (modified) $("#updated").textContent = `마지막 갱신: ${new Date(modified).toLocaleString("ko-KR", { timeZone: KST })}`;
@@ -795,7 +914,7 @@
     let start = "list";
     try { start = sessionStorage.getItem("ic.view") || "list"; } catch (e) { /* 무시 */ }
     show(["list", "cal", "set"].includes(start) ? start : "list");
-    // S&P 100 밖 내 종목이 있으면 전체 상장사 표를 불러와 일정을 더한다
+    // S&P 500 밖 내 종목이 있으면 전체 상장사 표를 불러와 일정을 더한다
     const sp = new Set(companies.map((c) => c.symbol));
     if (settings.mine.some((s) => !sp.has(s))) loadMarket().then(() => refresh());
   }).catch(() => {

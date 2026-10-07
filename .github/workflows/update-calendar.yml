@@ -53,7 +53,7 @@ jobs:
           # 최신 main 위에 다시 올려서 저장한다 (충돌 방지).
           OUT="$RUNNER_TEMP/generated"
           mkdir -p "$OUT"
-          FILES="docs/calendar.ics docs/events.json docs/companies.json docs/market.json docs/fx.json data/sp100.json"
+          FILES="docs/calendar.ics docs/events.json docs/companies.json docs/market.json docs/fx.json data/sp100.json data/sp500.json"
           for f in $FILES; do [ -f "$f" ] && cp "$f" "$OUT/$(basename "$f")"; done
           git fetch origin main
           git checkout -f -B main origin/main

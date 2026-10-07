@@ -1,9 +1,9 @@
 """투자 일정 캘린더(.ics) 생성기.
 
 하는 일:
-  1. 위키백과에서 S&P 100 구성종목 목록(티커·회사명·섹터)을 가져온다.
+  1. 위키백과에서 S&P 500 구성종목 목록(티커·회사명·섹터)과 그중 S&P 100 종목을 가져온다.
   2. 나스닥 실적 캘린더 API에서 지난 100일~앞으로 90일의 실적 발표 일정을 가져와
-     S&P 100 종목만 고른다. 아직 확정되지 않은 다음 분기는 13주 간격으로
+     S&P 500 종목만 고른다. 발표가 끝난 일정에는 실제 EPS와 예상 대비 결과를 붙인다. 아직 확정되지 않은 다음 분기는 13주 간격으로
      '예상일'을 계산해 약 6개월 앞까지 채운다.
   3. 연준(Fed) 홈페이지에서 FOMC 회의 일정을 가져온다.
   4. 한국어 설명(테마/섹터, 한국시간 발표 시간대)과 영어 원문 링크를 붙여
@@ -36,6 +36,12 @@ DATA_DIR = ROOT / "data"
 DOCS_DIR = ROOT / "docs"
 
 WIKI_URL = "https://en.wikipedia.org/wiki/S%26P_100"
+WIKI_SP500_URL = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
+NASDAQ_SURPRISE_API = "https://api.nasdaq.com/api/company/{symbol}/earnings-surprise"
+SEC_FILINGS_PAGE = ("https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK={symbol}"
+                    "&type=8-K&dateb=&owner=include&count=10")
+RESULT_LOOKBACK_DAYS = 14   # 발표 후 며칠까지 결과(실제 EPS)를 따로 찾아볼지
+RESULT_LOOKUP_LIMIT = 60    # 한 번 실행에 결과를 따로 찾아보는 최대 종목 수
 NASDAQ_API = "https://api.nasdaq.com/api/calendar/earnings?date={day}"
 NASDAQ_EARNINGS_PAGE = "https://www.nasdaq.com/market-activity/stocks/{symbol}/earnings"
 FOMC_URL = "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
@@ -117,15 +123,17 @@ class Item:
     timing: str = ""   # "pre"(장 전), "after"(장 후), ""(미정)
     sector: str = ""   # 한국어 섹터 (웹앱 필터에 사용)
     kst_date: str = "" # 한국시간 기준 날짜(종일 일정을 놓을 날). 비면 us_date
+    actual_eps: str = ""  # 발표된 실제 EPS (예: "$5.20")
+    surprise: str = ""    # 예상 대비 차이 % (예: "3.8", "-1.2")
 
 
 # ---------------------------------------------------------------- 공통 도구
 
-def http_get(url: str, headers: dict | None = None, tries: int = 3) -> requests.Response:
+def http_get(url: str, headers: dict | None = None, tries: int = 3, timeout: int = 30) -> requests.Response:
     last_err: Exception | None = None
     for attempt in range(tries):
         try:
-            resp = requests.get(url, headers=headers or {"User-Agent": USER_AGENT}, timeout=30)
+            resp = requests.get(url, headers=headers or {"User-Agent": USER_AGENT}, timeout=timeout)
             resp.raise_for_status()
             return resp
         except requests.RequestException as err:
@@ -203,9 +211,10 @@ TIME_NOTE = ("※ 나스닥은 '장 전/장 후'만 알려 줘요. 위 시간은
              "정확한 시각은 회사 IR 공지를 확인하세요.")
 
 
-# ---------------------------------------------------------------- 1. S&P 100 목록
+# ---------------------------------------------------------------- 1. S&P 500 / S&P 100 목록
 
-def parse_sp100(html: str) -> list[dict]:
+def parse_index_table(html: str) -> list[dict]:
+    """위키백과의 지수 구성종목 표(티커·회사명·섹터)를 읽는다. S&P 100, S&P 500 공통."""
     soup = BeautifulSoup(html, "html.parser")
     for table in soup.select("table.wikitable"):
         headers = [th.get_text(" ", strip=True).lower() for th in table.select("tr th")]
@@ -214,7 +223,8 @@ def parse_sp100(html: str) -> list[dict]:
         first_row = table.find("tr")
         cols = [c.get_text(" ", strip=True).lower() for c in first_row.find_all(["th", "td"])]
         i_sym = next(i for i, h in enumerate(cols) if "symbol" in h)
-        i_name = next((i for i, h in enumerate(cols) if "name" in h or "company" in h), i_sym + 1)
+        i_name = next((i for i, h in enumerate(cols) if any(k in h for k in ("name", "company", "security"))),
+                      i_sym + 1)
         i_sec = next(i for i, h in enumerate(cols) if "sector" in h)
         out = []
         for tr in table.find_all("tr")[1:]:
@@ -227,20 +237,38 @@ def parse_sp100(html: str) -> list[dict]:
             out.append({"symbol": symbol, "name": cells[i_name], "sector": cells[i_sec]})
         if len(out) >= 50:
             return out
-    raise ValueError("위키백과 페이지에서 S&P 100 표를 찾지 못했습니다.")
+    raise ValueError("위키백과 페이지에서 구성종목 표를 찾지 못했습니다.")
 
 
-def get_sp100() -> list[dict]:
-    cache = DATA_DIR / "sp100.json"
+parse_sp100 = parse_index_table  # 예전 이름
+
+
+def fetch_index(url: str, cache_name: str, label: str) -> list[dict]:
+    cache = DATA_DIR / cache_name
     try:
-        members = parse_sp100(http_get(WIKI_URL).text)
+        members = parse_index_table(http_get(url).text)
         save_json(cache, members)
-        print(f"S&P 100 구성종목 {len(members)}개를 위키백과에서 가져왔습니다.")
+        print(f"{label} 구성종목 {len(members)}개를 위키백과에서 가져왔습니다.")
         return members
     except Exception as err:  # noqa: BLE001 - 어떤 실패든 캐시로 대체
         members = load_json(cache, [])
-        warn(f"위키백과 실패 → 저장된 목록 {len(members)}개 사용 ({err})")
+        warn(f"{label} 위키백과 실패 → 저장된 목록 {len(members)}개 사용 ({err})")
         return members
+
+
+def combine_members(sp500: list[dict], sp100: list[dict]) -> list[dict]:
+    """S&P 500 전체에 S&P 100 여부(top100)를 표시한다. 웹앱은 S&P 100만 기본으로 켠다."""
+    top = {norm_symbol(m["symbol"]) for m in sp100}
+    out = {norm_symbol(m["symbol"]): {**m, "top100": norm_symbol(m["symbol"]) in top} for m in sp500}
+    for m in sp100:  # S&P 500 목록을 못 받았거나 빠진 종목이 있어도 S&P 100은 지킨다
+        out.setdefault(norm_symbol(m["symbol"]), {**m, "top100": True})
+    return list(out.values())
+
+
+def get_members() -> list[dict]:
+    sp500 = fetch_index(WIKI_SP500_URL, "sp500.json", "S&P 500")
+    sp100 = fetch_index(WIKI_URL, "sp100.json", "S&P 100")
+    return combine_members(sp500, sp100)
 
 
 # ---------------------------------------------------------------- 2. 실적 발표
@@ -255,8 +283,11 @@ def earnings_item(row: dict, member: dict, us_day: date, themes: dict) -> Item:
     timing_code = timing_code_of(row)
     kst_day, title_tag, when_lines = timing_info(us_day, timing_code)
 
-    lines = [
-        f"■ {name} ({symbol}) 실적 발표",
+    actual, surprise = actual_of(row)
+    lines = [f"■ {name} ({symbol}) 실적 발표"]
+    if actual:
+        lines.append(result_line(actual, (row.get("epsForecast") or "").strip(), surprise))
+    lines += [
         f"섹터: {sector}" + (f" / 테마: {theme}" if theme else ""),
         *when_lines,
         f"미국 현지 날짜: {us_day.isoformat()}",
@@ -274,23 +305,90 @@ def earnings_item(row: dict, member: dict, us_day: date, themes: dict) -> Item:
         TIME_NOTE,
         "※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.",
         "",
+        "공식 공시(8-K, 실적 보도자료 포함 · 영어):",
+        SEC_FILINGS_PAGE.format(symbol=symbol.replace(".", "-")),
         "English source (Nasdaq):",
     ]
     url = NASDAQ_EARNINGS_PAGE.format(symbol=symbol.lower())
     lines.append(url)
+    title = (f"✅ {symbol} 실적 결과 · {verdict(surprise)} · {sector}" if actual
+             else f"📊 {symbol} 실적 ({title_tag}) · {sector}")
 
     return Item(
         uid=f"earnings-{norm_symbol(symbol)}-{us_day.isoformat()}@investment-calendar",
         kind="earnings",
         us_date=us_day.isoformat(),
-        title=f"📊 {symbol} 실적 ({title_tag}) · {sector}",
+        title=title,
         description="\n".join(lines),
         url=url,
         symbol=symbol,
         timing=timing_code,
         sector=sector,
         kst_date=kst_day,
+        actual_eps=actual,
+        surprise=surprise,
     )
+
+
+def money(text) -> str:
+    """'$1.23', '($0.12)', 1.23 같은 값을 '$1.23' / '-$0.12' 꼴로. 값이 없으면 ''."""
+    if text is None:
+        return ""
+    t = str(text).strip()
+    if not t or t.upper() in {"N/A", "NA", "--", "-"}:
+        return ""
+    neg = t.startswith("(") and t.endswith(")") or t.startswith("-")
+    num = re.sub(r"[^0-9.]", "", t)
+    if not num:
+        return ""
+    try:
+        v = float(num)
+    except ValueError:
+        return ""
+    return f"{'-' if neg and v else ''}${v:.2f}"
+
+
+def percent(text) -> str:
+    if text is None:
+        return ""
+    t = str(text).strip().replace("%", "")
+    neg = t.startswith("(") and t.endswith(")")
+    try:
+        v = float(re.sub(r"[()+,\s]", "", t))
+    except ValueError:
+        return ""
+    return f"{-abs(v) if neg else v:.1f}"
+
+
+def actual_of(row: dict) -> tuple[str, str]:
+    """나스닥 표에서 실제 EPS와 예상 대비 %를 읽는다. 지난 날짜에만 들어 있다."""
+    actual = money(row.get("eps") if "eps" in row else row.get("actualEPS"))
+    if not actual:
+        return "", ""
+    surprise = percent(row.get("surprise") if "surprise" in row else row.get("percentageSurprise"))
+    if not surprise:
+        est = money(row.get("epsForecast"))
+        try:
+            a, e = float(actual.replace("$", "")), float(est.replace("$", ""))
+            surprise = f"{(a - e) / abs(e) * 100:.1f}" if e else ""
+        except ValueError:
+            surprise = ""
+    return actual, surprise
+
+
+def verdict(surprise: str) -> str:
+    try:
+        v = float(surprise)
+    except ValueError:
+        return "결과 발표"
+    if abs(v) < 0.05:
+        return "예상 부합"
+    return f"예상 {'상회' if v > 0 else '하회'} {v:+.1f}%"
+
+
+def result_line(actual: str, estimate: str, surprise: str) -> str:
+    est = f" · 시장 예상 {estimate}" if estimate else ""
+    return f"✅ 발표 결과: 실제 EPS {actual}{est} → {verdict(surprise)}"
 
 
 def timing_code_of(row: dict) -> str:
@@ -317,7 +415,8 @@ def parse_nasdaq_day(payload: dict, us_day: date, members: dict[str, dict], them
 
 
 def market_rows(payload: dict) -> list[list[str]]:
-    """그날 실적을 발표하는 미국 상장사 전체를 간단한 표로. [티커, 회사명, 장전/장후, 예상 EPS, 대상 분기]
+    """그날 실적을 발표하는 미국 상장사 전체를 간단한 표로.
+    [티커, 회사명, 장전/장후, 예상 EPS, 대상 분기, 실제 EPS, 예상 대비 %]
 
     웹앱에서 S&P 100 밖의 종목도 '내 종목'으로 고를 수 있게, 공개된 전체 목록을 그대로 보관한다.
     누가 어떤 종목을 골랐는지는 저장소에 남지 않는다(기기 안에만 저장).
@@ -328,13 +427,15 @@ def market_rows(payload: dict) -> list[list[str]]:
         symbol = (row.get("symbol") or "").strip()
         if not symbol:
             continue
+        actual, surprise = actual_of(row)
         out.append([symbol, (row.get("name") or "").strip(), timing_code_of(row),
-                    (row.get("epsForecast") or "").strip(), (row.get("fiscalQuarterEnding") or "").strip()])
+                    (row.get("epsForecast") or "").strip(), (row.get("fiscalQuarterEnding") or "").strip(),
+                    actual, surprise])
     return out
 
 
 def get_earnings(members_list: list[dict], themes: dict, today: date) -> tuple[list[Item], set[str], dict]:
-    """반환값: (S&P 100 실적 일정, 성공적으로 조회한 날짜들, 날짜별 전체 상장사 표)"""
+    """반환값: (S&P 500 실적 일정, 성공적으로 조회한 날짜들, 날짜별 전체 상장사 표)"""
     members = {norm_symbol(m["symbol"]): m for m in members_list}
     items: list[Item] = []
     market: dict[str, list] = {}
@@ -347,6 +448,9 @@ def get_earnings(members_list: list[dict], themes: dict, today: date) -> tuple[l
         try:
             resp = http_get(NASDAQ_API.format(day=day.isoformat()), headers=BROWSER_HEADERS, tries=2)
             payload = resp.json()
+            if offset in (-3, 3):  # 나스닥이 지난 날짜·앞 날짜에 어떤 항목을 주는지 기록 (점검용)
+                rows = ((payload or {}).get("data") or {}).get("rows") or []
+                print(f"  {day} 나스닥 항목: {sorted(rows[0].keys()) if rows else '없음'}")
             items += parse_nasdaq_day(payload, day, members, themes)
             market[day.isoformat()] = market_rows(payload)
             fetched.add(day.isoformat())
@@ -363,18 +467,67 @@ def get_earnings(members_list: list[dict], themes: dict, today: date) -> tuple[l
 def merge_market(previous: dict, market: dict, today: date) -> dict:
     """새로 조회한 날짜는 새 표로 바꾸고, 조회 못 한 날짜는 이전 표를 유지한다.
 
-    파일 크기를 줄이려고 회사명은 names에 한 번만 두고, 날짜별 표는 [티커, 장전/장후, 예상 EPS, 대상 분기]만 담는다.
+    파일 크기를 줄이려고 회사명은 names에 한 번만 두고,
+    날짜별 표는 [티커, 장전/장후, 예상 EPS, 대상 분기, 실제 EPS, 예상 대비 %]만 담는다.
     """
     keep_from = (today - timedelta(days=KEEP_PAST_DAYS)).isoformat()
     names = dict(previous.get("names") or {})
     days = {d: rows for d, rows in (previous.get("days") or {}).items() if d >= keep_from}
     for d, rows in market.items():
-        days[d] = [[sym, timing, eps, fq] for sym, name, timing, eps, fq in rows]
+        days[d] = [[sym, timing, eps, fq, actual, surprise] for sym, name, timing, eps, fq, actual, surprise in rows]
         for sym, name, *_ in rows:
             if name:
                 names[sym] = name
     used = {row[0] for rows in days.values() for row in rows}
     return {"names": {k: names[k] for k in sorted(used) if k in names}, "days": dict(sorted(days.items()))}
+
+
+def parse_surprise(payload: dict, us_day: date) -> tuple[str, str]:
+    """나스닥 회사별 '실적 서프라이즈' 표에서 그 날짜에 발표한 실제 EPS를 찾는다."""
+    rows = ((((payload or {}).get("data") or {}).get("earningsSurpriseTable") or {}).get("rows")) or []
+    for row in rows:
+        reported = (row.get("dateReported") or "").strip()
+        try:
+            day = datetime.strptime(reported, "%m/%d/%Y").date()
+        except ValueError:
+            continue
+        if abs((day - us_day).days) <= 3:
+            actual = money(row.get("eps"))
+            if actual:
+                return actual, percent(row.get("percentageSurprise"))
+    return "", ""
+
+
+def fill_results(earnings: list[Item], today: date) -> list[Item]:
+    """발표일이 지났는데 달력 표에 결과가 없으면, 회사별 결과 표에서 한 번 더 찾아본다."""
+    since = (today - timedelta(days=RESULT_LOOKBACK_DAYS)).isoformat()
+    todo = [i for i in earnings if not i.actual_eps and since <= i.us_date < today.isoformat()]
+    found = failures = 0
+    for item in todo[:RESULT_LOOKUP_LIMIT]:
+        if failures >= 5:  # 연속으로 막히면 이번 실행에서는 그만 (내일 다시 시도)
+            print("  결과 조회가 계속 실패해 이번에는 중단합니다.")
+            break
+        try:
+            payload = http_get(NASDAQ_SURPRISE_API.format(symbol=item.symbol.replace(".", "-")),
+                               headers=BROWSER_HEADERS, tries=1, timeout=10).json()
+            actual, surprise = parse_surprise(payload, date.fromisoformat(item.us_date))
+            failures = 0
+        except Exception as err:  # noqa: BLE001
+            failures += 1
+            print(f"  {item.symbol} 결과 조회 실패: {err}")
+            continue
+        finally:
+            time.sleep(0.5)
+        if actual:
+            found += 1
+            item.actual_eps, item.surprise = actual, surprise
+            lines = item.description.split("\n")
+            lines.insert(1, result_line(actual, "", surprise))
+            item.description = "\n".join(lines)
+            item.title = f"✅ {item.symbol} 실적 결과 · {verdict(surprise)} · {item.sector}"
+    if todo:
+        print(f"발표 결과 추가 조회: {min(len(todo), RESULT_LOOKUP_LIMIT)}건 중 {found}건 찾음")
+    return earnings
 
 
 # ---------------------------------------------------------------- 2-1. 실적 예상일
@@ -556,7 +709,7 @@ def build_ics(items: list[Item], now: datetime) -> bytes:
     cal.add("version", "2.0")
     cal.add("calscale", "GREGORIAN")
     cal.add("method", "PUBLISH")
-    cal.add("x-wr-calname", "투자 일정 (S&P 100 실적 · FOMC)")
+    cal.add("x-wr-calname", "투자 일정 (S&P 100 실적 · FOMC)")  # 구독 파일은 크기 때문에 S&P 100만
     cal.add("x-wr-caldesc", "S&P 100 기업 실적 발표와 FOMC 일정. 매일 자동 갱신. 공개 정보 기반, 투자 권유 아님.")
     cal.add("x-wr-timezone", "Asia/Seoul")
     cal.add("refresh-interval", vDuration(timedelta(hours=12)), parameters={"VALUE": "DURATION"})
@@ -588,7 +741,8 @@ def companies(members: list[dict], themes: dict, names_ko: dict | None = None) -
     for m in members:
         sector = SECTOR_KO.get(m.get("sector", ""), m.get("sector", ""))
         out.append({"symbol": m["symbol"], "name": m["name"], "sector": sector,
-                    "theme": themes.get(m["symbol"], ""), "ko": names_ko.get(m["symbol"], "")})
+                    "theme": themes.get(m["symbol"], ""), "ko": names_ko.get(m["symbol"], ""),
+                    "top100": bool(m.get("top100", True))})
     return sorted(out, key=lambda c: (c["sector"], c["symbol"]))
 
 
@@ -631,11 +785,12 @@ def main() -> int:
     previous = [Item(**d) for d in load_json(events_path, [])]
     themes = {k: v for k, v in load_json(DATA_DIR / "themes.json", {}).items() if not k.startswith("_")}
 
-    members = get_sp100()
+    members = get_members()
     if members:
         earnings, fetched, market = get_earnings(members, themes, today)
+        earnings = fill_results(earnings, today)
     else:
-        warn("S&P 100 목록이 없어 실적 일정을 건너뜁니다.")
+        warn("S&P 500 목록이 없어 실적 일정을 건너뜁니다.")
         earnings, fetched, market = [], set(), {}
     fomc = get_fomc()
     market_all = merge_market(load_json(DOCS_DIR / "market.json", {}), market, today)
@@ -649,7 +804,9 @@ def main() -> int:
         return 1
 
     DOCS_DIR.mkdir(exist_ok=True)
-    (DOCS_DIR / "calendar.ics").write_bytes(build_ics(items, now))
+    top100 = {norm_symbol(m["symbol"]) for m in members if m.get("top100")}
+    ics_items = [i for i in items if i.kind == "fomc" or not top100 or norm_symbol(i.symbol) in top100]
+    (DOCS_DIR / "calendar.ics").write_bytes(build_ics(ics_items, now))
     save_json(events_path, [asdict(i) for i in items])
     if members:
         names_ko = {k: v for k, v in load_json(DATA_DIR / "names_ko.json", {}).items() if not k.startswith("_")}
@@ -662,7 +819,9 @@ def main() -> int:
     n_e = sum(i.kind == "earnings" for i in items)
     n_f = sum(i.kind == "fomc" for i in items)
     n_x = sum(i.kind == "estimate" for i in items)
-    print(f"완료: 확정 실적 {n_e}건, 실적 예상일 {n_x}건, FOMC {n_f}건 → docs/calendar.ics")
+    n_r = sum(bool(i.actual_eps) for i in items)
+    print(f"완료: 확정 실적 {n_e}건(결과 {n_r}건), 실적 예상일 {n_x}건, FOMC {n_f}건 "
+          f"→ 웹앱 전체, 구독 파일 {len(ics_items)}건")
     return 0
 
 
