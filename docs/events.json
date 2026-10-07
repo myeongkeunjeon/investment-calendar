@@ -1,0 +1,1052 @@
+[
+  {
+    "uid": "fomc-2026-06-17@investment-calendar",
+    "kind": "fomc",
+    "us_date": "2026-06-17",
+    "title": "🏦 FOMC 금리 결정 (+점도표)",
+    "description": "■ FOMC(미국 연방공개시장위원회) 기준금리 결정\n섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 금리\n한국시간: 6월 18일(목) 오전 3:00 성명서 발표 (미 동부 14:00)\n기자회견: 6월 18일(목) 오전 3:30부터 (미 동부 14:30)\n미국 현지 날짜: 2026-06-17 (이틀 회의의 둘째 날)\n이번 회의에서는 경제전망(SEP)과 점도표도 함께 공개됩니다.\n\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Federal Reserve):\nhttps://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "start_utc": "2026-06-17T18:00:00+00:00",
+    "minutes": 60
+  },
+  {
+    "uid": "fomc-2026-07-29@investment-calendar",
+    "kind": "fomc",
+    "us_date": "2026-07-29",
+    "title": "🏦 FOMC 금리 결정",
+    "description": "■ FOMC(미국 연방공개시장위원회) 기준금리 결정\n섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 금리\n한국시간: 7월 30일(목) 오전 3:00 성명서 발표 (미 동부 14:00)\n기자회견: 7월 30일(목) 오전 3:30부터 (미 동부 14:30)\n미국 현지 날짜: 2026-07-29 (이틀 회의의 둘째 날)\n\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Federal Reserve):\nhttps://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "start_utc": "2026-07-29T18:00:00+00:00",
+    "minutes": 60
+  },
+  {
+    "uid": "fomc-2026-09-16@investment-calendar",
+    "kind": "fomc",
+    "us_date": "2026-09-16",
+    "title": "🏦 FOMC 금리 결정 (+점도표)",
+    "description": "■ FOMC(미국 연방공개시장위원회) 기준금리 결정\n섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 금리\n한국시간: 9월 17일(목) 오전 3:00 성명서 발표 (미 동부 14:00)\n기자회견: 9월 17일(목) 오전 3:30부터 (미 동부 14:30)\n미국 현지 날짜: 2026-09-16 (이틀 회의의 둘째 날)\n이번 회의에서는 경제전망(SEP)과 점도표도 함께 공개됩니다.\n\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Federal Reserve):\nhttps://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "start_utc": "2026-09-16T18:00:00+00:00",
+    "minutes": 60
+  },
+  {
+    "uid": "earnings-PEP-2026-10-08@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-08",
+    "title": "📊 PEP 실적 (장전) · 필수소비재",
+    "description": "■ PepsiCo (PEP) 실적 발표\n섹터: 필수소비재 / 테마: 음료·스낵\n한국시간: 10월 8일(목) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-08\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $2.29 (애널리스트 7명)\n작년 같은 분기 EPS: $2.29\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/pep/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/pep/earnings",
+    "start_utc": "2026-10-08T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-C-2026-10-13@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-13",
+    "title": "📊 C 실적 (장전) · 금융",
+    "description": "■ Citigroup (C) 실적 발표\n섹터: 금융 / 테마: 대형 은행, 글로벌 금융\n한국시간: 10월 13일(화) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-13\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $2.66 (애널리스트 7명)\n작년 같은 분기 EPS: $2.24\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/c/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/c/earnings",
+    "start_utc": "2026-10-13T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-GS-2026-10-13@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-13",
+    "title": "📊 GS 실적 (장전) · 금융",
+    "description": "■ Goldman Sachs (GS) 실적 발표\n섹터: 금융 / 테마: 투자은행·자산운용\n한국시간: 10월 13일(화) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-13\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $13.89 (애널리스트 7명)\n작년 같은 분기 EPS: $12.25\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/gs/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/gs/earnings",
+    "start_utc": "2026-10-13T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-JNJ-2026-10-13@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-13",
+    "title": "📊 JNJ 실적 (장전) · 헬스케어",
+    "description": "■ Johnson & Johnson (JNJ) 실적 발표\n섹터: 헬스케어 / 테마: 제약, 의료기기\n한국시간: 10월 13일(화) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-13\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $2.90 (애널리스트 7명)\n작년 같은 분기 EPS: $2.80\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/jnj/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/jnj/earnings",
+    "start_utc": "2026-10-13T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-JPM-2026-10-13@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-13",
+    "title": "📊 JPM 실적 (장전) · 금융",
+    "description": "■ JPMorgan Chase (JPM) 실적 발표\n섹터: 금융 / 테마: 미국 최대 은행, 투자은행\n한국시간: 10월 13일(화) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-13\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $5.94 (애널리스트 6명)\n작년 같은 분기 EPS: $5.07\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/jpm/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/jpm/earnings",
+    "start_utc": "2026-10-13T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-UNH-2026-10-13@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-13",
+    "title": "📊 UNH 실적 (장전) · 헬스케어",
+    "description": "■ UnitedHealth Group (UNH) 실적 발표\n섹터: 헬스케어 / 테마: 건강보험, 의료 서비스\n한국시간: 10월 13일(화) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-13\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $4.12 (애널리스트 8명)\n작년 같은 분기 EPS: $2.92\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/unh/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/unh/earnings",
+    "start_utc": "2026-10-13T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-WFC-2026-10-13@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-13",
+    "title": "📊 WFC 실적 (장전) · 금융",
+    "description": "■ Wells Fargo (WFC) 실적 발표\n섹터: 금융 / 테마: 대형 은행\n한국시간: 10월 13일(화) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-13\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.85 (애널리스트 8명)\n작년 같은 분기 EPS: $1.73\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/wfc/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/wfc/earnings",
+    "start_utc": "2026-10-13T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-BAC-2026-10-14@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-14",
+    "title": "📊 BAC 실적 (장전) · 금융",
+    "description": "■ Bank of America (BAC) 실적 발표\n섹터: 금융 / 테마: 대형 은행\n한국시간: 10월 14일(수) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-14\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.12 (애널리스트 6명)\n작년 같은 분기 EPS: $1.06\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/bac/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/bac/earnings",
+    "start_utc": "2026-10-14T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-BLK-2026-10-14@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-14",
+    "title": "📊 BLK 실적 (장전) · 금융",
+    "description": "■ BlackRock (BLK) 실적 발표\n섹터: 금융 / 테마: 자산운용(ETF 아이셰어즈)\n한국시간: 10월 14일(수) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-14\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $14.04 (애널리스트 6명)\n작년 같은 분기 EPS: $11.55\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/blk/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/blk/earnings",
+    "start_utc": "2026-10-14T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-MS-2026-10-14@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-14",
+    "title": "📊 MS 실적 (장전) · 금융",
+    "description": "■ Morgan Stanley (MS) 실적 발표\n섹터: 금융 / 테마: 투자은행·자산관리\n한국시간: 10월 14일(수) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-14\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $2.88 (애널리스트 5명)\n작년 같은 분기 EPS: $2.80\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/ms/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/ms/earnings",
+    "start_utc": "2026-10-14T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-BNY-2026-10-15@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-15",
+    "title": "📊 BNY 실적 (시각 미정) · 금융",
+    "description": "■ BNY Mellon (BNY) 실적 발표\n섹터: 금융\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-10-15\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $2.27 (애널리스트 6명)\n작년 같은 분기 EPS: $1.91\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/bny/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/bny/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-SCHW-2026-10-15@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-15",
+    "title": "📊 SCHW 실적 (장전) · 금융",
+    "description": "■ Charles Schwab Corporation (SCHW) 실적 발표\n섹터: 금융 / 테마: 증권 중개·자산관리\n한국시간: 10월 15일(목) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-15\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.66 (애널리스트 10명)\n작년 같은 분기 EPS: $1.31\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/schw/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/schw/earnings",
+    "start_utc": "2026-10-15T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-USB-2026-10-15@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-15",
+    "title": "📊 USB 실적 (장전) · 금융",
+    "description": "■ U.S. Bancorp (USB) 실적 발표\n섹터: 금융\n한국시간: 10월 15일(목) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-15\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.32 (애널리스트 9명)\n작년 같은 분기 EPS: $1.22\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/usb/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/usb/earnings",
+    "start_utc": "2026-10-15T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-MMM-2026-10-20@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-20",
+    "title": "📊 MMM 실적 (시각 미정) · 산업재",
+    "description": "■ 3M (MMM) 실적 발표\n섹터: 산업재\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-10-20\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $2.41 (애널리스트 5명)\n작년 같은 분기 EPS: $2.19\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/mmm/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/mmm/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-GE-2026-10-20@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-20",
+    "title": "📊 GE 실적 (장전) · 산업재",
+    "description": "■ GE Aerospace (GE) 실적 발표\n섹터: 산업재 / 테마: 항공기 엔진\n한국시간: 10월 20일(화) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-20\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $2.01 (애널리스트 7명)\n작년 같은 분기 EPS: $1.66\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/ge/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/ge/earnings",
+    "start_utc": "2026-10-20T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-GM-2026-10-20@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-20",
+    "title": "📊 GM 실적 (장전) · 경기소비재",
+    "description": "■ General Motors (GM) 실적 발표\n섹터: 경기소비재 / 테마: 자동차\n한국시간: 10월 20일(화) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-20\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $3.46 (애널리스트 7명)\n작년 같은 분기 EPS: $2.80\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/gm/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/gm/earnings",
+    "start_utc": "2026-10-20T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-PM-2026-10-20@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-20",
+    "title": "📊 PM 실적 (장전) · 필수소비재",
+    "description": "■ Philip Morris International (PM) 실적 발표\n섹터: 필수소비재\n한국시간: 10월 20일(화) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-20\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $2.33 (애널리스트 2명)\n작년 같은 분기 EPS: $2.24\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/pm/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/pm/earnings",
+    "start_utc": "2026-10-20T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-RTX-2026-10-20@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-20",
+    "title": "📊 RTX 실적 (장전) · 산업재",
+    "description": "■ RTX Corporation (RTX) 실적 발표\n섹터: 산업재 / 테마: 방산·항공 엔진\n한국시간: 10월 20일(화) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-20\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.75 (애널리스트 5명)\n작년 같은 분기 EPS: $1.70\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/rtx/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/rtx/earnings",
+    "start_utc": "2026-10-20T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-COF-2026-10-20@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-20",
+    "title": "📊 COF 실적 (장후) · 금융",
+    "description": "■ Capital One (COF) 실적 발표\n섹터: 금융\n한국시간: 10월 21일(수) 오전 5:05경 (미 동부 16:05경 추정, 미국 장 마감 후)\n미국 현지 날짜: 2026-10-20\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $5.43 (애널리스트 8명)\n작년 같은 분기 EPS: $5.95\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/cof/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/cof/earnings",
+    "start_utc": "2026-10-20T20:05:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-ISRG-2026-10-20@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-20",
+    "title": "📊 ISRG 실적 (장후) · 헬스케어",
+    "description": "■ Intuitive Surgical (ISRG) 실적 발표\n섹터: 헬스케어 / 테마: 수술 로봇\n한국시간: 10월 21일(수) 오전 5:05경 (미 동부 16:05경 추정, 미국 장 마감 후)\n미국 현지 날짜: 2026-10-20\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $2.13 (애널리스트 8명)\n작년 같은 분기 EPS: $1.96\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/isrg/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/isrg/earnings",
+    "start_utc": "2026-10-20T20:05:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-NFLX-2026-10-20@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-20",
+    "title": "📊 NFLX 실적 (장후) · 커뮤니케이션 서비스",
+    "description": "■ Netflix, Inc. (NFLX) 실적 발표\n섹터: 커뮤니케이션 서비스 / 테마: 동영상 스트리밍\n한국시간: 10월 21일(수) 오전 5:05경 (미 동부 16:05경 추정, 미국 장 마감 후)\n미국 현지 날짜: 2026-10-20\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $0.82 (애널리스트 12명)\n작년 같은 분기 EPS: $0.59\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/nflx/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/nflx/earnings",
+    "start_utc": "2026-10-20T20:05:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-ABT-2026-10-21@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-21",
+    "title": "📊 ABT 실적 (장전) · 헬스케어",
+    "description": "■ Abbott Laboratories (ABT) 실적 발표\n섹터: 헬스케어 / 테마: 의료기기·진단\n한국시간: 10월 21일(수) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-21\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.43 (애널리스트 8명)\n작년 같은 분기 EPS: $1.30\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/abt/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/abt/earnings",
+    "start_utc": "2026-10-21T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-DHR-2026-10-21@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-21",
+    "title": "📊 DHR 실적 (장전) · 헬스케어",
+    "description": "■ Danaher Corporation (DHR) 실적 발표\n섹터: 헬스케어\n한국시간: 10월 21일(수) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-21\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.96 (애널리스트 9명)\n작년 같은 분기 EPS: $1.89\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/dhr/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/dhr/earnings",
+    "start_utc": "2026-10-21T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-T-2026-10-21@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-21",
+    "title": "📊 T 실적 (장전) · 커뮤니케이션 서비스",
+    "description": "■ AT&T (T) 실적 발표\n섹터: 커뮤니케이션 서비스 / 테마: 미국 통신(무선·유선)\n한국시간: 10월 21일(수) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-21\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $0.61 (애널리스트 8명)\n작년 같은 분기 EPS: $0.54\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/t/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/t/earnings",
+    "start_utc": "2026-10-21T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-TMO-2026-10-21@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-21",
+    "title": "📊 TMO 실적 (장전) · 헬스케어",
+    "description": "■ Thermo Fisher Scientific (TMO) 실적 발표\n섹터: 헬스케어 / 테마: 연구장비·진단\n한국시간: 10월 21일(수) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-21\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $6.40 (애널리스트 8명)\n작년 같은 분기 EPS: $5.79\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/tmo/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/tmo/earnings",
+    "start_utc": "2026-10-21T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-IBM-2026-10-21@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-21",
+    "title": "📊 IBM 실적 (장후) · 정보기술",
+    "description": "■ IBM (IBM) 실적 발표\n섹터: 정보기술 / 테마: 기업 IT 서비스, 하이브리드 클라우드·AI\n한국시간: 10월 22일(목) 오전 5:05경 (미 동부 16:05경 추정, 미국 장 마감 후)\n미국 현지 날짜: 2026-10-21\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $2.90 (애널리스트 6명)\n작년 같은 분기 EPS: $2.65\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/ibm/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/ibm/earnings",
+    "start_utc": "2026-10-21T20:05:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-LRCX-2026-10-21@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-21",
+    "title": "📊 LRCX 실적 (장후) · 정보기술",
+    "description": "■ Lam Research (LRCX) 실적 발표\n섹터: 정보기술\n한국시간: 10월 22일(목) 오전 5:05경 (미 동부 16:05경 추정, 미국 장 마감 후)\n미국 현지 날짜: 2026-10-21\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $2.17 (애널리스트 9명)\n작년 같은 분기 EPS: $1.26\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/lrcx/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/lrcx/earnings",
+    "start_utc": "2026-10-21T20:05:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-TXN-2026-10-21@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-21",
+    "title": "📊 TXN 실적 (장후) · 정보기술",
+    "description": "■ Texas Instruments (TXN) 실적 발표\n섹터: 정보기술 / 테마: 아날로그·임베디드 반도체\n한국시간: 10월 22일(목) 오전 5:05경 (미 동부 16:05경 추정, 미국 장 마감 후)\n미국 현지 날짜: 2026-10-21\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $2.39 (애널리스트 9명)\n작년 같은 분기 EPS: $1.48\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/txn/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/txn/earnings",
+    "start_utc": "2026-10-21T20:05:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-INTC-2026-10-22@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-22",
+    "title": "📊 INTC 실적 (시각 미정) · 정보기술",
+    "description": "■ Intel (INTC) 실적 발표\n섹터: 정보기술 / 테마: 반도체(CPU), 파운드리(위탁생산)\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-10-22\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $0.27 (애널리스트 13명)\n작년 같은 분기 EPS: $0.11\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/intc/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/intc/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-CMCSA-2026-10-22@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-22",
+    "title": "📊 CMCSA 실적 (장전) · 커뮤니케이션 서비스",
+    "description": "■ Comcast (CMCSA) 실적 발표\n섹터: 커뮤니케이션 서비스 / 테마: 케이블·인터넷, 미디어(NBC유니버설)\n한국시간: 10월 22일(목) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-22\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $0.98 (애널리스트 8명)\n작년 같은 분기 EPS: $1.12\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/cmcsa/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/cmcsa/earnings",
+    "start_utc": "2026-10-22T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-LMT-2026-10-22@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-22",
+    "title": "📊 LMT 실적 (장전) · 산업재",
+    "description": "■ Lockheed Martin (LMT) 실적 발표\n섹터: 산업재 / 테마: 방산(전투기·미사일)\n한국시간: 10월 22일(목) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-22\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $7.25 (애널리스트 7명)\n작년 같은 분기 EPS: $6.95\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/lmt/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/lmt/earnings",
+    "start_utc": "2026-10-22T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-PG-2026-10-22@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-22",
+    "title": "📊 PG 실적 (장전) · 필수소비재",
+    "description": "■ Procter & Gamble (PG) 실적 발표\n섹터: 필수소비재 / 테마: 생활용품\n한국시간: 10월 22일(목) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-22\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.89 (애널리스트 10명)\n작년 같은 분기 EPS: $1.99\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/pg/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/pg/earnings",
+    "start_utc": "2026-10-22T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-UNP-2026-10-22@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-22",
+    "title": "📊 UNP 실적 (장전) · 산업재",
+    "description": "■ Union Pacific Corporation (UNP) 실적 발표\n섹터: 산업재 / 테마: 철도 운송\n한국시간: 10월 22일(목) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-22\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $3.44 (애널리스트 6명)\n작년 같은 분기 EPS: $3.08\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/unp/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/unp/earnings",
+    "start_utc": "2026-10-22T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-GD-2026-10-23@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-23",
+    "title": "📊 GD 실적 (시각 미정) · 산업재",
+    "description": "■ General Dynamics (GD) 실적 발표\n섹터: 산업재 / 테마: 방산(잠수함·장갑차), 비즈니스 제트기\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-10-23\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $4.14 (애널리스트 8명)\n작년 같은 분기 EPS: $3.88\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/gd/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/gd/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-AXP-2026-10-23@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-23",
+    "title": "📊 AXP 실적 (장전) · 금융",
+    "description": "■ American Express (AXP) 실적 발표\n섹터: 금융 / 테마: 신용카드·결제\n한국시간: 10월 23일(금) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-23\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $4.52 (애널리스트 9명)\n작년 같은 분기 EPS: $4.14\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/axp/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/axp/earnings",
+    "start_utc": "2026-10-23T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-VZ-2026-10-26@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-26",
+    "title": "📊 VZ 실적 (장전) · 커뮤니케이션 서비스",
+    "description": "■ Verizon (VZ) 실적 발표\n섹터: 커뮤니케이션 서비스 / 테마: 미국 통신(무선·유선)\n한국시간: 10월 26일(월) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-26\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.28 (애널리스트 8명)\n작년 같은 분기 EPS: $1.21\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/vz/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/vz/earnings",
+    "start_utc": "2026-10-26T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-BKNG-2026-10-27@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-27",
+    "title": "📊 BKNG 실적 (시각 미정) · 경기소비재",
+    "description": "■ Booking Holdings (BKNG) 실적 발표\n섹터: 경기소비재 / 테마: 온라인 여행 예약\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-10-27\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $4.48 (애널리스트 11명)\n작년 같은 분기 EPS: $3.98\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/bkng/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/bkng/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-MDLZ-2026-10-27@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-27",
+    "title": "📊 MDLZ 실적 (시각 미정) · 필수소비재",
+    "description": "■ Mondelēz International (MDLZ) 실적 발표\n섹터: 필수소비재\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-10-27\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $0.71 (애널리스트 7명)\n작년 같은 분기 EPS: $0.73\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/mdlz/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/mdlz/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-NEE-2026-10-27@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-27",
+    "title": "📊 NEE 실적 (시각 미정) · 유틸리티",
+    "description": "■ NextEra Energy (NEE) 실적 발표\n섹터: 유틸리티 / 테마: 전력·신재생 에너지\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-10-27\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.20 (애널리스트 4명)\n작년 같은 분기 EPS: $1.13\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/nee/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/nee/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-V-2026-10-27@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-27",
+    "title": "📊 V 실적 (시각 미정) · 금융",
+    "description": "■ Visa Inc. (V) 실적 발표\n섹터: 금융 / 테마: 카드 결제 네트워크\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-10-27\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $3.43 (애널리스트 12명)\n작년 같은 분기 EPS: $2.98\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/v/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/v/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-AMT-2026-10-27@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-27",
+    "title": "📊 AMT 실적 (장전) · 부동산",
+    "description": "■ American Tower (AMT) 실적 발표\n섹터: 부동산 / 테마: 통신 기지국 리츠(부동산)\n한국시간: 10월 27일(화) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-27\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $2.78 (애널리스트 4명)\n작년 같은 분기 EPS: $2.78\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/amt/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/amt/earnings",
+    "start_utc": "2026-10-27T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-BA-2026-10-27@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-27",
+    "title": "📊 BA 실적 (장전) · 산업재",
+    "description": "■ Boeing (BA) 실적 발표\n섹터: 산업재 / 테마: 항공기 제조\n한국시간: 10월 27일(화) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-27\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): ($0.15) (애널리스트 7명)\n작년 같은 분기 EPS: ($7.47)\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/ba/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/ba/earnings",
+    "start_utc": "2026-10-27T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-KO-2026-10-27@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-27",
+    "title": "📊 KO 실적 (장전) · 필수소비재",
+    "description": "■ Coca-Cola Company (The) (KO) 실적 발표\n섹터: 필수소비재 / 테마: 음료\n한국시간: 10월 27일(화) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-27\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $0.87 (애널리스트 8명)\n작년 같은 분기 EPS: $0.82\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/ko/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/ko/earnings",
+    "start_utc": "2026-10-27T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-UPS-2026-10-27@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-27",
+    "title": "📊 UPS 실적 (장전) · 산업재",
+    "description": "■ United Parcel Service (UPS) 실적 발표\n섹터: 산업재 / 테마: 택배·물류\n한국시간: 10월 27일(화) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-27\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.63 (애널리스트 10명)\n작년 같은 분기 EPS: $1.74\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/ups/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/ups/earnings",
+    "start_utc": "2026-10-27T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-GEV-2026-10-28@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-28",
+    "title": "📊 GEV 실적 (시각 미정) · 산업재",
+    "description": "■ GE Vernova (GEV) 실적 발표\n섹터: 산업재\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-10-28\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $4.09 (애널리스트 7명)\n작년 같은 분기 EPS: $1.64\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/gev/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/gev/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-TSLA-2026-10-28@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-28",
+    "title": "📊 TSLA 실적 (시각 미정) · 경기소비재",
+    "description": "■ Tesla, Inc. (TSLA) 실적 발표\n섹터: 경기소비재 / 테마: 전기차, 에너지 저장, 자율주행\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-10-28\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $0.24 (애널리스트 11명)\n작년 같은 분기 EPS: $0.37\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/tsla/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/tsla/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "fomc-2026-10-28@investment-calendar",
+    "kind": "fomc",
+    "us_date": "2026-10-28",
+    "title": "🏦 FOMC 금리 결정",
+    "description": "■ FOMC(미국 연방공개시장위원회) 기준금리 결정\n섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 금리\n한국시간: 10월 29일(목) 오전 3:00 성명서 발표 (미 동부 14:00)\n기자회견: 10월 29일(목) 오전 3:30부터 (미 동부 14:30)\n미국 현지 날짜: 2026-10-28 (이틀 회의의 둘째 날)\n\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Federal Reserve):\nhttps://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "start_utc": "2026-10-28T18:00:00+00:00",
+    "minutes": 60
+  },
+  {
+    "uid": "earnings-TMUS-2026-10-28@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-28",
+    "title": "📊 TMUS 실적 (장후) · 커뮤니케이션 서비스",
+    "description": "■ T-Mobile US (TMUS) 실적 발표\n섹터: 커뮤니케이션 서비스 / 테마: 미국 통신(무선)\n한국시간: 10월 29일(목) 오전 5:05경 (미 동부 16:05경 추정, 미국 장 마감 후)\n미국 현지 날짜: 2026-10-28\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $2.85 (애널리스트 8명)\n작년 같은 분기 EPS: $2.59\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/tmus/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/tmus/earnings",
+    "start_utc": "2026-10-28T20:05:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-AAPL-2026-10-29@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-29",
+    "title": "📊 AAPL 실적 (시각 미정) · 정보기술",
+    "description": "■ Apple Inc. (AAPL) 실적 발표\n섹터: 정보기술 / 테마: 아이폰·맥·앱스토어 등 서비스\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-10-29\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.98 (애널리스트 8명)\n작년 같은 분기 EPS: $1.85\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/aapl/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/aapl/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-AMZN-2026-10-29@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-29",
+    "title": "📊 AMZN 실적 (시각 미정) · 경기소비재",
+    "description": "■ Amazon (AMZN) 실적 발표\n섹터: 경기소비재 / 테마: 전자상거래, 클라우드(AWS)\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-10-29\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $2.02 (애널리스트 13명)\n작년 같은 분기 EPS: $1.95\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/amzn/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/amzn/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-GILD-2026-10-29@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-29",
+    "title": "📊 GILD 실적 (시각 미정) · 헬스케어",
+    "description": "■ Gilead Sciences (GILD) 실적 발표\n섹터: 헬스케어 / 테마: 바이오 의약품(항바이러스)\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-10-29\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $2.15 (애널리스트 6명)\n작년 같은 분기 EPS: $2.47\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/gild/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/gild/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-MA-2026-10-29@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-29",
+    "title": "📊 MA 실적 (시각 미정) · 금융",
+    "description": "■ Mastercard (MA) 실적 발표\n섹터: 금융 / 테마: 카드 결제 네트워크\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-10-29\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $5.13 (애널리스트 11명)\n작년 같은 분기 EPS: $4.38\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/ma/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/ma/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-BMY-2026-10-29@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-29",
+    "title": "📊 BMY 실적 (장전) · 헬스케어",
+    "description": "■ Bristol Myers Squibb (BMY) 실적 발표\n섹터: 헬스케어\n한국시간: 10월 29일(목) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-29\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.68 (애널리스트 9명)\n작년 같은 분기 EPS: $1.63\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/bmy/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/bmy/earnings",
+    "start_utc": "2026-10-29T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-LIN-2026-10-29@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-29",
+    "title": "📊 LIN 실적 (장전) · 소재",
+    "description": "■ Linde plc (LIN) 실적 발표\n섹터: 소재 / 테마: 산업용 가스\n한국시간: 10월 29일(목) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-29\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $4.52 (애널리스트 8명)\n작년 같은 분기 EPS: $4.21\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/lin/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/lin/earnings",
+    "start_utc": "2026-10-29T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-LLY-2026-10-29@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-29",
+    "title": "📊 LLY 실적 (장전) · 헬스케어",
+    "description": "■ Eli Lilly and Company (LLY) 실적 발표\n섹터: 헬스케어 / 테마: 비만·당뇨 치료제, 제약\n한국시간: 10월 29일(목) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-29\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $9.83 (애널리스트 4명)\n작년 같은 분기 EPS: $7.02\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/lly/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/lly/earnings",
+    "start_utc": "2026-10-29T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-MO-2026-10-29@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-29",
+    "title": "📊 MO 실적 (장전) · 필수소비재",
+    "description": "■ Altria (MO) 실적 발표\n섹터: 필수소비재\n한국시간: 10월 29일(목) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-29\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.50 (애널리스트 5명)\n작년 같은 분기 EPS: $1.45\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/mo/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/mo/earnings",
+    "start_utc": "2026-10-29T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-MRK-2026-10-29@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-29",
+    "title": "📊 MRK 실적 (장전) · 헬스케어",
+    "description": "■ Merck & Co. (MRK) 실적 발표\n섹터: 헬스케어 / 테마: 제약(면역항암제)\n한국시간: 10월 29일(목) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-29\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $2.25 (애널리스트 5명)\n작년 같은 분기 EPS: $2.58\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/mrk/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/mrk/earnings",
+    "start_utc": "2026-10-29T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-SNDK-2026-10-29@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-29",
+    "title": "📊 SNDK 실적 (장후) · 정보기술",
+    "description": "■ Sandisk (SNDK) 실적 발표\n섹터: 정보기술\n한국시간: 10월 30일(금) 오전 5:05경 (미 동부 16:05경 추정, 미국 장 마감 후)\n미국 현지 날짜: 2026-10-29\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $45.22 (애널리스트 4명)\n작년 같은 분기 EPS: $0.90\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/sndk/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/sndk/earnings",
+    "start_utc": "2026-10-29T20:05:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-XOM-2026-10-30@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-30",
+    "title": "📊 XOM 실적 (시각 미정) · 에너지",
+    "description": "■ ExxonMobil (XOM) 실적 발표\n섹터: 에너지 / 테마: 석유·가스\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-10-30\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $3.93 (애널리스트 6명)\n작년 같은 분기 EPS: $1.88\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/xom/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/xom/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-ABBV-2026-10-30@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-30",
+    "title": "📊 ABBV 실적 (장전) · 헬스케어",
+    "description": "■ AbbVie (ABBV) 실적 발표\n섹터: 헬스케어 / 테마: 제약(면역질환 치료제)\n한국시간: 10월 30일(금) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-30\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $3.85 (애널리스트 7명)\n작년 같은 분기 EPS: $1.86\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/abbv/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/abbv/earnings",
+    "start_utc": "2026-10-30T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-CVX-2026-10-30@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-10-30",
+    "title": "📊 CVX 실적 (장전) · 에너지",
+    "description": "■ Chevron Corporation (CVX) 실적 발표\n섹터: 에너지 / 테마: 석유·가스\n한국시간: 10월 30일(금) 오후 8:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-10-30\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $4.89 (애널리스트 6명)\n작년 같은 분기 EPS: $1.85\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/cvx/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/cvx/earnings",
+    "start_utc": "2026-10-30T11:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-PLTR-2026-11-02@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-02",
+    "title": "📊 PLTR 실적 (시각 미정) · 정보기술",
+    "description": "■ Palantir Technologies (PLTR) 실적 발표\n섹터: 정보기술 / 테마: 데이터 분석·AI 소프트웨어(정부·기업)\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-11-02\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $0.34 (애널리스트 9명)\n작년 같은 분기 EPS: $0.18\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/pltr/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/pltr/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-AMD-2026-11-03@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-03",
+    "title": "📊 AMD 실적 (시각 미정) · 정보기술",
+    "description": "■ Advanced Micro Devices (AMD) 실적 발표\n섹터: 정보기술 / 테마: 반도체(CPU·GPU), AI 가속기\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-11-03\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.64 (애널리스트 15명)\n작년 같은 분기 EPS: $0.97\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/amd/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/amd/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-AMGN-2026-11-03@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-03",
+    "title": "📊 AMGN 실적 (시각 미정) · 헬스케어",
+    "description": "■ Amgen (AMGN) 실적 발표\n섹터: 헬스케어 / 테마: 바이오 의약품\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-11-03\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $5.69 (애널리스트 9명)\n작년 같은 분기 EPS: $5.64\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/amgn/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/amgn/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-ANET-2026-11-03@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-03",
+    "title": "📊 ANET 실적 (시각 미정) · 정보기술",
+    "description": "■ Arista Networks (ANET) 실적 발표\n섹터: 정보기술\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-11-03\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $0.99 (애널리스트 9명)\n작년 같은 분기 EPS: $0.67\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/anet/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/anet/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-UBER-2026-11-03@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-03",
+    "title": "📊 UBER 실적 (시각 미정) · 산업재",
+    "description": "■ Uber (UBER) 실적 발표\n섹터: 산업재 / 테마: 차량 호출, 음식 배달\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-11-03\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.03 (애널리스트 8명)\n작년 같은 분기 EPS: $3.11\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/uber/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/uber/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-PFE-2026-11-03@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-03",
+    "title": "📊 PFE 실적 (장전) · 헬스케어",
+    "description": "■ Pfizer (PFE) 실적 발표\n섹터: 헬스케어 / 테마: 제약, 백신\n한국시간: 11월 3일(화) 오후 9:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-11-03\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $0.77 (애널리스트 5명)\n작년 같은 분기 EPS: $0.87\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/pfe/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/pfe/earnings",
+    "start_utc": "2026-11-03T12:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-CAT-2026-11-04@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-04",
+    "title": "📊 CAT 실적 (시각 미정) · 산업재",
+    "description": "■ Caterpillar Inc. (CAT) 실적 발표\n섹터: 산업재 / 테마: 건설·광산 장비\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-11-04\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $6.95 (애널리스트 10명)\n작년 같은 분기 EPS: $4.95\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/cat/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/cat/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-EMR-2026-11-04@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-04",
+    "title": "📊 EMR 실적 (시각 미정) · 산업재",
+    "description": "■ Emerson Electric (EMR) 실적 발표\n섹터: 산업재\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-11-04\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.84 (애널리스트 7명)\n작년 같은 분기 EPS: $1.62\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/emr/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/emr/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-GOOG-2026-11-04@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-04",
+    "title": "📊 GOOG 실적 (시각 미정) · 커뮤니케이션 서비스",
+    "description": "■ Alphabet Inc. (Class C) (GOOG) 실적 발표\n섹터: 커뮤니케이션 서비스 / 테마: 검색·유튜브 광고, 클라우드, AI\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-11-04\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $2.95 (애널리스트 13명)\n작년 같은 분기 EPS: $2.87\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/goog/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/goog/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-MCD-2026-11-04@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-04",
+    "title": "📊 MCD 실적 (시각 미정) · 경기소비재",
+    "description": "■ McDonald's (MCD) 실적 발표\n섹터: 경기소비재 / 테마: 외식(패스트푸드)\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-11-04\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $3.37 (애널리스트 10명)\n작년 같은 분기 EPS: $3.22\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/mcd/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/mcd/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-META-2026-11-04@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-04",
+    "title": "📊 META 실적 (시각 미정) · 커뮤니케이션 서비스",
+    "description": "■ Meta Platforms (META) 실적 발표\n섹터: 커뮤니케이션 서비스 / 테마: 페이스북·인스타그램 광고, AI\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-11-04\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $6.39 (애널리스트 12명)\n작년 같은 분기 EPS: $7.25\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/meta/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/meta/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-MSFT-2026-11-04@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-04",
+    "title": "📊 MSFT 실적 (시각 미정) · 정보기술",
+    "description": "■ Microsoft (MSFT) 실적 발표\n섹터: 정보기술 / 테마: 윈도우·오피스, 클라우드(Azure)·AI\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-11-04\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $4.70 (애널리스트 14명)\n작년 같은 분기 EPS: $4.13\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/msft/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/msft/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-NOW-2026-11-04@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-04",
+    "title": "📊 NOW 실적 (시각 미정) · 정보기술",
+    "description": "■ ServiceNow (NOW) 실적 발표\n섹터: 정보기술\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-11-04\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $0.57 (애널리스트 12명)\n작년 같은 분기 EPS: $0.59\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/now/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/now/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-QCOM-2026-11-04@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-04",
+    "title": "📊 QCOM 실적 (시각 미정) · 정보기술",
+    "description": "■ Qualcomm (QCOM) 실적 발표\n섹터: 정보기술 / 테마: 스마트폰용 반도체(스냅드래곤)\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-11-04\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.47 (애널리스트 9명)\n작년 같은 분기 EPS: $2.56\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/qcom/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/qcom/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-SBUX-2026-11-04@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-04",
+    "title": "📊 SBUX 실적 (시각 미정) · 경기소비재",
+    "description": "■ Starbucks (SBUX) 실적 발표\n섹터: 경기소비재 / 테마: 커피 전문점\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-11-04\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $0.72 (애널리스트 9명)\n작년 같은 분기 EPS: $0.52\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/sbux/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/sbux/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-CVS-2026-11-04@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-04",
+    "title": "📊 CVS 실적 (장전) · 헬스케어",
+    "description": "■ CVS Health (CVS) 실적 발표\n섹터: 헬스케어 / 테마: 약국 체인, 건강보험\n한국시간: 11월 4일(수) 오후 9:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-11-04\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.62 (애널리스트 9명)\n작년 같은 분기 EPS: $1.60\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/cvs/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/cvs/earnings",
+    "start_utc": "2026-11-04T12:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-DUK-2026-11-05@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-05",
+    "title": "📊 DUK 실적 (시각 미정) · 유틸리티",
+    "description": "■ Duke Energy (DUK) 실적 발표\n섹터: 유틸리티 / 테마: 전력\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-11-05\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.85 (애널리스트 4명)\n작년 같은 분기 EPS: $1.81\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/duk/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/duk/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-COP-2026-11-05@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-05",
+    "title": "📊 COP 실적 (장전) · 에너지",
+    "description": "■ ConocoPhillips (COP) 실적 발표\n섹터: 에너지 / 테마: 석유·가스 생산\n한국시간: 11월 5일(목) 오후 9:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-11-05\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $2.58 (애널리스트 7명)\n작년 같은 분기 EPS: $1.61\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/cop/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/cop/earnings",
+    "start_utc": "2026-11-05T12:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-SO-2026-11-05@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-05",
+    "title": "📊 SO 실적 (장전) · 유틸리티",
+    "description": "■ Southern Company (SO) 실적 발표\n섹터: 유틸리티 / 테마: 전력\n한국시간: 11월 5일(목) 오후 9:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-11-05\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.65 (애널리스트 4명)\n작년 같은 분기 EPS: $1.60\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/so/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/so/earnings",
+    "start_utc": "2026-11-05T12:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-BRKB-2026-11-06@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-06",
+    "title": "📊 BRK.B 실적 (시각 미정) · 금융",
+    "description": "■ Berkshire Hathaway (Class B) (BRK.B) 실적 발표\n섹터: 금융 / 테마: 버크셔 해서웨이 지주회사(보험·철도·투자)\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-11-06\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $5.66 (애널리스트 2명)\n작년 같은 분기 EPS: $6.26\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/brk.b/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/brk.b/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-CSCO-2026-11-11@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-11",
+    "title": "📊 CSCO 실적 (시각 미정) · 정보기술",
+    "description": "■ Cisco (CSCO) 실적 발표\n섹터: 정보기술 / 테마: 네트워크 장비, 보안\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-11-11\n대상 분기: Oct/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.14 (애널리스트 8명)\n작년 같은 분기 EPS: $0.81\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/csco/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/csco/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-DIS-2026-11-12@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-12",
+    "title": "📊 DIS 실적 (시각 미정) · 커뮤니케이션 서비스",
+    "description": "■ Walt Disney Company (The) (DIS) 실적 발표\n섹터: 커뮤니케이션 서비스 / 테마: 미디어·스트리밍(디즈니+), 테마파크\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-11-12\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.69 (애널리스트 8명)\n작년 같은 분기 EPS: $1.11\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/dis/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/dis/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-AMAT-2026-11-12@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-12",
+    "title": "📊 AMAT 실적 (장후) · 정보기술",
+    "description": "■ Applied Materials (AMAT) 실적 발표\n섹터: 정보기술\n한국시간: 11월 13일(금) 오전 6:05경 (미 동부 16:05경 추정, 미국 장 마감 후)\n미국 현지 날짜: 2026-11-12\n대상 분기: Oct/2026 마감 분기\n시장 예상 EPS(주당순이익): $4.06 (애널리스트 10명)\n작년 같은 분기 EPS: $2.17\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/amat/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/amat/earnings",
+    "start_utc": "2026-11-12T21:05:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-MDT-2026-11-17@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-17",
+    "title": "📊 MDT 실적 (시각 미정) · 헬스케어",
+    "description": "■ Medtronic (MDT) 실적 발표\n섹터: 헬스케어 / 테마: 의료기기\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-11-17\n대상 분기: Oct/2026 마감 분기\n시장 예상 EPS(주당순이익): $1.34 (애널리스트 7명)\n작년 같은 분기 EPS: $1.36\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/mdt/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/mdt/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-HD-2026-11-17@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-17",
+    "title": "📊 HD 실적 (장전) · 경기소비재",
+    "description": "■ Home Depot (HD) 실적 발표\n섹터: 경기소비재 / 테마: 주택 개량 용품 유통\n한국시간: 11월 17일(화) 오후 9:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-11-17\n대상 분기: Oct/2026 마감 분기\n시장 예상 EPS(주당순이익): $3.86 (애널리스트 11명)\n작년 같은 분기 EPS: $3.74\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/hd/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/hd/earnings",
+    "start_utc": "2026-11-17T12:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-NVDA-2026-11-18@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-18",
+    "title": "📊 NVDA 실적 (시각 미정) · 정보기술",
+    "description": "■ Nvidia (NVDA) 실적 발표\n섹터: 정보기술 / 테마: AI 반도체(GPU)·데이터센터\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-11-18\n대상 분기: Oct/2026 마감 분기\n시장 예상 EPS(주당순이익): $2.47 (애널리스트 13명)\n작년 같은 분기 EPS: $1.24\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/nvda/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/nvda/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-PANW-2026-11-18@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-18",
+    "title": "📊 PANW 실적 (시각 미정) · 정보기술",
+    "description": "■ Palo Alto Networks (PANW) 실적 발표\n섹터: 정보기술\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-11-18\n대상 분기: Oct/2026 마감 분기\n시장 예상 EPS(주당순이익): $0.52 (애널리스트 14명)\n작년 같은 분기 EPS: $0.53\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/panw/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/panw/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-LOW-2026-11-18@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-18",
+    "title": "📊 LOW 실적 (장전) · 경기소비재",
+    "description": "■ Lowe's (LOW) 실적 발표\n섹터: 경기소비재 / 테마: 주택 개량 용품 유통\n한국시간: 11월 18일(수) 오후 9:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-11-18\n대상 분기: Oct/2026 마감 분기\n시장 예상 EPS(주당순이익): $2.86 (애널리스트 11명)\n작년 같은 분기 EPS: $3.06\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/low/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/low/earnings",
+    "start_utc": "2026-11-18T12:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-INTU-2026-11-19@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-19",
+    "title": "📊 INTU 실적 (시각 미정) · 정보기술",
+    "description": "■ Intuit (INTU) 실적 발표\n섹터: 정보기술\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-11-19\n대상 분기: Oct/2026 마감 분기\n시장 예상 EPS(주당순이익): $2.47 (애널리스트 9명)\n작년 같은 분기 EPS: $1.88\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/intu/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/intu/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-WMT-2026-11-19@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-19",
+    "title": "📊 WMT 실적 (장전) · 필수소비재",
+    "description": "■ Walmart (WMT) 실적 발표\n섹터: 필수소비재 / 테마: 대형 할인 유통\n한국시간: 11월 19일(목) 오후 9:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-11-19\n대상 분기: Oct/2026 마감 분기\n시장 예상 EPS(주당순이익): $0.63 (애널리스트 12명)\n작년 같은 분기 EPS: $0.62\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/wmt/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/wmt/earnings",
+    "start_utc": "2026-11-19T12:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-DELL-2026-11-24@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-24",
+    "title": "📊 DELL 실적 (시각 미정) · 정보기술",
+    "description": "■ Dell Technologies (DELL) 실적 발표\n섹터: 정보기술\n한국시간: 발표 시각 미정 (회사가 아직 시각을 알리지 않음)\n미국 현지 날짜: 2026-11-24\n대상 분기: Oct/2026 마감 분기\n시장 예상 EPS(주당순이익): $6.41 (애널리스트 8명)\n작년 같은 분기 EPS: $2.35\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/dell/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/dell/earnings",
+    "start_utc": null,
+    "minutes": 30
+  },
+  {
+    "uid": "earnings-DE-2026-11-25@investment-calendar",
+    "kind": "earnings",
+    "us_date": "2026-11-25",
+    "title": "📊 DE 실적 (장전) · 산업재",
+    "description": "■ Deere & Company (DE) 실적 발표\n섹터: 산업재 / 테마: 농기계\n한국시간: 11월 25일(수) 오후 9:00경 (미 동부 07:00경 추정, 미국 장 시작 전)\n미국 현지 날짜: 2026-11-25\n대상 분기: Oct/2026 마감 분기\n시장 예상 EPS(주당순이익): $4.08 (애널리스트 2명)\n작년 같은 분기 EPS: $3.93\n\n※ 발표 시각은 나스닥의 '장 전/장 후' 구분을 바탕으로 한 추정입니다. 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/de/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/de/earnings",
+    "start_utc": "2026-11-25T12:00:00+00:00",
+    "minutes": 30
+  },
+  {
+    "uid": "fomc-2026-12-09@investment-calendar",
+    "kind": "fomc",
+    "us_date": "2026-12-09",
+    "title": "🏦 FOMC 금리 결정 (+점도표)",
+    "description": "■ FOMC(미국 연방공개시장위원회) 기준금리 결정\n섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 금리\n한국시간: 12월 10일(목) 오전 4:00 성명서 발표 (미 동부 14:00)\n기자회견: 12월 10일(목) 오전 4:30부터 (미 동부 14:30)\n미국 현지 날짜: 2026-12-09 (이틀 회의의 둘째 날)\n이번 회의에서는 경제전망(SEP)과 점도표도 함께 공개됩니다.\n\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Federal Reserve):\nhttps://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "start_utc": "2026-12-09T19:00:00+00:00",
+    "minutes": 60
+  },
+  {
+    "uid": "fomc-2027-01-27@investment-calendar",
+    "kind": "fomc",
+    "us_date": "2027-01-27",
+    "title": "🏦 FOMC 금리 결정",
+    "description": "■ FOMC(미국 연방공개시장위원회) 기준금리 결정\n섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 금리\n한국시간: 1월 28일(목) 오전 4:00 성명서 발표 (미 동부 14:00)\n기자회견: 1월 28일(목) 오전 4:30부터 (미 동부 14:30)\n미국 현지 날짜: 2027-01-27 (이틀 회의의 둘째 날)\n\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Federal Reserve):\nhttps://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "start_utc": "2027-01-27T19:00:00+00:00",
+    "minutes": 60
+  },
+  {
+    "uid": "fomc-2027-03-17@investment-calendar",
+    "kind": "fomc",
+    "us_date": "2027-03-17",
+    "title": "🏦 FOMC 금리 결정 (+점도표)",
+    "description": "■ FOMC(미국 연방공개시장위원회) 기준금리 결정\n섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 금리\n한국시간: 3월 18일(목) 오전 3:00 성명서 발표 (미 동부 14:00)\n기자회견: 3월 18일(목) 오전 3:30부터 (미 동부 14:30)\n미국 현지 날짜: 2027-03-17 (이틀 회의의 둘째 날)\n이번 회의에서는 경제전망(SEP)과 점도표도 함께 공개됩니다.\n\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Federal Reserve):\nhttps://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "start_utc": "2027-03-17T18:00:00+00:00",
+    "minutes": 60
+  },
+  {
+    "uid": "fomc-2027-04-28@investment-calendar",
+    "kind": "fomc",
+    "us_date": "2027-04-28",
+    "title": "🏦 FOMC 금리 결정",
+    "description": "■ FOMC(미국 연방공개시장위원회) 기준금리 결정\n섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 금리\n한국시간: 4월 29일(목) 오전 3:00 성명서 발표 (미 동부 14:00)\n기자회견: 4월 29일(목) 오전 3:30부터 (미 동부 14:30)\n미국 현지 날짜: 2027-04-28 (이틀 회의의 둘째 날)\n\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Federal Reserve):\nhttps://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "start_utc": "2027-04-28T18:00:00+00:00",
+    "minutes": 60
+  },
+  {
+    "uid": "fomc-2027-06-09@investment-calendar",
+    "kind": "fomc",
+    "us_date": "2027-06-09",
+    "title": "🏦 FOMC 금리 결정 (+점도표)",
+    "description": "■ FOMC(미국 연방공개시장위원회) 기준금리 결정\n섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 금리\n한국시간: 6월 10일(목) 오전 3:00 성명서 발표 (미 동부 14:00)\n기자회견: 6월 10일(목) 오전 3:30부터 (미 동부 14:30)\n미국 현지 날짜: 2027-06-09 (이틀 회의의 둘째 날)\n이번 회의에서는 경제전망(SEP)과 점도표도 함께 공개됩니다.\n\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Federal Reserve):\nhttps://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "start_utc": "2027-06-09T18:00:00+00:00",
+    "minutes": 60
+  },
+  {
+    "uid": "fomc-2027-07-28@investment-calendar",
+    "kind": "fomc",
+    "us_date": "2027-07-28",
+    "title": "🏦 FOMC 금리 결정",
+    "description": "■ FOMC(미국 연방공개시장위원회) 기준금리 결정\n섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 금리\n한국시간: 7월 29일(목) 오전 3:00 성명서 발표 (미 동부 14:00)\n기자회견: 7월 29일(목) 오전 3:30부터 (미 동부 14:30)\n미국 현지 날짜: 2027-07-28 (이틀 회의의 둘째 날)\n\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Federal Reserve):\nhttps://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "start_utc": "2027-07-28T18:00:00+00:00",
+    "minutes": 60
+  },
+  {
+    "uid": "fomc-2027-09-15@investment-calendar",
+    "kind": "fomc",
+    "us_date": "2027-09-15",
+    "title": "🏦 FOMC 금리 결정 (+점도표)",
+    "description": "■ FOMC(미국 연방공개시장위원회) 기준금리 결정\n섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 금리\n한국시간: 9월 16일(목) 오전 3:00 성명서 발표 (미 동부 14:00)\n기자회견: 9월 16일(목) 오전 3:30부터 (미 동부 14:30)\n미국 현지 날짜: 2027-09-15 (이틀 회의의 둘째 날)\n이번 회의에서는 경제전망(SEP)과 점도표도 함께 공개됩니다.\n\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Federal Reserve):\nhttps://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "start_utc": "2027-09-15T18:00:00+00:00",
+    "minutes": 60
+  },
+  {
+    "uid": "fomc-2027-10-27@investment-calendar",
+    "kind": "fomc",
+    "us_date": "2027-10-27",
+    "title": "🏦 FOMC 금리 결정",
+    "description": "■ FOMC(미국 연방공개시장위원회) 기준금리 결정\n섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 금리\n한국시간: 10월 28일(목) 오전 3:00 성명서 발표 (미 동부 14:00)\n기자회견: 10월 28일(목) 오전 3:30부터 (미 동부 14:30)\n미국 현지 날짜: 2027-10-27 (이틀 회의의 둘째 날)\n\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Federal Reserve):\nhttps://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "start_utc": "2027-10-27T18:00:00+00:00",
+    "minutes": 60
+  },
+  {
+    "uid": "fomc-2027-12-08@investment-calendar",
+    "kind": "fomc",
+    "us_date": "2027-12-08",
+    "title": "🏦 FOMC 금리 결정 (+점도표)",
+    "description": "■ FOMC(미국 연방공개시장위원회) 기준금리 결정\n섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 금리\n한국시간: 12월 9일(목) 오전 4:00 성명서 발표 (미 동부 14:00)\n기자회견: 12월 9일(목) 오전 4:30부터 (미 동부 14:30)\n미국 현지 날짜: 2027-12-08 (이틀 회의의 둘째 날)\n이번 회의에서는 경제전망(SEP)과 점도표도 함께 공개됩니다.\n\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Federal Reserve):\nhttps://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "start_utc": "2027-12-08T19:00:00+00:00",
+    "minutes": 60
+  }
+]
