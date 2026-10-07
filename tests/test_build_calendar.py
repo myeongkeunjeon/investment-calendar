@@ -289,6 +289,38 @@ class TestBokDividendsReaction(unittest.TestCase):
         self.assertEqual(bc.reaction_from(closes, "2026-10-14", "pre"), {"pct": 2.0, "from": "2026-10-13", "to": "2026-10-14"})
         self.assertEqual(bc.reaction_from(closes, "2026-10-14", "after"), {"pct": -5.0, "from": "2026-10-14", "to": "2026-10-15"})
         self.assertIsNone(bc.reaction_from(closes, "2026-10-15", "after"))  # 다음 거래일 자료 없음
+        # 장 전/장 후를 모르면 전날 종가 → 다음 거래일 종가
+        self.assertEqual(bc.reaction_from(closes, "2026-10-14", ""), {"pct": -3.1, "from": "2026-10-13", "to": "2026-10-15"})
+
+    def test_bls_falls_back_to_fred_api(self):
+        calls = []
+
+        class Resp:
+            def __init__(self, data): self.data = data
+            def json(self): return self.data
+
+        def fake_get(url, headers=None, tries=3, timeout=30):
+            calls.append(url)
+            if "bls.gov" in url:
+                raise RuntimeError("403 Forbidden")
+            return Resp({"release_dates": [{"release_id": 10, "date": "2026-11-12"}]})
+
+        orig_get, orig_key = bc.http_get, bc.os.environ.get("FRED_API_KEY")
+        bc.http_get = fake_get
+        try:
+            bc.os.environ.pop("FRED_API_KEY", None)
+            with self.assertRaises(RuntimeError):
+                bc.fetch_bls()
+            bc.os.environ["FRED_API_KEY"] = "test"
+            got = bc.fetch_bls()
+        finally:
+            bc.http_get = orig_get
+            if orig_key is None:
+                bc.os.environ.pop("FRED_API_KEY", None)
+            else:
+                bc.os.environ["FRED_API_KEY"] = orig_key
+        self.assertEqual({g["key"] for g in got}, {"cpi", "jobs"})
+        self.assertEqual(got[0]["utc"], "2026-11-12T13:30:00+00:00")  # 미 동부 08:30 (서머타임 끝)
 
 
 class TestEstimates(unittest.TestCase):

@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import sys
 import time
@@ -1011,11 +1012,45 @@ def parse_schedule_text(html: str, agency: str) -> list[dict]:
     return out
 
 
+BLS_HEADER_SETS = [  # BLS는 자동 접속을 자주 막는다. 연락처가 담긴 이름, 일반 브라우저 순서로 시도
+    {"User-Agent": "investment-calendar/1.0 (+https://github.com/myeongkeunjeon/investment-calendar)",
+     "Accept": "text/calendar,text/plain,*/*"},
+    {"User-Agent": BROWSER_HEADERS["User-Agent"], "Accept": "text/html,application/xhtml+xml,text/calendar,*/*;q=0.8",
+     "Accept-Language": "en-US,en;q=0.9", "Sec-Fetch-Dest": "document", "Sec-Fetch-Mode": "navigate", "Sec-Fetch-Site": "none"},
+]
+FRED_API = ("https://api.stlouisfed.org/fred/release/dates?release_id={rid}&api_key={key}&file_type=json"
+            "&include_release_dates_with_no_data=true&realtime_start={start}&sort_order=asc&limit=200")
+FRED_RELEASE_IDS = {"cpi": 10, "jobs": 50}  # FRED 공식 발표 번호: CPI, 고용보고서
+
+
+def fetch_bls() -> list[dict]:
+    last: Exception | None = None
+    for headers in BLS_HEADER_SETS:
+        try:
+            got = parse_bls_ics(http_get(BLS_ICS, headers=headers, tries=1).content)
+            if got:
+                return got
+        except Exception as err:  # noqa: BLE001
+            last = err
+    key = os.environ.get("FRED_API_KEY", "").strip()
+    if not key:
+        raise RuntimeError(f"{last} — 대체 경로(FRED API)를 쓰려면 저장소 Secrets에 FRED_API_KEY를 넣어 주세요")
+    out = []
+    start = (date.today() - timedelta(days=120)).isoformat()
+    for k, rid in FRED_RELEASE_IDS.items():
+        rows = http_get(FRED_API.format(rid=rid, key=key, start=start), tries=2).json().get("release_dates") or []
+        for r in rows:
+            d = date.fromisoformat(r["date"])
+            out.append(release_entry(k, "", et_to_utc(d, ECON_TIME_ET)))
+    print(f"  BLS 대신 FRED API로 CPI·고용 일정 {len(out)}건")
+    return out
+
+
 def fetch_releases() -> tuple[list[dict], set[str]]:
     """반환: (발표 일정들, 일정을 제대로 받은 기관들)"""
     entries, ok = [], set()
     sources = [
-        ("bls", lambda: parse_bls_ics(http_get(BLS_ICS, headers=BROWSER_HEADERS | {"Accept": "text/calendar,*/*"}).content)),
+        ("bls", fetch_bls),
         ("bea", lambda: parse_schedule_text(http_get(BEA_SCHEDULE, headers=BROWSER_HEADERS | {"Accept": "text/html"}).text, "bea")),
         ("census", lambda: parse_schedule_text(http_get(CENSUS_CALENDAR, headers=BROWSER_HEADERS | {"Accept": "text/html"}).text, "census")),
     ]
@@ -1330,7 +1365,8 @@ def parse_closes(payload: dict) -> dict[str, float]:
 
 
 def reaction_from(closes: dict[str, float], us_day: str, timing: str) -> dict | None:
-    """장 전 발표: 전날 종가 → 당일 종가, 장 후 발표: 당일 종가 → 다음 거래일 종가."""
+    """장 전 발표: 전날 종가 → 당일 종가, 장 후 발표: 당일 종가 → 다음 거래일 종가,
+    모르면: 전날 종가 → 다음 거래일 종가."""
     days = sorted(closes)
     before = [d for d in days if d < us_day]
     on_after = [d for d in days if d >= us_day]
@@ -1343,15 +1379,24 @@ def reaction_from(closes: dict[str, float], us_day: str, timing: str) -> dict | 
         if us_day not in closes or not nxt:
             return None
         a, b = us_day, nxt[0]
-    else:
-        return None
+    else:  # 장 전/장 후를 모르면 발표 전날 종가 → 발표 다음 거래일 종가 (어느 쪽이든 반응이 담기도록)
+        nxt = [d for d in days if d > us_day]
+        if not before or not nxt:
+            return None
+        a, b = before[-1], nxt[0]
     return {"pct": round((closes[b] / closes[a] - 1) * 100, 1), "from": a, "to": b}
 
 
 def apply_reactions(earnings: list[Item], today: date) -> None:
     path = DATA_DIR / "reactions.json"
     cache = load_json(path, {})
-    todo = [i for i in earnings if i.kind == "earnings" and i.actual_eps and i.timing in ("pre", "after")
+    # 나스닥은 지난 날짜에는 장 전/장 후를 알려 주지 않는다. 발표 전에 알게 된 값을 기억해 둔다.
+    timings_path = DATA_DIR / "timings.json"
+    timings = load_json(timings_path, {})
+    timings.update({i.uid: i.timing for i in earnings if i.timing})
+    keep = {i.uid for i in earnings}
+    save_json(timings_path, {k: v for k, v in sorted(timings.items()) if k in keep})
+    todo = [i for i in earnings if i.kind == "earnings" and i.actual_eps
             and i.uid not in cache and i.us_date < (today - timedelta(days=1)).isoformat()]
     done = fails = 0
     for item in todo[:REACTION_LIMIT]:
@@ -1370,11 +1415,10 @@ def apply_reactions(earnings: list[Item], today: date) -> None:
             continue
         finally:
             time.sleep(0.4)
-        r = reaction_from(closes, item.us_date, item.timing)
+        r = reaction_from(closes, item.us_date, item.timing or timings.get(item.uid, ""))
         if r:
             cache[item.uid] = r
             done += 1
-    keep = {i.uid for i in earnings}
     cache = {k: v for k, v in cache.items() if k in keep}
     save_json(path, cache)
     for item in earnings:
