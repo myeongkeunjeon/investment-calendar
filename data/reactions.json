@@ -1,1 +1,752 @@
-{}
+{
+  "earnings-NKE-2026-06-30@investment-calendar": {
+    "pct": 3.8,
+    "from": "2026-06-29",
+    "to": "2026-07-01"
+  },
+  "earnings-STZ-2026-06-30@investment-calendar": {
+    "pct": -2.0,
+    "from": "2026-06-29",
+    "to": "2026-07-01"
+  },
+  "earnings-GIS-2026-07-01@investment-calendar": {
+    "pct": 8.0,
+    "from": "2026-06-30",
+    "to": "2026-07-02"
+  },
+  "earnings-FDS-2026-07-01@investment-calendar": {
+    "pct": 8.7,
+    "from": "2026-06-30",
+    "to": "2026-07-02"
+  },
+  "earnings-PEP-2026-07-09@investment-calendar": {
+    "pct": -3.6,
+    "from": "2026-07-08",
+    "to": "2026-07-10"
+  },
+  "earnings-DAL-2026-07-10@investment-calendar": {
+    "pct": -3.2,
+    "from": "2026-07-09",
+    "to": "2026-07-13"
+  },
+  "earnings-JPM-2026-07-14@investment-calendar": {
+    "pct": 3.7,
+    "from": "2026-07-13",
+    "to": "2026-07-15"
+  },
+  "earnings-BAC-2026-07-14@investment-calendar": {
+    "pct": 3.5,
+    "from": "2026-07-13",
+    "to": "2026-07-15"
+  },
+  "earnings-GS-2026-07-14@investment-calendar": {
+    "pct": 10.2,
+    "from": "2026-07-13",
+    "to": "2026-07-15"
+  },
+  "earnings-WFC-2026-07-14@investment-calendar": {
+    "pct": -0.2,
+    "from": "2026-07-13",
+    "to": "2026-07-15"
+  },
+  "earnings-C-2026-07-14@investment-calendar": {
+    "pct": -4.1,
+    "from": "2026-07-13",
+    "to": "2026-07-15"
+  },
+  "earnings-FAST-2026-07-14@investment-calendar": {
+    "pct": -3.6,
+    "from": "2026-07-13",
+    "to": "2026-07-15"
+  },
+  "earnings-JNJ-2026-07-15@investment-calendar": {
+    "pct": -1.5,
+    "from": "2026-07-14",
+    "to": "2026-07-16"
+  },
+  "earnings-MS-2026-07-15@investment-calendar": {
+    "pct": -4.1,
+    "from": "2026-07-14",
+    "to": "2026-07-16"
+  },
+  "earnings-BLK-2026-07-15@investment-calendar": {
+    "pct": 6.0,
+    "from": "2026-07-14",
+    "to": "2026-07-16"
+  },
+  "earnings-PGR-2026-07-15@investment-calendar": {
+    "pct": -9.2,
+    "from": "2026-07-14",
+    "to": "2026-07-16"
+  },
+  "earnings-BNY-2026-07-15@investment-calendar": {
+    "pct": 4.1,
+    "from": "2026-07-14",
+    "to": "2026-07-16"
+  },
+  "earnings-PNC-2026-07-15@investment-calendar": {
+    "pct": 1.3,
+    "from": "2026-07-14",
+    "to": "2026-07-16"
+  },
+  "earnings-ELV-2026-07-15@investment-calendar": {
+    "pct": -12.6,
+    "from": "2026-07-14",
+    "to": "2026-07-16"
+  },
+  "earnings-CTAS-2026-07-15@investment-calendar": {
+    "pct": 11.9,
+    "from": "2026-07-14",
+    "to": "2026-07-16"
+  },
+  "earnings-UAL-2026-07-15@investment-calendar": {
+    "pct": -1.3,
+    "from": "2026-07-14",
+    "to": "2026-07-16"
+  },
+  "earnings-MTB-2026-07-15@investment-calendar": {
+    "pct": 5.0,
+    "from": "2026-07-14",
+    "to": "2026-07-16"
+  },
+  "earnings-JBHT-2026-07-15@investment-calendar": {
+    "pct": 6.2,
+    "from": "2026-07-14",
+    "to": "2026-07-16"
+  },
+  "earnings-UNH-2026-07-16@investment-calendar": {
+    "pct": 1.8,
+    "from": "2026-07-15",
+    "to": "2026-07-17"
+  },
+  "earnings-GE-2026-07-16@investment-calendar": {
+    "pct": -3.2,
+    "from": "2026-07-15",
+    "to": "2026-07-17"
+  },
+  "earnings-NFLX-2026-07-16@investment-calendar": {
+    "pct": -6.4,
+    "from": "2026-07-15",
+    "to": "2026-07-17"
+  },
+  "earnings-ABT-2026-07-16@investment-calendar": {
+    "pct": 12.8,
+    "from": "2026-07-15",
+    "to": "2026-07-17"
+  },
+  "earnings-ISRG-2026-07-16@investment-calendar": {
+    "pct": -11.2,
+    "from": "2026-07-15",
+    "to": "2026-07-17"
+  },
+  "earnings-PLD-2026-07-16@investment-calendar": {
+    "pct": 4.4,
+    "from": "2026-07-15",
+    "to": "2026-07-17"
+  },
+  "earnings-USB-2026-07-16@investment-calendar": {
+    "pct": 0.2,
+    "from": "2026-07-15",
+    "to": "2026-07-17"
+  },
+  "earnings-STT-2026-07-16@investment-calendar": {
+    "pct": -2.2,
+    "from": "2026-07-15",
+    "to": "2026-07-17"
+  },
+  "earnings-CFG-2026-07-16@investment-calendar": {
+    "pct": 1.8,
+    "from": "2026-07-15",
+    "to": "2026-07-17"
+  },
+  "earnings-TRV-2026-07-17@investment-calendar": {
+    "pct": 9.1,
+    "from": "2026-07-16",
+    "to": "2026-07-20"
+  },
+  "earnings-TFC-2026-07-17@investment-calendar": {
+    "pct": -4.2,
+    "from": "2026-07-16",
+    "to": "2026-07-20"
+  },
+  "earnings-FITB-2026-07-17@investment-calendar": {
+    "pct": -3.3,
+    "from": "2026-07-16",
+    "to": "2026-07-20"
+  },
+  "earnings-RF-2026-07-17@investment-calendar": {
+    "pct": -4.0,
+    "from": "2026-07-16",
+    "to": "2026-07-20"
+  },
+  "earnings-STLD-2026-07-20@investment-calendar": {
+    "pct": -0.8,
+    "from": "2026-07-17",
+    "to": "2026-07-21"
+  },
+  "earnings-WRB-2026-07-20@investment-calendar": {
+    "pct": 0.8,
+    "from": "2026-07-17",
+    "to": "2026-07-21"
+  },
+  "earnings-DPZ-2026-07-20@investment-calendar": {
+    "pct": 1.3,
+    "from": "2026-07-17",
+    "to": "2026-07-21"
+  },
+  "earnings-SCHW-2026-07-21@investment-calendar": {
+    "pct": -1.7,
+    "from": "2026-07-20",
+    "to": "2026-07-22"
+  },
+  "earnings-DHR-2026-07-21@investment-calendar": {
+    "pct": -10.9,
+    "from": "2026-07-20",
+    "to": "2026-07-22"
+  },
+  "earnings-CB-2026-07-21@investment-calendar": {
+    "pct": -2.6,
+    "from": "2026-07-20",
+    "to": "2026-07-22"
+  },
+  "earnings-COF-2026-07-21@investment-calendar": {
+    "pct": -2.6,
+    "from": "2026-07-20",
+    "to": "2026-07-22"
+  },
+  "earnings-MMM-2026-07-21@investment-calendar": {
+    "pct": 7.3,
+    "from": "2026-07-20",
+    "to": "2026-07-22"
+  },
+  "earnings-MRSH-2026-07-21@investment-calendar": {
+    "pct": -3.4,
+    "from": "2026-07-20",
+    "to": "2026-07-22"
+  },
+  "earnings-GM-2026-07-21@investment-calendar": {
+    "pct": 8.4,
+    "from": "2026-07-20",
+    "to": "2026-07-22"
+  },
+  "earnings-NOC-2026-07-21@investment-calendar": {
+    "pct": 0.3,
+    "from": "2026-07-20",
+    "to": "2026-07-22"
+  },
+  "earnings-IBKR-2026-07-21@investment-calendar": {
+    "pct": 2.0,
+    "from": "2026-07-20",
+    "to": "2026-07-22"
+  },
+  "earnings-MSCI-2026-07-21@investment-calendar": {
+    "pct": -8.7,
+    "from": "2026-07-20",
+    "to": "2026-07-22"
+  },
+  "earnings-DHI-2026-07-21@investment-calendar": {
+    "pct": -1.6,
+    "from": "2026-07-20",
+    "to": "2026-07-22"
+  },
+  "earnings-EQT-2026-07-21@investment-calendar": {
+    "pct": 10.1,
+    "from": "2026-07-20",
+    "to": "2026-07-22"
+  },
+  "earnings-HAL-2026-07-21@investment-calendar": {
+    "pct": -5.9,
+    "from": "2026-07-20",
+    "to": "2026-07-22"
+  },
+  "earnings-SYF-2026-07-21@investment-calendar": {
+    "pct": -0.8,
+    "from": "2026-07-20",
+    "to": "2026-07-22"
+  },
+  "earnings-KEY-2026-07-21@investment-calendar": {
+    "pct": -0.9,
+    "from": "2026-07-20",
+    "to": "2026-07-22"
+  },
+  "earnings-GPC-2026-07-21@investment-calendar": {
+    "pct": -1.7,
+    "from": "2026-07-20",
+    "to": "2026-07-22"
+  },
+  "earnings-EFX-2026-07-21@investment-calendar": {
+    "pct": -5.3,
+    "from": "2026-07-20",
+    "to": "2026-07-22"
+  },
+  "earnings-HAS-2026-07-21@investment-calendar": {
+    "pct": 9.1,
+    "from": "2026-07-20",
+    "to": "2026-07-22"
+  },
+  "earnings-GOOG-2026-07-22@investment-calendar": {
+    "pct": -8.0,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-TSLA-2026-07-22@investment-calendar": {
+    "pct": -15.6,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-PM-2026-07-22@investment-calendar": {
+    "pct": 1.6,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-GEV-2026-07-22@investment-calendar": {
+    "pct": -4.4,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-TXN-2026-07-22@investment-calendar": {
+    "pct": -2.2,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-IBM-2026-07-22@investment-calendar": {
+    "pct": -1.8,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-T-2026-07-22@investment-calendar": {
+    "pct": 3.1,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-NOW-2026-07-22@investment-calendar": {
+    "pct": -9.9,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-CME-2026-07-22@investment-calendar": {
+    "pct": 7.1,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-CSX-2026-07-22@investment-calendar": {
+    "pct": 5.9,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-MCO-2026-07-22@investment-calendar": {
+    "pct": -3.8,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-KMI-2026-07-22@investment-calendar": {
+    "pct": 1.2,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-URI-2026-07-22@investment-calendar": {
+    "pct": 12.4,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-TEL-2026-07-22@investment-calendar": {
+    "pct": -4.9,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-WAB-2026-07-22@investment-calendar": {
+    "pct": 13.1,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-VMRK-2026-07-22@investment-calendar": {
+    "pct": -0.0,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-NTRS-2026-07-22@investment-calendar": {
+    "pct": -3.8,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-RJF-2026-07-22@investment-calendar": {
+    "pct": -1.1,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-CCI-2026-07-22@investment-calendar": {
+    "pct": -2.1,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-TDY-2026-07-22@investment-calendar": {
+    "pct": 0.6,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-OTIS-2026-07-22@investment-calendar": {
+    "pct": -1.6,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-LVS-2026-07-22@investment-calendar": {
+    "pct": 1.2,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-PHM-2026-07-22@investment-calendar": {
+    "pct": 0.3,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-LUV-2026-07-22@investment-calendar": {
+    "pct": -8.2,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-PKG-2026-07-22@investment-calendar": {
+    "pct": 2.5,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-ROL-2026-07-22@investment-calendar": {
+    "pct": -10.1,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-GL-2026-07-22@investment-calendar": {
+    "pct": -7.2,
+    "from": "2026-07-21",
+    "to": "2026-07-23"
+  },
+  "earnings-INTC-2026-07-23@investment-calendar": {
+    "pct": -10.0,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-RTX-2026-07-23@investment-calendar": {
+    "pct": 9.2,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-TMO-2026-07-23@investment-calendar": {
+    "pct": 7.9,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-TMUS-2026-07-23@investment-calendar": {
+    "pct": -5.7,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-UNP-2026-07-23@investment-calendar": {
+    "pct": 5.0,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-NEM-2026-07-23@investment-calendar": {
+    "pct": -2.7,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-LMT-2026-07-23@investment-calendar": {
+    "pct": 13.3,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-FCX-2026-07-23@investment-calendar": {
+    "pct": -3.7,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-BX-2026-07-23@investment-calendar": {
+    "pct": 5.8,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-CMCSA-2026-07-23@investment-calendar": {
+    "pct": -5.2,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-NSC-2026-07-23@investment-calendar": {
+    "pct": 6.0,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-DLR-2026-07-23@investment-calendar": {
+    "pct": 11.6,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-HON-2026-07-23@investment-calendar": {
+    "pct": 4.4,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-FIX-2026-07-23@investment-calendar": {
+    "pct": -3.2,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-NDAQ-2026-07-23@investment-calendar": {
+    "pct": 1.3,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-EW-2026-07-23@investment-calendar": {
+    "pct": -2.1,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-AMP-2026-07-23@investment-calendar": {
+    "pct": 0.4,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-ROP-2026-07-23@investment-calendar": {
+    "pct": 9.1,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-HIG-2026-07-23@investment-calendar": {
+    "pct": -0.2,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-PCG-2026-07-23@investment-calendar": {
+    "pct": -1.4,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-HBAN-2026-07-23@investment-calendar": {
+    "pct": -5.0,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-VRSN-2026-07-23@investment-calendar": {
+    "pct": 6.6,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-WST-2026-07-23@investment-calendar": {
+    "pct": -8.4,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-DOV-2026-07-23@investment-calendar": {
+    "pct": -5.7,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-DGX-2026-07-23@investment-calendar": {
+    "pct": 8.6,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-DOW-2026-07-23@investment-calendar": {
+    "pct": -4.5,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-SNA-2026-07-23@investment-calendar": {
+    "pct": -0.5,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-TSCO-2026-07-23@investment-calendar": {
+    "pct": 5.7,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-NVR-2026-07-23@investment-calendar": {
+    "pct": 1.0,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-ALLE-2026-07-23@investment-calendar": {
+    "pct": 9.6,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-DECK-2026-07-23@investment-calendar": {
+    "pct": -6.3,
+    "from": "2026-07-22",
+    "to": "2026-07-24"
+  },
+  "earnings-AXP-2026-07-24@investment-calendar": {
+    "pct": -1.6,
+    "from": "2026-07-23",
+    "to": "2026-07-27"
+  },
+  "earnings-VZ-2026-07-24@investment-calendar": {
+    "pct": 8.0,
+    "from": "2026-07-23",
+    "to": "2026-07-27"
+  },
+  "earnings-NEE-2026-07-24@investment-calendar": {
+    "pct": -1.1,
+    "from": "2026-07-23",
+    "to": "2026-07-27"
+  },
+  "earnings-HCA-2026-07-24@investment-calendar": {
+    "pct": 3.5,
+    "from": "2026-07-23",
+    "to": "2026-07-27"
+  },
+  "earnings-SLB-2026-07-24@investment-calendar": {
+    "pct": 9.1,
+    "from": "2026-07-23",
+    "to": "2026-07-27"
+  },
+  "earnings-CHTR-2026-07-24@investment-calendar": {
+    "pct": 4.0,
+    "from": "2026-07-23",
+    "to": "2026-07-27"
+  },
+  "earnings-WELL-2026-07-27@investment-calendar": {
+    "pct": -3.4,
+    "from": "2026-07-24",
+    "to": "2026-07-28"
+  },
+  "earnings-CDNS-2026-07-27@investment-calendar": {
+    "pct": 5.7,
+    "from": "2026-07-24",
+    "to": "2026-07-28"
+  },
+  "earnings-NUE-2026-07-27@investment-calendar": {
+    "pct": 7.3,
+    "from": "2026-07-24",
+    "to": "2026-07-28"
+  },
+  "earnings-FFIV-2026-07-27@investment-calendar": {
+    "pct": 2.9,
+    "from": "2026-07-24",
+    "to": "2026-07-28"
+  },
+  "earnings-CINF-2026-07-27@investment-calendar": {
+    "pct": -0.1,
+    "from": "2026-07-24",
+    "to": "2026-07-28"
+  },
+  "earnings-PFG-2026-07-27@investment-calendar": {
+    "pct": 4.3,
+    "from": "2026-07-24",
+    "to": "2026-07-28"
+  },
+  "earnings-BRO-2026-07-27@investment-calendar": {
+    "pct": 8.9,
+    "from": "2026-07-24",
+    "to": "2026-07-28"
+  },
+  "earnings-UDR-2026-07-27@investment-calendar": {
+    "pct": -1.5,
+    "from": "2026-07-24",
+    "to": "2026-07-28"
+  },
+  "earnings-UHS-2026-07-27@investment-calendar": {
+    "pct": 6.7,
+    "from": "2026-07-24",
+    "to": "2026-07-28"
+  },
+  "earnings-V-2026-07-28@investment-calendar": {
+    "pct": 1.7,
+    "from": "2026-07-27",
+    "to": "2026-07-29"
+  },
+  "earnings-KO-2026-07-28@investment-calendar": {
+    "pct": 6.0,
+    "from": "2026-07-27",
+    "to": "2026-07-29"
+  },
+  "earnings-KLAC-2026-07-28@investment-calendar": {
+    "pct": -16.3,
+    "from": "2026-07-27",
+    "to": "2026-07-29"
+  },
+  "earnings-STX-2026-07-28@investment-calendar": {
+    "pct": -6.4,
+    "from": "2026-07-27",
+    "to": "2026-07-29"
+  },
+  "earnings-BA-2026-07-28@investment-calendar": {
+    "pct": 1.2,
+    "from": "2026-07-27",
+    "to": "2026-07-29"
+  },
+  "earnings-GLW-2026-07-28@investment-calendar": {
+    "pct": -13.5,
+    "from": "2026-07-27",
+    "to": "2026-07-29"
+  },
+  "earnings-SPGI-2026-07-28@investment-calendar": {
+    "pct": -4.6,
+    "from": "2026-07-27",
+    "to": "2026-07-29"
+  },
+  "earnings-BE-2026-07-28@investment-calendar": {
+    "pct": -13.0,
+    "from": "2026-07-27",
+    "to": "2026-07-29"
+  },
+  "earnings-WM-2026-07-28@investment-calendar": {
+    "pct": -0.5,
+    "from": "2026-07-27",
+    "to": "2026-07-29"
+  },
+  "earnings-UPS-2026-07-28@investment-calendar": {
+    "pct": -7.4,
+    "from": "2026-07-27",
+    "to": "2026-07-29"
+  },
+  "earnings-ECL-2026-07-28@investment-calendar": {
+    "pct": 4.5,
+    "from": "2026-07-27",
+    "to": "2026-07-29"
+  },
+  "earnings-SHW-2026-07-28@investment-calendar": {
+    "pct": 5.1,
+    "from": "2026-07-27",
+    "to": "2026-07-29"
+  },
+  "earnings-RCL-2026-07-28@investment-calendar": {
+    "pct": 6.1,
+    "from": "2026-07-27",
+    "to": "2026-07-29"
+  },
+  "earnings-AMT-2026-07-28@investment-calendar": {
+    "pct": 7.5,
+    "from": "2026-07-27",
+    "to": "2026-07-29"
+  },
+  "earnings-MDLZ-2026-07-28@investment-calendar": {
+    "pct": 7.1,
+    "from": "2026-07-27",
+    "to": "2026-07-29"
+  },
+  "earnings-ITW-2026-07-28@investment-calendar": {
+    "pct": 2.7,
+    "from": "2026-07-27",
+    "to": "2026-07-29"
+  },
+  "earnings-HLT-2026-07-28@investment-calendar": {
+    "pct": -2.8,
+    "from": "2026-07-27",
+    "to": "2026-07-29"
+  },
+  "earnings-TER-2026-07-28@investment-calendar": {
+    "pct": -4.6,
+    "from": "2026-07-27",
+    "to": "2026-07-29"
+  },
+  "earnings-NXPI-2026-07-28@investment-calendar": {
+    "pct": -10.0,
+    "from": "2026-07-27",
+    "to": "2026-07-29"
+  },
+  "earnings-PCAR-2026-07-28@investment-calendar": {
+    "pct": 0.3,
+    "from": "2026-07-27",
+    "to": "2026-07-29"
+  }
+}
