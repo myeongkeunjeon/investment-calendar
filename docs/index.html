@@ -519,7 +519,7 @@
     if (c) return c.name;
     return marketIndex.get(sym)?.name || "";
   }
-  function eventRow(ev) {
+  function eventRow(ev, prefix = "l") {
     const sub = [];
     if (ev.kind === "fomc") sub.push(ev.note || "미국 기준금리 결정");
     else {
@@ -532,7 +532,7 @@
     const res = ev.actual_eps ? verdict(ev.surprise) : null;
     const star = ev.kind !== "fomc" && mineSet().has(ev.symbol) ? `<span class="star" aria-label="내 종목">★</span>` : "";
     const title = ev.kind === "fomc" ? esc(ev.name) : `${star}${esc(ev.symbol)} ${ev.actual_eps ? "실적 결과" : KIND[ev.kind].label}`;
-    const id = detailId(ev.uid);
+    const id = detailId(ev.uid, prefix);
     return `<div class="ev k-${ev.kind}">
       <button aria-expanded="false" aria-controls="${id}">
         <span class="time">${esc(ev.time)}</span>
@@ -546,10 +546,11 @@
     const head = document.querySelector("header").getBoundingClientRect().height;
     window.scrollTo({ top: Math.max(0, el.getBoundingClientRect().top + window.scrollY - head - 8), behavior: "smooth" });
   }
-  function detailId(uid) { return "d-" + String(uid).replace(/[^a-zA-Z0-9]/g, ""); }
+  function detailId(uid, prefix = "l") { return `d${prefix}-` + String(uid).replace(/[^a-zA-Z0-9]/g, ""); }
   function bindToggles(root) {
     root.querySelectorAll(".ev > button").forEach((b) => b.addEventListener("click", () => {
-      const d = document.getElementById(b.getAttribute("aria-controls"));
+      // 같은 일정이 일정 탭과 달력 탭에 함께 있을 수 있으니, 누른 줄 바로 아래 설명만 연다
+      const d = b.closest(".ev").querySelector(".detail");
       const open = d.hidden;
       d.hidden = !open;
       b.setAttribute("aria-expanded", String(open));
@@ -669,7 +670,7 @@
     const tomorrow = addDays(todayYmd, 1);
     $("#list").innerHTML = shown.map(([day, evs]) => {
       const tag = day === todayYmd ? `<span class="tag">오늘</span>` : day === tomorrow ? `<span class="tag">내일</span>` : "";
-      return `<div class="day"><h2>${dayLabel(day)} ${tag}</h2><div class="card">${evs.map(eventRow).join("")}</div></div>`;
+      return `<div class="day"><h2>${dayLabel(day)} ${tag}</h2><div class="card">${evs.map((ev) => eventRow(ev)).join("")}</div></div>`;
     }).join("") + (days.length > listLimit ? `<button class="btn more" id="more">더 보기 (${days.length - listLimit}일 남음)</button>` : "");
     bindToggles($("#list"));
     const more = $("#more");
@@ -715,12 +716,12 @@
       if (selDay.slice(0, 7) !== calMonth) calMonth = selDay.slice(0, 7);
       renderCal();
       // 달력 아래 그날 일정으로 내려가고, 종목 이름을 눌렀다면 그 종목 설명을 바로 펼친다
-      const target = chip && document.querySelector(`#cal-day [aria-controls="${detailId(chip.dataset.uid)}"]`);
+      const target = chip && document.querySelector(`#cal-day [aria-controls="${detailId(chip.dataset.uid, "c")}"]`);
       if (target) target.click();
       scrollBelowHeader(target ? target.closest(".ev") : $("#cal-day"));
     }));
     const evs = [...(byDay.get(selDay) || [])].sort((a, b) => rank(a, mine) - rank(b, mine));
-    $("#cal-day").innerHTML = `<div class="day"><h2>${dayLabel(selDay)}</h2>${evs.length ? `<div class="card">${evs.map(eventRow).join("")}</div>` : `<div class="empty" style="padding:16px">일정이 없어요.</div>`}</div>`;
+    $("#cal-day").innerHTML = `<div class="day"><h2>${dayLabel(selDay)}</h2>${evs.length ? `<div class="card">${evs.map((ev) => eventRow(ev, "c")).join("")}</div>` : `<div class="empty" style="padding:16px">일정이 없어요.</div>`}</div>`;
     bindToggles($("#cal-day"));
   }
   const rank = (ev, mine) => ev.kind === "fomc" ? 0 : mine.has(ev.symbol) ? 1 : 2;
