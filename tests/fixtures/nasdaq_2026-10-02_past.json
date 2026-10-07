@@ -1,0 +1,5 @@
+{"data":{"asOf":"Fri, Oct 2, 2026","rows":[
+{"time":"time-pre-market","symbol":"JPM","name":"JPMorgan Chase & Co.","eps":"$5.20","surprise":"3.79","marketCap":"$800,000,000,000","fiscalQuarterEnding":"Sep/2026","epsForecast":"$5.01","noOfEsts":"12"},
+{"time":"time-after-hours","symbol":"AAPL","name":"Apple Inc.","eps":"($0.10)","surprise":"N/A","marketCap":"","fiscalQuarterEnding":"Sep/2026","epsForecast":"$0.20","noOfEsts":"10"},
+{"time":"time-not-supplied","symbol":"SMLL","name":"Small Cap Inc.","eps":"N/A","surprise":"N/A","fiscalQuarterEnding":"Sep/2026","epsForecast":"$0.10","noOfEsts":"2"}
+]}}

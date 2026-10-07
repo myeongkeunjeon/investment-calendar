@@ -62,12 +62,12 @@ class TestSources(unittest.TestCase):
         payload = json.loads((FIX / "nasdaq_2026-10-14.json").read_text())
         rows = bc.market_rows(payload)
         self.assertEqual(len(rows), 5)  # S&P 100 밖 종목(SMLL)도 남는다
-        self.assertEqual(rows[-1], ["SMLL", "Small Cap Inc.", "pre", "$0.10", "Sep/2026"])
+        self.assertEqual(rows[-1], ["SMLL", "Small Cap Inc.", "pre", "$0.10", "Sep/2026", "", ""])
         previous = {"names": {"KEEP": "Keep Co.", "OLD": "Old Co."},
                     "days": {"2026-01-01": [["OLD", "", "", ""]], "2026-10-13": [["KEEP", "pre", "", ""]]}}
         merged = bc.merge_market(previous, {"2026-10-14": rows}, date(2026, 10, 7))
         self.assertEqual(list(merged["days"]), ["2026-10-13", "2026-10-14"])  # 오래된 날짜는 정리
-        self.assertEqual(merged["days"]["2026-10-14"][-1], ["SMLL", "pre", "$0.10", "Sep/2026"])
+        self.assertEqual(merged["days"]["2026-10-14"][-1], ["SMLL", "pre", "$0.10", "Sep/2026", "", ""])
         self.assertEqual(merged["names"]["SMLL"], "Small Cap Inc.")
         self.assertEqual(merged["names"]["KEEP"], "Keep Co.")
         self.assertNotIn("OLD", merged["names"])  # 쓰이지 않는 이름도 정리
@@ -83,6 +83,62 @@ class TestSources(unittest.TestCase):
         # 12월은 미국 서머타임 해제: 14:00 EST = 한국 다음 날 04:00
         self.assertIn("12월 10일(목) 오전 4:00", dec.description)
         self.assertIn("점도표", dec.title)
+
+
+class TestSp500AndResults(unittest.TestCase):
+    def test_sp500_table_and_top100_flag(self):
+        sp500 = bc.parse_index_table((FIX / "wiki_sp500.html").read_text())
+        self.assertEqual(sp500[1], {"symbol": "ZTS", "name": "Zoetis", "sector": "Health Care"})
+        sp100 = [{"symbol": "AAPL", "name": "Apple Inc.", "sector": "Information Technology"},
+                 {"symbol": "BRK.B", "name": "Berkshire", "sector": "Financials"}]
+        members = {m["symbol"]: m for m in bc.combine_members(sp500, sp100)}
+        self.assertTrue(members["AAPL"]["top100"])
+        self.assertFalse(members["ZTS"]["top100"])
+        self.assertTrue(members["BRK.B"]["top100"])  # S&P 500 표에 없어도 S&P 100은 지킨다
+
+    def test_past_day_results(self):
+        payload = json.loads((FIX / "nasdaq_2026-10-02_past.json").read_text())
+        members = {bc.norm_symbol(m["symbol"]): m for m in [
+            {"symbol": "JPM", "name": "JPMorgan Chase", "sector": "Financials"},
+            {"symbol": "AAPL", "name": "Apple Inc.", "sector": "Information Technology"}]}
+        items = {i.symbol: i for i in bc.parse_nasdaq_day(payload, date(2026, 10, 2), members, THEMES)}
+        jpm = items["JPM"]
+        self.assertEqual((jpm.actual_eps, jpm.surprise), ("$5.20", "3.8"))
+        self.assertIn("✅ 발표 결과: 실제 EPS $5.20 · 시장 예상 $5.01 → 예상 상회 +3.8%", jpm.description)
+        self.assertTrue(jpm.title.startswith("✅ JPM 실적 결과 · 예상 상회 +3.8%"))
+        self.assertIn("sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JPM&type=8-K", jpm.description)
+        # 서프라이즈 값이 없으면 예상치로 계산, 적자는 음수로
+        self.assertEqual((items["AAPL"].actual_eps, items["AAPL"].surprise), ("-$0.10", "-150.0"))
+        rows = bc.market_rows(payload)
+        self.assertEqual(rows[0][5:], ["$5.20", "3.8"])
+        self.assertEqual(rows[2][5:], ["", ""])  # 아직 결과 없음
+
+    def test_money_and_verdict(self):
+        self.assertEqual(bc.money("$1,234.5"), "$1234.50")
+        self.assertEqual(bc.money(-0.3), "-$0.30")
+        self.assertEqual(bc.money("N/A"), "")
+        self.assertEqual(bc.verdict("-2.04"), "예상 하회 -2.0%")
+        self.assertEqual(bc.verdict("0"), "예상 부합")
+        self.assertEqual(bc.verdict(""), "결과 발표")
+
+    def test_fill_results_from_surprise_table(self):
+        item = bc.Item("earnings-JPM-2026-10-01@x", "earnings", "2026-10-01", "📊 JPM 실적", "■ JPM\n섹터", "u",
+                       symbol="JPM", sector="금융")
+        payload = {"data": {"earningsSurpriseTable": {"rows": [
+            {"fiscalQtrEnd": "Sep 2026", "dateReported": "10/1/2026", "eps": 5.2,
+             "consensusForecast": "5.01", "percentageSurprise": "3.79"}]}}}
+
+        class R:
+            def json(self):
+                return payload
+        orig_get, orig_sleep = bc.http_get, bc.time.sleep
+        bc.http_get, bc.time.sleep = (lambda *a, **k: R()), (lambda s: None)
+        try:
+            bc.fill_results([item], date(2026, 10, 7))
+        finally:
+            bc.http_get, bc.time.sleep = orig_get, orig_sleep
+        self.assertEqual((item.actual_eps, item.surprise), ("$5.20", "3.8"))
+        self.assertEqual(item.description.split("\n")[1], "✅ 발표 결과: 실제 EPS $5.20 → 예상 상회 +3.8%")
 
 
 class TestEstimates(unittest.TestCase):
@@ -132,7 +188,7 @@ class TestCompanies(unittest.TestCase):
                    {"symbol": "AAPL", "name": "Apple Inc.", "sector": "Information Technology"}]
         out = bc.companies(members, THEMES, {"JPM": "JP모건 체이스"})
         self.assertEqual(out[0], {"symbol": "JPM", "name": "JPMorgan Chase", "sector": "금융",
-                                  "theme": "미국 최대 은행, 투자은행", "ko": "JP모건 체이스"})
+                                  "theme": "미국 최대 은행, 투자은행", "ko": "JP모건 체이스", "top100": True})
         self.assertEqual(out[1]["theme"], "")
 
 
