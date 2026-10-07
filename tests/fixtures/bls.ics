@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BLS//Release Calendar//EN
+BEGIN:VEVENT
+UID:cpi-2026-10@bls.gov
+DTSTART;TZID=America/New_York:20261015T083000
+SUMMARY:Consumer Price Index for September 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:empsit-2026-10@bls.gov
+DTSTART;TZID=America/New_York:20261002T083000
+SUMMARY:The Employment Situation for September 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:avg-2026-10@bls.gov
+DTSTART;TZID=America/New_York:20261015T083000
+SUMMARY:Consumer Price Index Average Price Data for September 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:jolts@bls.gov
+DTSTART;TZID=America/New_York:20261006T100000
+SUMMARY:Job Openings and Labor Turnover Survey for August 2026
+END:VEVENT
+END:VCALENDAR
