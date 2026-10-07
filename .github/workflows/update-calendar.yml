@@ -45,9 +45,12 @@ jobs:
 
       - name: 캘린더 만들기
         run: python build_calendar.py
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}  # 선택: BLS가 막힐 때 CPI·고용 일정을 받는 대체 경로
 
       - name: 갱신된 데이터 저장
         if: github.ref == 'refs/heads/main'
+        continue-on-error: true   # 저장이 실패해도 앱에는 새 데이터를 올린다
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -55,18 +58,25 @@ jobs:
           # 최신 main 위에 다시 올려서 저장한다 (충돌 방지).
           OUT="$RUNNER_TEMP/generated"
           mkdir -p "$OUT"
-          FILES="docs/calendar.ics docs/events.json docs/companies.json docs/market.json docs/fx.json docs/dividends.json data/sp100.json data/sp500.json data/macro_schedule.json data/bok_rate_history.json data/reactions.json"
+          FILES="docs/calendar.ics docs/events.json docs/companies.json docs/market.json docs/fx.json docs/dividends.json data/sp100.json data/sp500.json data/macro_schedule.json data/bok_rate_history.json data/reactions.json data/timings.json"
           for f in $FILES; do [ -f "$f" ] && cp "$f" "$OUT/$(basename "$f")"; done
-          git fetch origin main
-          git checkout -f -B main origin/main
-          for f in $FILES; do [ -f "$OUT/$(basename "$f")" ] && cp "$OUT/$(basename "$f")" "$f"; done
-          git add $FILES 2>/dev/null || git add docs data
-          if git diff --cached --quiet; then
-            echo "바뀐 일정이 없습니다."
-          else
+          # GitHub 서버가 잠깐 오류를 낼 수 있어 몇 번 다시 시도한다
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git checkout -f -B main origin/main
+            for f in $FILES; do [ -f "$OUT/$(basename "$f")" ] && cp "$OUT/$(basename "$f")" "$f"; done
+            git add $FILES 2>/dev/null || git add docs data
+            if git diff --cached --quiet; then
+              echo "바뀐 일정이 없습니다."
+              exit 0
+            fi
             git commit -m "캘린더 자동 갱신 $(date -u +%Y-%m-%d)"
-            git push origin HEAD:main
-          fi
+            if git push origin HEAD:main; then exit 0; fi
+            echo "저장 실패 ($attempt번째) → $((attempt * 15))초 뒤 다시 시도"
+            sleep $((attempt * 15))
+          done
+          echo "::warning::데이터를 저장소에 저장하지 못했어요. 앱에는 이번 데이터가 올라가고, 다음 실행에서 다시 저장해요."
+          exit 1
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
