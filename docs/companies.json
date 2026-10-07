@@ -1,0 +1,608 @@
+[
+  {
+    "symbol": "AMZN",
+    "name": "Amazon",
+    "sector": "경기소비재",
+    "theme": "전자상거래, 클라우드(AWS)"
+  },
+  {
+    "symbol": "BKNG",
+    "name": "Booking Holdings",
+    "sector": "경기소비재",
+    "theme": "온라인 여행 예약"
+  },
+  {
+    "symbol": "GM",
+    "name": "General Motors",
+    "sector": "경기소비재",
+    "theme": "자동차"
+  },
+  {
+    "symbol": "HD",
+    "name": "Home Depot",
+    "sector": "경기소비재",
+    "theme": "주택 개량 용품 유통"
+  },
+  {
+    "symbol": "LOW",
+    "name": "Lowe's",
+    "sector": "경기소비재",
+    "theme": "주택 개량 용품 유통"
+  },
+  {
+    "symbol": "MCD",
+    "name": "McDonald's",
+    "sector": "경기소비재",
+    "theme": "외식(패스트푸드)"
+  },
+  {
+    "symbol": "SBUX",
+    "name": "Starbucks",
+    "sector": "경기소비재",
+    "theme": "커피 전문점"
+  },
+  {
+    "symbol": "TSLA",
+    "name": "Tesla, Inc.",
+    "sector": "경기소비재",
+    "theme": "전기차, 에너지 저장, 자율주행"
+  },
+  {
+    "symbol": "AXP",
+    "name": "American Express",
+    "sector": "금융",
+    "theme": "신용카드·결제"
+  },
+  {
+    "symbol": "BAC",
+    "name": "Bank of America",
+    "sector": "금융",
+    "theme": "대형 은행"
+  },
+  {
+    "symbol": "BLK",
+    "name": "BlackRock",
+    "sector": "금융",
+    "theme": "자산운용(ETF 아이셰어즈)"
+  },
+  {
+    "symbol": "BNY",
+    "name": "BNY Mellon",
+    "sector": "금융",
+    "theme": ""
+  },
+  {
+    "symbol": "BRK.B",
+    "name": "Berkshire Hathaway (Class B)",
+    "sector": "금융",
+    "theme": "버크셔 해서웨이 지주회사(보험·철도·투자)"
+  },
+  {
+    "symbol": "C",
+    "name": "Citigroup",
+    "sector": "금융",
+    "theme": "대형 은행, 글로벌 금융"
+  },
+  {
+    "symbol": "COF",
+    "name": "Capital One",
+    "sector": "금융",
+    "theme": ""
+  },
+  {
+    "symbol": "GS",
+    "name": "Goldman Sachs",
+    "sector": "금융",
+    "theme": "투자은행·자산운용"
+  },
+  {
+    "symbol": "JPM",
+    "name": "JPMorgan Chase",
+    "sector": "금융",
+    "theme": "미국 최대 은행, 투자은행"
+  },
+  {
+    "symbol": "MA",
+    "name": "Mastercard",
+    "sector": "금융",
+    "theme": "카드 결제 네트워크"
+  },
+  {
+    "symbol": "MS",
+    "name": "Morgan Stanley",
+    "sector": "금융",
+    "theme": "투자은행·자산관리"
+  },
+  {
+    "symbol": "SCHW",
+    "name": "Charles Schwab Corporation",
+    "sector": "금융",
+    "theme": "증권 중개·자산관리"
+  },
+  {
+    "symbol": "USB",
+    "name": "U.S. Bancorp",
+    "sector": "금융",
+    "theme": ""
+  },
+  {
+    "symbol": "V",
+    "name": "Visa Inc.",
+    "sector": "금융",
+    "theme": "카드 결제 네트워크"
+  },
+  {
+    "symbol": "WFC",
+    "name": "Wells Fargo",
+    "sector": "금융",
+    "theme": "대형 은행"
+  },
+  {
+    "symbol": "AMT",
+    "name": "American Tower",
+    "sector": "부동산",
+    "theme": "통신 기지국 리츠(부동산)"
+  },
+  {
+    "symbol": "BA",
+    "name": "Boeing",
+    "sector": "산업재",
+    "theme": "항공기 제조"
+  },
+  {
+    "symbol": "CAT",
+    "name": "Caterpillar Inc.",
+    "sector": "산업재",
+    "theme": "건설·광산 장비"
+  },
+  {
+    "symbol": "DE",
+    "name": "Deere & Company",
+    "sector": "산업재",
+    "theme": "농기계"
+  },
+  {
+    "symbol": "EMR",
+    "name": "Emerson Electric",
+    "sector": "산업재",
+    "theme": ""
+  },
+  {
+    "symbol": "FDX",
+    "name": "FedEx",
+    "sector": "산업재",
+    "theme": "택배·물류"
+  },
+  {
+    "symbol": "GD",
+    "name": "General Dynamics",
+    "sector": "산업재",
+    "theme": "방산(잠수함·장갑차), 비즈니스 제트기"
+  },
+  {
+    "symbol": "GE",
+    "name": "GE Aerospace",
+    "sector": "산업재",
+    "theme": "항공기 엔진"
+  },
+  {
+    "symbol": "GEV",
+    "name": "GE Vernova",
+    "sector": "산업재",
+    "theme": ""
+  },
+  {
+    "symbol": "LMT",
+    "name": "Lockheed Martin",
+    "sector": "산업재",
+    "theme": "방산(전투기·미사일)"
+  },
+  {
+    "symbol": "MMM",
+    "name": "3M",
+    "sector": "산업재",
+    "theme": ""
+  },
+  {
+    "symbol": "RTX",
+    "name": "RTX Corporation",
+    "sector": "산업재",
+    "theme": "방산·항공 엔진"
+  },
+  {
+    "symbol": "UBER",
+    "name": "Uber",
+    "sector": "산업재",
+    "theme": "차량 호출, 음식 배달"
+  },
+  {
+    "symbol": "UNP",
+    "name": "Union Pacific Corporation",
+    "sector": "산업재",
+    "theme": "철도 운송"
+  },
+  {
+    "symbol": "UPS",
+    "name": "United Parcel Service",
+    "sector": "산업재",
+    "theme": "택배·물류"
+  },
+  {
+    "symbol": "LIN",
+    "name": "Linde plc",
+    "sector": "소재",
+    "theme": "산업용 가스"
+  },
+  {
+    "symbol": "COP",
+    "name": "ConocoPhillips",
+    "sector": "에너지",
+    "theme": "석유·가스 생산"
+  },
+  {
+    "symbol": "CVX",
+    "name": "Chevron Corporation",
+    "sector": "에너지",
+    "theme": "석유·가스"
+  },
+  {
+    "symbol": "XOM",
+    "name": "ExxonMobil",
+    "sector": "에너지",
+    "theme": "석유·가스"
+  },
+  {
+    "symbol": "DUK",
+    "name": "Duke Energy",
+    "sector": "유틸리티",
+    "theme": "전력"
+  },
+  {
+    "symbol": "NEE",
+    "name": "NextEra Energy",
+    "sector": "유틸리티",
+    "theme": "전력·신재생 에너지"
+  },
+  {
+    "symbol": "SO",
+    "name": "Southern Company",
+    "sector": "유틸리티",
+    "theme": "전력"
+  },
+  {
+    "symbol": "AAPL",
+    "name": "Apple Inc.",
+    "sector": "정보기술",
+    "theme": "아이폰·맥·앱스토어 등 서비스"
+  },
+  {
+    "symbol": "ACN",
+    "name": "Accenture",
+    "sector": "정보기술",
+    "theme": "IT 컨설팅·아웃소싱"
+  },
+  {
+    "symbol": "ADBE",
+    "name": "Adobe Inc.",
+    "sector": "정보기술",
+    "theme": "포토샵 등 창작 소프트웨어, 생성형 AI"
+  },
+  {
+    "symbol": "AMAT",
+    "name": "Applied Materials",
+    "sector": "정보기술",
+    "theme": ""
+  },
+  {
+    "symbol": "AMD",
+    "name": "Advanced Micro Devices",
+    "sector": "정보기술",
+    "theme": "반도체(CPU·GPU), AI 가속기"
+  },
+  {
+    "symbol": "ANET",
+    "name": "Arista Networks",
+    "sector": "정보기술",
+    "theme": ""
+  },
+  {
+    "symbol": "AVGO",
+    "name": "Broadcom",
+    "sector": "정보기술",
+    "theme": "AI 맞춤형 반도체·네트워크 칩, 소프트웨어"
+  },
+  {
+    "symbol": "CRM",
+    "name": "Salesforce",
+    "sector": "정보기술",
+    "theme": "기업용 클라우드 소프트웨어(CRM)"
+  },
+  {
+    "symbol": "CSCO",
+    "name": "Cisco",
+    "sector": "정보기술",
+    "theme": "네트워크 장비, 보안"
+  },
+  {
+    "symbol": "DELL",
+    "name": "Dell Technologies",
+    "sector": "정보기술",
+    "theme": ""
+  },
+  {
+    "symbol": "IBM",
+    "name": "IBM",
+    "sector": "정보기술",
+    "theme": "기업 IT 서비스, 하이브리드 클라우드·AI"
+  },
+  {
+    "symbol": "INTC",
+    "name": "Intel",
+    "sector": "정보기술",
+    "theme": "반도체(CPU), 파운드리(위탁생산)"
+  },
+  {
+    "symbol": "INTU",
+    "name": "Intuit",
+    "sector": "정보기술",
+    "theme": ""
+  },
+  {
+    "symbol": "LRCX",
+    "name": "Lam Research",
+    "sector": "정보기술",
+    "theme": ""
+  },
+  {
+    "symbol": "MSFT",
+    "name": "Microsoft",
+    "sector": "정보기술",
+    "theme": "윈도우·오피스, 클라우드(Azure)·AI"
+  },
+  {
+    "symbol": "MU",
+    "name": "Micron Technology",
+    "sector": "정보기술",
+    "theme": "메모리 반도체(D램·HBM·낸드)"
+  },
+  {
+    "symbol": "NOW",
+    "name": "ServiceNow",
+    "sector": "정보기술",
+    "theme": ""
+  },
+  {
+    "symbol": "NVDA",
+    "name": "Nvidia",
+    "sector": "정보기술",
+    "theme": "AI 반도체(GPU)·데이터센터"
+  },
+  {
+    "symbol": "ORCL",
+    "name": "Oracle Corporation",
+    "sector": "정보기술",
+    "theme": "데이터베이스, 클라우드 인프라"
+  },
+  {
+    "symbol": "PANW",
+    "name": "Palo Alto Networks",
+    "sector": "정보기술",
+    "theme": ""
+  },
+  {
+    "symbol": "PLTR",
+    "name": "Palantir Technologies",
+    "sector": "정보기술",
+    "theme": "데이터 분석·AI 소프트웨어(정부·기업)"
+  },
+  {
+    "symbol": "QCOM",
+    "name": "Qualcomm",
+    "sector": "정보기술",
+    "theme": "스마트폰용 반도체(스냅드래곤)"
+  },
+  {
+    "symbol": "SNDK",
+    "name": "Sandisk",
+    "sector": "정보기술",
+    "theme": ""
+  },
+  {
+    "symbol": "TXN",
+    "name": "Texas Instruments",
+    "sector": "정보기술",
+    "theme": "아날로그·임베디드 반도체"
+  },
+  {
+    "symbol": "CMCSA",
+    "name": "Comcast",
+    "sector": "커뮤니케이션 서비스",
+    "theme": "케이블·인터넷, 미디어(NBC유니버설)"
+  },
+  {
+    "symbol": "DIS",
+    "name": "Walt Disney Company (The)",
+    "sector": "커뮤니케이션 서비스",
+    "theme": "미디어·스트리밍(디즈니+), 테마파크"
+  },
+  {
+    "symbol": "GOOG",
+    "name": "Alphabet Inc. (Class C)",
+    "sector": "커뮤니케이션 서비스",
+    "theme": "검색·유튜브 광고, 클라우드, AI"
+  },
+  {
+    "symbol": "GOOGL",
+    "name": "Alphabet Inc. (Class A)",
+    "sector": "커뮤니케이션 서비스",
+    "theme": "검색·유튜브 광고, 클라우드, AI"
+  },
+  {
+    "symbol": "META",
+    "name": "Meta Platforms",
+    "sector": "커뮤니케이션 서비스",
+    "theme": "페이스북·인스타그램 광고, AI"
+  },
+  {
+    "symbol": "NFLX",
+    "name": "Netflix, Inc.",
+    "sector": "커뮤니케이션 서비스",
+    "theme": "동영상 스트리밍"
+  },
+  {
+    "symbol": "T",
+    "name": "AT&T",
+    "sector": "커뮤니케이션 서비스",
+    "theme": "미국 통신(무선·유선)"
+  },
+  {
+    "symbol": "TMUS",
+    "name": "T-Mobile US",
+    "sector": "커뮤니케이션 서비스",
+    "theme": "미국 통신(무선)"
+  },
+  {
+    "symbol": "VZ",
+    "name": "Verizon",
+    "sector": "커뮤니케이션 서비스",
+    "theme": "미국 통신(무선·유선)"
+  },
+  {
+    "symbol": "COST",
+    "name": "Costco",
+    "sector": "필수소비재",
+    "theme": "회원제 창고형 유통"
+  },
+  {
+    "symbol": "KO",
+    "name": "Coca-Cola Company (The)",
+    "sector": "필수소비재",
+    "theme": "음료"
+  },
+  {
+    "symbol": "MDLZ",
+    "name": "Mondelēz International",
+    "sector": "필수소비재",
+    "theme": ""
+  },
+  {
+    "symbol": "MO",
+    "name": "Altria",
+    "sector": "필수소비재",
+    "theme": ""
+  },
+  {
+    "symbol": "PEP",
+    "name": "PepsiCo",
+    "sector": "필수소비재",
+    "theme": "음료·스낵"
+  },
+  {
+    "symbol": "PG",
+    "name": "Procter & Gamble",
+    "sector": "필수소비재",
+    "theme": "생활용품"
+  },
+  {
+    "symbol": "PM",
+    "name": "Philip Morris International",
+    "sector": "필수소비재",
+    "theme": ""
+  },
+  {
+    "symbol": "WMT",
+    "name": "Walmart",
+    "sector": "필수소비재",
+    "theme": "대형 할인 유통"
+  },
+  {
+    "symbol": "ABBV",
+    "name": "AbbVie",
+    "sector": "헬스케어",
+    "theme": "제약(면역질환 치료제)"
+  },
+  {
+    "symbol": "ABT",
+    "name": "Abbott Laboratories",
+    "sector": "헬스케어",
+    "theme": "의료기기·진단"
+  },
+  {
+    "symbol": "AMGN",
+    "name": "Amgen",
+    "sector": "헬스케어",
+    "theme": "바이오 의약품"
+  },
+  {
+    "symbol": "BMY",
+    "name": "Bristol Myers Squibb",
+    "sector": "헬스케어",
+    "theme": ""
+  },
+  {
+    "symbol": "CVS",
+    "name": "CVS Health",
+    "sector": "헬스케어",
+    "theme": "약국 체인, 건강보험"
+  },
+  {
+    "symbol": "DHR",
+    "name": "Danaher Corporation",
+    "sector": "헬스케어",
+    "theme": ""
+  },
+  {
+    "symbol": "GILD",
+    "name": "Gilead Sciences",
+    "sector": "헬스케어",
+    "theme": "바이오 의약품(항바이러스)"
+  },
+  {
+    "symbol": "ISRG",
+    "name": "Intuitive Surgical",
+    "sector": "헬스케어",
+    "theme": "수술 로봇"
+  },
+  {
+    "symbol": "JNJ",
+    "name": "Johnson & Johnson",
+    "sector": "헬스케어",
+    "theme": "제약, 의료기기"
+  },
+  {
+    "symbol": "LLY",
+    "name": "Eli Lilly and Company",
+    "sector": "헬스케어",
+    "theme": "비만·당뇨 치료제, 제약"
+  },
+  {
+    "symbol": "MDT",
+    "name": "Medtronic",
+    "sector": "헬스케어",
+    "theme": "의료기기"
+  },
+  {
+    "symbol": "MRK",
+    "name": "Merck & Co.",
+    "sector": "헬스케어",
+    "theme": "제약(면역항암제)"
+  },
+  {
+    "symbol": "PFE",
+    "name": "Pfizer",
+    "sector": "헬스케어",
+    "theme": "제약, 백신"
+  },
+  {
+    "symbol": "TMO",
+    "name": "Thermo Fisher Scientific",
+    "sector": "헬스케어",
+    "theme": "연구장비·진단"
+  },
+  {
+    "symbol": "UNH",
+    "name": "UnitedHealth Group",
+    "sector": "헬스케어",
+    "theme": "건강보험, 의료 서비스"
+  }
+]
