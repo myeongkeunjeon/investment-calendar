@@ -640,11 +640,6 @@
     "sector": "Financials"
   },
   {
-    "symbol": "CTVA",
-    "name": "Corteva",
-    "sector": "Materials"
-  },
-  {
     "symbol": "CSGP",
     "name": "CoStar Group",
     "sector": "Real Estate"
@@ -1790,7 +1785,7 @@
     "sector": "Information Technology"
   },
   {
-    "symbol": "PSKY",
+    "symbol": "SKYD",
     "name": "Paramount Skydance Corporation",
     "sector": "Communication Services"
   },
@@ -2255,6 +2250,11 @@
     "sector": "Financials"
   },
   {
+    "symbol": "TWLO",
+    "name": "Twilio",
+    "sector": "Information Technology"
+  },
+  {
     "symbol": "TYL",
     "name": "Tyler Technologies",
     "sector": "Information Technology"
@@ -2390,6 +2390,11 @@
     "sector": "Materials"
   },
   {
+    "symbol": "VYLR",
+    "name": "Vylor",
+    "sector": "Consumer Staples"
+  },
+  {
     "symbol": "WRB",
     "name": "W. R. Berkley Corporation",
     "sector": "Financials"
@@ -2412,11 +2417,6 @@
   {
     "symbol": "DIS",
     "name": "Walt Disney Company (The)",
-    "sector": "Communication Services"
-  },
-  {
-    "symbol": "WBD",
-    "name": "Warner Bros. Discovery",
     "sector": "Communication Services"
   },
   {

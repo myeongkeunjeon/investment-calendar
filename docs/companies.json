@@ -1944,14 +1944,6 @@
     "top100": false
   },
   {
-    "symbol": "CTVA",
-    "name": "Corteva",
-    "sector": "소재",
-    "theme": "",
-    "ko": "",
-    "top100": false
-  },
-  {
     "symbol": "DOW",
     "name": "Dow Inc.",
     "sector": "소재",
@@ -3048,6 +3040,14 @@
     "top100": false
   },
   {
+    "symbol": "TWLO",
+    "name": "Twilio",
+    "sector": "정보기술",
+    "theme": "",
+    "ko": "",
+    "top100": false
+  },
+  {
     "symbol": "TXN",
     "name": "Texas Instruments",
     "sector": "정보기술",
@@ -3216,16 +3216,16 @@
     "top100": false
   },
   {
-    "symbol": "PSKY",
-    "name": "Paramount Skydance Corporation",
+    "symbol": "RDDT",
+    "name": "Reddit",
     "sector": "커뮤니케이션 서비스",
     "theme": "",
     "ko": "",
     "top100": false
   },
   {
-    "symbol": "RDDT",
-    "name": "Reddit",
+    "symbol": "SKYD",
+    "name": "Paramount Skydance Corporation",
     "sector": "커뮤니케이션 서비스",
     "theme": "",
     "ko": "",
@@ -3270,14 +3270,6 @@
     "theme": "미국 통신(무선·유선)",
     "ko": "버라이즌",
     "top100": true
-  },
-  {
-    "symbol": "WBD",
-    "name": "Warner Bros. Discovery",
-    "sector": "커뮤니케이션 서비스",
-    "theme": "",
-    "ko": "",
-    "top100": false
   },
   {
     "symbol": "ADM",
@@ -3530,6 +3522,14 @@
   {
     "symbol": "TSN",
     "name": "Tyson Foods",
+    "sector": "필수소비재",
+    "theme": "",
+    "ko": "",
+    "top100": false
+  },
+  {
+    "symbol": "VYLR",
+    "name": "Vylor",
     "sector": "필수소비재",
     "theme": "",
     "ko": "",
