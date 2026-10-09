@@ -1,14 +1,4 @@
 {
-  "earnings-NKE-2026-06-30@investment-calendar": {
-    "pct": 3.8,
-    "from": "2026-06-29",
-    "to": "2026-07-01"
-  },
-  "earnings-STZ-2026-06-30@investment-calendar": {
-    "pct": -2.0,
-    "from": "2026-06-29",
-    "to": "2026-07-01"
-  },
   "earnings-GIS-2026-07-01@investment-calendar": {
     "pct": 8.0,
     "from": "2026-06-30",
