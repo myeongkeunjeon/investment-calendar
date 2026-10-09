@@ -1785,11 +1785,6 @@
     "sector": "Information Technology"
   },
   {
-    "symbol": "SKYD",
-    "name": "Paramount Skydance Corporation",
-    "sector": "Communication Services"
-  },
-  {
     "symbol": "PH",
     "name": "Parker Hannifin",
     "sector": "Industrials"
@@ -2053,6 +2048,11 @@
     "symbol": "SPG",
     "name": "Simon Property Group",
     "sector": "Real Estate"
+  },
+  {
+    "symbol": "SKYD",
+    "name": "Skydance Corporation",
+    "sector": "Communication Services"
   },
   {
     "symbol": "SWKS",
