@@ -1,14 +1,4 @@
 {
-  "earnings-GIS-2026-07-01@investment-calendar": {
-    "pct": 8.0,
-    "from": "2026-06-30",
-    "to": "2026-07-02"
-  },
-  "earnings-FDS-2026-07-01@investment-calendar": {
-    "pct": 8.7,
-    "from": "2026-06-30",
-    "to": "2026-07-02"
-  },
   "earnings-PEP-2026-07-09@investment-calendar": {
     "pct": -3.6,
     "from": "2026-07-08",
@@ -2458,5 +2448,10 @@
     "pct": 1.7,
     "from": "2026-08-31",
     "to": "2026-09-02"
+  },
+  "earnings-PEP-2026-10-08@investment-calendar": {
+    "pct": 3.7,
+    "from": "2026-10-07",
+    "to": "2026-10-08"
   }
 }
