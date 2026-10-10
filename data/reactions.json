@@ -2443,5 +2443,20 @@
     "pct": 4.5,
     "from": "2026-10-05",
     "to": "2026-10-07"
+  },
+  "earnings-DELL-2026-09-01@investment-calendar": {
+    "pct": 7.9,
+    "from": "2026-08-31",
+    "to": "2026-09-02"
+  },
+  "earnings-PANW-2026-09-01@investment-calendar": {
+    "pct": -14.0,
+    "from": "2026-08-31",
+    "to": "2026-09-02"
+  },
+  "earnings-MDT-2026-09-01@investment-calendar": {
+    "pct": 1.7,
+    "from": "2026-08-31",
+    "to": "2026-09-02"
   }
 }
