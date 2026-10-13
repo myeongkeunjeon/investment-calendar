@@ -2458,5 +2458,30 @@
     "pct": 0.0,
     "from": "2026-10-08",
     "to": "2026-10-09"
+  },
+  "earnings-AVGO-2026-09-02@investment-calendar": {
+    "pct": -3.4,
+    "from": "2026-09-01",
+    "to": "2026-09-03"
+  },
+  "earnings-HPE-2026-09-02@investment-calendar": {
+    "pct": 7.0,
+    "from": "2026-09-01",
+    "to": "2026-09-03"
+  },
+  "earnings-NTAP-2026-09-02@investment-calendar": {
+    "pct": 1.2,
+    "from": "2026-09-01",
+    "to": "2026-09-03"
+  },
+  "earnings-CIEN-2026-09-03@investment-calendar": {
+    "pct": -9.4,
+    "from": "2026-09-02",
+    "to": "2026-09-04"
+  },
+  "earnings-LULU-2026-09-03@investment-calendar": {
+    "pct": -16.2,
+    "from": "2026-09-02",
+    "to": "2026-09-04"
   }
 }
