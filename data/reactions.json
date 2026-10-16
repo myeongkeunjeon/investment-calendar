@@ -2518,5 +2518,35 @@
     "pct": -4.8,
     "from": "2026-10-12",
     "to": "2026-10-13"
+  },
+  "earnings-BAC-2026-10-14@investment-calendar": {
+    "pct": -4.8,
+    "from": "2026-10-13",
+    "to": "2026-10-14"
+  },
+  "earnings-MS-2026-10-14@investment-calendar": {
+    "pct": -2.7,
+    "from": "2026-10-13",
+    "to": "2026-10-14"
+  },
+  "earnings-BLK-2026-10-14@investment-calendar": {
+    "pct": 0.7,
+    "from": "2026-10-13",
+    "to": "2026-10-14"
+  },
+  "earnings-PGR-2026-10-14@investment-calendar": {
+    "pct": -4.2,
+    "from": "2026-10-13",
+    "to": "2026-10-14"
+  },
+  "earnings-FAST-2026-10-14@investment-calendar": {
+    "pct": 1.1,
+    "from": "2026-10-13",
+    "to": "2026-10-14"
+  },
+  "earnings-STT-2026-10-14@investment-calendar": {
+    "pct": -4.1,
+    "from": "2026-10-13",
+    "to": "2026-10-14"
   }
 }
