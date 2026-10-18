@@ -1,9 +1,4 @@
 {
-  "earnings-PEP-2026-07-09@investment-calendar": {
-    "pct": -3.6,
-    "from": "2026-07-08",
-    "to": "2026-07-10"
-  },
   "earnings-DAL-2026-07-10@investment-calendar": {
     "pct": -3.2,
     "from": "2026-07-09",
@@ -2591,6 +2586,31 @@
   },
   "earnings-JBHT-2026-10-15@investment-calendar": {
     "pct": -2.8,
+    "from": "2026-10-15",
+    "to": "2026-10-16"
+  },
+  "earnings-TRV-2026-10-16@investment-calendar": {
+    "pct": 1.5,
+    "from": "2026-10-15",
+    "to": "2026-10-16"
+  },
+  "earnings-TFC-2026-10-16@investment-calendar": {
+    "pct": 1.1,
+    "from": "2026-10-15",
+    "to": "2026-10-16"
+  },
+  "earnings-MTB-2026-10-16@investment-calendar": {
+    "pct": -1.5,
+    "from": "2026-10-15",
+    "to": "2026-10-16"
+  },
+  "earnings-CFG-2026-10-16@investment-calendar": {
+    "pct": -0.1,
+    "from": "2026-10-15",
+    "to": "2026-10-16"
+  },
+  "earnings-RF-2026-10-16@investment-calendar": {
+    "pct": 0.5,
     "from": "2026-10-15",
     "to": "2026-10-16"
   }
