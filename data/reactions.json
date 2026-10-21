@@ -2608,5 +2608,20 @@
     "pct": 0.5,
     "from": "2026-10-15",
     "to": "2026-10-16"
+  },
+  "earnings-FITB-2026-10-19@investment-calendar": {
+    "pct": 0.3,
+    "from": "2026-10-16",
+    "to": "2026-10-19"
+  },
+  "earnings-STLD-2026-10-19@investment-calendar": {
+    "pct": -0.3,
+    "from": "2026-10-19",
+    "to": "2026-10-20"
+  },
+  "earnings-WRB-2026-10-19@investment-calendar": {
+    "pct": -1.3,
+    "from": "2026-10-19",
+    "to": "2026-10-20"
   }
 }
