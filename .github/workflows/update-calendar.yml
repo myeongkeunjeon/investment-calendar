@@ -10,6 +10,7 @@ on:
     branches: [main]
     paths:
       - "build_calendar.py"
+      - "kr_calendar.py"
       - "data/themes.json"
       - "data/names_ko.json"
       - "data/bok_meetings.json"
@@ -58,7 +59,7 @@ jobs:
           # 최신 main 위에 다시 올려서 저장한다 (충돌 방지).
           OUT="$RUNNER_TEMP/generated"
           mkdir -p "$OUT"
-          FILES="docs/calendar.ics docs/events.json docs/companies.json docs/market.json docs/fx.json docs/dividends.json data/sp100.json data/sp500.json data/macro_schedule.json data/bok_rate_history.json data/reactions.json data/timings.json"
+          FILES="docs/calendar.ics docs/events.json docs/companies.json docs/market.json docs/fx.json docs/dividends.json docs/kr.json data/kr_cache.json data/kr_stocks.json data/sp100.json data/sp500.json data/macro_schedule.json data/bok_rate_history.json data/reactions.json data/timings.json"
           for f in $FILES; do [ -f "$f" ] && cp "$f" "$OUT/$(basename "$f")"; done
           # GitHub 서버가 잠깐 오류를 낼 수 있어 몇 번 다시 시도한다
           for attempt in 1 2 3 4; do

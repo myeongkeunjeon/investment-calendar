@@ -10,6 +10,7 @@
      docs/calendar.ics 로 저장한다.
   5. 웹앱용으로 미국 상장사 전체 실적 일정(docs/market.json)과
      달러/원 환율(docs/fx.json)도 함께 저장한다.
+  6. 국내 주식(코스피·코스닥) 일정은 kr_calendar.py 가 만들어 docs/kr.json 으로 저장한다.
 
 어느 한 곳에서 가져오기에 실패해도, 지난번에 저장해 둔 데이터를 그대로 써서
 캘린더가 비지 않도록 한다. 개인 보유 종목 같은 비공개 정보는 다루지 않는다.
@@ -1607,6 +1608,11 @@ def main() -> int:
     fx = get_fx(today, load_json(DOCS_DIR / "fx.json", {}))
     extras = get_econ(now) + get_bok(today)
     dividends = get_dividends(today)
+    try:  # 국내 주식 일정 (docs/kr.json). 실패해도 미국 일정은 그대로 만든다.
+        import kr_calendar
+        kr_calendar.update(now.astimezone(KST).date())
+    except Exception as err:  # noqa: BLE001
+        warn(f"국내 일정 만들기 실패 → 이전 데이터 유지 ({err})")
 
     items = merge(previous, earnings, fetched, fomc, today) + extras
     if members:
