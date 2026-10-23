@@ -1,34 +1,4 @@
 {
-  "earnings-JPM-2026-07-14@investment-calendar": {
-    "pct": 3.7,
-    "from": "2026-07-13",
-    "to": "2026-07-15"
-  },
-  "earnings-BAC-2026-07-14@investment-calendar": {
-    "pct": 3.5,
-    "from": "2026-07-13",
-    "to": "2026-07-15"
-  },
-  "earnings-GS-2026-07-14@investment-calendar": {
-    "pct": 10.2,
-    "from": "2026-07-13",
-    "to": "2026-07-15"
-  },
-  "earnings-WFC-2026-07-14@investment-calendar": {
-    "pct": -0.2,
-    "from": "2026-07-13",
-    "to": "2026-07-15"
-  },
-  "earnings-C-2026-07-14@investment-calendar": {
-    "pct": -4.1,
-    "from": "2026-07-13",
-    "to": "2026-07-15"
-  },
-  "earnings-FAST-2026-07-14@investment-calendar": {
-    "pct": -3.6,
-    "from": "2026-07-13",
-    "to": "2026-07-15"
-  },
   "earnings-JNJ-2026-07-15@investment-calendar": {
     "pct": -1.5,
     "from": "2026-07-14",
@@ -2708,5 +2678,135 @@
     "pct": 11.2,
     "from": "2026-10-19",
     "to": "2026-10-20"
+  },
+  "earnings-META-2026-10-21@investment-calendar": {
+    "pct": -7.0,
+    "from": "2026-10-21",
+    "to": "2026-10-22"
+  },
+  "earnings-TSLA-2026-10-21@investment-calendar": {
+    "pct": -3.1,
+    "from": "2026-10-21",
+    "to": "2026-10-22"
+  },
+  "earnings-PM-2026-10-21@investment-calendar": {
+    "pct": -1.2,
+    "from": "2026-10-20",
+    "to": "2026-10-21"
+  },
+  "earnings-LRCX-2026-10-21@investment-calendar": {
+    "pct": -11.8,
+    "from": "2026-10-21",
+    "to": "2026-10-22"
+  },
+  "earnings-TXN-2026-10-21@investment-calendar": {
+    "pct": -1.8,
+    "from": "2026-10-21",
+    "to": "2026-10-22"
+  },
+  "earnings-TMO-2026-10-21@investment-calendar": {
+    "pct": 1.0,
+    "from": "2026-10-20",
+    "to": "2026-10-21"
+  },
+  "earnings-IBM-2026-10-21@investment-calendar": {
+    "pct": 0.3,
+    "from": "2026-10-21",
+    "to": "2026-10-22"
+  },
+  "earnings-ABT-2026-10-21@investment-calendar": {
+    "pct": -1.9,
+    "from": "2026-10-20",
+    "to": "2026-10-21"
+  },
+  "earnings-NEE-2026-10-21@investment-calendar": {
+    "pct": -0.7,
+    "from": "2026-10-20",
+    "to": "2026-10-21"
+  },
+  "earnings-DHR-2026-10-21@investment-calendar": {
+    "pct": 4.3,
+    "from": "2026-10-20",
+    "to": "2026-10-21"
+  },
+  "earnings-T-2026-10-21@investment-calendar": {
+    "pct": -6.4,
+    "from": "2026-10-20",
+    "to": "2026-10-21"
+  },
+  "earnings-CME-2026-10-21@investment-calendar": {
+    "pct": 0.2,
+    "from": "2026-10-20",
+    "to": "2026-10-21"
+  },
+  "earnings-ELV-2026-10-21@investment-calendar": {
+    "pct": -1.4,
+    "from": "2026-10-20",
+    "to": "2026-10-21"
+  },
+  "earnings-CSX-2026-10-21@investment-calendar": {
+    "pct": 6.8,
+    "from": "2026-10-21",
+    "to": "2026-10-22"
+  },
+  "earnings-MCO-2026-10-21@investment-calendar": {
+    "pct": 1.2,
+    "from": "2026-10-20",
+    "to": "2026-10-21"
+  },
+  "earnings-KMI-2026-10-21@investment-calendar": {
+    "pct": -0.7,
+    "from": "2026-10-21",
+    "to": "2026-10-22"
+  },
+  "earnings-URI-2026-10-21@investment-calendar": {
+    "pct": 3.9,
+    "from": "2026-10-21",
+    "to": "2026-10-22"
+  },
+  "earnings-WAB-2026-10-21@investment-calendar": {
+    "pct": 2.0,
+    "from": "2026-10-20",
+    "to": "2026-10-21"
+  },
+  "earnings-CCI-2026-10-21@investment-calendar": {
+    "pct": 0.2,
+    "from": "2026-10-21",
+    "to": "2026-10-22"
+  },
+  "earnings-NTRS-2026-10-21@investment-calendar": {
+    "pct": 0.9,
+    "from": "2026-10-20",
+    "to": "2026-10-21"
+  },
+  "earnings-TDY-2026-10-21@investment-calendar": {
+    "pct": -0.3,
+    "from": "2026-10-20",
+    "to": "2026-10-21"
+  },
+  "earnings-LVS-2026-10-21@investment-calendar": {
+    "pct": -2.6,
+    "from": "2026-10-21",
+    "to": "2026-10-22"
+  },
+  "earnings-PKG-2026-10-21@investment-calendar": {
+    "pct": 4.2,
+    "from": "2026-10-21",
+    "to": "2026-10-22"
+  },
+  "earnings-LUV-2026-10-21@investment-calendar": {
+    "pct": 5.4,
+    "from": "2026-10-21",
+    "to": "2026-10-22"
+  },
+  "earnings-ROL-2026-10-21@investment-calendar": {
+    "pct": 5.6,
+    "from": "2026-10-21",
+    "to": "2026-10-22"
+  },
+  "earnings-GL-2026-10-21@investment-calendar": {
+    "pct": -0.7,
+    "from": "2026-10-21",
+    "to": "2026-10-22"
   }
 }
