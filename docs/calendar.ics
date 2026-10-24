@@ -13,7 +13,7 @@ BEGIN:VEVENT
 SUMMARY:🇰🇷 한국은행 기준금리 결정 · 동결
 DTSTART;VALUE=DATE:20260115
 DTEND;VALUE=DATE:20260116
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:bok-2026-01-15@investment-calendar
 DESCRIPTION:■ 한국은행 금융통화위원회 기준금리 결정\n
  ✅ 결정: 동결 (2.50%)\n섹터/테마: 거시경제 · 한국 기준
@@ -32,7 +32,7 @@ BEGIN:VEVENT
 SUMMARY:🇰🇷 한국은행 기준금리 결정 · 동결
 DTSTART;VALUE=DATE:20260226
 DTEND;VALUE=DATE:20260227
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:bok-2026-02-26@investment-calendar
 DESCRIPTION:■ 한국은행 금융통화위원회 기준금리 결정\n
  ✅ 결정: 동결 (2.50%)\n섹터/테마: 거시경제 · 한국 기준
@@ -51,7 +51,7 @@ BEGIN:VEVENT
 SUMMARY:🇰🇷 한국은행 기준금리 결정 · 동결
 DTSTART;VALUE=DATE:20260410
 DTEND;VALUE=DATE:20260411
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:bok-2026-04-10@investment-calendar
 DESCRIPTION:■ 한국은행 금융통화위원회 기준금리 결정\n
  ✅ 결정: 동결 (2.50%)\n섹터/테마: 거시경제 · 한국 기준
@@ -70,7 +70,7 @@ BEGIN:VEVENT
 SUMMARY:🇰🇷 한국은행 기준금리 결정 · 동결
 DTSTART;VALUE=DATE:20260528
 DTEND;VALUE=DATE:20260529
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:bok-2026-05-28@investment-calendar
 DESCRIPTION:■ 한국은행 금융통화위원회 기준금리 결정\n
  ✅ 결정: 동결 (2.50%)\n섹터/테마: 거시경제 · 한국 기준
@@ -89,7 +89,7 @@ BEGIN:VEVENT
 SUMMARY:📈 소비자물가지수(CPI) · 2026년 5월분
 DTSTART:20260610T123000Z
 DTEND:20260610T130000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-cpi-2026-05-x-2026-06-10@investment-calendar
 DESCRIPTION:■ 소비자물가지수(CPI) 발표 · 2026년 5월분\n✅ 
  결과: 5월 CPI 전년 대비 +4.2% (전월 +3.8%) · 근원 +2.8% · 전
@@ -107,7 +107,7 @@ BEGIN:VEVENT
 SUMMARY:👷 고용보고서(일자리·실업률) · 2026년 6월분
 DTSTART:20260702T123000Z
 DTEND:20260702T130000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-jobs-2026-06-x-2026-07-02@investment-calendar
 DESCRIPTION:■ 고용보고서(일자리·실업률) 발표 · 2026년 6
  월분\n✅ 결과: 6월 비농업 일자리 +3.1만 명 · 실업률 4.2%
@@ -126,7 +126,7 @@ BEGIN:VEVENT
 SUMMARY:✅ PEP 실적 결과 · 예상 상회 +0.5% · 필수소비재
 DTSTART;VALUE=DATE:20260709
 DTEND;VALUE=DATE:20260710
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-PEP-2026-07-09@investment-calendar
 DESCRIPTION:■ PepsiCo (PEP) 실적 발표\n✅ 발표 결과: 실제 EPS
   $2.20 · 시장 예상 $2.19 → 예상 상회 +0.5%\n📉 주가 반응:
@@ -149,7 +149,7 @@ BEGIN:VEVENT
 SUMMARY:✅ BAC 실적 결과 · 예상 상회 +7.1% · 금융
 DTSTART;VALUE=DATE:20260714
 DTEND;VALUE=DATE:20260715
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-BAC-2026-07-14@investment-calendar
 DESCRIPTION:■ Bank of America (BAC) 실적 발표\n✅ 발표 결과: 
  실제 EPS $1.21 · 시장 예상 $1.13 → 예상 상회 +7.1%\n📈 주
@@ -172,7 +172,7 @@ BEGIN:VEVENT
 SUMMARY:✅ C 실적 결과 · 예상 상회 +15.8% · 금융
 DTSTART;VALUE=DATE:20260714
 DTEND;VALUE=DATE:20260715
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-C-2026-07-14@investment-calendar
 DESCRIPTION:■ Citigroup (C) 실적 발표\n✅ 발표 결과: 실제 EPS
   $3.15 · 시장 예상 $2.72 → 예상 상회 +15.8%\n📉 주가 반응
@@ -195,7 +195,7 @@ BEGIN:VEVENT
 SUMMARY:✅ GS 실적 결과 · 예상 상회 +45.0% · 금융
 DTSTART;VALUE=DATE:20260714
 DTEND;VALUE=DATE:20260715
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-GS-2026-07-14@investment-calendar
 DESCRIPTION:■ Goldman Sachs (GS) 실적 발표\n✅ 발표 결과: 실
  제 EPS $20.98 · 시장 예상 $14.47 → 예상 상회 +45.0%\n📈 주
@@ -218,7 +218,7 @@ BEGIN:VEVENT
 SUMMARY:✅ JPM 실적 결과 · 예상 상회 +9.8% · 금융
 DTSTART;VALUE=DATE:20260714
 DTEND;VALUE=DATE:20260715
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-JPM-2026-07-14@investment-calendar
 DESCRIPTION:■ JPMorgan Chase (JPM) 실적 발표\n✅ 발표 결과: 실
  제 EPS $6.14 · 시장 예상 $5.59 → 예상 상회 +9.8%\n📈 주가 
@@ -241,7 +241,7 @@ BEGIN:VEVENT
 SUMMARY:✅ WFC 실적 결과 · 예상 상회 +13.3% · 금융
 DTSTART;VALUE=DATE:20260714
 DTEND;VALUE=DATE:20260715
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-WFC-2026-07-14@investment-calendar
 DESCRIPTION:■ Wells Fargo (WFC) 실적 발표\n✅ 발표 결과: 실제
   EPS $1.96 · 시장 예상 $1.73 → 예상 상회 +13.3%\n📉 주가 
@@ -264,7 +264,7 @@ BEGIN:VEVENT
 SUMMARY:📈 소비자물가지수(CPI) · 2026년 6월분
 DTSTART:20260714T123000Z
 DTEND:20260714T130000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-cpi-2026-06-x-2026-07-14@investment-calendar
 DESCRIPTION:■ 소비자물가지수(CPI) 발표 · 2026년 6월분\n✅ 
  결과: 6월 CPI 전년 대비 +3.5% (전월 +4.2%) · 근원 +2.6% · 전
@@ -282,7 +282,7 @@ BEGIN:VEVENT
 SUMMARY:✅ BLK 실적 결과 · 예상 상회 +9.8% · 금융
 DTSTART;VALUE=DATE:20260715
 DTEND;VALUE=DATE:20260716
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-BLK-2026-07-15@investment-calendar
 DESCRIPTION:■ BlackRock (BLK) 실적 발표\n✅ 발표 결과: 실제 E
  PS $13.91 · 시장 예상 $12.67 → 예상 상회 +9.8%\n📈 주가 반
@@ -305,7 +305,7 @@ BEGIN:VEVENT
 SUMMARY:✅ BNY 실적 결과 · 예상 상회 +11.8% · 금융
 DTSTART;VALUE=DATE:20260715
 DTEND;VALUE=DATE:20260716
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-BNY-2026-07-15@investment-calendar
 DESCRIPTION:■ BNY Mellon (BNY) 실적 발표\n✅ 발표 결과: 실제 
  EPS $2.46 · 시장 예상 $2.20 → 예상 상회 +11.8%\n📈 주가 반
@@ -327,7 +327,7 @@ BEGIN:VEVENT
 SUMMARY:✅ JNJ 실적 결과 · 예상 상회 +2.1% · 헬스케어
 DTSTART;VALUE=DATE:20260715
 DTEND;VALUE=DATE:20260716
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-JNJ-2026-07-15@investment-calendar
 DESCRIPTION:■ Johnson & Johnson (JNJ) 실적 발표\n✅ 발표 결과: 
  실제 EPS $2.90 · 시장 예상 $2.84 → 예상 상회 +2.1%\n📉 주
@@ -350,7 +350,7 @@ BEGIN:VEVENT
 SUMMARY:✅ MS 실적 결과 · 예상 상회 +19.7% · 금융
 DTSTART;VALUE=DATE:20260715
 DTEND;VALUE=DATE:20260716
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-MS-2026-07-15@investment-calendar
 DESCRIPTION:■ Morgan Stanley (MS) 실적 발표\n✅ 발표 결과: 실
  제 EPS $3.46 · 시장 예상 $2.89 → 예상 상회 +19.7%\n📉 주가
@@ -373,7 +373,7 @@ BEGIN:VEVENT
 SUMMARY:🇰🇷 한국은행 기준금리 결정 · 0.25%p 인상
 DTSTART;VALUE=DATE:20260716
 DTEND;VALUE=DATE:20260717
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:bok-2026-07-16@investment-calendar
 DESCRIPTION:■ 한국은행 금융통화위원회 기준금리 결정\n
  ✅ 결정: 0.25%p 인상 (2.50% → 2.75%)\n섹터/테마: 거시경제 
@@ -392,7 +392,7 @@ BEGIN:VEVENT
 SUMMARY:✅ ABT 실적 결과 · 예상 상회 +2.3% · 헬스케어
 DTSTART;VALUE=DATE:20260716
 DTEND;VALUE=DATE:20260717
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-ABT-2026-07-16@investment-calendar
 DESCRIPTION:■ Abbott Laboratories (ABT) 실적 발표\n✅ 발표 결과
  : 실제 EPS $1.31 · 시장 예상 $1.28 → 예상 상회 +2.3%\n📈 
@@ -415,7 +415,7 @@ BEGIN:VEVENT
 SUMMARY:✅ GE 실적 결과 · 예상 상회 +8.6% · 산업재
 DTSTART;VALUE=DATE:20260716
 DTEND;VALUE=DATE:20260717
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-GE-2026-07-16@investment-calendar
 DESCRIPTION:■ GE Aerospace (GE) 실적 발표\n✅ 발표 결과: 실제
   EPS $2.02 · 시장 예상 $1.86 → 예상 상회 +8.6%\n📉 주가 반
@@ -438,7 +438,7 @@ BEGIN:VEVENT
 SUMMARY:✅ ISRG 실적 결과 · 예상 상회 +17.3% · 헬스케어
 DTSTART;VALUE=DATE:20260716
 DTEND;VALUE=DATE:20260717
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-ISRG-2026-07-16@investment-calendar
 DESCRIPTION:■ Intuitive Surgical (ISRG) 실적 발표\n✅ 발표 결과
  : 실제 EPS $2.37 · 시장 예상 $2.02 → 예상 상회 +17.3%\n📉 
@@ -462,7 +462,7 @@ SUMMARY:✅ NFLX 실적 결과 · 예상 상회 +1.3% · 커뮤니케이
  션 서비스
 DTSTART;VALUE=DATE:20260716
 DTEND;VALUE=DATE:20260717
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-NFLX-2026-07-16@investment-calendar
 DESCRIPTION:■ Netflix (NFLX) 실적 발표\n✅ 발표 결과: 실제 EP
  S $0.80 · 시장 예상 $0.79 → 예상 상회 +1.3%\n📉 주가 반응
@@ -485,7 +485,7 @@ BEGIN:VEVENT
 SUMMARY:✅ UNH 실적 결과 · 예상 상회 +29.1% · 헬스케어
 DTSTART;VALUE=DATE:20260716
 DTEND;VALUE=DATE:20260717
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-UNH-2026-07-16@investment-calendar
 DESCRIPTION:■ UnitedHealth Group (UNH) 실적 발표\n✅ 발표 결과:
   실제 EPS $6.38 · 시장 예상 $4.94 → 예상 상회 +29.1%\n📈 
@@ -508,7 +508,7 @@ BEGIN:VEVENT
 SUMMARY:✅ USB 실적 결과 · 예상 상회 +5.5% · 금융
 DTSTART;VALUE=DATE:20260716
 DTEND;VALUE=DATE:20260717
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-USB-2026-07-16@investment-calendar
 DESCRIPTION:■ U.S. Bancorp (USB) 실적 발표\n✅ 발표 결과: 실
  제 EPS $1.35 · 시장 예상 $1.28 → 예상 상회 +5.5%\n📈 주가 
@@ -531,7 +531,7 @@ BEGIN:VEVENT
 SUMMARY:✅ COF 실적 결과 · 예상 상회 +19.8% · 금융
 DTSTART;VALUE=DATE:20260721
 DTEND;VALUE=DATE:20260722
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-COF-2026-07-21@investment-calendar
 DESCRIPTION:■ Capital One (COF) 실적 발표\n✅ 발표 결과: 실제
   EPS $5.81 · 시장 예상 $4.85 → 예상 상회 +19.8%\n📉 주가 
@@ -554,7 +554,7 @@ BEGIN:VEVENT
 SUMMARY:✅ DHR 실적 결과 · 예상 상회 +5.4% · 헬스케어
 DTSTART;VALUE=DATE:20260721
 DTEND;VALUE=DATE:20260722
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-DHR-2026-07-21@investment-calendar
 DESCRIPTION:■ Danaher Corporation (DHR) 실적 발표\n✅ 발표 결과
  : 실제 EPS $1.94 · 시장 예상 $1.84 → 예상 상회 +5.4%\n📉 
@@ -577,7 +577,7 @@ BEGIN:VEVENT
 SUMMARY:✅ GM 실적 결과 · 예상 상회 +14.1% · 경기소비재
 DTSTART;VALUE=DATE:20260721
 DTEND;VALUE=DATE:20260722
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-GM-2026-07-21@investment-calendar
 DESCRIPTION:■ General Motors (GM) 실적 발표\n✅ 발표 결과: 실
  제 EPS $3.57 · 시장 예상 $3.13 → 예상 상회 +14.1%\n📈 주가
@@ -600,7 +600,7 @@ BEGIN:VEVENT
 SUMMARY:✅ MMM 실적 결과 · 예상 상회 +5.7% · 산업재
 DTSTART;VALUE=DATE:20260721
 DTEND;VALUE=DATE:20260722
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-MMM-2026-07-21@investment-calendar
 DESCRIPTION:■ 3M (MMM) 실적 발표\n✅ 발표 결과: 실제 EPS $2.4
  0 · 시장 예상 $2.27 → 예상 상회 +5.7%\n📈 주가 반응: +7.3
@@ -622,7 +622,7 @@ BEGIN:VEVENT
 SUMMARY:✅ SCHW 실적 결과 · 예상 상회 +5.9% · 금융
 DTSTART;VALUE=DATE:20260721
 DTEND;VALUE=DATE:20260722
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-SCHW-2026-07-21@investment-calendar
 DESCRIPTION:■ Charles Schwab Corporation (SCHW) 실적 발표\n✅ 발
  표 결과: 실제 EPS $1.62 · 시장 예상 $1.53 → 예상 상회 +5.9
@@ -645,7 +645,7 @@ BEGIN:VEVENT
 SUMMARY:✅ GEV 실적 결과 · 예상 하회 -22.1% · 산업재
 DTSTART;VALUE=DATE:20260722
 DTEND;VALUE=DATE:20260723
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-GEV-2026-07-22@investment-calendar
 DESCRIPTION:■ GE Vernova (GEV) 실적 발표\n✅ 발표 결과: 실제 
  EPS $2.47 · 시장 예상 $3.17 → 예상 하회 -22.1%\n📉 주가 반
@@ -669,7 +669,7 @@ SUMMARY:✅ GOOG 실적 결과 · 예상 상회 +216.3% · 커뮤니케이
  션 서비스
 DTSTART;VALUE=DATE:20260722
 DTEND;VALUE=DATE:20260723
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-GOOG-2026-07-22@investment-calendar
 DESCRIPTION:■ Alphabet Inc. (Class C) (GOOG) 실적 발표\n✅ 발표 
  결과: 실제 EPS $9.11 · 시장 예상 $2.88 → 예상 상회 +216.3%\
@@ -693,7 +693,7 @@ BEGIN:VEVENT
 SUMMARY:✅ IBM 실적 결과 · 예상 부합 · 정보기술
 DTSTART;VALUE=DATE:20260722
 DTEND;VALUE=DATE:20260723
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-IBM-2026-07-22@investment-calendar
 DESCRIPTION:■ IBM (IBM) 실적 발표\n✅ 발표 결과: 실제 EPS $2.
  93 · 시장 예상 $2.93 → 예상 부합\n📉 주가 반응: -1.8% (07
@@ -716,7 +716,7 @@ BEGIN:VEVENT
 SUMMARY:✅ NOW 실적 결과 · 예상 하회 -22.5% · 정보기술
 DTSTART;VALUE=DATE:20260722
 DTEND;VALUE=DATE:20260723
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-NOW-2026-07-22@investment-calendar
 DESCRIPTION:■ ServiceNow (NOW) 실적 발표\n✅ 발표 결과: 실제 
  EPS $0.31 · 시장 예상 $0.40 → 예상 하회 -22.5%\n📉 주가 반
@@ -739,7 +739,7 @@ BEGIN:VEVENT
 SUMMARY:✅ PM 실적 결과 · 예상 상회 +7.8% · 필수소비재
 DTSTART;VALUE=DATE:20260722
 DTEND;VALUE=DATE:20260723
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-PM-2026-07-22@investment-calendar
 DESCRIPTION:■ Philip Morris International (PM) 실적 발표\n✅ 발표
   결과: 실제 EPS $2.20 · 시장 예상 $2.04 → 예상 상회 +7.8%\n
@@ -763,7 +763,7 @@ SUMMARY:✅ T 실적 결과 · 예상 상회 +10.2% · 커뮤니케이션
  서비스
 DTSTART;VALUE=DATE:20260722
 DTEND;VALUE=DATE:20260723
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-T-2026-07-22@investment-calendar
 DESCRIPTION:■ AT&T (T) 실적 발표\n✅ 발표 결과: 실제 EPS $0.6
  5 · 시장 예상 $0.59 → 예상 상회 +10.2%\n📈 주가 반응: +3.
@@ -786,7 +786,7 @@ BEGIN:VEVENT
 SUMMARY:✅ TSLA 실적 결과 · 예상 하회 -87.5% · 경기소비재
 DTSTART;VALUE=DATE:20260722
 DTEND;VALUE=DATE:20260723
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-TSLA-2026-07-22@investment-calendar
 DESCRIPTION:■ Tesla\, Inc. (TSLA) 실적 발표\n✅ 발표 결과: 실
  제 EPS $0.04 · 시장 예상 $0.32 → 예상 하회 -87.5%\n📉 주가
@@ -809,7 +809,7 @@ BEGIN:VEVENT
 SUMMARY:✅ TXN 실적 결과 · 예상 상회 +12.0% · 정보기술
 DTSTART;VALUE=DATE:20260722
 DTEND;VALUE=DATE:20260723
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-TXN-2026-07-22@investment-calendar
 DESCRIPTION:■ Texas Instruments (TXN) 실적 발표\n✅ 발표 결과: 
  실제 EPS $2.14 · 시장 예상 $1.91 → 예상 상회 +12.0%\n📉 주
@@ -833,7 +833,7 @@ SUMMARY:✅ CMCSA 실적 결과 · 예상 상회 +7.2% · 커뮤니케이
  션 서비스
 DTSTART;VALUE=DATE:20260723
 DTEND;VALUE=DATE:20260724
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-CMCSA-2026-07-23@investment-calendar
 DESCRIPTION:■ Comcast (CMCSA) 실적 발표\n✅ 발표 결과: 실제 E
  PS $1.04 · 시장 예상 $0.97 → 예상 상회 +7.2%\n📉 주가 반
@@ -857,7 +857,7 @@ BEGIN:VEVENT
 SUMMARY:✅ INTC 실적 결과 · 예상 상회 +200.0% · 정보기술
 DTSTART;VALUE=DATE:20260723
 DTEND;VALUE=DATE:20260724
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-INTC-2026-07-23@investment-calendar
 DESCRIPTION:■ Intel (INTC) 실적 발표\n✅ 발표 결과: 실제 EPS 
  $0.30 · 시장 예상 $0.10 → 예상 상회 +200.0%\n📉 주가 반응
@@ -880,7 +880,7 @@ BEGIN:VEVENT
 SUMMARY:✅ LMT 실적 결과 · 예상 상회 +10.0% · 산업재
 DTSTART;VALUE=DATE:20260723
 DTEND;VALUE=DATE:20260724
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-LMT-2026-07-23@investment-calendar
 DESCRIPTION:■ Lockheed Martin (LMT) 실적 발표\n✅ 발표 결과: 
  실제 EPS $7.94 · 시장 예상 $7.22 → 예상 상회 +10.0%\n📈 주
@@ -903,7 +903,7 @@ BEGIN:VEVENT
 SUMMARY:✅ RTX 실적 결과 · 예상 상회 +13.9% · 산업재
 DTSTART;VALUE=DATE:20260723
 DTEND;VALUE=DATE:20260724
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-RTX-2026-07-23@investment-calendar
 DESCRIPTION:■ RTX Corporation (RTX) 실적 발표\n✅ 발표 결과: 
  실제 EPS $1.89 · 시장 예상 $1.66 → 예상 상회 +13.9%\n📈 주
@@ -926,7 +926,7 @@ BEGIN:VEVENT
 SUMMARY:✅ TMO 실적 결과 · 예상 상회 +5.6% · 헬스케어
 DTSTART;VALUE=DATE:20260723
 DTEND;VALUE=DATE:20260724
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-TMO-2026-07-23@investment-calendar
 DESCRIPTION:■ Thermo Fisher Scientific (TMO) 실적 발표\n✅ 발표 
  결과: 실제 EPS $6.03 · 시장 예상 $5.71 → 예상 상회 +5.6%\n
@@ -950,7 +950,7 @@ SUMMARY:✅ TMUS 실적 결과 · 예상 상회 +25.7% · 커뮤니케이
  션 서비스
 DTSTART;VALUE=DATE:20260723
 DTEND;VALUE=DATE:20260724
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-TMUS-2026-07-23@investment-calendar
 DESCRIPTION:■ T-Mobile US (TMUS) 실적 발표\n✅ 발표 결과: 실
  제 EPS $3.13 · 시장 예상 $2.49 → 예상 상회 +25.7%\n📉 주가
@@ -973,7 +973,7 @@ BEGIN:VEVENT
 SUMMARY:✅ UNP 실적 결과 · 예상 상회 +6.6% · 산업재
 DTSTART;VALUE=DATE:20260723
 DTEND;VALUE=DATE:20260724
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-UNP-2026-07-23@investment-calendar
 DESCRIPTION:■ Union Pacific Corporation (UNP) 실적 발표\n✅ 발표 
  결과: 실제 EPS $3.41 · 시장 예상 $3.20 → 예상 상회 +6.6%\n
@@ -996,7 +996,7 @@ BEGIN:VEVENT
 SUMMARY:✅ AXP 실적 결과 · 예상 상회 +2.7% · 금융
 DTSTART;VALUE=DATE:20260724
 DTEND;VALUE=DATE:20260725
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-AXP-2026-07-24@investment-calendar
 DESCRIPTION:■ American Express (AXP) 실적 발표\n✅ 발표 결과: 
  실제 EPS $4.53 · 시장 예상 $4.41 → 예상 상회 +2.7%\n📉 주
@@ -1019,7 +1019,7 @@ BEGIN:VEVENT
 SUMMARY:✅ NEE 실적 결과 · 예상 상회 +5.5% · 유틸리티
 DTSTART;VALUE=DATE:20260724
 DTEND;VALUE=DATE:20260725
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-NEE-2026-07-24@investment-calendar
 DESCRIPTION:■ NextEra Energy (NEE) 실적 발표\n✅ 발표 결과: 실
  제 EPS $1.15 · 시장 예상 $1.09 → 예상 상회 +5.5%\n📉 주가 
@@ -1043,7 +1043,7 @@ SUMMARY:✅ VZ 실적 결과 · 예상 상회 +2.4% · 커뮤니케이션
  서비스
 DTSTART;VALUE=DATE:20260724
 DTEND;VALUE=DATE:20260725
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-VZ-2026-07-24@investment-calendar
 DESCRIPTION:■ Verizon (VZ) 실적 발표\n✅ 발표 결과: 실제 EPS 
  $1.30 · 시장 예상 $1.27 → 예상 상회 +2.4%\n📈 주가 반응: 
@@ -1066,7 +1066,7 @@ BEGIN:VEVENT
 SUMMARY:✅ AMT 실적 결과 · 예상 상회 +2.3% · 부동산
 DTSTART;VALUE=DATE:20260728
 DTEND;VALUE=DATE:20260729
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-AMT-2026-07-28@investment-calendar
 DESCRIPTION:■ American Tower (AMT) 실적 발표\n✅ 발표 결과: 실
  제 EPS $2.71 · 시장 예상 $2.65 → 예상 상회 +2.3%\n📈 주가 
@@ -1089,7 +1089,7 @@ BEGIN:VEVENT
 SUMMARY:✅ BA 실적 결과 · 예상 하회 -123.5% · 산업재
 DTSTART;VALUE=DATE:20260728
 DTEND;VALUE=DATE:20260729
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-BA-2026-07-28@investment-calendar
 DESCRIPTION:■ Boeing (BA) 실적 발표\n✅ 발표 결과: 실제 EPS -
  $0.76 · 시장 예상 ($0.34) → 예상 하회 -123.5%\n📈 주가 반
@@ -1112,7 +1112,7 @@ BEGIN:VEVENT
 SUMMARY:✅ KO 실적 결과 · 예상 상회 +5.4% · 필수소비재
 DTSTART;VALUE=DATE:20260728
 DTEND;VALUE=DATE:20260729
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-KO-2026-07-28@investment-calendar
 DESCRIPTION:■ Coca-Cola Company (The) (KO) 실적 발표\n✅ 발표 결
  과: 실제 EPS $0.97 · 시장 예상 $0.92 → 예상 상회 +5.4%\n📈
@@ -1135,7 +1135,7 @@ BEGIN:VEVENT
 SUMMARY:✅ MDLZ 실적 결과 · 예상 상회 +9.0% · 필수소비재
 DTSTART;VALUE=DATE:20260728
 DTEND;VALUE=DATE:20260729
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-MDLZ-2026-07-28@investment-calendar
 DESCRIPTION:■ Mondelez International (MDLZ) 실적 발표\n✅ 발표 
  결과: 실제 EPS $0.73 · 시장 예상 $0.67 → 예상 상회 +9.0%\n
@@ -1158,7 +1158,7 @@ BEGIN:VEVENT
 SUMMARY:✅ UPS 실적 결과 · 예상 상회 +6.7% · 산업재
 DTSTART;VALUE=DATE:20260728
 DTEND;VALUE=DATE:20260729
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-UPS-2026-07-28@investment-calendar
 DESCRIPTION:■ United Parcel Service (UPS) 실적 발표\n✅ 발표 결
  과: 실제 EPS $1.76 · 시장 예상 $1.65 → 예상 상회 +6.7%\n📉
@@ -1181,7 +1181,7 @@ BEGIN:VEVENT
 SUMMARY:✅ V 실적 결과 · 예상 상회 +2.8% · 금융
 DTSTART;VALUE=DATE:20260728
 DTEND;VALUE=DATE:20260729
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-V-2026-07-28@investment-calendar
 DESCRIPTION:■ Visa Inc. (V) 실적 발표\n✅ 발표 결과: 실제 EPS
   $3.32 · 시장 예상 $3.23 → 예상 상회 +2.8%\n📈 주가 반응:
@@ -1204,7 +1204,7 @@ BEGIN:VEVENT
 SUMMARY:✅ GD 실적 결과 · 예상 상회 +7.3% · 산업재
 DTSTART;VALUE=DATE:20260729
 DTEND;VALUE=DATE:20260730
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-GD-2026-07-29@investment-calendar
 DESCRIPTION:■ General Dynamics (GD) 실적 발표\n✅ 발표 결과: 
  실제 EPS $4.24 · 시장 예상 $3.95 → 예상 상회 +7.3%\n📉 주
@@ -1227,7 +1227,7 @@ BEGIN:VEVENT
 SUMMARY:✅ LRCX 실적 결과 · 예상 상회 +7.7% · 정보기술
 DTSTART;VALUE=DATE:20260729
 DTEND;VALUE=DATE:20260730
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-LRCX-2026-07-29@investment-calendar
 DESCRIPTION:■ Lam Research (LRCX) 실적 발표\n✅ 발표 결과: 실
  제 EPS $1.82 · 시장 예상 $1.69 → 예상 상회 +7.7%\n📈 주가 
@@ -1251,7 +1251,7 @@ SUMMARY:✅ META 실적 결과 · 예상 하회 -13.0% · 커뮤니케이
  션 서비스
 DTSTART;VALUE=DATE:20260729
 DTEND;VALUE=DATE:20260730
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-META-2026-07-29@investment-calendar
 DESCRIPTION:■ Meta Platforms (META) 실적 발표\n✅ 발표 결과: 
  실제 EPS $6.18 · 시장 예상 $7.10 → 예상 하회 -13.0%\n📉 주
@@ -1275,7 +1275,7 @@ BEGIN:VEVENT
 SUMMARY:✅ MSFT 실적 결과 · 예상 상회 +12.6% · 정보기술
 DTSTART;VALUE=DATE:20260729
 DTEND;VALUE=DATE:20260730
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-MSFT-2026-07-29@investment-calendar
 DESCRIPTION:■ Microsoft (MSFT) 실적 발표\n✅ 발표 결과: 실제 
  EPS $4.74 · 시장 예상 $4.21 → 예상 상회 +12.6%\n📈 주가 반
@@ -1298,7 +1298,7 @@ BEGIN:VEVENT
 SUMMARY:✅ PG 실적 결과 · 예상 상회 +1.4% · 필수소비재
 DTSTART;VALUE=DATE:20260729
 DTEND;VALUE=DATE:20260730
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-PG-2026-07-29@investment-calendar
 DESCRIPTION:■ Procter & Gamble (PG) 실적 발표\n✅ 발표 결과: 
  실제 EPS $1.43 · 시장 예상 $1.41 → 예상 상회 +1.4%\n📉 주
@@ -1321,7 +1321,7 @@ BEGIN:VEVENT
 SUMMARY:✅ QCOM 실적 결과 · 예상 하회 -0.7% · 정보기술
 DTSTART;VALUE=DATE:20260729
 DTEND;VALUE=DATE:20260730
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-QCOM-2026-07-29@investment-calendar
 DESCRIPTION:■ Qualcomm (QCOM) 실적 발표\n✅ 발표 결과: 실제 E
  PS $1.53 · 시장 예상 $1.54 → 예상 하회 -0.7%\n📉 주가 반
@@ -1344,7 +1344,7 @@ BEGIN:VEVENT
 SUMMARY:✅ SBUX 실적 결과 · 예상 상회 +28.8% · 경기소비재
 DTSTART;VALUE=DATE:20260729
 DTEND;VALUE=DATE:20260730
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-SBUX-2026-07-29@investment-calendar
 DESCRIPTION:■ Starbucks (SBUX) 실적 발표\n✅ 발표 결과: 실제 
  EPS $0.85 · 시장 예상 $0.66 → 예상 상회 +28.8%\n📈 주가 반
@@ -1367,7 +1367,7 @@ BEGIN:VEVENT
 SUMMARY:✅ AAPL 실적 결과 · 예상 상회 +1.6% · 정보기술
 DTSTART;VALUE=DATE:20260730
 DTEND;VALUE=DATE:20260731
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-AAPL-2026-07-30@investment-calendar
 DESCRIPTION:■ Apple Inc. (AAPL) 실적 발표\n✅ 발표 결과: 실제
   EPS $1.91 · 시장 예상 $1.88 → 예상 상회 +1.6%\n📉 주가 반
@@ -1390,7 +1390,7 @@ BEGIN:VEVENT
 SUMMARY:✅ AMZN 실적 결과 · 예상 상회 +2.7% · 경기소비재
 DTSTART;VALUE=DATE:20260730
 DTEND;VALUE=DATE:20260731
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-AMZN-2026-07-30@investment-calendar
 DESCRIPTION:■ Amazon (AMZN) 실적 발표\n✅ 발표 결과: 실제 EPS
   $1.88 · 시장 예상 $1.83 → 예상 상회 +2.7%\n📈 주가 반응:
@@ -1413,7 +1413,7 @@ BEGIN:VEVENT
 SUMMARY:✅ BMY 실적 결과 · 예상 상회 +28.3% · 헬스케어
 DTSTART;VALUE=DATE:20260730
 DTEND;VALUE=DATE:20260731
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-BMY-2026-07-30@investment-calendar
 DESCRIPTION:■ Bristol Myers Squibb (BMY) 실적 발표\n✅ 발표 결
  과: 실제 EPS $2.04 · 시장 예상 $1.59 → 예상 상회 +28.3%\n
@@ -1436,7 +1436,7 @@ BEGIN:VEVENT
 SUMMARY:✅ MA 실적 결과 · 예상 상회 +5.7% · 금융
 DTSTART;VALUE=DATE:20260730
 DTEND;VALUE=DATE:20260731
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-MA-2026-07-30@investment-calendar
 DESCRIPTION:■ Mastercard (MA) 실적 발표\n✅ 발표 결과: 실제 E
  PS $5.04 · 시장 예상 $4.77 → 예상 상회 +5.7%\n📈 주가 반
@@ -1459,7 +1459,7 @@ BEGIN:VEVENT
 SUMMARY:✅ MO 실적 결과 · 예상 하회 -1.3% · 필수소비재
 DTSTART;VALUE=DATE:20260730
 DTEND;VALUE=DATE:20260731
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-MO-2026-07-30@investment-calendar
 DESCRIPTION:■ Altria (MO) 실적 발표\n✅ 발표 결과: 실제 EPS $
  1.48 · 시장 예상 $1.50 → 예상 하회 -1.3%\n📉 주가 반응: -
@@ -1482,7 +1482,7 @@ BEGIN:VEVENT
 SUMMARY:✅ SO 실적 결과 · 예상 상회 +11.9% · 유틸리티
 DTSTART;VALUE=DATE:20260730
 DTEND;VALUE=DATE:20260731
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-SO-2026-07-30@investment-calendar
 DESCRIPTION:■ Southern Company (SO) 실적 발표\n✅ 발표 결과: 
  실제 EPS $1.13 · 시장 예상 $1.01 → 예상 상회 +11.9%\n📉 주
@@ -1505,7 +1505,7 @@ BEGIN:VEVENT
 SUMMARY:🏦 FOMC 금리 결정 · 동결
 DTSTART:20260729T180000Z
 DTEND:20260729T190000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:fomc-2026-07-29@investment-calendar
 DESCRIPTION:■ FOMC(미국 연방공개시장위원회) 기준금리 결
  정\n✅ 결정: 동결 (3.50~3.75%)\n섹터/테마: 거시경제 · 미
@@ -1522,7 +1522,7 @@ BEGIN:VEVENT
 SUMMARY:✅ ABBV 실적 결과 · 예상 상회 +0.3% · 헬스케어
 DTSTART;VALUE=DATE:20260731
 DTEND;VALUE=DATE:20260801
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-ABBV-2026-07-31@investment-calendar
 DESCRIPTION:■ AbbVie (ABBV) 실적 발표\n✅ 발표 결과: 실제 EPS
   $3.65 · 시장 예상 $3.64 → 예상 상회 +0.3%\n📉 주가 반응:
@@ -1545,7 +1545,7 @@ BEGIN:VEVENT
 SUMMARY:✅ CVX 실적 결과 · 예상 상회 +4.5% · 에너지
 DTSTART;VALUE=DATE:20260731
 DTEND;VALUE=DATE:20260801
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-CVX-2026-07-31@investment-calendar
 DESCRIPTION:■ Chevron Corporation (CVX) 실적 발표\n✅ 발표 결과
  : 실제 EPS $6.06 · 시장 예상 $5.80 → 예상 상회 +4.5%\n📈 
@@ -1568,7 +1568,7 @@ BEGIN:VEVENT
 SUMMARY:✅ LIN 실적 결과 · 예상 상회 +0.2% · 소재
 DTSTART;VALUE=DATE:20260731
 DTEND;VALUE=DATE:20260801
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-LIN-2026-07-31@investment-calendar
 DESCRIPTION:■ Linde plc (LIN) 실적 발표\n✅ 발표 결과: 실제 E
  PS $4.50 · 시장 예상 $4.49 → 예상 상회 +0.2%\n📉 주가 반
@@ -1591,7 +1591,7 @@ BEGIN:VEVENT
 SUMMARY:✅ XOM 실적 결과 · 예상 하회 -4.3% · 에너지
 DTSTART;VALUE=DATE:20260731
 DTEND;VALUE=DATE:20260801
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-XOM-2026-07-31@investment-calendar
 DESCRIPTION:■ ExxonMobil (XOM) 실적 발표\n✅ 발표 결과: 실제 
  EPS $3.52 · 시장 예상 $3.68 → 예상 하회 -4.3%\n📉 주가 반
@@ -1614,7 +1614,7 @@ BEGIN:VEVENT
 SUMMARY:✅ PLTR 실적 결과 · 예상 상회 +10.7% · 정보기술
 DTSTART;VALUE=DATE:20260803
 DTEND;VALUE=DATE:20260804
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-PLTR-2026-08-03@investment-calendar
 DESCRIPTION:■ Palantir Technologies (PLTR) 실적 발표\n✅ 발표 결
  과: 실제 EPS $0.31 · 시장 예상 $0.28 → 예상 상회 +10.7%\n
@@ -1638,7 +1638,7 @@ BEGIN:VEVENT
 SUMMARY:✅ AMD 실적 결과 · 예상 상회 +6.7% · 정보기술
 DTSTART;VALUE=DATE:20260804
 DTEND;VALUE=DATE:20260805
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-AMD-2026-08-04@investment-calendar
 DESCRIPTION:■ Advanced Micro Devices (AMD) 실적 발표\n✅ 발표 결
  과: 실제 EPS $1.44 · 시장 예상 $1.35 → 예상 상회 +6.7%\n📉
@@ -1661,7 +1661,7 @@ BEGIN:VEVENT
 SUMMARY:✅ AMGN 실적 결과 · 예상 상회 +12.3% · 헬스케어
 DTSTART;VALUE=DATE:20260804
 DTEND;VALUE=DATE:20260805
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-AMGN-2026-08-04@investment-calendar
 DESCRIPTION:■ Amgen (AMGN) 실적 발표\n✅ 발표 결과: 실제 EPS 
  $6.29 · 시장 예상 $5.60 → 예상 상회 +12.3%\n📈 주가 반응:
@@ -1684,7 +1684,7 @@ BEGIN:VEVENT
 SUMMARY:✅ ANET 실적 결과 · 예상 상회 +18.8% · 정보기술
 DTSTART;VALUE=DATE:20260804
 DTEND;VALUE=DATE:20260805
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-ANET-2026-08-04@investment-calendar
 DESCRIPTION:■ Arista Networks (ANET) 실적 발표\n✅ 발표 결과: 
  실제 EPS $0.95 · 시장 예상 $0.80 → 예상 상회 +18.8%\n📈 주
@@ -1707,7 +1707,7 @@ BEGIN:VEVENT
 SUMMARY:✅ BKNG 실적 결과 · 예상 상회 +3.7% · 경기소비재
 DTSTART;VALUE=DATE:20260804
 DTEND;VALUE=DATE:20260805
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-BKNG-2026-08-04@investment-calendar
 DESCRIPTION:■ Booking Holdings (BKNG) 실적 발표\n✅ 발표 결과: 
  실제 EPS $2.54 · 시장 예상 $2.45 → 예상 상회 +3.7%\n📈 주
@@ -1730,7 +1730,7 @@ BEGIN:VEVENT
 SUMMARY:✅ CAT 실적 결과 · 예상 상회 +30.7% · 산업재
 DTSTART;VALUE=DATE:20260804
 DTEND;VALUE=DATE:20260805
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-CAT-2026-08-04@investment-calendar
 DESCRIPTION:■ Caterpillar Inc. (CAT) 실적 발표\n✅ 발표 결과: 
  실제 EPS $8.17 · 시장 예상 $6.25 → 예상 상회 +30.7%\n📈 주
@@ -1753,7 +1753,7 @@ BEGIN:VEVENT
 SUMMARY:✅ DUK 실적 결과 · 예상 상회 +10.8% · 유틸리티
 DTSTART;VALUE=DATE:20260804
 DTEND;VALUE=DATE:20260805
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-DUK-2026-08-04@investment-calendar
 DESCRIPTION:■ Duke Energy (DUK) 실적 발표\n✅ 발표 결과: 실제
   EPS $1.43 · 시장 예상 $1.29 → 예상 상회 +10.8%\n📉 주가 
@@ -1776,7 +1776,7 @@ BEGIN:VEVENT
 SUMMARY:✅ EMR 실적 결과 · 예상 상회 +1.8% · 산업재
 DTSTART;VALUE=DATE:20260804
 DTEND;VALUE=DATE:20260805
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-EMR-2026-08-04@investment-calendar
 DESCRIPTION:■ Emerson Electric (EMR) 실적 발표\n✅ 발표 결과: 
  실제 EPS $1.71 · 시장 예상 $1.68 → 예상 상회 +1.8%\n📈 주
@@ -1799,7 +1799,7 @@ BEGIN:VEVENT
 SUMMARY:✅ GILD 실적 결과 · 예상 상회 +4.5% · 헬스케어
 DTSTART;VALUE=DATE:20260804
 DTEND;VALUE=DATE:20260805
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-GILD-2026-08-04@investment-calendar
 DESCRIPTION:■ Gilead Sciences (GILD) 실적 발표\n✅ 발표 결과: 
  실제 EPS -$6.75 · 시장 예상 ($7.07) → 예상 상회 +4.5%\n📈 
@@ -1822,7 +1822,7 @@ BEGIN:VEVENT
 SUMMARY:✅ MCD 실적 결과 · 예상 상회 +1.8% · 경기소비재
 DTSTART;VALUE=DATE:20260804
 DTEND;VALUE=DATE:20260805
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-MCD-2026-08-04@investment-calendar
 DESCRIPTION:■ McDonald's (MCD) 실적 발표\n✅ 발표 결과: 실제 
  EPS $3.38 · 시장 예상 $3.32 → 예상 상회 +1.8%\n📈 주가 반
@@ -1845,7 +1845,7 @@ BEGIN:VEVENT
 SUMMARY:✅ MRK 실적 결과 · 예상 상회 +50.0% · 헬스케어
 DTSTART;VALUE=DATE:20260804
 DTEND;VALUE=DATE:20260805
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-MRK-2026-08-04@investment-calendar
 DESCRIPTION:■ Merck & Co. (MRK) 실적 발표\n✅ 발표 결과: 실제
   EPS -$0.13 · 시장 예상 ($0.26) → 예상 상회 +50.0%\n📈 주가
@@ -1868,7 +1868,7 @@ BEGIN:VEVENT
 SUMMARY:✅ PFE 실적 결과 · 예상 상회 +13.2% · 헬스케어
 DTSTART;VALUE=DATE:20260804
 DTEND;VALUE=DATE:20260805
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-PFE-2026-08-04@investment-calendar
 DESCRIPTION:■ Pfizer (PFE) 실적 발표\n✅ 발표 결과: 실제 EPS 
  $0.77 · 시장 예상 $0.68 → 예상 상회 +13.2%\n📈 주가 반응:
@@ -1891,7 +1891,7 @@ BEGIN:VEVENT
 SUMMARY:✅ CVS 실적 결과 · 예상 상회 +38.0% · 헬스케어
 DTSTART;VALUE=DATE:20260805
 DTEND;VALUE=DATE:20260806
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-CVS-2026-08-05@investment-calendar
 DESCRIPTION:■ CVS Health (CVS) 실적 발표\n✅ 발표 결과: 실제 
  EPS $2.58 · 시장 예상 $1.87 → 예상 상회 +38.0%\n📉 주가 반
@@ -1915,7 +1915,7 @@ SUMMARY:✅ DIS 실적 결과 · 예상 상회 +9.6% · 커뮤니케이션
   서비스
 DTSTART;VALUE=DATE:20260805
 DTEND;VALUE=DATE:20260806
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-DIS-2026-08-05@investment-calendar
 DESCRIPTION:■ Walt Disney Company (The) (DIS) 실적 발표\n✅ 발표 
  결과: 실제 EPS $2.06 · 시장 예상 $1.88 → 예상 상회 +9.6%\n
@@ -1939,7 +1939,7 @@ BEGIN:VEVENT
 SUMMARY:✅ LLY 실적 결과 · 예상 상회 +39.4% · 헬스케어
 DTSTART;VALUE=DATE:20260805
 DTEND;VALUE=DATE:20260806
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-LLY-2026-08-05@investment-calendar
 DESCRIPTION:■ Lilly (Eli) (LLY) 실적 발표\n✅ 발표 결과: 실제
   EPS $8.38 · 시장 예상 $6.01 → 예상 상회 +39.4%\n📈 주가 
@@ -1962,7 +1962,7 @@ BEGIN:VEVENT
 SUMMARY:✅ SNDK 실적 결과 · 예상 상회 +16.6% · 정보기술
 DTSTART;VALUE=DATE:20260805
 DTEND;VALUE=DATE:20260806
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-SNDK-2026-08-05@investment-calendar
 DESCRIPTION:■ Sandisk (SNDK) 실적 발표\n✅ 발표 결과: 실제 EP
  S $38.82 · 시장 예상 $33.28 → 예상 상회 +16.6%\n📉 주가 반
@@ -1985,7 +1985,7 @@ BEGIN:VEVENT
 SUMMARY:✅ UBER 실적 결과 · 예상 상회 +41.0% · 산업재
 DTSTART;VALUE=DATE:20260805
 DTEND;VALUE=DATE:20260806
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-UBER-2026-08-05@investment-calendar
 DESCRIPTION:■ Uber (UBER) 실적 발표\n✅ 발표 결과: 실제 EPS $
  1.17 · 시장 예상 $0.83 → 예상 상회 +41.0%\n📉 주가 반응: 
@@ -2008,7 +2008,7 @@ BEGIN:VEVENT
 SUMMARY:✅ COP 실적 결과 · 예상 상회 +9.5% · 에너지
 DTSTART;VALUE=DATE:20260806
 DTEND;VALUE=DATE:20260807
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-COP-2026-08-06@investment-calendar
 DESCRIPTION:■ ConocoPhillips (COP) 실적 발표\n✅ 발표 결과: 실
  제 EPS $3.24 · 시장 예상 $2.96 → 예상 상회 +9.5%\n📈 주가 
@@ -2031,7 +2031,7 @@ BEGIN:VEVENT
 SUMMARY:👷 고용보고서(일자리·실업률) · 2026년 7월분
 DTSTART:20260807T123000Z
 DTEND:20260807T130000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-jobs-2026-07-x-2026-08-07@investment-calendar
 DESCRIPTION:■ 고용보고서(일자리·실업률) 발표 · 2026년 7
  월분\n✅ 결과: 7월 비농업 일자리 -1.0만 명 · 실업률 4.1%
@@ -2050,7 +2050,7 @@ BEGIN:VEVENT
 SUMMARY:✅ CSCO 실적 결과 · 예상 상회 +9.1% · 정보기술
 DTSTART;VALUE=DATE:20260812
 DTEND;VALUE=DATE:20260813
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-CSCO-2026-08-12@investment-calendar
 DESCRIPTION:■ Cisco (CSCO) 실적 발표\n✅ 발표 결과: 실제 EPS 
  $1.08 · 시장 예상 $0.99 → 예상 상회 +9.1%\n📉 주가 반응: 
@@ -2073,7 +2073,7 @@ BEGIN:VEVENT
 SUMMARY:📈 소비자물가지수(CPI) · 2026년 7월분
 DTSTART:20260812T123000Z
 DTEND:20260812T130000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-cpi-2026-07-x-2026-08-12@investment-calendar
 DESCRIPTION:■ 소비자물가지수(CPI) 발표 · 2026년 7월분\n✅ 
  결과: 7월 CPI 전년 대비 +3.3% (전월 +3.5%) · 근원 +2.5% · 전
@@ -2091,7 +2091,7 @@ BEGIN:VEVENT
 SUMMARY:✅ AMAT 실적 결과 · 예상 상회 +3.5% · 정보기술
 DTSTART;VALUE=DATE:20260813
 DTEND;VALUE=DATE:20260814
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-AMAT-2026-08-13@investment-calendar
 DESCRIPTION:■ Applied Materials (AMAT) 실적 발표\n✅ 발표 결과:
   실제 EPS $3.50 · 시장 예상 $3.38 → 예상 상회 +3.5%\n📉 주
@@ -2114,7 +2114,7 @@ BEGIN:VEVENT
 SUMMARY:✅ HD 실적 결과 · 예상 상회 +4.5% · 경기소비재
 DTSTART;VALUE=DATE:20260818
 DTEND;VALUE=DATE:20260819
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-HD-2026-08-18@investment-calendar
 DESCRIPTION:■ Home Depot (The) (HD) 실적 발표\n✅ 발표 결과: 
  실제 EPS $4.92 · 시장 예상 $4.71 → 예상 상회 +4.5%\n📈 주
@@ -2137,7 +2137,7 @@ BEGIN:VEVENT
 SUMMARY:✅ LOW 실적 결과 · 예상 상회 +4.3% · 경기소비재
 DTSTART;VALUE=DATE:20260819
 DTEND;VALUE=DATE:20260820
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-LOW-2026-08-19@investment-calendar
 DESCRIPTION:■ Lowe's (LOW) 실적 발표\n✅ 발표 결과: 실제 EPS 
  $4.40 · 시장 예상 $4.22 → 예상 상회 +4.3%\n📈 주가 반응: 
@@ -2160,7 +2160,7 @@ BEGIN:VEVENT
 SUMMARY:✅ DE 실적 결과 · 예상 상회 +6.5% · 산업재
 DTSTART;VALUE=DATE:20260820
 DTEND;VALUE=DATE:20260821
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-DE-2026-08-20@investment-calendar
 DESCRIPTION:■ Deere & Company (DE) 실적 발표\n✅ 발표 결과: 실
  제 EPS $5.10 · 시장 예상 $4.79 → 예상 상회 +6.5%\n📈 주가 
@@ -2183,7 +2183,7 @@ BEGIN:VEVENT
 SUMMARY:✅ WMT 실적 결과 · 예상 상회 +11.0% · 필수소비재
 DTSTART;VALUE=DATE:20260820
 DTEND;VALUE=DATE:20260821
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-WMT-2026-08-20@investment-calendar
 DESCRIPTION:■ Walmart (WMT) 실적 발표\n✅ 발표 결과: 실제 EPS
   $0.81 · 시장 예상 $0.73 → 예상 상회 +11.0%\n📉 주가 반응
@@ -2206,7 +2206,7 @@ BEGIN:VEVENT
 SUMMARY:✅ INTU 실적 결과 · 예상 상회 +2.4% · 정보기술
 DTSTART;VALUE=DATE:20260825
 DTEND;VALUE=DATE:20260826
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-INTU-2026-08-25@investment-calendar
 DESCRIPTION:■ Intuit (INTU) 실적 발표\n✅ 발표 결과: 실제 EPS
   $2.17 · 시장 예상 $2.12 → 예상 상회 +2.4%\n📉 주가 반응:
@@ -2229,7 +2229,7 @@ BEGIN:VEVENT
 SUMMARY:✅ CRM 실적 결과 · 예상 상회 +110.6% · 정보기술
 DTSTART;VALUE=DATE:20260826
 DTEND;VALUE=DATE:20260827
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-CRM-2026-08-26@investment-calendar
 DESCRIPTION:■ Salesforce (CRM) 실적 발표\n✅ 발표 결과: 실제 
  EPS $4.95 · 시장 예상 $2.35 → 예상 상회 +110.6%\n📈 주가 
@@ -2252,7 +2252,7 @@ BEGIN:VEVENT
 SUMMARY:✅ NVDA 실적 결과 · 예상 상회 +6.2% · 정보기술
 DTSTART;VALUE=DATE:20260826
 DTEND;VALUE=DATE:20260827
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-NVDA-2026-08-26@investment-calendar
 DESCRIPTION:■ Nvidia (NVDA) 실적 발표\n✅ 발표 결과: 실제 EPS
   $2.22 · 시장 예상 $2.09 → 예상 상회 +6.2%\n📈 주가 반응:
@@ -2275,7 +2275,7 @@ BEGIN:VEVENT
 SUMMARY:🇰🇷 한국은행 기준금리 결정 · 0.25%p 인상
 DTSTART;VALUE=DATE:20260827
 DTEND;VALUE=DATE:20260828
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:bok-2026-08-27@investment-calendar
 DESCRIPTION:■ 한국은행 금융통화위원회 기준금리 결정\n
  ✅ 결정: 0.25%p 인상 (2.75% → 3.00%)\n섹터/테마: 거시경제 
@@ -2294,7 +2294,7 @@ BEGIN:VEVENT
 SUMMARY:✅ DELL 실적 결과 · 예상 상회 +43.2% · 정보기술
 DTSTART;VALUE=DATE:20260901
 DTEND;VALUE=DATE:20260902
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-DELL-2026-09-01@investment-calendar
 DESCRIPTION:■ Dell Technologies (DELL) 실적 발표\n✅ 발표 결과:
   실제 EPS $6.76 · 시장 예상 $4.72 → 예상 상회 +43.2%\n📈 
@@ -2317,7 +2317,7 @@ BEGIN:VEVENT
 SUMMARY:✅ MDT 실적 결과 · 예상 상회 +4.3% · 헬스케어
 DTSTART;VALUE=DATE:20260901
 DTEND;VALUE=DATE:20260902
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-MDT-2026-09-01@investment-calendar
 DESCRIPTION:■ Medtronic (MDT) 실적 발표\n✅ 발표 결과: 실제 E
  PS $1.45 · 시장 예상 $1.39 → 예상 상회 +4.3%\n📈 주가 반
@@ -2340,7 +2340,7 @@ BEGIN:VEVENT
 SUMMARY:✅ PANW 실적 결과 · 예상 상회 +3.9% · 정보기술
 DTSTART;VALUE=DATE:20260901
 DTEND;VALUE=DATE:20260902
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-PANW-2026-09-01@investment-calendar
 DESCRIPTION:■ Palo Alto Networks (PANW) 실적 발표\n✅ 발표 결과
  : 실제 EPS $0.53 · 시장 예상 $0.51 → 예상 상회 +3.9%\n📉 
@@ -2363,7 +2363,7 @@ BEGIN:VEVENT
 SUMMARY:✅ AVGO 실적 결과 · 예상 상회 +7.1% · 정보기술
 DTSTART;VALUE=DATE:20260902
 DTEND;VALUE=DATE:20260903
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-AVGO-2026-09-02@investment-calendar
 DESCRIPTION:■ Broadcom (AVGO) 실적 발표\n✅ 발표 결과: 실제 E
  PS $3.03 · 시장 예상 $2.83 → 예상 상회 +7.1%\n📉 주가 반
@@ -2387,7 +2387,7 @@ BEGIN:VEVENT
 SUMMARY:👷 고용보고서(일자리·실업률) · 2026년 8월분
 DTSTART:20260904T123000Z
 DTEND:20260904T130000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-jobs-2026-08-x-2026-09-04@investment-calendar
 DESCRIPTION:■ 고용보고서(일자리·실업률) 발표 · 2026년 8
  월분\n✅ 결과: 8월 비농업 일자리 +13.3만 명 · 실업률 4.1
@@ -2406,7 +2406,7 @@ BEGIN:VEVENT
 SUMMARY:✅ ADBE 실적 결과 · 예상 하회 -2.3% · 정보기술
 DTSTART;VALUE=DATE:20260910
 DTEND;VALUE=DATE:20260911
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-ADBE-2026-09-10@investment-calendar
 DESCRIPTION:■ Adobe Inc. (ADBE) 실적 발표\n✅ 발표 결과: 실제
   EPS $4.75 · 시장 예상 $4.86 → 예상 하회 -2.3%\n📉 주가 반
@@ -2429,7 +2429,7 @@ BEGIN:VEVENT
 SUMMARY:✅ ORCL 실적 결과 · 예상 상회 +17.3% · 정보기술
 DTSTART;VALUE=DATE:20260910
 DTEND;VALUE=DATE:20260911
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-ORCL-2026-09-10@investment-calendar
 DESCRIPTION:■ Oracle Corporation (ORCL) 실적 발표\n✅ 발표 결과
  : 실제 EPS $1.63 · 시장 예상 $1.39 → 예상 상회 +17.3%\n📉 
@@ -2452,7 +2452,7 @@ BEGIN:VEVENT
 SUMMARY:📈 소비자물가지수(CPI) · 2026년 8월분
 DTSTART:20260911T123000Z
 DTEND:20260911T130000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-cpi-2026-08-x-2026-09-11@investment-calendar
 DESCRIPTION:■ 소비자물가지수(CPI) 발표 · 2026년 8월분\n✅ 
  결과: 8월 CPI 전년 대비 +3.4% (전월 +3.3%) · 근원 +2.4% · 전
@@ -2470,7 +2470,7 @@ BEGIN:VEVENT
 SUMMARY:🏦 FOMC 금리 결정 (+점도표) · 0.25%p 인상
 DTSTART:20260916T180000Z
 DTEND:20260916T190000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:fomc-2026-09-16@investment-calendar
 DESCRIPTION:■ FOMC(미국 연방공개시장위원회) 기준금리 결
  정\n✅ 결정: 0.25%p 인상 (3.50~3.75% → 3.75~4.00%)\n섹터/테마:
@@ -2489,7 +2489,7 @@ BEGIN:VEVENT
 SUMMARY:✅ COST 실적 결과 · 예상 상회 +1.9% · 필수소비재
 DTSTART;VALUE=DATE:20260924
 DTEND;VALUE=DATE:20260925
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-COST-2026-09-24@investment-calendar
 DESCRIPTION:■ Costco (COST) 실적 발표\n✅ 발표 결과: 실제 EPS
   $6.60 · 시장 예상 $6.48 → 예상 상회 +1.9%\n📈 주가 반응:
@@ -2512,7 +2512,7 @@ BEGIN:VEVENT
 SUMMARY:✅ MU 실적 결과 · 예상 상회 +5.7% · 정보기술
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-MU-2026-09-30@investment-calendar
 DESCRIPTION:■ Micron Technology (MU) 실적 발표\n✅ 발표 결과: 
  실제 EPS $33.19 · 시장 예상 $31.41 → 예상 상회 +5.7%\n📈 
@@ -2535,7 +2535,7 @@ BEGIN:VEVENT
 SUMMARY:✅ ACN 실적 결과 · 예상 상회 +3.1% · 정보기술
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-ACN-2026-10-01@investment-calendar
 DESCRIPTION:■ Accenture (ACN) 실적 발표\n✅ 발표 결과: 실제 E
  PS $3.29 · 시장 예상 $3.19 → 예상 상회 +3.1%\n📈 주가 반
@@ -2558,7 +2558,7 @@ BEGIN:VEVENT
 SUMMARY:👷 고용보고서(일자리·실업률) · 2026년 9월분
 DTSTART:20261002T123000Z
 DTEND:20261002T130000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-jobs-2026-09-x-2026-10-02@investment-calendar
 DESCRIPTION:■ 고용보고서(일자리·실업률) 발표 · 2026년 9
  월분\n✅ 결과: 9월 비농업 일자리 +2.9만 명 · 실업률 4.2%
@@ -2577,7 +2577,7 @@ BEGIN:VEVENT
 SUMMARY:✅ PEP 실적 결과 · 예상 상회 +2.2% · 필수소비재
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-PEP-2026-10-08@investment-calendar
 DESCRIPTION:■ PepsiCo (PEP) 실적 발표\n✅ 발표 결과: 실제 EPS
   $2.34 · 시장 예상 $2.29 → 예상 상회 +2.2%\n📈 주가 반응:
@@ -2600,7 +2600,7 @@ BEGIN:VEVENT
 SUMMARY:✅ C 실적 결과 · 예상 상회 +7.1% · 금융
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-C-2026-10-13@investment-calendar
 DESCRIPTION:■ Citigroup (C) 실적 발표\n✅ 발표 결과: 실제 EPS
   $2.85 · 시장 예상 $2.66 → 예상 상회 +7.1%\n📉 주가 반응:
@@ -2623,7 +2623,7 @@ BEGIN:VEVENT
 SUMMARY:✅ GS 실적 결과 · 예상 상회 +31.9% · 금융
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-GS-2026-10-13@investment-calendar
 DESCRIPTION:■ Goldman Sachs (GS) 실적 발표\n✅ 발표 결과: 실
  제 EPS $17.01 · 시장 예상 $12.90 → 예상 상회 +31.9%\n📉 주
@@ -2646,7 +2646,7 @@ BEGIN:VEVENT
 SUMMARY:✅ JNJ 실적 결과 · 예상 상회 +2.4% · 헬스케어
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-JNJ-2026-10-13@investment-calendar
 DESCRIPTION:■ Johnson & Johnson (JNJ) 실적 발표\n✅ 발표 결과: 
  실제 EPS $2.59 · 시장 예상 $2.53 → 예상 상회 +2.4%\n📉 주
@@ -2669,7 +2669,7 @@ BEGIN:VEVENT
 SUMMARY:✅ JPM 실적 결과 · 예상 하회 -3.2% · 금융
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-JPM-2026-10-13@investment-calendar
 DESCRIPTION:■ JPMorgan Chase (JPM) 실적 발표\n✅ 발표 결과: 실
  제 EPS $5.75 · 시장 예상 $5.94 → 예상 하회 -3.2%\n📉 주가 
@@ -2692,7 +2692,7 @@ BEGIN:VEVENT
 SUMMARY:✅ UNH 실적 결과 · 예상 상회 +13.8% · 헬스케어
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-UNH-2026-10-13@investment-calendar
 DESCRIPTION:■ UnitedHealth Group (UNH) 실적 발표\n✅ 발표 결과:
   실제 EPS $4.69 · 시장 예상 $4.12 → 예상 상회 +13.8%\n📉 
@@ -2715,7 +2715,7 @@ BEGIN:VEVENT
 SUMMARY:✅ WFC 실적 결과 · 예상 상회 +1.1% · 금융
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-WFC-2026-10-13@investment-calendar
 DESCRIPTION:■ Wells Fargo (WFC) 실적 발표\n✅ 발표 결과: 실제
   EPS $1.87 · 시장 예상 $1.85 → 예상 상회 +1.1%\n📉 주가 반
@@ -2738,7 +2738,7 @@ BEGIN:VEVENT
 SUMMARY:✅ BAC 실적 결과 · 예상 하회 -2.7% · 금융
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-BAC-2026-10-14@investment-calendar
 DESCRIPTION:■ Bank of America (BAC) 실적 발표\n✅ 발표 결과: 
  실제 EPS $1.08 · 시장 예상 $1.11 → 예상 하회 -2.7%\n📉 주
@@ -2761,7 +2761,7 @@ BEGIN:VEVENT
 SUMMARY:✅ BLK 실적 결과 · 예상 상회 +13.7% · 금융
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-BLK-2026-10-14@investment-calendar
 DESCRIPTION:■ BlackRock (BLK) 실적 발표\n✅ 발표 결과: 실제 E
  PS $15.93 · 시장 예상 $14.01 → 예상 상회 +13.7%\n📈 주가 
@@ -2784,7 +2784,7 @@ BEGIN:VEVENT
 SUMMARY:✅ MS 실적 결과 · 예상 상회 +7.1% · 금융
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-MS-2026-10-14@investment-calendar
 DESCRIPTION:■ Morgan Stanley (MS) 실적 발표\n✅ 발표 결과: 실
  제 EPS $3.03 · 시장 예상 $2.83 → 예상 상회 +7.1%\n📉 주가 
@@ -2807,7 +2807,7 @@ BEGIN:VEVENT
 SUMMARY:📈 소비자물가지수(CPI) · 2026년 9월분
 DTSTART:20261014T123000Z
 DTEND:20261014T130000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-cpi-2026-09-x-2026-10-14@investment-calendar
 DESCRIPTION:■ 소비자물가지수(CPI) 발표 · 2026년 9월분\n✅ 
  결과: 9월 CPI 전년 대비 +3.7% (전월 +3.4%) · 근원 +2.6% · 전
@@ -2825,7 +2825,7 @@ BEGIN:VEVENT
 SUMMARY:✅ BNY 실적 결과 · 예상 상회 +4.9% · 금융
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-BNY-2026-10-15@investment-calendar
 DESCRIPTION:■ BNY Mellon (BNY) 실적 발표\n✅ 발표 결과: 실제 
  EPS $2.37 · 시장 예상 $2.26 → 예상 상회 +4.9%\n📈 주가 반
@@ -2847,7 +2847,7 @@ BEGIN:VEVENT
 SUMMARY:✅ SCHW 실적 결과 · 예상 상회 +1.8% · 금융
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-SCHW-2026-10-15@investment-calendar
 DESCRIPTION:■ Charles Schwab Corporation (SCHW) 실적 발표\n✅ 발
  표 결과: 실제 EPS $1.69 · 시장 예상 $1.66 → 예상 상회 +1.8
@@ -2870,7 +2870,7 @@ BEGIN:VEVENT
 SUMMARY:✅ USB 실적 결과 · 예상 상회 +1.5% · 금융
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-USB-2026-10-15@investment-calendar
 DESCRIPTION:■ U.S. Bancorp (USB) 실적 발표\n✅ 발표 결과: 실
  제 EPS $1.34 · 시장 예상 $1.32 → 예상 상회 +1.5%\n📈 주가 
@@ -2893,7 +2893,7 @@ BEGIN:VEVENT
 SUMMARY:✅ COF 실적 결과 · 예상 상회 +22.8% · 금융
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261021
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-COF-2026-10-20@investment-calendar
 DESCRIPTION:■ Capital One (COF) 실적 발표\n✅ 발표 결과: 실제
   EPS $6.69 · 시장 예상 $5.45 → 예상 상회 +22.8%\n📈 주가 
@@ -2916,7 +2916,7 @@ BEGIN:VEVENT
 SUMMARY:✅ GE 실적 결과 · 예상 상회 +11.4% · 산업재
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261021
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-GE-2026-10-20@investment-calendar
 DESCRIPTION:■ GE Aerospace (GE) 실적 발표\n✅ 발표 결과: 실제
   EPS $2.25 · 시장 예상 $2.02 → 예상 상회 +11.4%\n📉 주가 
@@ -2939,7 +2939,7 @@ BEGIN:VEVENT
 SUMMARY:✅ GM 실적 결과 · 예상 상회 +4.2% · 경기소비재
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261021
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-GM-2026-10-20@investment-calendar
 DESCRIPTION:■ General Motors (GM) 실적 발표\n✅ 발표 결과: 실
  제 EPS $3.70 · 시장 예상 $3.55 → 예상 상회 +4.2%\n📉 주가 
@@ -2962,7 +2962,7 @@ BEGIN:VEVENT
 SUMMARY:✅ ISRG 실적 결과 · 예상 상회 +18.8% · 헬스케어
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261021
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-ISRG-2026-10-20@investment-calendar
 DESCRIPTION:■ Intuitive Surgical (ISRG) 실적 발표\n✅ 발표 결과
  : 실제 EPS $2.53 · 시장 예상 $2.13 → 예상 상회 +18.8%\n📉 
@@ -2985,7 +2985,7 @@ BEGIN:VEVENT
 SUMMARY:✅ MMM 실적 결과 · 예상 상회 +4.2% · 산업재
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261021
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-MMM-2026-10-20@investment-calendar
 DESCRIPTION:■ 3M (MMM) 실적 발표\n✅ 발표 결과: 실제 EPS $2.5
  0 · 시장 예상 $2.40 → 예상 상회 +4.2%\n📈 주가 반응: +5.8
@@ -3008,7 +3008,7 @@ SUMMARY:✅ NFLX 실적 결과 · 예상 상회 +6.1% · 커뮤니케이
  션 서비스
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261021
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-NFLX-2026-10-20@investment-calendar
 DESCRIPTION:■ Netflix (NFLX) 실적 발표\n✅ 발표 결과: 실제 EP
  S $0.87 · 시장 예상 $0.82 → 예상 상회 +6.1%\n📉 주가 반응
@@ -3031,7 +3031,7 @@ BEGIN:VEVENT
 SUMMARY:✅ RTX 실적 결과 · 예상 상회 +27.0% · 산업재
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261021
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-RTX-2026-10-20@investment-calendar
 DESCRIPTION:■ RTX Corporation (RTX) 실적 발표\n✅ 발표 결과: 
  실제 EPS $2.26 · 시장 예상 $1.78 → 예상 상회 +27.0%\n📈 주
@@ -3054,7 +3054,7 @@ BEGIN:VEVENT
 SUMMARY:✅ ABT 실적 결과 · 예상 하회 -0.7% · 헬스케어
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-ABT-2026-10-21@investment-calendar
 DESCRIPTION:■ Abbott Laboratories (ABT) 실적 발표\n✅ 발표 결과
  : 실제 EPS $1.42 · 시장 예상 $1.43 → 예상 하회 -0.7%\n📉 
@@ -3077,7 +3077,7 @@ BEGIN:VEVENT
 SUMMARY:✅ DHR 실적 결과 · 예상 상회 +9.9% · 헬스케어
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-DHR-2026-10-21@investment-calendar
 DESCRIPTION:■ Danaher Corporation (DHR) 실적 발표\n✅ 발표 결과
  : 실제 EPS $2.11 · 시장 예상 $1.92 → 예상 상회 +9.9%\n📈 
@@ -3100,7 +3100,7 @@ BEGIN:VEVENT
 SUMMARY:✅ IBM 실적 결과 · 예상 상회 +2.4% · 정보기술
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-IBM-2026-10-21@investment-calendar
 DESCRIPTION:■ IBM (IBM) 실적 발표\n✅ 발표 결과: 실제 EPS $2.
  95 · 시장 예상 $2.88 → 예상 상회 +2.4%\n📈 주가 반응: +0.
@@ -3123,7 +3123,7 @@ BEGIN:VEVENT
 SUMMARY:✅ LRCX 실적 결과 · 예상 상회 +1.4% · 정보기술
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-LRCX-2026-10-21@investment-calendar
 DESCRIPTION:■ Lam Research (LRCX) 실적 발표\n✅ 발표 결과: 실
  제 EPS $2.20 · 시장 예상 $2.17 → 예상 상회 +1.4%\n📉 주가 
@@ -3147,7 +3147,7 @@ SUMMARY:✅ META 실적 결과 · 예상 상회 +13.5% · 커뮤니케이
  션 서비스
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-META-2026-10-21@investment-calendar
 DESCRIPTION:■ Meta Platforms (META) 실적 발표\n✅ 발표 결과: 
  실제 EPS $7.40 · 시장 예상 $6.52 → 예상 상회 +13.5%\n📉 주
@@ -3171,7 +3171,7 @@ BEGIN:VEVENT
 SUMMARY:✅ NEE 실적 결과 · 예상 상회 +3.3% · 유틸리티
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-NEE-2026-10-21@investment-calendar
 DESCRIPTION:■ NextEra Energy (NEE) 실적 발표\n✅ 발표 결과: 실
  제 EPS $1.24 · 시장 예상 $1.20 → 예상 상회 +3.3%\n📉 주가 
@@ -3194,7 +3194,7 @@ BEGIN:VEVENT
 SUMMARY:✅ PM 실적 결과 · 예상 상회 +2.6% · 필수소비재
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-PM-2026-10-21@investment-calendar
 DESCRIPTION:■ Philip Morris International (PM) 실적 발표\n✅ 발표
   결과: 실제 EPS $2.36 · 시장 예상 $2.30 → 예상 상회 +2.6%\n
@@ -3218,7 +3218,7 @@ SUMMARY:✅ T 실적 결과 · 예상 상회 +6.6% · 커뮤니케이션
  서비스
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-T-2026-10-21@investment-calendar
 DESCRIPTION:■ AT&T (T) 실적 발표\n✅ 발표 결과: 실제 EPS $0.6
  5 · 시장 예상 $0.61 → 예상 상회 +6.6%\n📉 주가 반응: -6.4
@@ -3241,7 +3241,7 @@ BEGIN:VEVENT
 SUMMARY:✅ TMO 실적 결과 · 예상 상회 +4.4% · 헬스케어
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-TMO-2026-10-21@investment-calendar
 DESCRIPTION:■ Thermo Fisher Scientific (TMO) 실적 발표\n✅ 발표 
  결과: 실제 EPS $6.68 · 시장 예상 $6.40 → 예상 상회 +4.4%\n
@@ -3264,7 +3264,7 @@ BEGIN:VEVENT
 SUMMARY:✅ TSLA 실적 결과 · 예상 하회 -9.1% · 경기소비재
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-TSLA-2026-10-21@investment-calendar
 DESCRIPTION:■ Tesla\, Inc. (TSLA) 실적 발표\n✅ 발표 결과: 실
  제 EPS $0.20 · 시장 예상 $0.22 → 예상 하회 -9.1%\n📉 주가 
@@ -3287,7 +3287,7 @@ BEGIN:VEVENT
 SUMMARY:✅ TXN 실적 결과 · 예상 상회 +9.2% · 정보기술
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-TXN-2026-10-21@investment-calendar
 DESCRIPTION:■ Texas Instruments (TXN) 실적 발표\n✅ 발표 결과: 
  실제 EPS $2.62 · 시장 예상 $2.40 → 예상 상회 +9.2%\n📉 주
@@ -3310,7 +3310,7 @@ BEGIN:VEVENT
 SUMMARY:🇰🇷 한국은행 기준금리 결정 · 동결
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:bok-2026-10-22@investment-calendar
 DESCRIPTION:■ 한국은행 금융통화위원회 기준금리 결정\n
  ✅ 결정: 동결 (3.00%)\n섹터/테마: 거시경제 · 한국 기준
@@ -3330,22 +3330,23 @@ SUMMARY:✅ CMCSA 실적 결과 · 예상 상회 +9.2% · 커뮤니케이
  션 서비스
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-CMCSA-2026-10-22@investment-calendar
 DESCRIPTION:■ Comcast (CMCSA) 실적 발표\n✅ 발표 결과: 실제 E
- PS $1.07 · 시장 예상 $0.98 → 예상 상회 +9.2%\n섹터: 커뮤니
- 케이션 서비스 / 테마: 케이블·인터넷\, 미디어(NBC유니
- 버설)\n한국시간: 발표 시각 미정 (회사가 아직 장 전/장 
- 후를 알리지 않음)\n미국 현지 날짜: 2026-10-22\n대상 분기:
-  Sep/2026 마감 분기\n시장 예상 EPS(주당순이익): $0.98 (애널
- 리스트 8명)\n\n※ 나스닥은 '장 전/장 후'만 알려 줘요. 
- 위 시간은 대부분의 회사가 발표하는 시간대이고\, 정확
- 한 시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 
- 자동으로 모은 것이며 투자 권유가 아닙니다.\n\n공식 공
- 시(8-K\, 실적 보도자료 포함 · 영어):\nhttps://www.sec.gov/cgi-
- bin/browse-edgar?action=getcompany&CIK=CMCSA&type=8-K&dateb=&owner=include
- &count=10\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activit
- y/stocks/cmcsa/earnings
+ PS $1.07 · 시장 예상 $0.98 → 예상 상회 +9.2%\n📈 주가 반
+ 응: +3.4% (10/21 종가 → 10/22 종가)\n섹터: 커뮤니케이션 서
+ 비스 / 테마: 케이블·인터넷\, 미디어(NBC유니버설)\n한국
+ 시간: 발표 시각 미정 (회사가 아직 장 전/장 후를 알리
+ 지 않음)\n미국 현지 날짜: 2026-10-22\n대상 분기: Sep/2026 마
+ 감 분기\n시장 예상 EPS(주당순이익): $0.98 (애널리스트 8
+ 명)\n\n※ 나스닥은 '장 전/장 후'만 알려 줘요. 위 시간은
+  대부분의 회사가 발표하는 시간대이고\, 정확한 시각은
+  회사 IR 공지를 확인하세요.\n※ 공개 정보를 자동으로 
+ 모은 것이며 투자 권유가 아닙니다.\n\n공식 공시(8-K\, 실
+ 적 보도자료 포함 · 영어):\nhttps://www.sec.gov/cgi-bin/browse-ed
+ gar?action=getcompany&CIK=CMCSA&type=8-K&dateb=&owner=include&count=10\nEn
+ glish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/cmcs
+ a/earnings
 TRANSP:TRANSPARENT
 URL:https://www.nasdaq.com/market-activity/stocks/cmcsa/earnings
 END:VEVENT
@@ -3353,21 +3354,22 @@ BEGIN:VEVENT
 SUMMARY:✅ LMT 실적 결과 · 예상 상회 +6.4% · 산업재
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-LMT-2026-10-22@investment-calendar
 DESCRIPTION:■ Lockheed Martin (LMT) 실적 발표\n✅ 발표 결과: 
- 실제 EPS $7.97 · 시장 예상 $7.49 → 예상 상회 +6.4%\n섹터: 
- 산업재 / 테마: 방산(전투기·미사일)\n한국시간: 발표 시
- 각 미정 (회사가 아직 장 전/장 후를 알리지 않음)\n미국 
- 현지 날짜: 2026-10-22\n대상 분기: Sep/2026 마감 분기\n시장 
- 예상 EPS(주당순이익): $7.49 (애널리스트 6명)\n\n※ 나스닥
- 은 '장 전/장 후'만 알려 줘요. 위 시간은 대부분의 회사
- 가 발표하는 시간대이고\, 정확한 시각은 회사 IR 공지를
-  확인하세요.\n※ 공개 정보를 자동으로 모은 것이며 투
- 자 권유가 아닙니다.\n\n공식 공시(8-K\, 실적 보도자료 포
- 함 · 영어):\nhttps://www.sec.gov/cgi-bin/browse-edgar?action=getcompan
- y&CIK=LMT&type=8-K&dateb=&owner=include&count=10\nEnglish source (Nasdaq):
- \nhttps://www.nasdaq.com/market-activity/stocks/lmt/earnings
+ 실제 EPS $7.97 · 시장 예상 $7.49 → 예상 상회 +6.4%\n📈 주
+ 가 반응: +7.0% (10/21 종가 → 10/22 종가)\n섹터: 산업재 / 테
+ 마: 방산(전투기·미사일)\n한국시간: 발표 시각 미정 (회
+ 사가 아직 장 전/장 후를 알리지 않음)\n미국 현지 날짜: 
+ 2026-10-22\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주
+ 당순이익): $7.49 (애널리스트 6명)\n\n※ 나스닥은 '장 전/
+ 장 후'만 알려 줘요. 위 시간은 대부분의 회사가 발표하
+ 는 시간대이고\, 정확한 시각은 회사 IR 공지를 확인하세
+ 요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 
+ 아닙니다.\n\n공식 공시(8-K\, 실적 보도자료 포함 · 영어)
+ :\nhttps://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=LMT&type
+ =8-K&dateb=&owner=include&count=10\nEnglish source (Nasdaq):\nhttps://www.
+ nasdaq.com/market-activity/stocks/lmt/earnings
 TRANSP:TRANSPARENT
 URL:https://www.nasdaq.com/market-activity/stocks/lmt/earnings
 END:VEVENT
@@ -3375,21 +3377,22 @@ BEGIN:VEVENT
 SUMMARY:✅ PG 실적 결과 · 예상 상회 +5.8% · 필수소비재
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-PG-2026-10-22@investment-calendar
 DESCRIPTION:■ Procter & Gamble (PG) 실적 발표\n✅ 발표 결과: 
- 실제 EPS $2.00 · 시장 예상 $1.89 → 예상 상회 +5.8%\n섹터: 
- 필수소비재 / 테마: 생활용품\n한국시간: 발표 시각 미정
-  (회사가 아직 장 전/장 후를 알리지 않음)\n미국 현지 날
- 짜: 2026-10-22\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(
- 주당순이익): $1.89 (애널리스트 10명)\n\n※ 나스닥은 '장 
- 전/장 후'만 알려 줘요. 위 시간은 대부분의 회사가 발표
- 하는 시간대이고\, 정확한 시각은 회사 IR 공지를 확인하
- 세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유
- 가 아닙니다.\n\n공식 공시(8-K\, 실적 보도자료 포함 · 영
- 어):\nhttps://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=PG&t
- ype=8-K&dateb=&owner=include&count=10\nEnglish source (Nasdaq):\nhttps://w
- ww.nasdaq.com/market-activity/stocks/pg/earnings
+ 실제 EPS $2.00 · 시장 예상 $1.89 → 예상 상회 +5.8%\n📈 주
+ 가 반응: +5.6% (10/21 종가 → 10/22 종가)\n섹터: 필수소비재
+  / 테마: 생활용품\n한국시간: 발표 시각 미정 (회사가 아
+ 직 장 전/장 후를 알리지 않음)\n미국 현지 날짜: 2026-10-22
+ \n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순이익
+ ): $1.89 (애널리스트 10명)\n\n※ 나스닥은 '장 전/장 후'만 
+ 알려 줘요. 위 시간은 대부분의 회사가 발표하는 시간대
+ 이고\, 정확한 시각은 회사 IR 공지를 확인하세요.\n※ 공
+ 개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.
+ \n\n공식 공시(8-K\, 실적 보도자료 포함 · 영어):\nhttps://ww
+ w.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=PG&type=8-K&dateb=&ow
+ ner=include&count=10\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/mar
+ ket-activity/stocks/pg/earnings
 TRANSP:TRANSPARENT
 URL:https://www.nasdaq.com/market-activity/stocks/pg/earnings
 END:VEVENT
@@ -3397,44 +3400,44 @@ BEGIN:VEVENT
 SUMMARY:✅ UNP 실적 결과 · 예상 상회 +1.7% · 산업재
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-UNP-2026-10-22@investment-calendar
 DESCRIPTION:■ Union Pacific Corporation (UNP) 실적 발표\n✅ 발표 
  결과: 실제 EPS $3.53 · 시장 예상 $3.47 → 예상 상회 +1.7%\n
- 섹터: 산업재 / 테마: 철도 운송\n한국시간: 발표 시각 미
- 정 (회사가 아직 장 전/장 후를 알리지 않음)\n미국 현지 
- 날짜: 2026-10-22\n대상 분기: Sep/2026 마감 분기\n시장 예상 E
- PS(주당순이익): $3.47 (애널리스트 7명)\n\n※ 나스닥은 '장
-  전/장 후'만 알려 줘요. 위 시간은 대부분의 회사가 발
- 표하는 시간대이고\, 정확한 시각은 회사 IR 공지를 확인
- 하세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권
- 유가 아닙니다.\n\n공식 공시(8-K\, 실적 보도자료 포함 · 
- 영어):\nhttps://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=U
- NP&type=8-K&dateb=&owner=include&count=10\nEnglish source (Nasdaq):\nhttps
- ://www.nasdaq.com/market-activity/stocks/unp/earnings
+ 📈 주가 반응: +3.6% (10/21 종가 → 10/22 종가)\n섹터: 산업
+ 재 / 테마: 철도 운송\n한국시간: 발표 시각 미정 (회사가
+  아직 장 전/장 후를 알리지 않음)\n미국 현지 날짜: 2026-1
+ 0-22\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(주당순
+ 이익): $3.47 (애널리스트 7명)\n\n※ 나스닥은 '장 전/장 후
+ '만 알려 줘요. 위 시간은 대부분의 회사가 발표하는 시
+ 간대이고\, 정확한 시각은 회사 IR 공지를 확인하세요.\n
+ ※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙
+ 니다.\n\n공식 공시(8-K\, 실적 보도자료 포함 · 영어):\nhtt
+ ps://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=UNP&type=8-K&d
+ ateb=&owner=include&count=10\nEnglish source (Nasdaq):\nhttps://www.nasdaq
+ .com/market-activity/stocks/unp/earnings
 TRANSP:TRANSPARENT
 URL:https://www.nasdaq.com/market-activity/stocks/unp/earnings
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:📊 AXP 실적 (장 전·저녁) · 금융
+SUMMARY:✅ AXP 실적 결과 · 예상 상회 +4.7% · 금융
 DTSTART;VALUE=DATE:20261023
 DTEND;VALUE=DATE:20261024
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-AXP-2026-10-23@investment-calendar
-DESCRIPTION:■ American Express (AXP) 실적 발표\n섹터: 금융 / 테
- 마: 신용카드·결제\n한국시간: 10월 23일(금) 저녁 7:00~9:30
-  사이 (미국 장 시작 전 발표)\n→ 이 실적이 주가에 처음
-  반영되는 미국 정규장 개장: 한국시간 밤 10:30\n미국 현
- 지 날짜: 2026-10-23\n대상 분기: Sep/2026 마감 분기\n시장 예
- 상 EPS(주당순이익): $4.47 (애널리스트 9명)\n작년 같은 분
- 기 EPS: $4.14\n\n※ 나스닥은 '장 전/장 후'만 알려 줘요. 위
-  시간은 대부분의 회사가 발표하는 시간대이고\, 정확한
-  시각은 회사 IR 공지를 확인하세요.\n※ 공개 정보를 자
- 동으로 모은 것이며 투자 권유가 아닙니다.\n\n공식 공시
- (8-K\, 실적 보도자료 포함 · 영어):\nhttps://www.sec.gov/cgi-bin
- /browse-edgar?action=getcompany&CIK=AXP&type=8-K&dateb=&owner=include&coun
- t=10\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/sto
- cks/axp/earnings
+DESCRIPTION:■ American Express (AXP) 실적 발표\n✅ 발표 결과: 
+ 실제 EPS $4.68 · 시장 예상 $4.47 → 예상 상회 +4.7%\n섹터: 
+ 금융 / 테마: 신용카드·결제\n한국시간: 발표 시각 미정 
+ (회사가 아직 장 전/장 후를 알리지 않음)\n미국 현지 날
+ 짜: 2026-10-23\n대상 분기: Sep/2026 마감 분기\n시장 예상 EPS(
+ 주당순이익): $4.47 (애널리스트 9명)\n\n※ 나스닥은 '장 
+ 전/장 후'만 알려 줘요. 위 시간은 대부분의 회사가 발표
+ 하는 시간대이고\, 정확한 시각은 회사 IR 공지를 확인하
+ 세요.\n※ 공개 정보를 자동으로 모은 것이며 투자 권유
+ 가 아닙니다.\n\n공식 공시(8-K\, 실적 보도자료 포함 · 영
+ 어):\nhttps://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AXP&
+ type=8-K&dateb=&owner=include&count=10\nEnglish source (Nasdaq):\nhttps://
+ www.nasdaq.com/market-activity/stocks/axp/earnings
 TRANSP:TRANSPARENT
 URL:https://www.nasdaq.com/market-activity/stocks/axp/earnings
 END:VEVENT
@@ -3442,7 +3445,7 @@ BEGIN:VEVENT
 SUMMARY:📊 VZ 실적 (장 전·저녁) · 커뮤니케이션 서비스
 DTSTART;VALUE=DATE:20261026
 DTEND;VALUE=DATE:20261027
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-VZ-2026-10-26@investment-calendar
 DESCRIPTION:■ Verizon (VZ) 실적 발표\n섹터: 커뮤니케이션 서
  비스 / 테마: 미국 통신(무선·유선)\n한국시간: 10월 26일(
@@ -3465,7 +3468,7 @@ BEGIN:VEVENT
 SUMMARY:📊 AMT 실적 (장 전·저녁) · 부동산
 DTSTART;VALUE=DATE:20261027
 DTEND;VALUE=DATE:20261028
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-AMT-2026-10-27@investment-calendar
 DESCRIPTION:■ American Tower (AMT) 실적 발표\n섹터: 부동산 / 
  테마: 통신 기지국 리츠(부동산)\n한국시간: 10월 27일(화)
@@ -3488,7 +3491,7 @@ BEGIN:VEVENT
 SUMMARY:📊 BA 실적 (장 전·저녁) · 산업재
 DTSTART;VALUE=DATE:20261027
 DTEND;VALUE=DATE:20261028
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-BA-2026-10-27@investment-calendar
 DESCRIPTION:■ Boeing (BA) 실적 발표\n섹터: 산업재 / 테마: 항
  공기 제조\n한국시간: 10월 27일(화) 저녁 7:00~9:30 사이 (미
@@ -3511,7 +3514,7 @@ BEGIN:VEVENT
 SUMMARY:📊 KO 실적 (장 전·저녁) · 필수소비재
 DTSTART;VALUE=DATE:20261027
 DTEND;VALUE=DATE:20261028
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-KO-2026-10-27@investment-calendar
 DESCRIPTION:■ Coca-Cola Company (The) (KO) 실적 발표\n섹터: 필수
  소비재 / 테마: 음료\n한국시간: 10월 27일(화) 저녁 7:00~9:3
@@ -3534,7 +3537,7 @@ BEGIN:VEVENT
 SUMMARY:📊 UPS 실적 (장 전·저녁) · 산업재
 DTSTART;VALUE=DATE:20261027
 DTEND;VALUE=DATE:20261028
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-UPS-2026-10-27@investment-calendar
 DESCRIPTION:■ United Parcel Service (UPS) 실적 발표\n섹터: 산업
  재 / 테마: 택배·물류\n한국시간: 10월 27일(화) 저녁 7:00~9
@@ -3557,7 +3560,7 @@ BEGIN:VEVENT
 SUMMARY:📊 GEV 실적 (장 전·저녁) · 산업재
 DTSTART;VALUE=DATE:20261028
 DTEND;VALUE=DATE:20261029
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-GEV-2026-10-28@investment-calendar
 DESCRIPTION:■ GE Vernova (GEV) 실적 발표\n섹터: 산업재\n한국
  시간: 10월 28일(수) 저녁 7:00~9:30 사이 (미국 장 시작 전 
@@ -3579,7 +3582,7 @@ BEGIN:VEVENT
 SUMMARY:📊 V 실적 (장 후·새벽) · 금융
 DTSTART;VALUE=DATE:20261028
 DTEND;VALUE=DATE:20261029
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-V-2026-10-27@investment-calendar
 DESCRIPTION:■ Visa Inc. (V) 실적 발표\n섹터: 금융 / 테마: 카
  드 결제 네트워크\n한국시간: 10월 28일(수) 새벽 5:00~6:00 
@@ -3600,7 +3603,7 @@ BEGIN:VEVENT
 SUMMARY:📊 BMY 실적 (장 전·저녁) · 헬스케어
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-BMY-2026-10-29@investment-calendar
 DESCRIPTION:■ Bristol Myers Squibb (BMY) 실적 발표\n섹터: 헬스
  케어\n한국시간: 10월 29일(목) 저녁 7:00~9:30 사이 (미국 장
@@ -3622,7 +3625,7 @@ BEGIN:VEVENT
 SUMMARY:📊 CAT 실적 (장 전·저녁) · 산업재
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-CAT-2026-10-29@investment-calendar
 DESCRIPTION:■ Caterpillar Inc. (CAT) 실적 발표\n섹터: 산업재 / 
  테마: 건설·광산 장비\n한국시간: 10월 29일(목) 저녁 7:00~
@@ -3645,7 +3648,7 @@ BEGIN:VEVENT
 SUMMARY:📊 FDX 실적 (장 후·새벽) · 산업재
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-FDX-2026-10-28@investment-calendar
 DESCRIPTION:■ FedEx (FDX) 실적 발표\n섹터: 산업재 / 테마: 택
  배·물류\n한국시간: 10월 29일(목) 새벽 5:00~6:00 사이 (미
@@ -3666,7 +3669,7 @@ BEGIN:VEVENT
 SUMMARY:📊 GOOG 실적 (장 후·새벽) · 커뮤니케이션 서비스
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-GOOG-2026-10-28@investment-calendar
 DESCRIPTION:■ Alphabet Inc. (Class C) (GOOG) 실적 발표\n섹터: 커
  뮤니케이션 서비스 / 테마: 검색·유튜브 광고\, 클라우
@@ -3688,7 +3691,7 @@ BEGIN:VEVENT
 SUMMARY:📊 LIN 실적 (장 전·저녁) · 소재
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-LIN-2026-10-29@investment-calendar
 DESCRIPTION:■ Linde plc (LIN) 실적 발표\n섹터: 소재 / 테마: 
  산업용 가스\n한국시간: 10월 29일(목) 저녁 7:00~9:30 사이 (
@@ -3711,7 +3714,7 @@ BEGIN:VEVENT
 SUMMARY:📊 LLY 실적 (장 전·저녁) · 헬스케어
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-LLY-2026-10-29@investment-calendar
 DESCRIPTION:■ Lilly (Eli) (LLY) 실적 발표\n섹터: 헬스케어 / 
  테마: 비만·당뇨 치료제\, 제약\n한국시간: 10월 29일(목) 
@@ -3734,7 +3737,7 @@ BEGIN:VEVENT
 SUMMARY:📊 MA 실적 (장 전·저녁) · 금융
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-MA-2026-10-29@investment-calendar
 DESCRIPTION:■ Mastercard (MA) 실적 발표\n섹터: 금융 / 테마: 
  카드 결제 네트워크\n한국시간: 10월 29일(목) 저녁 7:00~9:3
@@ -3757,7 +3760,7 @@ BEGIN:VEVENT
 SUMMARY:📊 MO 실적 (장 전·저녁) · 필수소비재
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-MO-2026-10-29@investment-calendar
 DESCRIPTION:■ Altria (MO) 실적 발표\n섹터: 필수소비재\n한국
  시간: 10월 29일(목) 저녁 7:00~9:30 사이 (미국 장 시작 전 
@@ -3779,7 +3782,7 @@ BEGIN:VEVENT
 SUMMARY:📊 MRK 실적 (장 전·저녁) · 헬스케어
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-MRK-2026-10-29@investment-calendar
 DESCRIPTION:■ Merck & Co. (MRK) 실적 발표\n섹터: 헬스케어 / 
  테마: 제약(면역항암제)\n한국시간: 10월 29일(목) 저녁 7:0
@@ -3802,7 +3805,7 @@ BEGIN:VEVENT
 SUMMARY:📊 MSFT 실적 (장 후·새벽) · 정보기술
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-MSFT-2026-10-28@investment-calendar
 DESCRIPTION:■ Microsoft (MSFT) 실적 발표\n섹터: 정보기술 / 테
  마: 윈도우·오피스\, 클라우드(Azure)·AI\n한국시간: 10월 2
@@ -3824,7 +3827,7 @@ BEGIN:VEVENT
 SUMMARY:📊 NOW 실적 (장 후·새벽) · 정보기술
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-NOW-2026-10-28@investment-calendar
 DESCRIPTION:■ ServiceNow (NOW) 실적 발표\n섹터: 정보기술\n한
  국시간: 10월 29일(목) 새벽 5:00~6:00 사이 (미국 장 마감 후
@@ -3845,7 +3848,7 @@ BEGIN:VEVENT
 SUMMARY:📊 TMUS 실적 (장 후·새벽) · 커뮤니케이션 서비스
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-TMUS-2026-10-28@investment-calendar
 DESCRIPTION:■ T-Mobile US (TMUS) 실적 발표\n섹터: 커뮤니케이
  션 서비스 / 테마: 미국 통신(무선)\n한국시간: 10월 29일(
@@ -3867,14 +3870,14 @@ BEGIN:VEVENT
 SUMMARY:🏦 FOMC 금리 결정
 DTSTART:20261028T180000Z
 DTEND:20261028T190000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:fomc-2026-10-28@investment-calendar
 DESCRIPTION:■ FOMC(미국 연방공개시장위원회) 기준금리 결
  정\n섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 
  금리\n한국시간: 10월 29일(목) 오전 3:00 성명서 발표 (미 
  동부 14:00)\n기자회견: 10월 29일(목) 오전 3:30부터 (미 동
  부 14:30)\n미국 현지 날짜: 2026-10-28 (이틀 회의의 둘째 날)
- \n\n현재 기준금리(목표 범위): 3.75~4.00% (2026-10-23 기준)\n
+ \n\n현재 기준금리(목표 범위): 3.75~4.00% (2026-10-24 기준)\n
  📍 연준 위원들의 금리 전망 (2026년 9월 점도표\, 18명)\n 
  · 2026년 말(올해) 적정 금리 중간값 4.125% — 지금보다 낮
  게 0명 · 지금 수준 2명 · 높게 16명\n · 2027년 말(내년) 
@@ -3895,7 +3898,7 @@ BEGIN:VEVENT
 SUMMARY:🏭 GDP(국내총생산) · 2026년 3분기분 속보치
 DTSTART:20261029T123000Z
 DTEND:20261029T130000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-gdp-2026-Q3-속보치-2026-10-29@investment-calendar
 DESCRIPTION:■ GDP(국내총생산) 발표 · 2026년 3분기분 속보
  치\n한국시간: 10월 29일(목) 오후 9:30 발표 (미 동부 08:30)\
@@ -3913,7 +3916,7 @@ BEGIN:VEVENT
 SUMMARY:🛒 PCE 물가(개인소비지출) · 2026년 9월분
 DTSTART:20261029T123000Z
 DTEND:20261029T130000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-pce-2026-09-x-2026-10-29@investment-calendar
 DESCRIPTION:■ PCE 물가(개인소비지출) 발표 · 2026년 9월분\n
  한국시간: 10월 29일(목) 오후 9:30 발표 (미 동부 08:30)\n왜 
@@ -3931,7 +3934,7 @@ BEGIN:VEVENT
 SUMMARY:📊 ABBV 실적 (장 전·저녁) · 헬스케어
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-ABBV-2026-10-30@investment-calendar
 DESCRIPTION:■ AbbVie (ABBV) 실적 발표\n섹터: 헬스케어 / 테마
  : 제약(면역질환 치료제)\n한국시간: 10월 30일(금) 저녁 7:
@@ -3954,7 +3957,7 @@ BEGIN:VEVENT
 SUMMARY:📊 AMZN 실적 (장 후·새벽) · 경기소비재
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-AMZN-2026-10-29@investment-calendar
 DESCRIPTION:■ Amazon (AMZN) 실적 발표\n섹터: 경기소비재 / 테
  마: 전자상거래\, 클라우드(AWS)\n한국시간: 10월 30일(금) 
@@ -3976,7 +3979,7 @@ BEGIN:VEVENT
 SUMMARY:📊 CVX 실적 (장 전·저녁) · 에너지
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-CVX-2026-10-30@investment-calendar
 DESCRIPTION:■ Chevron Corporation (CVX) 실적 발표\n섹터: 에너지
   / 테마: 석유·가스\n한국시간: 10월 30일(금) 저녁 7:00~9:30
@@ -3999,7 +4002,7 @@ BEGIN:VEVENT
 SUMMARY:📊 GD 실적 (장 전·저녁) · 산업재
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-GD-2026-10-30@investment-calendar
 DESCRIPTION:■ General Dynamics (GD) 실적 발표\n섹터: 산업재 / 
  테마: 방산(잠수함·장갑차)\, 비즈니스 제트기\n한국시
@@ -4022,7 +4025,7 @@ BEGIN:VEVENT
 SUMMARY:📊 GILD 실적 (장 후·새벽) · 헬스케어
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-GILD-2026-10-29@investment-calendar
 DESCRIPTION:■ Gilead Sciences (GILD) 실적 발표\n섹터: 헬스케어
   / 테마: 바이오 의약품(항바이러스)\n한국시간: 10월 30일
@@ -4044,7 +4047,7 @@ BEGIN:VEVENT
 SUMMARY:📊 INTC 실적 (장 후·새벽) · 정보기술
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-INTC-2026-10-29@investment-calendar
 DESCRIPTION:■ Intel (INTC) 실적 발표\n섹터: 정보기술 / 테마:
   반도체(CPU)\, 파운드리(위탁생산)\n한국시간: 10월 30일(
@@ -4066,7 +4069,7 @@ BEGIN:VEVENT
 SUMMARY:📊 MDLZ 실적 (장 후·새벽) · 필수소비재
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-MDLZ-2026-10-29@investment-calendar
 DESCRIPTION:■ Mondelez International (MDLZ) 실적 발표\n섹터: 필
  수소비재\n한국시간: 10월 30일(금) 새벽 5:00~6:00 사이 (미
@@ -4087,7 +4090,7 @@ BEGIN:VEVENT
 SUMMARY:📊 SBUX 실적 (장 후·새벽) · 경기소비재
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-SBUX-2026-10-29@investment-calendar
 DESCRIPTION:■ Starbucks (SBUX) 실적 발표\n섹터: 경기소비재 / 
  테마: 커피 전문점\n한국시간: 10월 30일(금) 새벽 5:00~6:00 
@@ -4108,7 +4111,7 @@ BEGIN:VEVENT
 SUMMARY:📊 SNDK 실적 (장 후·새벽) · 정보기술
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-SNDK-2026-10-29@investment-calendar
 DESCRIPTION:■ Sandisk (SNDK) 실적 발표\n섹터: 정보기술\n한국
  시간: 10월 30일(금) 새벽 5:00~6:00 사이 (미국 장 마감 후 
@@ -4129,7 +4132,7 @@ BEGIN:VEVENT
 SUMMARY:📊 XOM 실적 (장 전·저녁) · 에너지
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-XOM-2026-10-30@investment-calendar
 DESCRIPTION:■ ExxonMobil (XOM) 실적 발표\n섹터: 에너지 / 테마
  : 석유·가스\n한국시간: 10월 30일(금) 저녁 7:00~9:30 사이 (
@@ -4152,7 +4155,7 @@ BEGIN:VEVENT
 SUMMARY:📊 AAPL 실적 (장 후·새벽) · 정보기술
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-AAPL-2026-11-02@investment-calendar
 DESCRIPTION:■ Apple Inc. (AAPL) 실적 발표\n섹터: 정보기술 / 
  테마: 아이폰·맥·앱스토어 등 서비스\n한국시간: 11월 3
@@ -4174,7 +4177,7 @@ BEGIN:VEVENT
 SUMMARY:📊 PFE 실적 (장 전·저녁) · 헬스케어
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-PFE-2026-11-03@investment-calendar
 DESCRIPTION:■ Pfizer (PFE) 실적 발표\n섹터: 헬스케어 / 테마:
   제약\, 백신\n한국시간: 11월 3일(화) 저녁 8:00~10:30 사이 (
@@ -4197,7 +4200,7 @@ BEGIN:VEVENT
 SUMMARY:📊 PLTR 실적 (장 후·새벽) · 정보기술
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-PLTR-2026-11-02@investment-calendar
 DESCRIPTION:■ Palantir Technologies (PLTR) 실적 발표\n섹터: 정보
  기술 / 테마: 데이터 분석·AI 소프트웨어(정부·기업)\n한
@@ -4219,7 +4222,7 @@ BEGIN:VEVENT
 SUMMARY:📊 AMD 실적 (장 후·새벽) · 정보기술
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-AMD-2026-11-03@investment-calendar
 DESCRIPTION:■ Advanced Micro Devices (AMD) 실적 발표\n섹터: 정보
  기술 / 테마: 반도체(CPU·GPU)\, AI 가속기\n한국시간: 11월 4
@@ -4241,7 +4244,7 @@ BEGIN:VEVENT
 SUMMARY:📊 AMGN 실적 (장 후·새벽) · 헬스케어
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-AMGN-2026-11-03@investment-calendar
 DESCRIPTION:■ Amgen (AMGN) 실적 발표\n섹터: 헬스케어 / 테마:
   바이오 의약품\n한국시간: 11월 4일(수) 오전 6:00~7:00 사
@@ -4262,7 +4265,7 @@ BEGIN:VEVENT
 SUMMARY:📊 ANET 실적 (장 후·새벽) · 정보기술
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-ANET-2026-11-03@investment-calendar
 DESCRIPTION:■ Arista Networks (ANET) 실적 발표\n섹터: 정보기술
  \n한국시간: 11월 4일(수) 오전 6:00~7:00 사이 (미국 장 마감
@@ -4283,7 +4286,7 @@ BEGIN:VEVENT
 SUMMARY:📊 BKNG 실적 (장 후·새벽) · 경기소비재
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-BKNG-2026-11-03@investment-calendar
 DESCRIPTION:■ Booking Holdings (BKNG) 실적 발표\n섹터: 경기소
  비재 / 테마: 온라인 여행 예약\n한국시간: 11월 4일(수) 
@@ -4305,7 +4308,7 @@ BEGIN:VEVENT
 SUMMARY:📊 CVS 실적 (장 전·저녁) · 헬스케어
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-CVS-2026-11-04@investment-calendar
 DESCRIPTION:■ CVS Health (CVS) 실적 발표\n섹터: 헬스케어 / 테
  마: 약국 체인\, 건강보험\n한국시간: 11월 4일(수) 저녁 8:
@@ -4328,7 +4331,7 @@ BEGIN:VEVENT
 SUMMARY:📊 EMR 실적 (장 전·저녁) · 산업재
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-EMR-2026-11-04@investment-calendar
 DESCRIPTION:■ Emerson Electric (EMR) 실적 발표\n섹터: 산업재\n
  한국시간: 11월 4일(수) 저녁 8:00~10:30 사이 (미국 장 시작 
@@ -4350,7 +4353,7 @@ BEGIN:VEVENT
 SUMMARY:📊 MCD 실적 (장 전·저녁) · 경기소비재
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-MCD-2026-11-04@investment-calendar
 DESCRIPTION:■ McDonald's (MCD) 실적 발표\n섹터: 경기소비재 / 
  테마: 외식(패스트푸드)\n한국시간: 11월 4일(수) 저녁 8:00
@@ -4373,7 +4376,7 @@ BEGIN:VEVENT
 SUMMARY:📊 UBER 실적 (장 전·저녁) · 산업재
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-UBER-2026-11-04@investment-calendar
 DESCRIPTION:■ Uber (UBER) 실적 발표\n섹터: 산업재 / 테마: 차
  량 호출\, 음식 배달\n한국시간: 11월 4일(수) 저녁 8:00~10:3
@@ -4396,7 +4399,7 @@ BEGIN:VEVENT
 SUMMARY:📊 COP 실적 (장 전·저녁) · 에너지
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-COP-2026-11-05@investment-calendar
 DESCRIPTION:■ ConocoPhillips (COP) 실적 발표\n섹터: 에너지 / 
  테마: 석유·가스 생산\n한국시간: 11월 5일(목) 저녁 8:00~1
@@ -4419,7 +4422,7 @@ BEGIN:VEVENT
 SUMMARY:📊 DUK 실적 (장 전·저녁) · 유틸리티
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-DUK-2026-11-05@investment-calendar
 DESCRIPTION:■ Duke Energy (DUK) 실적 발표\n섹터: 유틸리티 / 
  테마: 전력\n한국시간: 11월 5일(목) 저녁 8:00~10:30 사이 (
@@ -4442,7 +4445,7 @@ BEGIN:VEVENT
 SUMMARY:📊 QCOM 실적 (장 후·새벽) · 정보기술
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-QCOM-2026-11-04@investment-calendar
 DESCRIPTION:■ Qualcomm (QCOM) 실적 발표\n섹터: 정보기술 / 테
  마: 스마트폰용 반도체(스냅드래곤)\n한국시간: 11월 5일(
@@ -4464,7 +4467,7 @@ BEGIN:VEVENT
 SUMMARY:📊 SO 실적 (장 전·저녁) · 유틸리티
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-SO-2026-11-05@investment-calendar
 DESCRIPTION:■ Southern Company (SO) 실적 발표\n섹터: 유틸리티 
  / 테마: 전력\n한국시간: 11월 5일(목) 저녁 8:00~10:30 사이 (
@@ -4487,7 +4490,7 @@ BEGIN:VEVENT
 SUMMARY:📊 BRK.B 실적 (시각 미정) · 금융
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-BRKB-2026-11-06@investment-calendar
 DESCRIPTION:■ Berkshire Hathaway (BRK.B) 실적 발표\n섹터: 금융 /
   테마: 버크셔 해서웨이 지주회사(보험·철도·투자)\n한
@@ -4509,7 +4512,7 @@ BEGIN:VEVENT
 SUMMARY:👷 고용보고서(일자리·실업률) · 2026년 10월분
 DTSTART:20261106T133000Z
 DTEND:20261106T140000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-jobs-2026-10-x-2026-11-06@investment-calendar
 DESCRIPTION:■ 고용보고서(일자리·실업률) 발표 · 2026년 10
  월분\n한국시간: 11월 6일(금) 오후 10:30 발표 (미 동부 08:3
@@ -4528,7 +4531,7 @@ BEGIN:VEVENT
 SUMMARY:📈 소비자물가지수(CPI) · 2026년 10월분
 DTSTART:20261110T133000Z
 DTEND:20261110T140000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-cpi-2026-10-x-2026-11-10@investment-calendar
 DESCRIPTION:■ 소비자물가지수(CPI) 발표 · 2026년 10월분\n한
  국시간: 11월 10일(화) 오후 10:30 발표 (미 동부 08:30)\n왜 
@@ -4546,7 +4549,7 @@ BEGIN:VEVENT
 SUMMARY:📊 CSCO 실적 (시각 미정) · 정보기술
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261112
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-CSCO-2026-11-11@investment-calendar
 DESCRIPTION:■ Cisco (CSCO) 실적 발표\n섹터: 정보기술 / 테마:
   네트워크 장비\, 보안\n한국시간: 발표 시각 미정 (회사
@@ -4568,7 +4571,7 @@ BEGIN:VEVENT
 SUMMARY:📊 AMAT 실적 (장 후·새벽) · 정보기술
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261114
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-AMAT-2026-11-12@investment-calendar
 DESCRIPTION:■ Applied Materials (AMAT) 실적 발표\n섹터: 정보기
  술\n한국시간: 11월 13일(금) 오전 6:00~7:00 사이 (미국 장 
@@ -4589,7 +4592,7 @@ BEGIN:VEVENT
 SUMMARY:📊 DIS 실적 (장 전·저녁) · 커뮤니케이션 서비스
 DTSTART;VALUE=DATE:20261117
 DTEND;VALUE=DATE:20261118
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-DIS-2026-11-17@investment-calendar
 DESCRIPTION:■ Walt Disney Company (The) (DIS) 실적 발표\n섹터: 커
  뮤니케이션 서비스 / 테마: 미디어·스트리밍(디즈니+)\, 
@@ -4613,7 +4616,7 @@ BEGIN:VEVENT
 SUMMARY:📊 HD 실적 (장 전·저녁) · 경기소비재
 DTSTART;VALUE=DATE:20261117
 DTEND;VALUE=DATE:20261118
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-HD-2026-11-17@investment-calendar
 DESCRIPTION:■ Home Depot (The) (HD) 실적 발표\n섹터: 경기소비
  재 / 테마: 주택 개량 용품 유통\n한국시간: 11월 17일(화) 
@@ -4636,7 +4639,7 @@ BEGIN:VEVENT
 SUMMARY:📊 MDT 실적 (시각 미정) · 헬스케어
 DTSTART;VALUE=DATE:20261117
 DTEND;VALUE=DATE:20261118
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-MDT-2026-11-17@investment-calendar
 DESCRIPTION:■ Medtronic (MDT) 실적 발표\n섹터: 헬스케어 / 테
  마: 의료기기\n한국시간: 발표 시각 미정 (회사가 아직 
@@ -4657,7 +4660,7 @@ BEGIN:VEVENT
 SUMMARY:📊 LOW 실적 (장 전·저녁) · 경기소비재
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-LOW-2026-11-18@investment-calendar
 DESCRIPTION:■ Lowe's (LOW) 실적 발표\n섹터: 경기소비재 / 테
  마: 주택 개량 용품 유통\n한국시간: 11월 18일(수) 저녁 8:
@@ -4680,7 +4683,7 @@ BEGIN:VEVENT
 SUMMARY:📊 NVDA 실적 (시각 미정) · 정보기술
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-NVDA-2026-11-18@investment-calendar
 DESCRIPTION:■ Nvidia (NVDA) 실적 발표\n섹터: 정보기술 / 테마
  : AI 반도체(GPU)·데이터센터\n한국시간: 발표 시각 미정 (
@@ -4702,7 +4705,7 @@ BEGIN:VEVENT
 SUMMARY:📊 PANW 실적 (시각 미정) · 정보기술
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-PANW-2026-11-18@investment-calendar
 DESCRIPTION:■ Palo Alto Networks (PANW) 실적 발표\n섹터: 정보기
  술\n한국시간: 발표 시각 미정 (회사가 아직 장 전/장 후
@@ -4723,7 +4726,7 @@ BEGIN:VEVENT
 SUMMARY:📊 INTU 실적 (시각 미정) · 정보기술
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-INTU-2026-11-19@investment-calendar
 DESCRIPTION:■ Intuit (INTU) 실적 발표\n섹터: 정보기술\n한국
  시간: 발표 시각 미정 (회사가 아직 장 전/장 후를 알리
@@ -4744,7 +4747,7 @@ BEGIN:VEVENT
 SUMMARY:📊 WMT 실적 (장 전·저녁) · 필수소비재
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-WMT-2026-11-19@investment-calendar
 DESCRIPTION:■ Walmart (WMT) 실적 발표\n섹터: 필수소비재 / 테
  마: 대형 할인 유통\n한국시간: 11월 19일(목) 저녁 8:00~10:3
@@ -4767,7 +4770,7 @@ BEGIN:VEVENT
 SUMMARY:📊 DELL 실적 (시각 미정) · 정보기술
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-DELL-2026-11-24@investment-calendar
 DESCRIPTION:■ Dell Technologies (DELL) 실적 발표\n섹터: 정보기
  술\n한국시간: 발표 시각 미정 (회사가 아직 장 전/장 후
@@ -4788,7 +4791,7 @@ BEGIN:VEVENT
 SUMMARY:📊 DE 실적 (장 전·저녁) · 산업재
 DTSTART;VALUE=DATE:20261125
 DTEND;VALUE=DATE:20261126
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-DE-2026-11-25@investment-calendar
 DESCRIPTION:■ Deere & Company (DE) 실적 발표\n섹터: 산업재 / 
  테마: 농기계\n한국시간: 11월 25일(수) 저녁 8:00~10:30 사이
@@ -4811,7 +4814,7 @@ BEGIN:VEVENT
 SUMMARY:🏭 GDP(국내총생산) · 2026년 3분기분 잠정치
 DTSTART:20261125T133000Z
 DTEND:20261125T140000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-gdp-2026-Q3-잠정치-2026-11-25@investment-calendar
 DESCRIPTION:■ GDP(국내총생산) 발표 · 2026년 3분기분 잠정
  치\n한국시간: 11월 25일(수) 오후 10:30 발표 (미 동부 08:30)
@@ -4829,7 +4832,7 @@ BEGIN:VEVENT
 SUMMARY:🛒 PCE 물가(개인소비지출) · 2026년 10월분
 DTSTART:20261125T133000Z
 DTEND:20261125T140000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-pce-2026-10-x-2026-11-25@investment-calendar
 DESCRIPTION:■ PCE 물가(개인소비지출) 발표 · 2026년 10월분\
  n한국시간: 11월 25일(수) 오후 10:30 발표 (미 동부 08:30)\n
@@ -4845,7 +4848,7 @@ BEGIN:VEVENT
 SUMMARY:🇰🇷 한국은행 기준금리 결정
 DTSTART;VALUE=DATE:20261126
 DTEND;VALUE=DATE:20261127
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:bok-2026-11-26@investment-calendar
 DESCRIPTION:■ 한국은행 금융통화위원회 기준금리 결정\n
  섹터/테마: 거시경제 · 한국 기준금리 · 원/달러 환율\n
@@ -4864,7 +4867,7 @@ BEGIN:VEVENT
 SUMMARY:📊 CRM 실적 (시각 미정) · 정보기술
 DTSTART;VALUE=DATE:20261202
 DTEND;VALUE=DATE:20261203
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-CRM-2026-12-02@investment-calendar
 DESCRIPTION:■ Salesforce (CRM) 실적 발표\n섹터: 정보기술 / 테
  마: 기업용 클라우드 소프트웨어(CRM)\n한국시간: 발표 시
@@ -4886,7 +4889,7 @@ BEGIN:VEVENT
 SUMMARY:👷 고용보고서(일자리·실업률) · 2026년 11월분
 DTSTART:20261204T133000Z
 DTEND:20261204T140000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-jobs-2026-11-x-2026-12-04@investment-calendar
 DESCRIPTION:■ 고용보고서(일자리·실업률) 발표 · 2026년 11
  월분\n한국시간: 12월 4일(금) 오후 10:30 발표 (미 동부 08:3
@@ -4902,7 +4905,7 @@ BEGIN:VEVENT
 SUMMARY:📊 ADBE 실적 (시각 미정) · 정보기술
 DTSTART;VALUE=DATE:20261209
 DTEND;VALUE=DATE:20261210
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-ADBE-2026-12-09@investment-calendar
 DESCRIPTION:■ Adobe Inc. (ADBE) 실적 발표\n섹터: 정보기술 / 
  테마: 포토샵 등 창작 소프트웨어\, 생성형 AI\n한국시간:
@@ -4924,7 +4927,7 @@ BEGIN:VEVENT
 SUMMARY:📊 ORCL 실적 (시각 미정) · 정보기술
 DTSTART;VALUE=DATE:20261209
 DTEND;VALUE=DATE:20261210
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-ORCL-2026-12-09@investment-calendar
 DESCRIPTION:■ Oracle Corporation (ORCL) 실적 발표\n섹터: 정보기
  술 / 테마: 데이터베이스\, 클라우드 인프라\n한국시간: 
@@ -4946,7 +4949,7 @@ BEGIN:VEVENT
 SUMMARY:📊 AVGO 실적 (시각 미정) · 정보기술
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-AVGO-2026-12-10@investment-calendar
 DESCRIPTION:■ Broadcom (AVGO) 실적 발표\n섹터: 정보기술 / 테
  마: AI 맞춤형 반도체·네트워크 칩\, 소프트웨어\n한국시
@@ -4968,7 +4971,7 @@ BEGIN:VEVENT
 SUMMARY:📊 COST 실적 (시각 미정) · 필수소비재
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-COST-2026-12-10@investment-calendar
 DESCRIPTION:■ Costco (COST) 실적 발표\n섹터: 필수소비재 / 테
  마: 회원제 창고형 유통\n한국시간: 발표 시각 미정 (회
@@ -4990,7 +4993,7 @@ BEGIN:VEVENT
 SUMMARY:🏦 FOMC 금리 결정 (+점도표)
 DTSTART:20261209T190000Z
 DTEND:20261209T200000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:fomc-2026-12-09@investment-calendar
 DESCRIPTION:■ FOMC(미국 연방공개시장위원회) 기준금리 결
  정\n섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 
@@ -4998,7 +5001,7 @@ DESCRIPTION:■ FOMC(미국 연방공개시장위원회) 기준금리 결
  동부 14:00)\n기자회견: 12월 10일(목) 오전 4:30부터 (미 동
  부 14:30)\n미국 현지 날짜: 2026-12-09 (이틀 회의의 둘째 날)
  \n이번 회의에서는 경제전망(SEP)과 점도표도 함께 공개
- 됩니다.\n\n현재 기준금리(목표 범위): 3.75~4.00% (2026-10-23 
+ 됩니다.\n\n현재 기준금리(목표 범위): 3.75~4.00% (2026-10-24 
  기준)\n📍 연준 위원들의 금리 전망 (2026년 9월 점도표\, 
  18명)\n · 2026년 말(올해) 적정 금리 중간값 4.125% — 지금
  보다 낮게 0명 · 지금 수준 2명 · 높게 16명\n · 2027년 말(
@@ -5019,7 +5022,7 @@ BEGIN:VEVENT
 SUMMARY:📈 소비자물가지수(CPI) · 2026년 11월분
 DTSTART:20261210T133000Z
 DTEND:20261210T140000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-cpi-2026-11-x-2026-12-10@investment-calendar
 DESCRIPTION:■ 소비자물가지수(CPI) 발표 · 2026년 11월분\n한
  국시간: 12월 10일(목) 오후 10:30 발표 (미 동부 08:30)\n왜 
@@ -5034,7 +5037,7 @@ BEGIN:VEVENT
 SUMMARY:📊 MU 실적 (시각 미정) · 정보기술
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-MU-2026-12-16@investment-calendar
 DESCRIPTION:■ Micron Technology (MU) 실적 발표\n섹터: 정보기술
   / 테마: 메모리 반도체(D램·HBM·낸드)\n한국시간: 발표 
@@ -5056,7 +5059,7 @@ BEGIN:VEVENT
 SUMMARY:📊 ACN 실적 (시각 미정) · 정보기술
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:earnings-ACN-2026-12-17@investment-calendar
 DESCRIPTION:■ Accenture (ACN) 실적 발표\n섹터: 정보기술 / 테
  마: IT 컨설팅·아웃소싱\n한국시간: 발표 시각 미정 (회
@@ -5078,7 +5081,7 @@ BEGIN:VEVENT
 SUMMARY:🏭 GDP(국내총생산) · 2026년 3분기분
 DTSTART:20261223T133000Z
 DTEND:20261223T140000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-gdp-2026-Q3-x-2026-12-23@investment-calendar
 DESCRIPTION:■ GDP(국내총생산) 발표 · 2026년 3분기분\n한국
  시간: 12월 23일(수) 오후 10:30 발표 (미 동부 08:30)\n왜 중
@@ -5096,7 +5099,7 @@ BEGIN:VEVENT
 SUMMARY:🛒 PCE 물가(개인소비지출) · 2026년 11월분
 DTSTART:20261223T133000Z
 DTEND:20261223T140000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-pce-2026-11-x-2026-12-23@investment-calendar
 DESCRIPTION:■ PCE 물가(개인소비지출) 발표 · 2026년 11월분\
  n한국시간: 12월 23일(수) 오후 10:30 발표 (미 동부 08:30)\n
@@ -5112,7 +5115,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ PEP 실적 예상일 · 필수소비재
 DTSTART;VALUE=DATE:20270107
 DTEND;VALUE=DATE:20270108
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-PEP-2027-01-07@investment-calendar
 DESCRIPTION:■ PepsiCo (PEP) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 필수소비재 / 테마: 음료·스낵\n예상 날짜(
@@ -5131,7 +5134,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ C 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-C-2027-01-12@investment-calendar
 DESCRIPTION:■ Citigroup (C) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 금융 / 테마: 대형 은행\, 글로벌 금융\n예상 
@@ -5150,7 +5153,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ GS 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-GS-2027-01-12@investment-calendar
 DESCRIPTION:■ Goldman Sachs (GS) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 금융 / 테마: 투자은행·자산운용\n예상 
@@ -5169,7 +5172,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ JNJ 실적 예상일 · 헬스케어
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-JNJ-2027-01-12@investment-calendar
 DESCRIPTION:■ Johnson & Johnson (JNJ) 실적 발표 예상일 — 아직
   확정 아님\n섹터: 헬스케어 / 테마: 제약\, 의료기기\n예
@@ -5188,7 +5191,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ JPM 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-JPM-2027-01-12@investment-calendar
 DESCRIPTION:■ JPMorgan Chase (JPM) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 금융 / 테마: 미국 최대 은행\, 투자은
@@ -5207,7 +5210,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ UNH 실적 예상일 · 헬스케어
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-UNH-2027-01-12@investment-calendar
 DESCRIPTION:■ UnitedHealth Group (UNH) 실적 발표 예상일 — 아
  직 확정 아님\n섹터: 헬스케어 / 테마: 건강보험\, 의료 
@@ -5226,7 +5229,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ WFC 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-WFC-2027-01-12@investment-calendar
 DESCRIPTION:■ Wells Fargo (WFC) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 금융 / 테마: 대형 은행\n예상 날짜(미국):
@@ -5245,7 +5248,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ BAC 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270113
 DTEND;VALUE=DATE:20270114
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-BAC-2027-01-13@investment-calendar
 DESCRIPTION:■ Bank of America (BAC) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 금융 / 테마: 대형 은행\n예상 날짜(미
@@ -5264,7 +5267,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ BLK 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270113
 DTEND;VALUE=DATE:20270114
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-BLK-2027-01-13@investment-calendar
 DESCRIPTION:■ BlackRock (BLK) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 금융 / 테마: 자산운용(ETF 아이셰어즈)\n예상
@@ -5283,7 +5286,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ MS 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270113
 DTEND;VALUE=DATE:20270114
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-MS-2027-01-13@investment-calendar
 DESCRIPTION:■ Morgan Stanley (MS) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 금융 / 테마: 투자은행·자산관리\n예상 
@@ -5302,7 +5305,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ BNY 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270114
 DTEND;VALUE=DATE:20270115
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-BNY-2027-01-14@investment-calendar
 DESCRIPTION:■ BNY Mellon (BNY) 실적 발표 예상일 — 아직 확정
   아님\n섹터: 금융\n예상 날짜(미국): 2027-01-14(목) 전후\n
@@ -5321,7 +5324,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ SCHW 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270114
 DTEND;VALUE=DATE:20270115
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-SCHW-2027-01-14@investment-calendar
 DESCRIPTION:■ Charles Schwab Corporation (SCHW) 실적 발표 예상일 
  — 아직 확정 아님\n섹터: 금융 / 테마: 증권 중개·자산
@@ -5340,7 +5343,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ USB 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270114
 DTEND;VALUE=DATE:20270115
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-USB-2027-01-14@investment-calendar
 DESCRIPTION:■ U.S. Bancorp (USB) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 금융\n예상 날짜(미국): 2027-01-14(목) 전후\
@@ -5359,7 +5362,7 @@ BEGIN:VEVENT
 SUMMARY:🛍️ 소매판매 · 2026년 12월분
 DTSTART:20270115T133000Z
 DTEND:20270115T140000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-retail-2026-12-x-2027-01-15@investment-calendar
 DESCRIPTION:■ 소매판매 발표 · 2026년 12월분\n한국시간: 1
  월 15일(금) 오후 10:30 발표 (미 동부 08:30)\n왜 중요할까: 
@@ -5374,7 +5377,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ COF 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270119
 DTEND;VALUE=DATE:20270120
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-COF-2027-01-19@investment-calendar
 DESCRIPTION:■ Capital One (COF) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 금융\n예상 날짜(미국): 2027-01-19(화) 전후\
@@ -5393,7 +5396,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ GE 실적 예상일 · 산업재
 DTSTART;VALUE=DATE:20270119
 DTEND;VALUE=DATE:20270120
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-GE-2027-01-19@investment-calendar
 DESCRIPTION:■ GE Aerospace (GE) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 산업재 / 테마: 항공기 엔진\n예상 날짜(
@@ -5412,7 +5415,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ GM 실적 예상일 · 경기소비재
 DTSTART;VALUE=DATE:20270119
 DTEND;VALUE=DATE:20270120
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-GM-2027-01-19@investment-calendar
 DESCRIPTION:■ General Motors (GM) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 경기소비재 / 테마: 자동차\n예상 날짜(미
@@ -5431,7 +5434,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ ISRG 실적 예상일 · 헬스케어
 DTSTART;VALUE=DATE:20270119
 DTEND;VALUE=DATE:20270120
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-ISRG-2027-01-19@investment-calendar
 DESCRIPTION:■ Intuitive Surgical (ISRG) 실적 발표 예상일 — 아
  직 확정 아님\n섹터: 헬스케어 / 테마: 수술 로봇\n예상 
@@ -5450,7 +5453,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ MMM 실적 예상일 · 산업재
 DTSTART;VALUE=DATE:20270119
 DTEND;VALUE=DATE:20270120
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-MMM-2027-01-19@investment-calendar
 DESCRIPTION:■ 3M (MMM) 실적 발표 예상일 — 아직 확정 아님\
  n섹터: 산업재\n예상 날짜(미국): 2027-01-19(화) 전후\n지난
@@ -5469,7 +5472,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ NFLX 실적 예상일 · 커뮤니케이션 서비스
 DTSTART;VALUE=DATE:20270119
 DTEND;VALUE=DATE:20270120
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-NFLX-2027-01-19@investment-calendar
 DESCRIPTION:■ Netflix (NFLX) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 커뮤니케이션 서비스 / 테마: 동영상 스트리
@@ -5488,7 +5491,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ RTX 실적 예상일 · 산업재
 DTSTART;VALUE=DATE:20270119
 DTEND;VALUE=DATE:20270120
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-RTX-2027-01-19@investment-calendar
 DESCRIPTION:■ RTX Corporation (RTX) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 산업재 / 테마: 방산·항공 엔진\n예상 
@@ -5507,7 +5510,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ ABT 실적 예상일 · 헬스케어
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-ABT-2027-01-20@investment-calendar
 DESCRIPTION:■ Abbott Laboratories (ABT) 실적 발표 예상일 — 아
  직 확정 아님\n섹터: 헬스케어 / 테마: 의료기기·진단\n
@@ -5526,7 +5529,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ DHR 실적 예상일 · 헬스케어
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-DHR-2027-01-20@investment-calendar
 DESCRIPTION:■ Danaher Corporation (DHR) 실적 발표 예상일 — 아
  직 확정 아님\n섹터: 헬스케어\n예상 날짜(미국): 2027-01-20
@@ -5545,7 +5548,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ IBM 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-IBM-2027-01-20@investment-calendar
 DESCRIPTION:■ IBM (IBM) 실적 발표 예상일 — 아직 확정 아님
  \n섹터: 정보기술 / 테마: 기업 IT 서비스\, 하이브리드 클
@@ -5565,7 +5568,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ LRCX 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-LRCX-2027-01-20@investment-calendar
 DESCRIPTION:■ Lam Research (LRCX) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 정보기술\n예상 날짜(미국): 2027-01-20(수) 
@@ -5584,7 +5587,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ META 실적 예상일 · 커뮤니케이션 서비스
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-META-2027-01-20@investment-calendar
 DESCRIPTION:■ Meta Platforms (META) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 커뮤니케이션 서비스 / 테마: 페이스북
@@ -5604,7 +5607,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ NEE 실적 예상일 · 유틸리티
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-NEE-2027-01-20@investment-calendar
 DESCRIPTION:■ NextEra Energy (NEE) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 유틸리티 / 테마: 전력·신재생 에너지\
@@ -5623,7 +5626,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ PM 실적 예상일 · 필수소비재
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-PM-2027-01-20@investment-calendar
 DESCRIPTION:■ Philip Morris International (PM) 실적 발표 예상일 
  — 아직 확정 아님\n섹터: 필수소비재\n예상 날짜(미국): 
@@ -5642,7 +5645,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ T 실적 예상일 · 커뮤니케이션 서비스
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-T-2027-01-20@investment-calendar
 DESCRIPTION:■ AT&T (T) 실적 발표 예상일 — 아직 확정 아님\
  n섹터: 커뮤니케이션 서비스 / 테마: 미국 통신(무선·유
@@ -5661,7 +5664,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ TMO 실적 예상일 · 헬스케어
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-TMO-2027-01-20@investment-calendar
 DESCRIPTION:■ Thermo Fisher Scientific (TMO) 실적 발표 예상일 —
   아직 확정 아님\n섹터: 헬스케어 / 테마: 연구장비·진단
@@ -5680,7 +5683,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ TSLA 실적 예상일 · 경기소비재
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-TSLA-2027-01-20@investment-calendar
 DESCRIPTION:■ Tesla\, Inc. (TSLA) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 경기소비재 / 테마: 전기차\, 에너지 저장
@@ -5700,7 +5703,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ TXN 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-TXN-2027-01-20@investment-calendar
 DESCRIPTION:■ Texas Instruments (TXN) 실적 발표 예상일 — 아직
   확정 아님\n섹터: 정보기술 / 테마: 아날로그·임베디드 
@@ -5719,7 +5722,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ CMCSA 실적 예상일 · 커뮤니케이션 서비스
 DTSTART;VALUE=DATE:20270121
 DTEND;VALUE=DATE:20270122
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-CMCSA-2027-01-21@investment-calendar
 DESCRIPTION:■ Comcast (CMCSA) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 커뮤니케이션 서비스 / 테마: 케이블·인터
@@ -5739,7 +5742,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ LMT 실적 예상일 · 산업재
 DTSTART;VALUE=DATE:20270121
 DTEND;VALUE=DATE:20270122
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-LMT-2027-01-21@investment-calendar
 DESCRIPTION:■ Lockheed Martin (LMT) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 산업재 / 테마: 방산(전투기·미사일)\n
@@ -5758,7 +5761,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ PG 실적 예상일 · 필수소비재
 DTSTART;VALUE=DATE:20270121
 DTEND;VALUE=DATE:20270122
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-PG-2027-01-21@investment-calendar
 DESCRIPTION:■ Procter & Gamble (PG) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 필수소비재 / 테마: 생활용품\n예상 날
@@ -5777,7 +5780,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ UNP 실적 예상일 · 산업재
 DTSTART;VALUE=DATE:20270121
 DTEND;VALUE=DATE:20270122
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-UNP-2027-01-21@investment-calendar
 DESCRIPTION:■ Union Pacific Corporation (UNP) 실적 발표 예상일 
  — 아직 확정 아님\n섹터: 산업재 / 테마: 철도 운송\n예
@@ -5796,19 +5799,18 @@ BEGIN:VEVENT
 SUMMARY:🗓️ AXP 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270122
 DTEND;VALUE=DATE:20270123
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-AXP-2027-01-22@investment-calendar
 DESCRIPTION:■ American Express (AXP) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 금융 / 테마: 신용카드·결제\n예상 날
- 짜(미국): 2027-01-22(금) 전후\n지난번엔 미국 장 시작 전 
- 발표 (한국시간 같은 날 저녁)\n\n계산 근거: 직전 발표일
-  2026-10-23에서 13주씩 더한 날짜예요.\n실제 날짜는 1~2주 
- 앞뒤로 달라질 수 있어요. 특히 연말 결산 분기(1~2월 발
- 표)는 늦어지기 쉬워요.\n회사가 날짜를 확정하면 이 예
- 상일은 자동으로 확정 일정으로 바뀝니다.\n\n※ 공개 정
- 보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEng
- lish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/axp/e
- arnings
+ 짜(미국): 2027-01-22(금) 전후\n지난번 발표 시각은 알려지
+ 지 않음\n\n계산 근거: 직전 발표일 2026-10-23에서 13주씩 
+ 더한 날짜예요.\n실제 날짜는 1~2주 앞뒤로 달라질 수 있
+ 어요. 특히 연말 결산 분기(1~2월 발표)는 늦어지기 쉬워
+ 요.\n회사가 날짜를 확정하면 이 예상일은 자동으로 확
+ 정 일정으로 바뀝니다.\n\n※ 공개 정보를 자동으로 모은
+  것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhtt
+ ps://www.nasdaq.com/market-activity/stocks/axp/earnings
 TRANSP:TRANSPARENT
 URL:https://www.nasdaq.com/market-activity/stocks/axp/earnings
 END:VEVENT
@@ -5816,7 +5818,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ VZ 실적 예상일 · 커뮤니케이션 서비스
 DTSTART;VALUE=DATE:20270125
 DTEND;VALUE=DATE:20270126
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-VZ-2027-01-25@investment-calendar
 DESCRIPTION:■ Verizon (VZ) 실적 발표 예상일 — 아직 확정 아
  님\n섹터: 커뮤니케이션 서비스 / 테마: 미국 통신(무선·
@@ -5836,7 +5838,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ AMT 실적 예상일 · 부동산
 DTSTART;VALUE=DATE:20270126
 DTEND;VALUE=DATE:20270127
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-AMT-2027-01-26@investment-calendar
 DESCRIPTION:■ American Tower (AMT) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 부동산 / 테마: 통신 기지국 리츠(부동
@@ -5856,7 +5858,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ BA 실적 예상일 · 산업재
 DTSTART;VALUE=DATE:20270126
 DTEND;VALUE=DATE:20270127
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-BA-2027-01-26@investment-calendar
 DESCRIPTION:■ Boeing (BA) 실적 발표 예상일 — 아직 확정 아
  님\n섹터: 산업재 / 테마: 항공기 제조\n예상 날짜(미국): 
@@ -5875,7 +5877,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ KO 실적 예상일 · 필수소비재
 DTSTART;VALUE=DATE:20270126
 DTEND;VALUE=DATE:20270127
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-KO-2027-01-26@investment-calendar
 DESCRIPTION:■ Coca-Cola Company (The) (KO) 실적 발표 예상일 — 
  아직 확정 아님\n섹터: 필수소비재 / 테마: 음료\n예상 날
@@ -5895,7 +5897,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ UPS 실적 예상일 · 산업재
 DTSTART;VALUE=DATE:20270126
 DTEND;VALUE=DATE:20270127
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-UPS-2027-01-26@investment-calendar
 DESCRIPTION:■ United Parcel Service (UPS) 실적 발표 예상일 — 
  아직 확정 아님\n섹터: 산업재 / 테마: 택배·물류\n예상 
@@ -5915,7 +5917,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ GEV 실적 예상일 · 산업재
 DTSTART;VALUE=DATE:20270127
 DTEND;VALUE=DATE:20270128
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-GEV-2027-01-27@investment-calendar
 DESCRIPTION:■ GE Vernova (GEV) 실적 발표 예상일 — 아직 확정
   아님\n섹터: 산업재\n예상 날짜(미국): 2027-01-27(수) 전후\
@@ -5934,7 +5936,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ V 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270127
 DTEND;VALUE=DATE:20270128
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-V-2027-01-26@investment-calendar
 DESCRIPTION:■ Visa Inc. (V) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 금융 / 테마: 카드 결제 네트워크\n예상 날짜
@@ -5954,7 +5956,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ BMY 실적 예상일 · 헬스케어
 DTSTART;VALUE=DATE:20270128
 DTEND;VALUE=DATE:20270129
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-BMY-2027-01-28@investment-calendar
 DESCRIPTION:■ Bristol Myers Squibb (BMY) 실적 발표 예상일 — 아
  직 확정 아님\n섹터: 헬스케어\n예상 날짜(미국): 2027-01-28
@@ -5973,7 +5975,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ CAT 실적 예상일 · 산업재
 DTSTART;VALUE=DATE:20270128
 DTEND;VALUE=DATE:20270129
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-CAT-2027-01-28@investment-calendar
 DESCRIPTION:■ Caterpillar Inc. (CAT) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 산업재 / 테마: 건설·광산 장비\n예상 
@@ -5993,7 +5995,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ FDX 실적 예상일 · 산업재
 DTSTART;VALUE=DATE:20270128
 DTEND;VALUE=DATE:20270129
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-FDX-2027-01-27@investment-calendar
 DESCRIPTION:■ FedEx (FDX) 실적 발표 예상일 — 아직 확정 아
  님\n섹터: 산업재 / 테마: 택배·물류\n예상 날짜(미국): 20
@@ -6012,7 +6014,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ GOOG 실적 예상일 · 커뮤니케이션 서비스
 DTSTART;VALUE=DATE:20270128
 DTEND;VALUE=DATE:20270129
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-GOOG-2027-01-27@investment-calendar
 DESCRIPTION:■ Alphabet Inc. (Class C) (GOOG) 실적 발표 예상일 —
   아직 확정 아님\n섹터: 커뮤니케이션 서비스 / 테마: 검
@@ -6032,7 +6034,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ LIN 실적 예상일 · 소재
 DTSTART;VALUE=DATE:20270128
 DTEND;VALUE=DATE:20270129
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-LIN-2027-01-28@investment-calendar
 DESCRIPTION:■ Linde plc (LIN) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 소재 / 테마: 산업용 가스\n예상 날짜(미국): 
@@ -6051,7 +6053,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ LLY 실적 예상일 · 헬스케어
 DTSTART;VALUE=DATE:20270128
 DTEND;VALUE=DATE:20270129
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-LLY-2027-01-28@investment-calendar
 DESCRIPTION:■ Lilly (Eli) (LLY) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 헬스케어 / 테마: 비만·당뇨 치료제\, 제
@@ -6071,7 +6073,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ MA 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270128
 DTEND;VALUE=DATE:20270129
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-MA-2027-01-28@investment-calendar
 DESCRIPTION:■ Mastercard (MA) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 금융 / 테마: 카드 결제 네트워크\n예상 날짜
@@ -6091,7 +6093,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ MO 실적 예상일 · 필수소비재
 DTSTART;VALUE=DATE:20270128
 DTEND;VALUE=DATE:20270129
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-MO-2027-01-28@investment-calendar
 DESCRIPTION:■ Altria (MO) 실적 발표 예상일 — 아직 확정 아
  님\n섹터: 필수소비재\n예상 날짜(미국): 2027-01-28(목) 전
@@ -6110,7 +6112,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ MRK 실적 예상일 · 헬스케어
 DTSTART;VALUE=DATE:20270128
 DTEND;VALUE=DATE:20270129
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-MRK-2027-01-28@investment-calendar
 DESCRIPTION:■ Merck & Co. (MRK) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 헬스케어 / 테마: 제약(면역항암제)\n예상
@@ -6130,7 +6132,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ MSFT 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270128
 DTEND;VALUE=DATE:20270129
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-MSFT-2027-01-27@investment-calendar
 DESCRIPTION:■ Microsoft (MSFT) 실적 발표 예상일 — 아직 확정
   아님\n섹터: 정보기술 / 테마: 윈도우·오피스\, 클라우
@@ -6150,7 +6152,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ NOW 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270128
 DTEND;VALUE=DATE:20270129
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-NOW-2027-01-27@investment-calendar
 DESCRIPTION:■ ServiceNow (NOW) 실적 발표 예상일 — 아직 확정
   아님\n섹터: 정보기술\n예상 날짜(미국): 2027-01-27(수) 전
@@ -6169,7 +6171,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ TMUS 실적 예상일 · 커뮤니케이션 서비스
 DTSTART;VALUE=DATE:20270128
 DTEND;VALUE=DATE:20270129
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-TMUS-2027-01-27@investment-calendar
 DESCRIPTION:■ T-Mobile US (TMUS) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 커뮤니케이션 서비스 / 테마: 미국 통신(
@@ -6189,14 +6191,14 @@ BEGIN:VEVENT
 SUMMARY:🏦 FOMC 금리 결정
 DTSTART:20270127T190000Z
 DTEND:20270127T200000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:fomc-2027-01-27@investment-calendar
 DESCRIPTION:■ FOMC(미국 연방공개시장위원회) 기준금리 결
  정\n섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 
  금리\n한국시간: 1월 28일(목) 오전 4:00 성명서 발표 (미 
  동부 14:00)\n기자회견: 1월 28일(목) 오전 4:30부터 (미 동부
   14:30)\n미국 현지 날짜: 2027-01-27 (이틀 회의의 둘째 날)\n\
- n현재 기준금리(목표 범위): 3.75~4.00% (2026-10-23 기준)\n📍 
+ n현재 기준금리(목표 범위): 3.75~4.00% (2026-10-24 기준)\n📍 
  연준 위원들의 금리 전망 (2026년 9월 점도표\, 18명)\n · 20
  26년 말(올해) 적정 금리 중간값 4.125% — 지금보다 낮게 0
  명 · 지금 수준 2명 · 높게 16명\n · 2027년 말(내년) 적정 
@@ -6216,7 +6218,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ ABBV 실적 예상일 · 헬스케어
 DTSTART;VALUE=DATE:20270129
 DTEND;VALUE=DATE:20270130
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-ABBV-2027-01-29@investment-calendar
 DESCRIPTION:■ AbbVie (ABBV) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 헬스케어 / 테마: 제약(면역질환 치료제)\n예
@@ -6236,7 +6238,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ AMZN 실적 예상일 · 경기소비재
 DTSTART;VALUE=DATE:20270129
 DTEND;VALUE=DATE:20270130
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-AMZN-2027-01-28@investment-calendar
 DESCRIPTION:■ Amazon (AMZN) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 경기소비재 / 테마: 전자상거래\, 클라우드(A
@@ -6256,7 +6258,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ CVX 실적 예상일 · 에너지
 DTSTART;VALUE=DATE:20270129
 DTEND;VALUE=DATE:20270130
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-CVX-2027-01-29@investment-calendar
 DESCRIPTION:■ Chevron Corporation (CVX) 실적 발표 예상일 — 아
  직 확정 아님\n섹터: 에너지 / 테마: 석유·가스\n예상 날
@@ -6276,7 +6278,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ GD 실적 예상일 · 산업재
 DTSTART;VALUE=DATE:20270129
 DTEND;VALUE=DATE:20270130
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-GD-2027-01-29@investment-calendar
 DESCRIPTION:■ General Dynamics (GD) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 산업재 / 테마: 방산(잠수함·장갑차)\, 
@@ -6296,7 +6298,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ GILD 실적 예상일 · 헬스케어
 DTSTART;VALUE=DATE:20270129
 DTEND;VALUE=DATE:20270130
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-GILD-2027-01-28@investment-calendar
 DESCRIPTION:■ Gilead Sciences (GILD) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 헬스케어 / 테마: 바이오 의약품(항바
@@ -6316,7 +6318,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ INTC 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270129
 DTEND;VALUE=DATE:20270130
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-INTC-2027-01-28@investment-calendar
 DESCRIPTION:■ Intel (INTC) 실적 발표 예상일 — 아직 확정 아
  님\n섹터: 정보기술 / 테마: 반도체(CPU)\, 파운드리(위탁
@@ -6336,7 +6338,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ MDLZ 실적 예상일 · 필수소비재
 DTSTART;VALUE=DATE:20270129
 DTEND;VALUE=DATE:20270130
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-MDLZ-2027-01-28@investment-calendar
 DESCRIPTION:■ Mondelez International (MDLZ) 실적 발표 예상일 — 
  아직 확정 아님\n섹터: 필수소비재\n예상 날짜(미국): 2027
@@ -6355,7 +6357,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ SBUX 실적 예상일 · 경기소비재
 DTSTART;VALUE=DATE:20270129
 DTEND;VALUE=DATE:20270130
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-SBUX-2027-01-28@investment-calendar
 DESCRIPTION:■ Starbucks (SBUX) 실적 발표 예상일 — 아직 확정
   아님\n섹터: 경기소비재 / 테마: 커피 전문점\n예상 날짜
@@ -6375,7 +6377,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ SNDK 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270129
 DTEND;VALUE=DATE:20270130
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-SNDK-2027-01-28@investment-calendar
 DESCRIPTION:■ Sandisk (SNDK) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 정보기술\n예상 날짜(미국): 2027-01-28(목) 전
@@ -6394,7 +6396,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ XOM 실적 예상일 · 에너지
 DTSTART;VALUE=DATE:20270129
 DTEND;VALUE=DATE:20270130
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-XOM-2027-01-29@investment-calendar
 DESCRIPTION:■ ExxonMobil (XOM) 실적 발표 예상일 — 아직 확정
   아님\n섹터: 에너지 / 테마: 석유·가스\n예상 날짜(미국)
@@ -6413,7 +6415,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ AAPL 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270202
 DTEND;VALUE=DATE:20270203
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-AAPL-2027-02-01@investment-calendar
 DESCRIPTION:■ Apple Inc. (AAPL) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 정보기술 / 테마: 아이폰·맥·앱스토어 
@@ -6433,7 +6435,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ PFE 실적 예상일 · 헬스케어
 DTSTART;VALUE=DATE:20270202
 DTEND;VALUE=DATE:20270203
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-PFE-2027-02-02@investment-calendar
 DESCRIPTION:■ Pfizer (PFE) 실적 발표 예상일 — 아직 확정 아
  님\n섹터: 헬스케어 / 테마: 제약\, 백신\n예상 날짜(미국)
@@ -6452,7 +6454,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ PLTR 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270202
 DTEND;VALUE=DATE:20270203
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-PLTR-2027-02-01@investment-calendar
 DESCRIPTION:■ Palantir Technologies (PLTR) 실적 발표 예상일 — 
  아직 확정 아님\n섹터: 정보기술 / 테마: 데이터 분석·AI 
@@ -6472,7 +6474,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ AMD 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270203
 DTEND;VALUE=DATE:20270204
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-AMD-2027-02-02@investment-calendar
 DESCRIPTION:■ Advanced Micro Devices (AMD) 실적 발표 예상일 — 
  아직 확정 아님\n섹터: 정보기술 / 테마: 반도체(CPU·GPU)\,
@@ -6492,7 +6494,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ AMGN 실적 예상일 · 헬스케어
 DTSTART;VALUE=DATE:20270203
 DTEND;VALUE=DATE:20270204
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-AMGN-2027-02-02@investment-calendar
 DESCRIPTION:■ Amgen (AMGN) 실적 발표 예상일 — 아직 확정 아
  님\n섹터: 헬스케어 / 테마: 바이오 의약품\n예상 날짜(미
@@ -6512,7 +6514,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ ANET 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270203
 DTEND;VALUE=DATE:20270204
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-ANET-2027-02-02@investment-calendar
 DESCRIPTION:■ Arista Networks (ANET) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 정보기술\n예상 날짜(미국): 2027-02-02(화
@@ -6531,7 +6533,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ BKNG 실적 예상일 · 경기소비재
 DTSTART;VALUE=DATE:20270203
 DTEND;VALUE=DATE:20270204
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-BKNG-2027-02-02@investment-calendar
 DESCRIPTION:■ Booking Holdings (BKNG) 실적 발표 예상일 — 아직
   확정 아님\n섹터: 경기소비재 / 테마: 온라인 여행 예약\
@@ -6551,7 +6553,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ CVS 실적 예상일 · 헬스케어
 DTSTART;VALUE=DATE:20270203
 DTEND;VALUE=DATE:20270204
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-CVS-2027-02-03@investment-calendar
 DESCRIPTION:■ CVS Health (CVS) 실적 발표 예상일 — 아직 확정
   아님\n섹터: 헬스케어 / 테마: 약국 체인\, 건강보험\n예
@@ -6571,7 +6573,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ EMR 실적 예상일 · 산업재
 DTSTART;VALUE=DATE:20270203
 DTEND;VALUE=DATE:20270204
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-EMR-2027-02-03@investment-calendar
 DESCRIPTION:■ Emerson Electric (EMR) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 산업재\n예상 날짜(미국): 2027-02-03(수) 
@@ -6590,7 +6592,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ MCD 실적 예상일 · 경기소비재
 DTSTART;VALUE=DATE:20270203
 DTEND;VALUE=DATE:20270204
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-MCD-2027-02-03@investment-calendar
 DESCRIPTION:■ McDonald's (MCD) 실적 발표 예상일 — 아직 확정
   아님\n섹터: 경기소비재 / 테마: 외식(패스트푸드)\n예상
@@ -6610,7 +6612,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ UBER 실적 예상일 · 산업재
 DTSTART;VALUE=DATE:20270203
 DTEND;VALUE=DATE:20270204
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-UBER-2027-02-03@investment-calendar
 DESCRIPTION:■ Uber (UBER) 실적 발표 예상일 — 아직 확정 아
  님\n섹터: 산업재 / 테마: 차량 호출\, 음식 배달\n예상 날
@@ -6630,7 +6632,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ COP 실적 예상일 · 에너지
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270205
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-COP-2027-02-04@investment-calendar
 DESCRIPTION:■ ConocoPhillips (COP) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 에너지 / 테마: 석유·가스 생산\n예상 
@@ -6650,7 +6652,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ DUK 실적 예상일 · 유틸리티
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270205
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-DUK-2027-02-04@investment-calendar
 DESCRIPTION:■ Duke Energy (DUK) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 유틸리티 / 테마: 전력\n예상 날짜(미국): 
@@ -6669,7 +6671,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ QCOM 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270205
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-QCOM-2027-02-03@investment-calendar
 DESCRIPTION:■ Qualcomm (QCOM) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 정보기술 / 테마: 스마트폰용 반도체(스냅드
@@ -6689,7 +6691,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ SO 실적 예상일 · 유틸리티
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270205
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-SO-2027-02-04@investment-calendar
 DESCRIPTION:■ Southern Company (SO) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 유틸리티 / 테마: 전력\n예상 날짜(미국
@@ -6708,7 +6710,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ BRK.B 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270205
 DTEND;VALUE=DATE:20270206
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-BRKB-2027-02-05@investment-calendar
 DESCRIPTION:■ Berkshire Hathaway (BRK.B) 실적 발표 예상일 — 아
  직 확정 아님\n섹터: 금융 / 테마: 버크셔 해서웨이 지주
@@ -6728,7 +6730,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ CSCO 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270210
 DTEND;VALUE=DATE:20270211
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-CSCO-2027-02-10@investment-calendar
 DESCRIPTION:■ Cisco (CSCO) 실적 발표 예상일 — 아직 확정 아
  님\n섹터: 정보기술 / 테마: 네트워크 장비\, 보안\n예상 
@@ -6747,7 +6749,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ AMAT 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270212
 DTEND;VALUE=DATE:20270213
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-AMAT-2027-02-11@investment-calendar
 DESCRIPTION:■ Applied Materials (AMAT) 실적 발표 예상일 — 아
  직 확정 아님\n섹터: 정보기술\n예상 날짜(미국): 2027-02-11
@@ -6766,7 +6768,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ DIS 실적 예상일 · 커뮤니케이션 서비스
 DTSTART;VALUE=DATE:20270216
 DTEND;VALUE=DATE:20270217
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-DIS-2027-02-16@investment-calendar
 DESCRIPTION:■ Walt Disney Company (The) (DIS) 실적 발표 예상일 
  — 아직 확정 아님\n섹터: 커뮤니케이션 서비스 / 테마: 
@@ -6786,7 +6788,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ HD 실적 예상일 · 경기소비재
 DTSTART;VALUE=DATE:20270216
 DTEND;VALUE=DATE:20270217
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-HD-2027-02-16@investment-calendar
 DESCRIPTION:■ Home Depot (The) (HD) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 경기소비재 / 테마: 주택 개량 용품 유
@@ -6806,7 +6808,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ MDT 실적 예상일 · 헬스케어
 DTSTART;VALUE=DATE:20270216
 DTEND;VALUE=DATE:20270217
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-MDT-2027-02-16@investment-calendar
 DESCRIPTION:■ Medtronic (MDT) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 헬스케어 / 테마: 의료기기\n예상 날짜(미국)
@@ -6825,7 +6827,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ LOW 실적 예상일 · 경기소비재
 DTSTART;VALUE=DATE:20270217
 DTEND;VALUE=DATE:20270218
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-LOW-2027-02-17@investment-calendar
 DESCRIPTION:■ Lowe's (LOW) 실적 발표 예상일 — 아직 확정 아
  님\n섹터: 경기소비재 / 테마: 주택 개량 용품 유통\n예상
@@ -6845,7 +6847,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ NVDA 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270217
 DTEND;VALUE=DATE:20270218
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-NVDA-2027-02-17@investment-calendar
 DESCRIPTION:■ Nvidia (NVDA) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 정보기술 / 테마: AI 반도체(GPU)·데이터센터\
@@ -6864,7 +6866,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ PANW 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270217
 DTEND;VALUE=DATE:20270218
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-PANW-2027-02-17@investment-calendar
 DESCRIPTION:■ Palo Alto Networks (PANW) 실적 발표 예상일 — 아
  직 확정 아님\n섹터: 정보기술\n예상 날짜(미국): 2027-02-17
@@ -6883,7 +6885,7 @@ BEGIN:VEVENT
 SUMMARY:🛍️ 소매판매 · 2027년 1월분
 DTSTART:20270217T133000Z
 DTEND:20270217T140000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-retail-2027-01-x-2027-02-17@investment-calendar
 DESCRIPTION:■ 소매판매 발표 · 2027년 1월분\n한국시간: 2월
   17일(수) 오후 10:30 발표 (미 동부 08:30)\n왜 중요할까: 미
@@ -6898,7 +6900,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ INTU 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270218
 DTEND;VALUE=DATE:20270219
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-INTU-2027-02-18@investment-calendar
 DESCRIPTION:■ Intuit (INTU) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 정보기술\n예상 날짜(미국): 2027-02-18(목) 전
@@ -6917,7 +6919,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ WMT 실적 예상일 · 필수소비재
 DTSTART;VALUE=DATE:20270218
 DTEND;VALUE=DATE:20270219
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-WMT-2027-02-18@investment-calendar
 DESCRIPTION:■ Walmart (WMT) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 필수소비재 / 테마: 대형 할인 유통\n예상 날
@@ -6937,7 +6939,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ DELL 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270223
 DTEND;VALUE=DATE:20270224
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-DELL-2027-02-23@investment-calendar
 DESCRIPTION:■ Dell Technologies (DELL) 실적 발표 예상일 — 아
  직 확정 아님\n섹터: 정보기술\n예상 날짜(미국): 2027-02-23
@@ -6956,7 +6958,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ DE 실적 예상일 · 산업재
 DTSTART;VALUE=DATE:20270224
 DTEND;VALUE=DATE:20270225
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-DE-2027-02-24@investment-calendar
 DESCRIPTION:■ Deere & Company (DE) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 산업재 / 테마: 농기계\n예상 날짜(미국
@@ -6975,7 +6977,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ CRM 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270303
 DTEND;VALUE=DATE:20270304
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-CRM-2027-03-03@investment-calendar
 DESCRIPTION:■ Salesforce (CRM) 실적 발표 예상일 — 아직 확정
   아님\n섹터: 정보기술 / 테마: 기업용 클라우드 소프트
@@ -6995,7 +6997,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ ADBE 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270310
 DTEND;VALUE=DATE:20270311
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-ADBE-2027-03-10@investment-calendar
 DESCRIPTION:■ Adobe Inc. (ADBE) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 정보기술 / 테마: 포토샵 등 창작 소프트
@@ -7015,7 +7017,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ ORCL 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270310
 DTEND;VALUE=DATE:20270311
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-ORCL-2027-03-10@investment-calendar
 DESCRIPTION:■ Oracle Corporation (ORCL) 실적 발표 예상일 — 아
  직 확정 아님\n섹터: 정보기술 / 테마: 데이터베이스\, 클
@@ -7035,7 +7037,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ AVGO 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270311
 DTEND;VALUE=DATE:20270312
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-AVGO-2027-03-11@investment-calendar
 DESCRIPTION:■ Broadcom (AVGO) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 정보기술 / 테마: AI 맞춤형 반도체·네트워
@@ -7055,7 +7057,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ COST 실적 예상일 · 필수소비재
 DTSTART;VALUE=DATE:20270311
 DTEND;VALUE=DATE:20270312
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-COST-2027-03-11@investment-calendar
 DESCRIPTION:■ Costco (COST) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 필수소비재 / 테마: 회원제 창고형 유통\n예
@@ -7074,7 +7076,7 @@ BEGIN:VEVENT
 SUMMARY:🛍️ 소매판매 · 2027년 2월분
 DTSTART:20270316T123000Z
 DTEND:20270316T130000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-retail-2027-02-x-2027-03-16@investment-calendar
 DESCRIPTION:■ 소매판매 발표 · 2027년 2월분\n한국시간: 3월
   16일(화) 오후 9:30 발표 (미 동부 08:30)\n왜 중요할까: 미
@@ -7089,7 +7091,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ MU 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270317
 DTEND;VALUE=DATE:20270318
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-MU-2027-03-17@investment-calendar
 DESCRIPTION:■ Micron Technology (MU) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 정보기술 / 테마: 메모리 반도체(D램·HB
@@ -7108,7 +7110,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ ACN 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270318
 DTEND;VALUE=DATE:20270319
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-ACN-2027-03-18@investment-calendar
 DESCRIPTION:■ Accenture (ACN) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 정보기술 / 테마: IT 컨설팅·아웃소싱\n예상 
@@ -7127,7 +7129,7 @@ BEGIN:VEVENT
 SUMMARY:🏦 FOMC 금리 결정 (+점도표)
 DTSTART:20270317T180000Z
 DTEND:20270317T190000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:fomc-2027-03-17@investment-calendar
 DESCRIPTION:■ FOMC(미국 연방공개시장위원회) 기준금리 결
  정\n섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 
@@ -7135,7 +7137,7 @@ DESCRIPTION:■ FOMC(미국 연방공개시장위원회) 기준금리 결
  동부 14:00)\n기자회견: 3월 18일(목) 오전 3:30부터 (미 동부
   14:30)\n미국 현지 날짜: 2027-03-17 (이틀 회의의 둘째 날)\n
  이번 회의에서는 경제전망(SEP)과 점도표도 함께 공개됩
- 니다.\n\n현재 기준금리(목표 범위): 3.75~4.00% (2026-10-23 기
+ 니다.\n\n현재 기준금리(목표 범위): 3.75~4.00% (2026-10-24 기
  준)\n📍 연준 위원들의 금리 전망 (2026년 9월 점도표\, 18
  명)\n · 2026년 말(올해) 적정 금리 중간값 4.125% — 지금보
  다 낮게 0명 · 지금 수준 2명 · 높게 16명\n · 2027년 말(내
@@ -7156,7 +7158,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ PEP 실적 예상일 · 필수소비재
 DTSTART;VALUE=DATE:20270408
 DTEND;VALUE=DATE:20270409
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-PEP-2027-04-08@investment-calendar
 DESCRIPTION:■ PepsiCo (PEP) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 필수소비재 / 테마: 음료·스낵\n예상 날짜(
@@ -7175,7 +7177,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ C 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270413
 DTEND;VALUE=DATE:20270414
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-C-2027-04-13@investment-calendar
 DESCRIPTION:■ Citigroup (C) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 금융 / 테마: 대형 은행\, 글로벌 금융\n예상 
@@ -7194,7 +7196,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ GS 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270413
 DTEND;VALUE=DATE:20270414
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-GS-2027-04-13@investment-calendar
 DESCRIPTION:■ Goldman Sachs (GS) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 금융 / 테마: 투자은행·자산운용\n예상 
@@ -7213,7 +7215,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ JNJ 실적 예상일 · 헬스케어
 DTSTART;VALUE=DATE:20270413
 DTEND;VALUE=DATE:20270414
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-JNJ-2027-04-13@investment-calendar
 DESCRIPTION:■ Johnson & Johnson (JNJ) 실적 발표 예상일 — 아직
   확정 아님\n섹터: 헬스케어 / 테마: 제약\, 의료기기\n예
@@ -7232,7 +7234,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ JPM 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270413
 DTEND;VALUE=DATE:20270414
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-JPM-2027-04-13@investment-calendar
 DESCRIPTION:■ JPMorgan Chase (JPM) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 금융 / 테마: 미국 최대 은행\, 투자은
@@ -7251,7 +7253,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ UNH 실적 예상일 · 헬스케어
 DTSTART;VALUE=DATE:20270413
 DTEND;VALUE=DATE:20270414
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-UNH-2027-04-13@investment-calendar
 DESCRIPTION:■ UnitedHealth Group (UNH) 실적 발표 예상일 — 아
  직 확정 아님\n섹터: 헬스케어 / 테마: 건강보험\, 의료 
@@ -7270,7 +7272,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ WFC 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270413
 DTEND;VALUE=DATE:20270414
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-WFC-2027-04-13@investment-calendar
 DESCRIPTION:■ Wells Fargo (WFC) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 금융 / 테마: 대형 은행\n예상 날짜(미국):
@@ -7289,7 +7291,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ BAC 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270414
 DTEND;VALUE=DATE:20270415
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-BAC-2027-04-14@investment-calendar
 DESCRIPTION:■ Bank of America (BAC) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 금융 / 테마: 대형 은행\n예상 날짜(미
@@ -7308,7 +7310,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ BLK 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270414
 DTEND;VALUE=DATE:20270415
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-BLK-2027-04-14@investment-calendar
 DESCRIPTION:■ BlackRock (BLK) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 금융 / 테마: 자산운용(ETF 아이셰어즈)\n예상
@@ -7327,7 +7329,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ MS 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270414
 DTEND;VALUE=DATE:20270415
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-MS-2027-04-14@investment-calendar
 DESCRIPTION:■ Morgan Stanley (MS) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 금융 / 테마: 투자은행·자산관리\n예상 
@@ -7346,7 +7348,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ BNY 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270415
 DTEND;VALUE=DATE:20270416
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-BNY-2027-04-15@investment-calendar
 DESCRIPTION:■ BNY Mellon (BNY) 실적 발표 예상일 — 아직 확정
   아님\n섹터: 금융\n예상 날짜(미국): 2027-04-15(목) 전후\n
@@ -7365,7 +7367,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ SCHW 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270415
 DTEND;VALUE=DATE:20270416
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-SCHW-2027-04-15@investment-calendar
 DESCRIPTION:■ Charles Schwab Corporation (SCHW) 실적 발표 예상일 
  — 아직 확정 아님\n섹터: 금융 / 테마: 증권 중개·자산
@@ -7384,7 +7386,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ USB 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270415
 DTEND;VALUE=DATE:20270416
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-USB-2027-04-15@investment-calendar
 DESCRIPTION:■ U.S. Bancorp (USB) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 금융\n예상 날짜(미국): 2027-04-15(목) 전후\
@@ -7403,7 +7405,7 @@ BEGIN:VEVENT
 SUMMARY:🛍️ 소매판매 · 2027년 3월분
 DTSTART:20270416T123000Z
 DTEND:20270416T130000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-retail-2027-03-x-2027-04-16@investment-calendar
 DESCRIPTION:■ 소매판매 발표 · 2027년 3월분\n한국시간: 4월
   16일(금) 오후 9:30 발표 (미 동부 08:30)\n왜 중요할까: 미
@@ -7418,7 +7420,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ COF 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270420
 DTEND;VALUE=DATE:20270421
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-COF-2027-04-20@investment-calendar
 DESCRIPTION:■ Capital One (COF) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 금융\n예상 날짜(미국): 2027-04-20(화) 전후\
@@ -7437,7 +7439,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ GE 실적 예상일 · 산업재
 DTSTART;VALUE=DATE:20270420
 DTEND;VALUE=DATE:20270421
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-GE-2027-04-20@investment-calendar
 DESCRIPTION:■ GE Aerospace (GE) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 산업재 / 테마: 항공기 엔진\n예상 날짜(
@@ -7456,7 +7458,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ GM 실적 예상일 · 경기소비재
 DTSTART;VALUE=DATE:20270420
 DTEND;VALUE=DATE:20270421
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-GM-2027-04-20@investment-calendar
 DESCRIPTION:■ General Motors (GM) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 경기소비재 / 테마: 자동차\n예상 날짜(미
@@ -7475,7 +7477,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ ISRG 실적 예상일 · 헬스케어
 DTSTART;VALUE=DATE:20270420
 DTEND;VALUE=DATE:20270421
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-ISRG-2027-04-20@investment-calendar
 DESCRIPTION:■ Intuitive Surgical (ISRG) 실적 발표 예상일 — 아
  직 확정 아님\n섹터: 헬스케어 / 테마: 수술 로봇\n예상 
@@ -7494,7 +7496,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ MMM 실적 예상일 · 산업재
 DTSTART;VALUE=DATE:20270420
 DTEND;VALUE=DATE:20270421
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-MMM-2027-04-20@investment-calendar
 DESCRIPTION:■ 3M (MMM) 실적 발표 예상일 — 아직 확정 아님\
  n섹터: 산업재\n예상 날짜(미국): 2027-04-20(화) 전후\n지난
@@ -7513,7 +7515,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ NFLX 실적 예상일 · 커뮤니케이션 서비스
 DTSTART;VALUE=DATE:20270420
 DTEND;VALUE=DATE:20270421
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-NFLX-2027-04-20@investment-calendar
 DESCRIPTION:■ Netflix (NFLX) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 커뮤니케이션 서비스 / 테마: 동영상 스트리
@@ -7532,7 +7534,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ RTX 실적 예상일 · 산업재
 DTSTART;VALUE=DATE:20270420
 DTEND;VALUE=DATE:20270421
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-RTX-2027-04-20@investment-calendar
 DESCRIPTION:■ RTX Corporation (RTX) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 산업재 / 테마: 방산·항공 엔진\n예상 
@@ -7551,7 +7553,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ ABT 실적 예상일 · 헬스케어
 DTSTART;VALUE=DATE:20270421
 DTEND;VALUE=DATE:20270422
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-ABT-2027-04-21@investment-calendar
 DESCRIPTION:■ Abbott Laboratories (ABT) 실적 발표 예상일 — 아
  직 확정 아님\n섹터: 헬스케어 / 테마: 의료기기·진단\n
@@ -7570,7 +7572,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ DHR 실적 예상일 · 헬스케어
 DTSTART;VALUE=DATE:20270421
 DTEND;VALUE=DATE:20270422
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-DHR-2027-04-21@investment-calendar
 DESCRIPTION:■ Danaher Corporation (DHR) 실적 발표 예상일 — 아
  직 확정 아님\n섹터: 헬스케어\n예상 날짜(미국): 2027-04-21
@@ -7589,7 +7591,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ IBM 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270421
 DTEND;VALUE=DATE:20270422
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-IBM-2027-04-21@investment-calendar
 DESCRIPTION:■ IBM (IBM) 실적 발표 예상일 — 아직 확정 아님
  \n섹터: 정보기술 / 테마: 기업 IT 서비스\, 하이브리드 클
@@ -7609,7 +7611,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ LRCX 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270421
 DTEND;VALUE=DATE:20270422
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-LRCX-2027-04-21@investment-calendar
 DESCRIPTION:■ Lam Research (LRCX) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 정보기술\n예상 날짜(미국): 2027-04-21(수) 
@@ -7628,7 +7630,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ META 실적 예상일 · 커뮤니케이션 서비스
 DTSTART;VALUE=DATE:20270421
 DTEND;VALUE=DATE:20270422
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-META-2027-04-21@investment-calendar
 DESCRIPTION:■ Meta Platforms (META) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 커뮤니케이션 서비스 / 테마: 페이스북
@@ -7648,7 +7650,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ NEE 실적 예상일 · 유틸리티
 DTSTART;VALUE=DATE:20270421
 DTEND;VALUE=DATE:20270422
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-NEE-2027-04-21@investment-calendar
 DESCRIPTION:■ NextEra Energy (NEE) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 유틸리티 / 테마: 전력·신재생 에너지\
@@ -7667,7 +7669,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ PM 실적 예상일 · 필수소비재
 DTSTART;VALUE=DATE:20270421
 DTEND;VALUE=DATE:20270422
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-PM-2027-04-21@investment-calendar
 DESCRIPTION:■ Philip Morris International (PM) 실적 발표 예상일 
  — 아직 확정 아님\n섹터: 필수소비재\n예상 날짜(미국): 
@@ -7686,7 +7688,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ T 실적 예상일 · 커뮤니케이션 서비스
 DTSTART;VALUE=DATE:20270421
 DTEND;VALUE=DATE:20270422
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-T-2027-04-21@investment-calendar
 DESCRIPTION:■ AT&T (T) 실적 발표 예상일 — 아직 확정 아님\
  n섹터: 커뮤니케이션 서비스 / 테마: 미국 통신(무선·유
@@ -7705,7 +7707,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ TMO 실적 예상일 · 헬스케어
 DTSTART;VALUE=DATE:20270421
 DTEND;VALUE=DATE:20270422
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-TMO-2027-04-21@investment-calendar
 DESCRIPTION:■ Thermo Fisher Scientific (TMO) 실적 발표 예상일 —
   아직 확정 아님\n섹터: 헬스케어 / 테마: 연구장비·진단
@@ -7724,7 +7726,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ TSLA 실적 예상일 · 경기소비재
 DTSTART;VALUE=DATE:20270421
 DTEND;VALUE=DATE:20270422
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-TSLA-2027-04-21@investment-calendar
 DESCRIPTION:■ Tesla\, Inc. (TSLA) 실적 발표 예상일 — 아직 확
  정 아님\n섹터: 경기소비재 / 테마: 전기차\, 에너지 저장
@@ -7744,7 +7746,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ TXN 실적 예상일 · 정보기술
 DTSTART;VALUE=DATE:20270421
 DTEND;VALUE=DATE:20270422
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-TXN-2027-04-21@investment-calendar
 DESCRIPTION:■ Texas Instruments (TXN) 실적 발표 예상일 — 아직
   확정 아님\n섹터: 정보기술 / 테마: 아날로그·임베디드 
@@ -7763,7 +7765,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ CMCSA 실적 예상일 · 커뮤니케이션 서비스
 DTSTART;VALUE=DATE:20270422
 DTEND;VALUE=DATE:20270423
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-CMCSA-2027-04-22@investment-calendar
 DESCRIPTION:■ Comcast (CMCSA) 실적 발표 예상일 — 아직 확정 
  아님\n섹터: 커뮤니케이션 서비스 / 테마: 케이블·인터
@@ -7783,7 +7785,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ LMT 실적 예상일 · 산업재
 DTSTART;VALUE=DATE:20270422
 DTEND;VALUE=DATE:20270423
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-LMT-2027-04-22@investment-calendar
 DESCRIPTION:■ Lockheed Martin (LMT) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 산업재 / 테마: 방산(전투기·미사일)\n
@@ -7802,7 +7804,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ PG 실적 예상일 · 필수소비재
 DTSTART;VALUE=DATE:20270422
 DTEND;VALUE=DATE:20270423
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-PG-2027-04-22@investment-calendar
 DESCRIPTION:■ Procter & Gamble (PG) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 필수소비재 / 테마: 생활용품\n예상 날
@@ -7821,7 +7823,7 @@ BEGIN:VEVENT
 SUMMARY:🗓️ UNP 실적 예상일 · 산업재
 DTSTART;VALUE=DATE:20270422
 DTEND;VALUE=DATE:20270423
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-UNP-2027-04-22@investment-calendar
 DESCRIPTION:■ Union Pacific Corporation (UNP) 실적 발표 예상일 
  — 아직 확정 아님\n섹터: 산업재 / 테마: 철도 운송\n예
@@ -7840,19 +7842,18 @@ BEGIN:VEVENT
 SUMMARY:🗓️ AXP 실적 예상일 · 금융
 DTSTART;VALUE=DATE:20270423
 DTEND;VALUE=DATE:20270424
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:estimate-AXP-2027-04-23@investment-calendar
 DESCRIPTION:■ American Express (AXP) 실적 발표 예상일 — 아직 
  확정 아님\n섹터: 금융 / 테마: 신용카드·결제\n예상 날
- 짜(미국): 2027-04-23(금) 전후\n지난번엔 미국 장 시작 전 
- 발표 (한국시간 같은 날 저녁)\n\n계산 근거: 직전 발표일
-  2026-10-23에서 13주씩 더한 날짜예요.\n실제 날짜는 1~2주 
- 앞뒤로 달라질 수 있어요. 특히 연말 결산 분기(1~2월 발
- 표)는 늦어지기 쉬워요.\n회사가 날짜를 확정하면 이 예
- 상일은 자동으로 확정 일정으로 바뀝니다.\n\n※ 공개 정
- 보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEng
- lish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/axp/e
- arnings
+ 짜(미국): 2027-04-23(금) 전후\n지난번 발표 시각은 알려지
+ 지 않음\n\n계산 근거: 직전 발표일 2026-10-23에서 13주씩 
+ 더한 날짜예요.\n실제 날짜는 1~2주 앞뒤로 달라질 수 있
+ 어요. 특히 연말 결산 분기(1~2월 발표)는 늦어지기 쉬워
+ 요.\n회사가 날짜를 확정하면 이 예상일은 자동으로 확
+ 정 일정으로 바뀝니다.\n\n※ 공개 정보를 자동으로 모은
+  것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhtt
+ ps://www.nasdaq.com/market-activity/stocks/axp/earnings
 TRANSP:TRANSPARENT
 URL:https://www.nasdaq.com/market-activity/stocks/axp/earnings
 END:VEVENT
@@ -7860,14 +7861,14 @@ BEGIN:VEVENT
 SUMMARY:🏦 FOMC 금리 결정
 DTSTART:20270428T180000Z
 DTEND:20270428T190000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:fomc-2027-04-28@investment-calendar
 DESCRIPTION:■ FOMC(미국 연방공개시장위원회) 기준금리 결
  정\n섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 
  금리\n한국시간: 4월 29일(목) 오전 3:00 성명서 발표 (미 
  동부 14:00)\n기자회견: 4월 29일(목) 오전 3:30부터 (미 동부
   14:30)\n미국 현지 날짜: 2027-04-28 (이틀 회의의 둘째 날)\n\
- n현재 기준금리(목표 범위): 3.75~4.00% (2026-10-23 기준)\n📍 
+ n현재 기준금리(목표 범위): 3.75~4.00% (2026-10-24 기준)\n📍 
  연준 위원들의 금리 전망 (2026년 9월 점도표\, 18명)\n · 20
  26년 말(올해) 적정 금리 중간값 4.125% — 지금보다 낮게 0
  명 · 지금 수준 2명 · 높게 16명\n · 2027년 말(내년) 적정 
@@ -7887,7 +7888,7 @@ BEGIN:VEVENT
 SUMMARY:🛍️ 소매판매 · 2027년 4월분
 DTSTART:20270514T123000Z
 DTEND:20270514T130000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-retail-2027-04-x-2027-05-14@investment-calendar
 DESCRIPTION:■ 소매판매 발표 · 2027년 4월분\n한국시간: 5월
   14일(금) 오후 9:30 발표 (미 동부 08:30)\n왜 중요할까: 미
@@ -7902,7 +7903,7 @@ BEGIN:VEVENT
 SUMMARY:🏦 FOMC 금리 결정 (+점도표)
 DTSTART:20270609T180000Z
 DTEND:20270609T190000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:fomc-2027-06-09@investment-calendar
 DESCRIPTION:■ FOMC(미국 연방공개시장위원회) 기준금리 결
  정\n섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 
@@ -7910,7 +7911,7 @@ DESCRIPTION:■ FOMC(미국 연방공개시장위원회) 기준금리 결
  동부 14:00)\n기자회견: 6월 10일(목) 오전 3:30부터 (미 동부
   14:30)\n미국 현지 날짜: 2027-06-09 (이틀 회의의 둘째 날)\n
  이번 회의에서는 경제전망(SEP)과 점도표도 함께 공개됩
- 니다.\n\n현재 기준금리(목표 범위): 3.75~4.00% (2026-10-23 기
+ 니다.\n\n현재 기준금리(목표 범위): 3.75~4.00% (2026-10-24 기
  준)\n📍 연준 위원들의 금리 전망 (2026년 9월 점도표\, 18
  명)\n · 2026년 말(올해) 적정 금리 중간값 4.125% — 지금보
  다 낮게 0명 · 지금 수준 2명 · 높게 16명\n · 2027년 말(내
@@ -7931,7 +7932,7 @@ BEGIN:VEVENT
 SUMMARY:🛍️ 소매판매 · 2027년 5월분
 DTSTART:20270616T123000Z
 DTEND:20270616T130000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-retail-2027-05-x-2027-06-16@investment-calendar
 DESCRIPTION:■ 소매판매 발표 · 2027년 5월분\n한국시간: 6월
   16일(수) 오후 9:30 발표 (미 동부 08:30)\n왜 중요할까: 미
@@ -7946,7 +7947,7 @@ BEGIN:VEVENT
 SUMMARY:🛍️ 소매판매 · 2027년 6월분
 DTSTART:20270716T123000Z
 DTEND:20270716T130000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-retail-2027-06-x-2027-07-16@investment-calendar
 DESCRIPTION:■ 소매판매 발표 · 2027년 6월분\n한국시간: 7월
   16일(금) 오후 9:30 발표 (미 동부 08:30)\n왜 중요할까: 미
@@ -7961,14 +7962,14 @@ BEGIN:VEVENT
 SUMMARY:🏦 FOMC 금리 결정
 DTSTART:20270728T180000Z
 DTEND:20270728T190000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:fomc-2027-07-28@investment-calendar
 DESCRIPTION:■ FOMC(미국 연방공개시장위원회) 기준금리 결
  정\n섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 
  금리\n한국시간: 7월 29일(목) 오전 3:00 성명서 발표 (미 
  동부 14:00)\n기자회견: 7월 29일(목) 오전 3:30부터 (미 동부
   14:30)\n미국 현지 날짜: 2027-07-28 (이틀 회의의 둘째 날)\n\
- n현재 기준금리(목표 범위): 3.75~4.00% (2026-10-23 기준)\n📍 
+ n현재 기준금리(목표 범위): 3.75~4.00% (2026-10-24 기준)\n📍 
  연준 위원들의 금리 전망 (2026년 9월 점도표\, 18명)\n · 20
  26년 말(올해) 적정 금리 중간값 4.125% — 지금보다 낮게 0
  명 · 지금 수준 2명 · 높게 16명\n · 2027년 말(내년) 적정 
@@ -7988,7 +7989,7 @@ BEGIN:VEVENT
 SUMMARY:🛍️ 소매판매 · 2027년 7월분
 DTSTART:20270816T123000Z
 DTEND:20270816T130000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-retail-2027-07-x-2027-08-16@investment-calendar
 DESCRIPTION:■ 소매판매 발표 · 2027년 7월분\n한국시간: 8월
   16일(월) 오후 9:30 발표 (미 동부 08:30)\n왜 중요할까: 미
@@ -8003,7 +8004,7 @@ BEGIN:VEVENT
 SUMMARY:🏦 FOMC 금리 결정 (+점도표)
 DTSTART:20270915T180000Z
 DTEND:20270915T190000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:fomc-2027-09-15@investment-calendar
 DESCRIPTION:■ FOMC(미국 연방공개시장위원회) 기준금리 결
  정\n섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 
@@ -8011,7 +8012,7 @@ DESCRIPTION:■ FOMC(미국 연방공개시장위원회) 기준금리 결
  동부 14:00)\n기자회견: 9월 16일(목) 오전 3:30부터 (미 동부
   14:30)\n미국 현지 날짜: 2027-09-15 (이틀 회의의 둘째 날)\n
  이번 회의에서는 경제전망(SEP)과 점도표도 함께 공개됩
- 니다.\n\n현재 기준금리(목표 범위): 3.75~4.00% (2026-10-23 기
+ 니다.\n\n현재 기준금리(목표 범위): 3.75~4.00% (2026-10-24 기
  준)\n📍 연준 위원들의 금리 전망 (2026년 9월 점도표\, 18
  명)\n · 2026년 말(올해) 적정 금리 중간값 4.125% — 지금보
  다 낮게 0명 · 지금 수준 2명 · 높게 16명\n · 2027년 말(내
@@ -8032,7 +8033,7 @@ BEGIN:VEVENT
 SUMMARY:🛍️ 소매판매 · 2027년 8월분
 DTSTART:20270916T123000Z
 DTEND:20270916T130000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-retail-2027-08-x-2027-09-16@investment-calendar
 DESCRIPTION:■ 소매판매 발표 · 2027년 8월분\n한국시간: 9월
   16일(목) 오후 9:30 발표 (미 동부 08:30)\n왜 중요할까: 미
@@ -8047,7 +8048,7 @@ BEGIN:VEVENT
 SUMMARY:🛍️ 소매판매 · 2027년 9월분
 DTSTART:20271015T123000Z
 DTEND:20271015T130000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-retail-2027-09-x-2027-10-15@investment-calendar
 DESCRIPTION:■ 소매판매 발표 · 2027년 9월분\n한국시간: 10
  월 15일(금) 오후 9:30 발표 (미 동부 08:30)\n왜 중요할까: 
@@ -8062,14 +8063,14 @@ BEGIN:VEVENT
 SUMMARY:🏦 FOMC 금리 결정
 DTSTART:20271027T180000Z
 DTEND:20271027T190000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:fomc-2027-10-27@investment-calendar
 DESCRIPTION:■ FOMC(미국 연방공개시장위원회) 기준금리 결
  정\n섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 
  금리\n한국시간: 10월 28일(목) 오전 3:00 성명서 발표 (미 
  동부 14:00)\n기자회견: 10월 28일(목) 오전 3:30부터 (미 동
  부 14:30)\n미국 현지 날짜: 2027-10-27 (이틀 회의의 둘째 날)
- \n\n현재 기준금리(목표 범위): 3.75~4.00% (2026-10-23 기준)\n
+ \n\n현재 기준금리(목표 범위): 3.75~4.00% (2026-10-24 기준)\n
  📍 연준 위원들의 금리 전망 (2026년 9월 점도표\, 18명)\n 
  · 2026년 말(올해) 적정 금리 중간값 4.125% — 지금보다 낮
  게 0명 · 지금 수준 2명 · 높게 16명\n · 2027년 말(내년) 
@@ -8090,7 +8091,7 @@ BEGIN:VEVENT
 SUMMARY:🛍️ 소매판매 · 2027년 10월분
 DTSTART:20271116T133000Z
 DTEND:20271116T140000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-retail-2027-10-x-2027-11-16@investment-calendar
 DESCRIPTION:■ 소매판매 발표 · 2027년 10월분\n한국시간: 11
  월 16일(화) 오후 10:30 발표 (미 동부 08:30)\n왜 중요할까: 
@@ -8105,7 +8106,7 @@ BEGIN:VEVENT
 SUMMARY:🏦 FOMC 금리 결정 (+점도표)
 DTSTART:20271208T190000Z
 DTEND:20271208T200000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:fomc-2027-12-08@investment-calendar
 DESCRIPTION:■ FOMC(미국 연방공개시장위원회) 기준금리 결
  정\n섹터/테마: 거시경제 · 미국 기준금리 · 달러/채권 
@@ -8113,7 +8114,7 @@ DESCRIPTION:■ FOMC(미국 연방공개시장위원회) 기준금리 결
  동부 14:00)\n기자회견: 12월 9일(목) 오전 4:30부터 (미 동부
   14:30)\n미국 현지 날짜: 2027-12-08 (이틀 회의의 둘째 날)\n
  이번 회의에서는 경제전망(SEP)과 점도표도 함께 공개됩
- 니다.\n\n현재 기준금리(목표 범위): 3.75~4.00% (2026-10-23 기
+ 니다.\n\n현재 기준금리(목표 범위): 3.75~4.00% (2026-10-24 기
  준)\n📍 연준 위원들의 금리 전망 (2026년 9월 점도표\, 18
  명)\n · 2026년 말(올해) 적정 금리 중간값 4.125% — 지금보
  다 낮게 0명 · 지금 수준 2명 · 높게 16명\n · 2027년 말(내
@@ -8134,7 +8135,7 @@ BEGIN:VEVENT
 SUMMARY:🛍️ 소매판매 · 2027년 11월분
 DTSTART:20271215T133000Z
 DTEND:20271215T140000Z
-DTSTAMP:20261024T004551Z
+DTSTAMP:20261024T173709Z
 UID:macro-retail-2027-11-x-2027-12-15@investment-calendar
 DESCRIPTION:■ 소매판매 발표 · 2027년 11월분\n한국시간: 12
  월 15일(수) 오후 10:30 발표 (미 동부 08:30)\n왜 중요할까: 
