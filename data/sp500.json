@@ -1895,9 +1895,9 @@
     "sector": "Consumer Discretionary"
   },
   {
-    "symbol": "PWR",
-    "name": "Quanta Services",
-    "sector": "Industrials"
+    "symbol": "Q",
+    "name": "Qnity Electronics",
+    "sector": "Information Technology"
   },
   {
     "symbol": "QCOM",
@@ -1905,14 +1905,14 @@
     "sector": "Information Technology"
   },
   {
+    "symbol": "PWR",
+    "name": "Quanta Services",
+    "sector": "Industrials"
+  },
+  {
     "symbol": "DGX",
     "name": "Quest Diagnostics",
     "sector": "Health Care"
-  },
-  {
-    "symbol": "Q",
-    "name": "Qnity Electronics",
-    "sector": "Information Technology"
   },
   {
     "symbol": "RL",
@@ -1928,11 +1928,6 @@
     "symbol": "RDDT",
     "name": "Reddit",
     "sector": "Communication Services"
-  },
-  {
-    "symbol": "RTX",
-    "name": "RTX Corporation",
-    "sector": "Industrials"
   },
   {
     "symbol": "O",
@@ -1998,6 +1993,11 @@
     "symbol": "RCL",
     "name": "Royal Caribbean Group",
     "sector": "Consumer Discretionary"
+  },
+  {
+    "symbol": "RTX",
+    "name": "RTX Corporation",
+    "sector": "Industrials"
   },
   {
     "symbol": "SPGI",

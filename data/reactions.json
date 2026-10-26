@@ -1,24 +1,4 @@
 {
-  "earnings-TRV-2026-07-17@investment-calendar": {
-    "pct": 9.1,
-    "from": "2026-07-16",
-    "to": "2026-07-20"
-  },
-  "earnings-TFC-2026-07-17@investment-calendar": {
-    "pct": -4.2,
-    "from": "2026-07-16",
-    "to": "2026-07-20"
-  },
-  "earnings-FITB-2026-07-17@investment-calendar": {
-    "pct": -3.3,
-    "from": "2026-07-16",
-    "to": "2026-07-20"
-  },
-  "earnings-RF-2026-07-17@investment-calendar": {
-    "pct": -4.0,
-    "from": "2026-07-16",
-    "to": "2026-07-20"
-  },
   "earnings-STLD-2026-07-20@investment-calendar": {
     "pct": -0.8,
     "from": "2026-07-17",
