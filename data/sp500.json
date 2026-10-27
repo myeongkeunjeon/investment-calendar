@@ -1875,14 +1875,14 @@
     "sector": "Financials"
   },
   {
-    "symbol": "PEG",
-    "name": "Public Service Enterprise Group",
-    "sector": "Utilities"
-  },
-  {
     "symbol": "PTC",
     "name": "PTC Inc.",
     "sector": "Information Technology"
+  },
+  {
+    "symbol": "PEG",
+    "name": "Public Service Enterprise Group",
+    "sector": "Utilities"
   },
   {
     "symbol": "PSA",
