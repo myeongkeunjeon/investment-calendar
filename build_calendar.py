@@ -506,10 +506,22 @@ def parse_surprise(payload: dict, us_day: date) -> tuple[str, str]:
     return "", ""
 
 
-def fill_results(earnings: list[Item], today: date) -> list[Item]:
-    """발표일이 지났는데 달력 표에 결과가 없으면, 회사별 결과 표에서 한 번 더 찾아본다."""
+def reported_by_now(item: Item, today: date, now_et: datetime | None) -> bool:
+    """발표 시각이 지났는지. 지난 날짜는 항상 True, 오늘은 장 전 발표면 미국 오전 9:30, 장 후·미정이면 오후 5시 이후."""
+    if item.us_date < today.isoformat():
+        return True
+    if item.us_date > today.isoformat() or now_et is None:
+        return False
+    minutes = now_et.hour * 60 + now_et.minute
+    return minutes >= (9 * 60 + 30 if item.timing == "pre" else 17 * 60)
+
+
+def fill_results(earnings: list[Item], today: date, now_et: datetime | None = None) -> list[Item]:
+    """발표 시각이 지났는데 달력 표에 결과가 없으면, 회사별 결과 표에서 한 번 더 찾아본다.
+    now_et(미국 동부 현재 시각)를 주면 오늘 발표한 회사도 찾는다 (예: 장 전 발표를 같은 날 반영)."""
     since = (today - timedelta(days=RESULT_LOOKBACK_DAYS)).isoformat()
-    todo = [i for i in earnings if not i.actual_eps and since <= i.us_date < today.isoformat()]
+    todo = [i for i in earnings if not i.actual_eps and since <= i.us_date and reported_by_now(i, today, now_et)]
+    todo.sort(key=lambda i: i.us_date, reverse=True)  # 가장 최근 발표부터
     found = failures = 0
     for item in todo[:RESULT_LOOKUP_LIMIT]:
         if failures >= 5:  # 연속으로 막히면 이번 실행에서는 그만 (내일 다시 시도)
@@ -1598,7 +1610,7 @@ def main() -> int:
     members = get_members()
     if members:
         earnings, fetched, market = get_earnings(members, themes, today)
-        earnings = fill_results(earnings, today)
+        earnings = fill_results(earnings, today, None if args.today else now.astimezone(ET))
         apply_reactions(earnings, today)
     else:
         warn("S&P 500 목록이 없어 실적 일정을 건너뜁니다.")

@@ -141,6 +141,18 @@ class TestSp500AndResults(unittest.TestCase):
         self.assertEqual(item.description.split("\n")[1], "✅ 발표 결과: 실제 EPS $5.20 → 예상 상회 +3.8%")
 
 
+    def test_same_day_pre_market_result(self):
+        item = bc.Item("earnings-BSX-2026-10-28@x", "earnings", "2026-10-28", "📊 BSX 실적", "■ BSX\n섹터", "u",
+                       symbol="BSX", timing="pre", sector="헬스케어")
+        late = bc.Item("earnings-X-2026-10-28@x", "earnings", "2026-10-28", "📊 X", "■ X", "u", symbol="X", timing="after")
+        et = bc.ET
+        day = date(2026, 10, 28)
+        self.assertFalse(bc.reported_by_now(item, day, datetime(2026, 10, 28, 8, 0, tzinfo=et)))
+        self.assertTrue(bc.reported_by_now(item, day, datetime(2026, 10, 28, 15, 50, tzinfo=et)))
+        self.assertFalse(bc.reported_by_now(late, day, datetime(2026, 10, 28, 15, 50, tzinfo=et)))
+        self.assertTrue(bc.reported_by_now(late, day, datetime(2026, 10, 28, 21, 30, tzinfo=et)))
+        self.assertFalse(bc.reported_by_now(item, day, None))  # 시각을 모르면 다음 날부터
+
 class TestFomcOutlook(unittest.TestCase):
     def setUp(self):
         lower = dict(bc.parse_fred_csv((FIX / "fred_lower.csv").read_text()))
