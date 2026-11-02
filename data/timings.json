@@ -1,4 +1,5 @@
 {
+  "earnings-A-2026-11-23@investment-calendar": "after",
   "earnings-AAPL-2026-11-02@investment-calendar": "after",
   "earnings-ABBV-2026-10-30@investment-calendar": "pre",
   "earnings-ABNB-2026-11-05@investment-calendar": "after",
@@ -212,6 +213,7 @@
   "earnings-ILMN-2026-10-29@investment-calendar": "after",
   "earnings-INCY-2026-10-29@investment-calendar": "pre",
   "earnings-INTC-2026-10-29@investment-calendar": "after",
+  "earnings-INTU-2026-11-19@investment-calendar": "after",
   "earnings-INVH-2026-10-28@investment-calendar": "after",
   "earnings-IP-2026-10-28@investment-calendar": "pre",
   "earnings-IQV-2026-10-27@investment-calendar": "pre",
@@ -237,8 +239,6 @@
   "earnings-KMB-2026-11-05@investment-calendar": "pre",
   "earnings-KMI-2026-10-21@investment-calendar": "after",
   "earnings-KO-2026-10-27@investment-calendar": "pre",
-  "earnings-KVUE-2026-10-30@investment-calendar": "pre",
-  "earnings-L-2026-11-02@investment-calendar": "pre",
   "earnings-LDOS-2026-11-03@investment-calendar": "pre",
   "earnings-LH-2026-10-28@investment-calendar": "pre",
   "earnings-LHX-2026-10-29@investment-calendar": "pre",
