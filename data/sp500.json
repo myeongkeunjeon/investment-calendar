@@ -1345,11 +1345,6 @@
     "sector": "Financials"
   },
   {
-    "symbol": "KVUE",
-    "name": "Kenvue",
-    "sector": "Consumer Staples"
-  },
-  {
     "symbol": "KDP",
     "name": "Keurig Dr Pepper",
     "sector": "Consumer Staples"
@@ -1733,6 +1728,11 @@
     "symbol": "OXY",
     "name": "Occidental Petroleum",
     "sector": "Energy"
+  },
+  {
+    "symbol": "OKTA",
+    "name": "Okta, Inc.",
+    "sector": "Information Technology"
   },
   {
     "symbol": "ODFL",

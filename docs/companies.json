@@ -2896,6 +2896,14 @@
     "top100": false
   },
   {
+    "symbol": "OKTA",
+    "name": "Okta, Inc.",
+    "sector": "정보기술",
+    "theme": "",
+    "ko": "",
+    "top100": false
+  },
+  {
     "symbol": "ON",
     "name": "ON Semiconductor",
     "sector": "정보기술",
@@ -3418,14 +3426,6 @@
   {
     "symbol": "KR",
     "name": "Kroger",
-    "sector": "필수소비재",
-    "theme": "",
-    "ko": "",
-    "top100": false
-  },
-  {
-    "symbol": "KVUE",
-    "name": "Kenvue",
     "sector": "필수소비재",
     "theme": "",
     "ko": "",
