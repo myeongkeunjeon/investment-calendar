@@ -1,79 +1,4 @@
 {
-  "earnings-XOM-2026-07-31@investment-calendar": {
-    "pct": -1.2,
-    "from": "2026-07-30",
-    "to": "2026-08-03"
-  },
-  "earnings-ABBV-2026-07-31@investment-calendar": {
-    "pct": -4.8,
-    "from": "2026-07-30",
-    "to": "2026-08-03"
-  },
-  "earnings-CVX-2026-07-31@investment-calendar": {
-    "pct": 0.5,
-    "from": "2026-07-30",
-    "to": "2026-08-03"
-  },
-  "earnings-LIN-2026-07-31@investment-calendar": {
-    "pct": -5.5,
-    "from": "2026-07-30",
-    "to": "2026-08-03"
-  },
-  "earnings-ETN-2026-07-31@investment-calendar": {
-    "pct": 13.3,
-    "from": "2026-07-30",
-    "to": "2026-08-03"
-  },
-  "earnings-MRNA-2026-07-31@investment-calendar": {
-    "pct": -4.8,
-    "from": "2026-07-30",
-    "to": "2026-08-03"
-  },
-  "earnings-CL-2026-07-31@investment-calendar": {
-    "pct": -1.9,
-    "from": "2026-07-30",
-    "to": "2026-08-03"
-  },
-  "earnings-D-2026-07-31@investment-calendar": {
-    "pct": -1.4,
-    "from": "2026-07-30",
-    "to": "2026-08-03"
-  },
-  "earnings-ARES-2026-07-31@investment-calendar": {
-    "pct": 11.6,
-    "from": "2026-07-30",
-    "to": "2026-08-03"
-  },
-  "earnings-CHD-2026-07-31@investment-calendar": {
-    "pct": 2.4,
-    "from": "2026-07-30",
-    "to": "2026-08-03"
-  },
-  "earnings-TROW-2026-07-31@investment-calendar": {
-    "pct": -4.8,
-    "from": "2026-07-30",
-    "to": "2026-08-03"
-  },
-  "earnings-LYB-2026-07-31@investment-calendar": {
-    "pct": 0.3,
-    "from": "2026-07-30",
-    "to": "2026-08-03"
-  },
-  "earnings-BEN-2026-07-31@investment-calendar": {
-    "pct": 6.2,
-    "from": "2026-07-30",
-    "to": "2026-08-03"
-  },
-  "earnings-CBOE-2026-07-31@investment-calendar": {
-    "pct": 0.4,
-    "from": "2026-07-30",
-    "to": "2026-08-03"
-  },
-  "earnings-FRT-2026-07-31@investment-calendar": {
-    "pct": -0.4,
-    "from": "2026-07-30",
-    "to": "2026-08-03"
-  },
   "earnings-PLTR-2026-08-03@investment-calendar": {
     "pct": 32.2,
     "from": "2026-07-31",
@@ -2994,11 +2919,6 @@
     "from": "2026-11-04",
     "to": "2026-11-05"
   },
-  "earnings-TECH-2026-11-04@investment-calendar": {
-    "pct": 0.0,
-    "from": "2026-11-03",
-    "to": "2026-11-05"
-  },
   "earnings-PODD-2026-11-04@investment-calendar": {
     "pct": 6.6,
     "from": "2026-11-03",
@@ -3221,11 +3141,6 @@
   },
   "earnings-PPL-2026-11-06@investment-calendar": {
     "pct": -0.6,
-    "from": "2026-11-05",
-    "to": "2026-11-06"
-  },
-  "earnings-ECHO-2026-11-06@investment-calendar": {
-    "pct": 5.2,
     "from": "2026-11-05",
     "to": "2026-11-06"
   },
