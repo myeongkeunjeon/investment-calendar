@@ -4,10 +4,6 @@
   "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html",
   "rates": [
     [
-      "2026-09-08",
-      1341.67
-    ],
-    [
       "2026-09-09",
       1336.2
     ],
@@ -182,6 +178,10 @@
     [
       "2026-11-09",
       1346.79
+    ],
+    [
+      "2026-11-10",
+      1339.0
     ]
   ]
 }
