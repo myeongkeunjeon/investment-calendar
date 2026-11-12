@@ -1,74 +1,4 @@
 {
-  "earnings-PLTR-2026-08-03@investment-calendar": {
-    "pct": 32.2,
-    "from": "2026-07-31",
-    "to": "2026-08-04"
-  },
-  "earnings-VRTX-2026-08-03@investment-calendar": {
-    "pct": 0.3,
-    "from": "2026-07-31",
-    "to": "2026-08-04"
-  },
-  "earnings-MAR-2026-08-03@investment-calendar": {
-    "pct": -7.4,
-    "from": "2026-07-31",
-    "to": "2026-08-04"
-  },
-  "earnings-WMB-2026-08-03@investment-calendar": {
-    "pct": -0.0,
-    "from": "2026-07-31",
-    "to": "2026-08-04"
-  },
-  "earnings-OKE-2026-08-03@investment-calendar": {
-    "pct": -3.5,
-    "from": "2026-07-31",
-    "to": "2026-08-04"
-  },
-  "earnings-FANG-2026-08-03@investment-calendar": {
-    "pct": -5.5,
-    "from": "2026-07-31",
-    "to": "2026-08-04"
-  },
-  "earnings-ON-2026-08-03@investment-calendar": {
-    "pct": -1.0,
-    "from": "2026-07-31",
-    "to": "2026-08-04"
-  },
-  "earnings-TKO-2026-08-03@investment-calendar": {
-    "pct": 1.5,
-    "from": "2026-07-31",
-    "to": "2026-08-04"
-  },
-  "earnings-ECHO-2026-08-03@investment-calendar": {
-    "pct": 8.9,
-    "from": "2026-07-31",
-    "to": "2026-08-04"
-  },
-  "earnings-L-2026-08-03@investment-calendar": {
-    "pct": -0.0,
-    "from": "2026-07-31",
-    "to": "2026-08-04"
-  },
-  "earnings-TSN-2026-08-03@investment-calendar": {
-    "pct": 1.3,
-    "from": "2026-07-31",
-    "to": "2026-08-04"
-  },
-  "earnings-SBAC-2026-08-03@investment-calendar": {
-    "pct": 3.8,
-    "from": "2026-07-31",
-    "to": "2026-08-04"
-  },
-  "earnings-CLX-2026-08-03@investment-calendar": {
-    "pct": 9.6,
-    "from": "2026-07-31",
-    "to": "2026-08-04"
-  },
-  "earnings-ARE-2026-08-03@investment-calendar": {
-    "pct": -5.0,
-    "from": "2026-07-31",
-    "to": "2026-08-04"
-  },
   "earnings-AMD-2026-08-04@investment-calendar": {
     "pct": -0.5,
     "from": "2026-08-03",
@@ -3188,5 +3118,10 @@
     "pct": 10.3,
     "from": "2026-11-06",
     "to": "2026-11-09"
+  },
+  "earnings-TDG-2026-11-10@investment-calendar": {
+    "pct": 0.5,
+    "from": "2026-11-09",
+    "to": "2026-11-10"
   }
 }
