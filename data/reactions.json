@@ -1,19 +1,4 @@
 {
-  "earnings-VST-2026-08-07@investment-calendar": {
-    "pct": 1.1,
-    "from": "2026-08-06",
-    "to": "2026-08-10"
-  },
-  "earnings-TTWO-2026-08-07@investment-calendar": {
-    "pct": 9.1,
-    "from": "2026-08-06",
-    "to": "2026-08-10"
-  },
-  "earnings-PPL-2026-08-07@investment-calendar": {
-    "pct": 1.1,
-    "from": "2026-08-06",
-    "to": "2026-08-10"
-  },
   "earnings-SPG-2026-08-10@investment-calendar": {
     "pct": -1.5,
     "from": "2026-08-07",
