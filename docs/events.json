@@ -35625,6 +35625,25 @@
     "surprise": ""
   },
   {
+    "uid": "estimate-DE-2027-05-26@investment-calendar",
+    "kind": "estimate",
+    "us_date": "2027-05-26",
+    "title": "🗓️ DE 실적 예상일 · 산업재",
+    "description": "■ Deere & Company (DE) 실적 발표 예상일 — 아직 확정 아님\n섹터: 산업재 / 테마: 농기계\n예상 날짜(미국): 2027-05-26(수) 전후\n지난번엔 미국 장 시작 전 발표 (한국시간 같은 날 저녁)\n\n계산 근거: 직전 발표일 2026-11-25에서 13주씩 더한 날짜예요.\n실제 날짜는 1~2주 앞뒤로 달라질 수 있어요. 특히 연말 결산 분기(1~2월 발표)는 늦어지기 쉬워요.\n회사가 날짜를 확정하면 이 예상일은 자동으로 확정 일정으로 바뀝니다.\n\n※ 공개 정보를 자동으로 모은 것이며 투자 권유가 아닙니다.\n\nEnglish source (Nasdaq):\nhttps://www.nasdaq.com/market-activity/stocks/de/earnings",
+    "url": "https://www.nasdaq.com/market-activity/stocks/de/earnings",
+    "start_utc": null,
+    "minutes": 30,
+    "symbol": "DE",
+    "timing": "pre",
+    "sector": "산업재",
+    "kst_date": "2027-05-26",
+    "note": "",
+    "short": "",
+    "reaction": "",
+    "actual_eps": "",
+    "surprise": ""
+  },
+  {
     "uid": "estimate-DELL-2027-05-25@investment-calendar",
     "kind": "estimate",
     "us_date": "2027-05-25",
