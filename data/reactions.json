@@ -2558,5 +2558,25 @@
     "pct": -15.2,
     "from": "2026-11-18",
     "to": "2026-11-19"
+  },
+  "earnings-CRWD-2026-11-23@investment-calendar": {
+    "pct": -8.1,
+    "from": "2026-11-20",
+    "to": "2026-11-24"
+  },
+  "earnings-HPE-2026-11-23@investment-calendar": {
+    "pct": -16.3,
+    "from": "2026-11-23",
+    "to": "2026-11-24"
+  },
+  "earnings-A-2026-11-23@investment-calendar": {
+    "pct": 4.2,
+    "from": "2026-11-23",
+    "to": "2026-11-24"
+  },
+  "earnings-J-2026-11-23@investment-calendar": {
+    "pct": -3.5,
+    "from": "2026-11-23",
+    "to": "2026-11-24"
   }
 }
