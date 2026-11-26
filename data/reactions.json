@@ -2578,5 +2578,50 @@
     "pct": -3.5,
     "from": "2026-11-23",
     "to": "2026-11-24"
+  },
+  "earnings-DELL-2026-11-24@investment-calendar": {
+    "pct": 0.6,
+    "from": "2026-11-24",
+    "to": "2026-11-25"
+  },
+  "earnings-ADI-2026-11-24@investment-calendar": {
+    "pct": -17.4,
+    "from": "2026-11-23",
+    "to": "2026-11-24"
+  },
+  "earnings-MDT-2026-11-24@investment-calendar": {
+    "pct": -4.6,
+    "from": "2026-11-23",
+    "to": "2026-11-24"
+  },
+  "earnings-ADSK-2026-11-24@investment-calendar": {
+    "pct": -3.5,
+    "from": "2026-11-24",
+    "to": "2026-11-25"
+  },
+  "earnings-WDAY-2026-11-24@investment-calendar": {
+    "pct": 0.7,
+    "from": "2026-11-24",
+    "to": "2026-11-25"
+  },
+  "earnings-DLTR-2026-11-24@investment-calendar": {
+    "pct": 11.2,
+    "from": "2026-11-23",
+    "to": "2026-11-24"
+  },
+  "earnings-HPQ-2026-11-24@investment-calendar": {
+    "pct": 11.5,
+    "from": "2026-11-24",
+    "to": "2026-11-25"
+  },
+  "earnings-BBY-2026-11-24@investment-calendar": {
+    "pct": 2.7,
+    "from": "2026-11-23",
+    "to": "2026-11-24"
+  },
+  "earnings-SJM-2026-11-24@investment-calendar": {
+    "pct": -1.5,
+    "from": "2026-11-23",
+    "to": "2026-11-24"
   }
 }
